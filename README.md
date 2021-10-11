@@ -22,7 +22,7 @@ Quoting from [The Tao of IETF](https://www.ietf.org/about/participate/tao/), emp
 We always believed that the end state for KERI standards would be through IETF but were willing to incubate them in advance of the formal IETF RFC standards track process. We believe that there is no longer any need for incubation. The last few months, indeed weeks have seen the keripy implementation reach beta status including support for fully functional verifiable credentials. We believe that this has sufficiently informed KERI to propose an IETF Internet-Draft submission and hence this project WebOfTrust with associated repositories for both code and IETF Internet-Drafts.
 
 ### Policy
-The documents in this repo titled [LICENSE.md]() and 
+The documents in this repo titled [LICENSE.md](https://github.com/WebOfTrust/Keri/blob/main/LICENSE.md) and [CONTRIBUTING.md]()
 
 ## Meetings
 We pressed pause on regular KERI meetings over the summer. We are now ready to resume with bi-weekly meetings. The meetings will be at 10 a.m. Eastern Time (EDT or EST depending on the season.

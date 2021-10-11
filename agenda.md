@@ -1,4 +1,4 @@
-# KERI Community Development Coordination Meeting Agenda
+# KERI Community Meeting Agenda
 
 [![hackmd-github-sync-badge](https://hackmd.io/-soUScAqQEaSw5MJ71899w/badge)](https://hackmd.io/-soUScAqQEaSw5MJ71899w)
 

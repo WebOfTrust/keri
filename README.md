@@ -27,7 +27,7 @@ The documents in this repo titled [LICENSE.md](https://github.com/WebOfTrust/Ker
 ## Meetings
 We pressed pause on regular KERI meetings over the summer. We are now ready to resume with bi-weekly meetings. The meetings will be at 10 a.m. Eastern Time (EDT or EST depending on the season.
 
-The first meeting will be Tuesday October 19 at 10 am EDT.
+The first meeting will be Tuesday, 2021 October, 19 at 10 am EDT.
 The zoom link is here:
 https://us02web.zoom.us/j/89842900185?pwd=OEpXSU5pa29FR1A3OXFkUithZFNwQT09
 Meeting ID: 898 4290 0185

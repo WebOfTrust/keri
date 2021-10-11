@@ -1,8 +1,8 @@
 # License
 
-All software and documentation in this repository are *Copyright 2021 SAID Contributors* and 
-all contributions to this repository are *Licensed under the Apache License, Version 2.0 (the "License")* [here](https://github.com/WebOfTrust/ietf-said/blob/main/LICENSE);
-As as defined in the the License, these contributions include but are not limited to patents, source code, specification text, 
+All software and documentation in this repository are *Copyright 2021 KERI Contributors* and 
+all contributions to this repository are *Licensed under the Apache License, Version 2.0 (the "License")* [here](https://github.com/WebOfTrust/keri/blob/main/LICENSE);
+As as defined in the License, contributions include but are not limited to patents, source code, specification text, 
 documentation, comments and issues. You may not use the software or documentation in this repository except in compliance with the License.
 Unless required by applicable law or agreed to in writing, software distributed
 under the License is distributed on an "AS IS" BASIS.
@@ -19,7 +19,7 @@ The legal structure of this repository with respect to the licensing of its
 associated contributions also follows GitHub's Open Source Guide reccomendations for
 open source standards and code. These may be found [here](https://opensource.guide/legal/)
 
-In addition to the above copyright and licensing restrictions, all contributions to this repository are contributions to the IETF standards process
+In addition to the copyright and licensing restrictions described above, all contributions to this repository are contributions to the IETF standards process
 and are licensed accordingly. The IETF license terms are defined in the
 [guidelines for contributions](https://github.com/WebOfTrust/keri/blob/main/CONTRIBUTING.md).
 

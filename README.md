@@ -33,6 +33,6 @@ https://us02web.zoom.us/j/89842900185?pwd=OEpXSU5pa29FR1A3OXFkUithZFNwQT09
 Meeting ID: 898 4290 0185
 Passcode: 300255
 
-The meeting agenda may be found [here]()
+The meeting agenda may be found [here](https://github.com/WebOfTrust/keri/blob/main/agenda.md)
 
 

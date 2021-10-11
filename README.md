@@ -1,2 +1,4 @@
-# KeriCommunity
-KERI Community Development Efforts Meetings Discussion
+# Keri Community
+
+KERI Community Development Efforts Meetings Discussions
+

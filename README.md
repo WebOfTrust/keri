@@ -25,7 +25,7 @@ We always believed that the end state for KERI standards would be at IETF but we
 The documents in this repo titled [LICENSE.md](https://github.com/WebOfTrust/Keri/blob/main/LICENSE.md) and [CONTRIBUTING.md](https://github.com/WebOfTrust/Keri/blob/main/CONTRIBUTING.md). Besides the IETF licensing terms, this includes the comprehensive Apache2 license for all associated intellectual property (IP) including patents. The advantage of one comprehensive license for all contributions is that there will always be alignment between all contibutors and for any type of contribution. This alignment includes an **inbound=outbound** [policy](https://opensource.guide/legal/) for all related IP. We only want contributions to KERI that are freely licensed open source be it software or specification.
 
 ## Meetings
-We pressed pause on regular KERI meetings over the summer. We are now ready to resume with bi-weekly meetings. The meetings will be at 10 a.m. Eastern Time (EDT or EST depending on the season.
+We pressed pause on regular KERI meetings over the summer. We are now ready to resume with bi-weekly meetings. The meetings will be every other Tuesday at 10 a.m. Eastern Time (EDT or EST depending on the season).
 
 The first meeting will be Tuesday, 2021 October, 19 at 10 am EDT.
 The zoom link is here:

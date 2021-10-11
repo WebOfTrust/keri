@@ -1,8 +1,8 @@
 # Keri Community
 
-KERI Community Development Efforts Meetings Discussions
+## KERI Community Development Efforts
 
-## Why Here Why Now?
+### Why Here? Why Now?
 
 After some crucial conversations some painful, we have decided to resume the broader KERI development and standards process here under the auspices of the WebOfTrust GitHub repository. The work at DIF was initially fruitful but DIF's policy of not allowing individual contribution except under very narrow conditions became an impediment to the goals and aspirations of KERI to be the trust spanning layer for the Internet. That goal means contributions from any source with minimal friction. Specifically, an employee of an entity may not be an individual contributor at DIF unless their employer is a member of DIF. This prevented several would be contributors from contributing. Should DIF ever change that policy then we might reconsider re-engaging with DIF. Moving forward, we believe the IETF will proof itself to be a better home for KERI. Indeed the value statement and organizational principles of the IETF strongly resonate with KERI.
 Quoting from [The Tao of IETF](https://www.ietf.org/about/participate/tao/), emphasis added.
@@ -21,7 +21,7 @@ Quoting from [The Tao of IETF](https://www.ietf.org/about/participate/tao/), emp
 
 We always believed that the end state for KERI standards would be through IETF but were willing to incubate them in advance of the formal IETF RFC standards track process. We believe that there is no longer any need for incubation. The last few months, indeed weeks have seen the keripy implementation reach beta status including support for fully functional verifiable credentials. We believe that this has sufficiently informed KERI to propose an IETF Internet-Draft submission and hence this project WebOfTrust with associated repositories for both code and IETF Internet-Drafts.
 
-## Policy
+### Policy
 The documents in this repo titled [LICENSE.md]() and 
 
 ## Meetings

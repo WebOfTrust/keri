@@ -1,5 +1,8 @@
 # KERI Community Development Coordination Meeting Agenda
 
+[![hackmd-github-sync-badge](https://hackmd.io/-soUScAqQEaSw5MJ71899w/badge)](https://hackmd.io/-soUScAqQEaSw5MJ71899w)
+
+
 Chair: Samuel M. Smith [email](sam@prosapien.com)
 Co-Chair: Phillip Feairheller [email](pfeairheller@gmail.com)
 

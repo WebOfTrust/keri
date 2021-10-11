@@ -15,6 +15,7 @@ Quoting from [The Tao of IETF](https://www.ietf.org/about/participate/tao/)
 >> + Specifying the development or usage of protocols and the near-term architecture to solve such technical problems for the Internet  
 >> + Making recommendations to the Internet Engineering Steering Group (IESG) regarding the standardization of protocols and protocol usage in the Internet  
 >> + Facilitating technology transfer from the Internet Research Task Force (IRTF) to the wider Internet community  
->> + Providing a forum for the exchange of information within the Internet community between vendors, users, researchers, agency contractors, operators, and network managers  
+>> + Providing a forum for the exchange of information within the Internet community between vendors, users, researchers, agency contractors, operators, and network managers 
+>>  
 >The IETF mission further states that the Internet isn't value-neutral, and neither is the IETF. The IETF wants the Internet to be useful for communities that share our commitment to openness and fairness. The IETF embraces technical concepts such as decentralized control, edge-user empowerment and sharing of resources, because those concepts resonate with the core values of the IETF community. These concepts have little to do with the technology that's possible, and much to do with the technology that we choose to create.  
 

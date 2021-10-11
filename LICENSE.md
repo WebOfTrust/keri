@@ -21,6 +21,6 @@ open source standards and code. These may be found [here](https://opensource.gui
 
 In addition to the above copyright and licensing restrictions, all contributions to this repository are contributions to the IETF standards process
 and are licensed accordingly. The IETF license terms are defined in the
-[guidelines for contributions](https://github.com/WebOfTrust/ietf-said/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/WebOfTrust/keri/blob/main/CONTRIBUTING.md).
 
 

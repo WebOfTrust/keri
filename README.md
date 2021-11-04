@@ -35,4 +35,17 @@ Passcode: 300255
 
 The meeting agenda may be found [here](https://github.com/WebOfTrust/keri/blob/main/agenda.md)
 
+## Existing Implementations
 
+* [keripy](https://github.com/WebOfTrust/keripy) – under development
+* [keriox](https://github.com/WebOfTrust/keriox) – under development
+
+
+|feature / implementation|keripy|keriox|
+|---|---|---|
+|**Peer to Peer mode** (controller to controller)|✓|✓|
+|**Witness mode**|✓|✓/𐄂|
+|**Multi signature mode**|✓|✓|
+|**Delegation mode**|✓|✓|
+
+_Feature completness table per implementation_

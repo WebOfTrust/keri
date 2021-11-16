@@ -1,3 +1,7 @@
+---
+tags: KERI, IETF, Community
+---
+
 # KERI Community Meeting Agenda
 
 [![hackmd-github-sync-badge](https://hackmd.io/-soUScAqQEaSw5MJ71899w/badge)](https://hackmd.io/-soUScAqQEaSw5MJ71899w)
@@ -16,20 +20,36 @@ Passcode: 300255
 Calendar Invite:
 https://us02web.zoom.us/meeting/tZ0lc-uhrjsrEtFmV2aSfAzR015DDL-ld-hg/ics?icsToken=98tyKuGhpj8oE9SVsRGCRpx5Go-ga_PziGJcj7d7kSm3AhNVQxnEZrMXFpZTXdTU
 
+KERI Slack: keriworld.slack.com
+https://join.slack.com/t/keriworld/shared_invite/zt-yv0d7jur-iq~lBTXUaAlkYAODfJBQHQ
+
+
+
 ## Meetings
+### 2021-11-30
+- Distributed multi-sig protocol
+- SKWA (Simple KERI for Web Auth)
+- OOBI
+- Witness dissemination protocol (how Witnesses promulgate receipts to Validator network) // added by Michal
 
 ### 2021-11-16
+
 - rpy message
     - d field for said
 - exp message
     - d field for said
 - qry message
     - d field for said
-- All keri key event messages icp  rot dip drt ixn to add d field for said of message. 
+- All keri key event messages icp  rot dip drt ixn to add d field for said of message. ( https://github.com/WebOfTrust/keripy/issues/110 )
 - p field will be said of prior message
-- Distribute multi-sig protocol
-- SKWA (Simple KERI for Web Auth)
-- OOBI
+
+- Query Message keriox (michal pietrus)
+    - how handling query and reply
+- New partial rotation
+    https://github.com/WebOfTrust/keripy/issues/118
+- Where we chat in realtime
+- Issue update readme with status of features
+- 
 
 
 ### 2021-11-02

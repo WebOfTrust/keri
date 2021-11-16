@@ -19,6 +19,7 @@ https://us02web.zoom.us/meeting/tZ0lc-uhrjsrEtFmV2aSfAzR015DDL-ld-hg/ics?icsToke
 ## Meetings
 
 ### 2021-11-16
+- address open issues and PR for keriox
 - rpy message
     - d field for said
 - exp message

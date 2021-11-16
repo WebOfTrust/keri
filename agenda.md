@@ -42,14 +42,12 @@ https://join.slack.com/t/keriworld/shared_invite/zt-yv0d7jur-iq~lBTXUaAlkYAODfJB
     - d field for said
 - All keri key event messages icp  rot dip drt ixn to add d field for said of message. ( https://github.com/WebOfTrust/keripy/issues/110 )
 - p field will be said of prior message
-
 - Query Message keriox (michal pietrus)
     - how handling query and reply
 - New partial rotation
     https://github.com/WebOfTrust/keripy/issues/118
 - Where we chat in realtime
 - Issue update readme with status of features
-- 
 
 
 ### 2021-11-02

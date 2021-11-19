@@ -33,7 +33,7 @@ https://join.slack.com/t/keriworld/shared_invite/zt-yv0d7jur-iq~lBTXUaAlkYAODfJB
 - Witness dissemination protocol (how Witnesses promulgate receipts to Validator network) // added by Michal
 
 ### 2021-11-16
-
+[Recording](https://drive.google.com/drive/folders/1-4XrL8S9WHeSNzaZznSatYH8QkaOqsw4?usp=sharing)
 - rpy message
     - d field for said
 - exp message

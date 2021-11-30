@@ -29,11 +29,26 @@ https://join.slack.com/t/keriworld/shared_invite/zt-yv0d7jur-iq~lBTXUaAlkYAODfJB
 
 
 ## Meetings
-### 2021-11-30
-- Distributed multi-sig protocol
-- SKWA (Simple KERI for Web Auth)
-- OOBI
+### 2021-12-14
 - Witness dissemination protocol (how Witnesses promulgate receipts to Validator network) // added by Michal
+- IETF CESR  variable length codes
+    - Pathing for CESR Proofs Attachments SADs
+- GLEIF MultiSig demo KIWI
+- Partial Rotation 
+- OOBI
+- SKWA (Simple KERI for Web Auth)
+
+### 2021-11-30
+- Query Msg Discussion
+    - https://hackmd.io/Qsrfj7Y-TIGl5ESvrxWGxw
+- New issues 
+    - (https://github.com/WebOfTrust/keripy/issues/110#issuecomment-982631336)
+- IETF CESR Draft   https://datatracker.ietf.org/doc/draft-ssmith-cesr/
+- Distributed multi-sig protocol
+    - KERI 
+
+
+    - 
 
 ### 2021-11-16
 [Recording](https://drive.google.com/drive/folders/1-4XrL8S9WHeSNzaZznSatYH8QkaOqsw4?usp=sharing)

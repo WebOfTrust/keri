@@ -1,5 +1,8 @@
 # Partial Participating Rotation
 
+[![hackmd-github-sync-badge](https://hackmd.io/Tfm63kdnRdmGxcVgrne5Uw/badge)](https://hackmd.io/Tfm63kdnRdmGxcVgrne5Uw)
+
+
 New event types with fields to allow rotation that need only expose  a threshold set of of the public keys allowing reuse of unexposed public keys.
 
 

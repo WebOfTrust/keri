@@ -8,6 +8,9 @@ version: 1.01
 
 # KERI Message and Seal Formats
 
+[![hackmd-github-sync-badge](https://hackmd.io/XfdKjT3ZQDi1M6Iv3iYhbg/badge)](https://hackmd.io/XfdKjT3ZQDi1M6Iv3iYhbg)
+
+
 Because adding the `d` field SAID to every key event message type will break all the explicit test vectors. Its no additional pain to normalize the field ordering across all message types and seals.
 Originally all messages included an `i` field but that is not true any more. So the changed field ordering is to put the fields that are common to all message types first in order followed by fields that are not common. The common fields are `v`, `t`, `d`.
 The newly revised messages and seals are shown below.

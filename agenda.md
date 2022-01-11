@@ -29,16 +29,101 @@ https://join.slack.com/t/keriworld/shared_invite/zt-yv0d7jur-iq~lBTXUaAlkYAODfJB
 
 
 ## Meetings
-### 2021-12-14
-- Witness dissemination protocol (how Witnesses promulgate receipts to Validator network) // added by Michal
-- IETF CESR  variable length codes
-    - Pathing for CESR Proofs Attachments SADs
-- GLEIF MultiSig demo KIWI
-- Partial Rotation 
+
+### 2022-01-11
+- Roadmap
+
+
+### 2022-01-11
+- Recording
+    - https://drive.google.com/file/d/10HzfvmpVlru1CecRerF8KULg0vVImJFB/view?usp=sharing
+    - 
+- Roadmap
+    - short term long term
+    - CESR version of KERI events
+        - UDP version of KERI (2nd Q)
+        - Gossip Protocol for KERI Receipt, KeyState, and OOBI dissemination (2nd Q)
+    - Recovery from delegated ID prerotated key compromise
+    - Presentation and Issuance exchange protocols add Ricardaian Contracts in the `r` section
+    - OOBI discovery and validation (Watchers)
+    - Registrar Backer support
+        - new config trait 
+        - new seal type
+    - Refreshing Doc strings 
+        - Sphinx Support for doc strings
+        - Swagger API
+        - Test Coverage
+    - Watcher Network
+    - KERI and DID-Comm and IETF
+    - KERI and peer did
+    - SWift KERI Library for iOS and Android (LLVM)
+    - 
+- Reports from Implementers:
+    - keripy
+        - SADification and SAIDification of attachments
+        - First implementation of CESR Proof Signatures, credential parsing moved to Parser
+        - Habery with explict multi-Habitat support (multiple prefix IDs per database)
+        - Keep Repo Mithril and Material UX (https://github.com/WebOfTrust/keep)
+    - keriox
+        -  query mode done
+        -  WIP: `d` in messages (issue 110)
+            -  Goldilocks crypto agility, reduce complexity
+            -  BowTie model for reasonsing about crypto committments
+        -  WIP: working on escrows 
+- IETF Internet Draft CESR-Proof
+    - practical applications of CESR-Proofs
+    - https://github.com/WebOfTrust/ietf-cesr-proof
+- Discuss a URN namespace spec for KERI:
+    -  it's a good idea to invent a URN specific for KERI. 
+    -  Write a spec for it and register with IANA
+        -  urn:NID:NSS/path?query#fragment
+        -  Examples
+            -  urn:aid:alblseejlske/path?query#fragment
+            -  urn:keri:slgheilshe/path?query#fragment
+- Henk: first draft of the [KERI MOOC](https://hackmd.io/nuUu5S8UQjOHXw_a53LvvA)
+
 - OOBI
 - SKWA (Simple KERI for Web Auth)
+- Witness dissemination protocol (how Witnesses promulgate receipts to Validator network) // added by Michal
+
+
+
+### 2021-12-14
+- [recording](https://drive.google.com/file/d/1-jFXFGX0X_Bwgyq42xfT948dBxcZw_sJ/view?usp=sharing)
+- Business
+    - Meeting cancelled on Dec 28. Next meeting Jan 11th
+- Reports from Implementers
+    - keripy
+        - CESR codes for variable length material.   core.coring.Matter object class now supports variable length codes.
+        - encrypted content
+        - legacy suites
+        - pathing
+    - keriox
+        - Query messages development
+        - Reply messages
+        - KSN message
+        - TSG 
+- Discuss `did:keri` further usage (see Slack #general channel)
+    - registrant. Need to update registered version to reference WoT repo not DIF repo
+    - did:keri is a very loose wrapper around the KERI prefix, it's there for adoption
+    - Maybe it's a good idea to invent a URN specific for KERI
+
+- KERI incubation within IETF: work item under some WG / WG on its own...?
+    - KERI presented to Blockchain WG; in the future perhaps hosted within this WG
+    - We have to have a draft spec first. Then you form a (work item within a) working group to discuss the spec.
+- Michal question: A lightweight protocol for streaming authentic data in  environments with unstable internet connection. Would CESR make sense?
+    - Yes, we are able to create a UDP (asynchronous communication) version. It's easier to make UDP reliable than to make TCP scalable.
+- GLEIF MultiSig demo KLI (command line version)
+    - Two ways of reaching the threshold of a multisig by participant in a rotation event, is by sharing all public addresses among the group of possible signers. If you don't want to disclose pubic keys to other participants, then you could use digests of the public keys in a partial rotation event, where we only need the participating signers to reach the threshold; this subgroups needs to disclose their public keys.
+- IETF CESR  variable length codes
+    - Pathing for CESR Proofs Attachments SADs
+- Partial Rotation 
+
+
 
 ### 2021-11-30
+- Recording 
+https://drive.google.com/drive/u/0/folders/1af1qa4cVw6vbuBGvqwa1sz9B2sk70ao-
 - Query Msg Discussion
     - https://hackmd.io/Qsrfj7Y-TIGl5ESvrxWGxw
 - New issues 

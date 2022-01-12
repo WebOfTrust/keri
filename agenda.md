@@ -31,9 +31,19 @@ https://join.slack.com/t/keriworld/shared_invite/zt-yv0d7jur-iq~lBTXUaAlkYAODfJB
 ## Meetings
 
 ### 2022-01-11
-- Roadmap
+- Recording:
+- 
+- Roadmap:
+
+- Reports from Implementers:
 
 
+- OOBI
+- SKWA (Simple KERI for Web Auth)
+- Witness dissemination protocol (how Witnesses promulgate receipts to Validator network) // added by Michal
+
+
+- 
 ### 2022-01-11
 - Recording
     - https://drive.google.com/file/d/10HzfvmpVlru1CecRerF8KULg0vVImJFB/view?usp=sharing

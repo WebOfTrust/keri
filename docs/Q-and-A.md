@@ -1,6 +1,6 @@
 # Q&A about KERI
 
-<!-- [![hackmd-github-sync-badge](https://hackmd.io/iDVDsqwkTXm16B-cIlVhvg/badge)](https://hackmd.io/iDVDsqwkTXm16B-cIlVhvg) -->
+[![hackmd-github-sync-badge](https://hackmd.io/Ox_1L3adTdCEkcFtAzuTFA/badge)](https://hackmd.io/Ox_1L3adTdCEkcFtAzuTFA)
 
 <img src="../images/Keri_logo_color_on_white.png" alt="KERI logo" border="0" width="300">
 

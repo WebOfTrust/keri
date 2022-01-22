@@ -228,6 +228,9 @@ Lastly, KERI is fundamentally different from blockchains like Ripple (Permission
 Blockchain and KERI is comparing apples and oranges. But we're happy to do that exercise for the hard-to-convince part of the SSI community.
 
 #### KERI, the internet identifier Platypus
+<img src="../images/platypus.jpg" alt="Platypus" border="0" width="250">
+
+
 ```
 KERI is nothing like we already know of. It's a mixtures of things. 
 You can't say _"Oh, KERI lays eggs, so it must be a reptile"_ It's not a reptile. 

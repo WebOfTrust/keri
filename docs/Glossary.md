@@ -18,6 +18,8 @@ Given one has solved secure attribution, one can layer on other things like tran
 
 ### KERI specific abbreviations
 In alphabetic order:\
+
+BADA = [Best Available Data Acceptance mechanism](#best-available-data-acceptance-mechanism)\
 CESR = [Composable Event Streaming Representation](#composable-event-streaming-representation)\
 DEL = [Duplicitous Event Log](#duplicitous-event-log)\
 KAACE = [KERI Agreement Algorithm for Control Establishment](#keri-agreement-algorithm-for-control-establishment)\
@@ -25,6 +27,7 @@ KEL = [Key Event Log](#key-event-log)\
 KERL = [Key Event Receipt Log](#key-event-receipt-log)\
 KERI = [Key Event Receipt Infrastructure](#key-event-receipt-infrastructure)\
 KID = [KERI Implementation/Improvement Docs](#keri-implementation-Improvement-docs)\
+OOBI = [Out-of-band Introductions](#out-of-band-introductions)\
 TEL = [Transaction Event Log](#transaction-event-log)\
 [Jump to General Abbreviations](#general-abbreviations)\
 [Jump to General definitions in alphabetic order](#general-definitions-in-alphabetic-order)
@@ -33,6 +36,10 @@ TEL = [Transaction Event Log](#transaction-event-log)\
 
 #### Ambient Verifiability 
 _Ambient_ means all around, abundantly available. It is a new term to better describe [end-verifiable](#end-verifiable) end state. The _combination_ of end-verifiable logs served by ambient infrastructure _enables_ ambient verifiability, that is, **anyone can verify anywhere at anytime**. This approach exhibits some of the features of [certificate transparency](#certificate-transparency) and [key transparency](#key-transparency) with end-verifiable event logs but differs in that each identifier has its own chain of events that are rooted in a [self-certifying identifier](#self-certifying-identifier).
+
+#### Best Available Data Acceptance mechanism
+The BADA security model provides a degree of replay attack protection. The attributate originator (issuer, author, source) is provided by an attached signature couple or quadruple. A single reply could have multiple originators. When used as an authorization the reply attributes may include the identifier of the authorizer and the logic for processing the associated route may require a matching attachment.\
+BADA is part of KERI's _[Zero Trust Computing Architecture for Data Management](https://hackmd.io/Qsrfj7Y-TIGl5ESvrxWGxw): How to support Secure Async Data Flow Routing in KERI enabled Applications_
 
 #### Composable derivation codes on cryptographic material primitives 
 KERI's design both requires - and benefits from - a universal compact encoding for all cryptographic material items with stable self-framing textual derivation codes.\
@@ -55,16 +62,15 @@ In common language 'duplicity' has a slightly different connotation: 'two-facedn
 "First seen" in KERI is the first **verified** event, accepted in the `KEL`. It has no effect on the timing of what has arrived in escrow for example; in escrow there can be garbage.
 Every 'first seen' event is propagated world wide within micro-seconds to the watchers. Only in this microseconds windows that you could have a live key conprise attack. If that happens, this where you have to look after this duplicity-attack a bit more in depth to handle it safely. E.g. a valid key rotation.
 
-#### Generic classes self-certifying identifiers 
+#### Generic classes of self-certifying identifiers 
 
 The KERI design approach is to build composable primitives instead of custom functionality that is so typical of other DKMI approaches:
 - transferable identifiers
 - non-transferable identifiers
 - delegated identifiers
-Consequently when applied recursively, _delegation_ may be used to compose arbitrarily complex trees of hierarchical (delegative) key management event streams. This is a most powerful capability that may provide an essential building block for a generic universal decentralized key management infrastructure (DKMI) that is also compatible with the demands of generic event streaming applications.\
+Consequently when applied recursively, _delegation_ may be used to compose arbitrarily complex trees of hierarchical (delegative) key management event streams. This is a most powerful capability that may provide an essential building block for a generic universal decentralized key management infrastructure (DKMI) that is also compatible with the demand of generic event streaming applications.\
 (new invention) More in the [whitepaper](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf)
 
-{TBW prio 1}
 
 #### KERI Agreement Algorithm for Control Establishment
 Also KAACE or KA2CE. A newly invented algorithm but it is a simplification of PBFT class algorithms, separation of control of distributed consensus using distinct promulgation (`witness`) and confirmation (`watcher`) networks (new invention) but many non-BFT consensus algorithms do something similar and one BFT algorithm Stellar does something similar but not the same.\
@@ -120,6 +126,10 @@ In KERI delegations are cooperative, this means that both the delegator and dele
 This superseding rule may be recursively applied to multiple levels of delegation, thereby enabling recovery of any set of keys signing or pre-rotated in any lower levels by a superseding rotation delegation at the next higher level. This cascades the security of the key management infrastructure of higher levels to lower levels. This is a _distinctive_ security feature of the cooperative delegation of identifiers in KERI.
 
 (new invention) More in chapter _Nested Delegation Recovery_ of the [whitepaper](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf)\
+
+#### Out-of-band Introductions
+Discovery and validation of IP resources for KERI autonomic identifiers. Validation is done based on [BADA](#best-available-data-acceptance-mechanism) More in 
+[KERI OOBI draft spec](https://hackmd.io/MxTAIBQTRkWU4-w140tNuA?view) and [KERI OOBI explained - draft](https://medium.com/p/510467856035).
 
 #### Pre-rotation 
 It is a new invention in KERI. Pre-rotation is a _cryptographical commitment (a hash)_ to the _next_ private key in the rotation-scheme.\

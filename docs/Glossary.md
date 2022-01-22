@@ -128,7 +128,17 @@ This superseding rule may be recursively applied to multiple levels of delegatio
 (new invention) More in chapter _Nested Delegation Recovery_ of the [whitepaper](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf)\
 
 #### Out-of-band Introductions
-Discovery and validation of IP resources for KERI autonomic identifiers. Validation is done based on [BADA](#best-available-data-acceptance-mechanism) More in 
+Discovery and validation of IP resources for KERI autonomic identifiers.\
+The simplest form of a KERI OOBI is a namespaced string, a tuple, a mapping, a structured message, or structured attachment that contains both a KERI AID and a URL. The OOBI associates the URL with the AID. In tuple form this abstractly:
+```
+(url, aid)
+```
+and concretely
+```
+("http://8.8.5.6:8080/oobi", "EaU6JR2nmwyZ-i0d8JZAoTNZH3ULvYAfSVPzhzS6b5CM")
+```
+
+Validation is done based on [BADA](#best-available-data-acceptance-mechanism) More in 
 [KERI OOBI draft spec](https://hackmd.io/MxTAIBQTRkWU4-w140tNuA?view) and [KERI OOBI explained - draft](https://medium.com/p/510467856035).
 
 #### Pre-rotation 

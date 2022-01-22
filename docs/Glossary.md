@@ -233,6 +233,9 @@ In the design of an identity system you need to answer a few questions.
 
 There's nobody that can intervene with the establishment of the authenticity of a control operation because you can verify all the way back to the root-of-trust.
 
+#### Backer
+The terms _Backer_ and _[Witness](#witness)_ is a synonym in KERI.
+
 #### Binding
 In short, the technique of connecting two data elements together. In the context of KERI it is the association of data or an identifier with another identifier or a subject (a person, organization or machine), thereby lifting the privacy of the subject through that connection, i.e. binding.
 
@@ -460,12 +463,11 @@ In KERI this is further developed:
 - key event confirmation service = from the `validator`'s point.
 
 The separation of promulgation and confirmation into two separate _loci-of-control_, one the controller’s, and the other the validator’s simplifies the interaction space between these two parties.\
-The design principle of separating the loci-of-control between controllers and validators removes one of the major drawbacks of total ordered distributed consensus algorithms, that is, shared governance over the pool of nodes that provide the consensus algorithm.
-
-The primary purpose of the KA2CE algorithm is to protect the controller’s ability to promulgate the authoritative copy of its key event history despite external attack. This includes maintaining a sufficient degree of availability such that any validator may obtain an authoritative copy on demand. 
+The design principle of separating the loci-of-control between controllers and validators removes one of the major drawbacks of total ordered distributed consensus algorithms, that is, shared governance over the pool of nodes that provide the consensus algorithm.\
+The primary purpose of the [KA2CE](#keri-agreement-algorithm-for-control-establishment) algorithm is to protect the controller’s ability to promulgate the authoritative copy of its key event history despite external attack. This includes maintaining a sufficient degree of availability such that any validator may obtain an authoritative copy on demand. 
 
 ####  MultiCodec 
-Is a self-describing multiformat, it wraps other formats with a tiny bit of self-description. A multicodec identifier is both a varint and the code identifying data. See more at [GitHub Multicodec](https://github.com/multiformats/multicodec)
+Is a self-describing multiformat, it wraps other formats with a tiny bit of self-description. A multicodec identifier is both a varint (variable length integer) and the code identifying data. See more at [GitHub Multicodec](https://github.com/multiformats/multicodec)
 Multicodec is an agreed-upon codec table. It is designed for use in binary representations, such as keys or identifiers (i.e CID). It is then used as a prefix to identify the data that follows.
 
 #### Namespace 
@@ -485,8 +487,7 @@ See any textbook on distributed systems such as https://www.amazon.com/dp/B00E3U
 To be able to do something with the identifier, it anchors data to the key event sequence. So you can do things like issue or revoke a verifiable credential or engage in a transaction in which you give a commitment of some form to some other entity and you can anchor that commitment to the KER log and make it verifiable that way.
 
 #### Non-transferable identifier
-And identifier of which you can't rotate its controlling private key. When the private key for a non-transferable identifier become exposed to potential compromise then the identifier must be abandoned by the controller as it is no longer secure.  
-
+And identifier of which you can't rotate its controlling private key. When the private key for a non-transferable identifier become exposed to potential compromise then the identifier must be abandoned by the controller as it is no longer secure.\
 The main innovation of KERI is that it provides a universal decentralized mechanism that supports *both* non-transferable and more importantly transferable self-certifying identifiers.
 
 #### Normative
@@ -534,7 +535,7 @@ More on [Wikipedia](https://en.wikipedia.org/wiki/Public_key_infrastructure)
 #### Race condition
 A race condition or race hazard is the condition of an electronics, software, or other system where the system's substantive behavior is dependent on the sequence or timing of other uncontrollable events. It becomes a bug when one or more of the possible behaviors is undesirable. [Source](https://en.wikipedia.org/wiki/Race_condition).
 
-#### Root of trust
+#### Root-of-trust
 Replace human basis-of-trust with cryptographic root-of-trust. With verifiable digital signatures from asymmetric key cryptography we may not trust in “what” was said, but we may trust in “who” said it.\
 The root-of-trust is consistent attribution via verifiable integral non-repudiable statements.
 
@@ -626,20 +627,20 @@ One useful property of many distributed consensus algorithms is a total (global)
 The process of changing the _controller_ of _cryptocurrency_, _identity_ or _verifiable credential_. MAY require the use of a _key_.
 
 #### Transferable identifier
-And identifier of which you can rotate its controlling private key. When the private key for a transferable identifier become exposed to potential compromise then control over the identifier may be transferred to a new key-pair to maintain security.
-
+And identifier of which you can rotate its controlling private key. When the private key for a transferable identifier become exposed to potential compromise then control over the identifier may be transferred to a new key-pair to maintain security.\
 The main innovation of KERI is that it provides a universal decentralized mechanism that supports *both* non-transferable and more importantly transferable self-certifying identifiers.
 
 #### Trust domains
+A trust domain is the ecosystem of interactions that rely on a trust basis. A trust basis binds controllers, identifiers, and key-pairs. _For example the Facebook ecosystem of social interactions is a trust domain that relies on Facebook’s identity system of usernames and passwords as its trust basis._ ([Source whitepaper](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf))\
+Another broader definition:\ 
 A trust domain is a domain that the system trusts to authenticate users. In other words, if a user or application is authenticated by a trusted domain, this authentication is accepted by all domains that trust the authenticating domain.
-{TBW prio 2}
 
 #### Trust-over-IP
 It's a term related to the effort of a foundation. The Trust over IP Foundation is an independent project hosted at Linux Foundation to enable the trustworthy exchange and verification of data between any two parties on the Internet. [More](https://trustoverip.org/about/faq/).
 <img src="../images/trust-over-ip-stack.png" alt="Trust over IP stack" border="0" width="600">
 
 #### Validator
-Known definitions of validator are: 
+Known definitions of **validator** are: 
 - _Validator of any VDS_ 
 - _Validator as a node in distributed consensus or participant_
 
@@ -675,11 +676,12 @@ In cryptography, a web of trust is a concept used in `PGP`, `GnuPG`, and other `
 More on [Wikipedia](https://en.wikipedia.org/wiki/Web_of_trust)
 
 #### Witness
-Witness legal term
-Witness of cryptographic accumulators
-Witnesses as lightweight nodes in simplified distributed consensus algorithms (ftp://ftp.cse.ucsc.edu/pub/darrell/IPCCC-Paris-2015.pdf)
-    Dozens of papers that use the term Witness in a similar role to KERI  for example https://ieeexplore.ieee.org/document/8644609
-{TBW prio 1}
+A witness is an entity or component designated (trusted) by the controller of an identifier. The primary role of a witness is to verify, sign, and keep events associated with an identifier. A wit- ness is the controller of its own self-referential identifier which may or may not be the same as the identifier to which it is a witness.\
+An identifier witness therefore is part of its [trust basis](#trust-domain) and may be controlled (but not necessarily so) by its controller. The purpose of a pool of witnesses is to protect the controller from external exploit of its identifier.\
+The term _[Backer](#backer)_ and _Witness_ is a synonym in KERI.
+
+Be sure to understand the narrow KERI definition of Witness well. You could easily be confused, for there are dozens of papers that use the term Witness in a similar role to KERI; for example https://ieeexplore.ieee.org/document/8644609 \
+More in the [whitepaper](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf)
 
 #### Zero trust
 In short, a Zero Trust approach trusts no one.\

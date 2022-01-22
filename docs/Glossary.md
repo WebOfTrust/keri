@@ -46,6 +46,15 @@ and [CESR explained](https://medium.com/happy-blockchains/cesr-one-of-sam-smiths
 #### Duplicitous event log
 Or DEL. This is a record of _inconsistent_ event messages produced by a given controller or witness with respect to a given `KERL`. The duplicitous events are indexed to the corresponding event in a KERL. A duplicitous event is represented by a set of two or more provably mutually inconsistent event messages with respect to a KERL. Each `juror` keeps a duplicitous event log (DEL) for each controller and all designated witness with respect to a KERL. Any validator may confirm duplicity by examining a DEL.
 
+#### Duplicity
+In `KERI` consistency is is used to described data that is internally consistent and cryptographically verifiably so. Duplicity is used to describe **external inconsistency**. Publication of two or more versions of a `KEL`, each of which is internally consistent is duplicity. Given that signatures are non-repudiable any duplicity is detectable and provable given possession of any two mutually inconsistent versions of a `KEL`.  
+
+In common language 'duplicity' has a slightly different connotation: 'two-facedness', 'dishonesty', 'deceitfulness', 'deviousness,'two-facedness', 'falseness'.
+
+#### First seen
+"First seen" in KERI is the first **verified** event, accepted in the `KEL`. It has no effect on the timing of what has arrived in escrow for example; in escrow there can be garbage.
+Every 'first seen' event is propagated world wide within micro-seconds to the watchers. Only in this microseconds windows that you could have a live key conprise attack. If that happens, this where you have to look after this duplicity-attack a bit more in depth to handle it safely. E.g. a valid key rotation.
+
 #### Generic classes self-certifying identifiers 
 
 The KERI design approach is to build composable primitives instead of custom functionality that is so typical of other DKMI approaches:
@@ -310,10 +319,6 @@ To properly extract and use the `public key` embedded in a self-certifying ident
 All crypto material appears in `KERI` in a fully qualified representation that includes a derivation code prepended to the crypto-material.
 <img src="../images/derivation-code.png" alt="Derivation Code" border="0" width="600">
 
-#### Duplicity
-In `KERI` consistency is is used to described data that is internally consistent and cryptographically verifiably so. Duplicity is used to describe **external inconsistency**. Publication of two or more versions of a `KEL`, each of which is internally consistent is duplicity. Given that signatures are non-repudiable any duplicity is detectable and provable given possession of any two mutually inconsistent versions of a `KEL`.  
-
-In common language 'duplicity' has a slightly different connotation: 'two-facedness', 'dishonesty', 'deceitfulness', 'deviousness,'two-facedness', 'falseness'.
 
 #### End verifiable
 If a log is end verifiable, this means that the log may be verified by any end user that receives a copy. No trust in intervening infrastructure is needed to verify the log and validate the content. 
@@ -340,10 +345,6 @@ In the Event Sourced architecture you recreate states in an asynchronous way. Th
 Two or more logs are _externally consistent_ if they are both verfiable internally consistent, to begin with, and the reported copies of the logs that are the same. 
 
 External logs that are _inconsitent_, have at least two reported copies of the logs that are different. That means I have a duplicitous log. We need duplicity detection to be able to garantuee _external consistency_ or put in an different way: duplicity detection protects against external inconsistency.
-
-#### First seen
-"First seen" in KERI is the first **verified** event, accepted in the `KEL`. It has no effect on the timing of what has arrived in escrow for example; in escrow there can be garbage.
-Every 'first seen' event is propagated world wide within micro-seconds to the watchers. Only in this microseconds windows that you could have a live key conprise attack. If that happens, this where you have to look after this duplicity-attack a bit more in depth to handle it safely. E.g. a valid key rotation.
 
 #### Identifier System
 The properties of an _identifier system_:

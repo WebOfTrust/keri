@@ -1,0 +1,13 @@
+@startuml
+
+actor Delegator as P
+actor Delegate as C
+
+P -> P: Generate location seal with known delegating\nevent data (Prefix, Sn, Ilk and Prev Digest fields)
+P -> C: Pass location seal
+C -> C: Generate delegated event using location seal
+C -> C: Generate delegated event seal using delegate\nevent data (Prefix, Sn and delegated event Digest)
+C -> P: Pass delegated event seal
+P -> P: Use delegated event seal in seal list of\ndelegating event
+
+@enduml

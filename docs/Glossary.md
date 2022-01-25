@@ -114,7 +114,8 @@ From KERI we've learned that _secure attribution_ is the essential problem for _
 KERI is also a Keltic woman's name.
 
 #### Key Event Receipt Log
-Also `KERL`. Signed Key Events, keeping track of establishment events. To begin with the inception event and any number of rotation events. We call that the _establishment subsequence_. \
+Also `KERL`. Signed Key Events, keeping track of establishment events. To begin with the inception event and any number of rotation events. We call that the _establishment subsequence_.\
+The Key Event Receipt Logs are built from receipts of events signed by the witnesses of those events (these are called `commitments`); these are also append-only but not hash-chained.\
 (_@henkvancann_)
 
 <img src="../images/inception-rotation.png" alt="inception and any number of rotation events" border="0" width="200" style="float:left">
@@ -179,6 +180,7 @@ GPG = [GNU Privacy Guard](#pgp-and-gpg)\
 HSM = Hardware Security Module\
 IPv4 = standard Internet Protocol, version 4\
 LOA = [Levels Of Assurance](#levels-of-assurance)\
+LMDB = Lightning Memory-Mapped Database\ 
 PBFT = [practical Byzantine Fault Tolerance](#byzantine-fault-tolerance)\
 PGP = [Pretty Good Privacy](#pgp-and-gpg)\
 PKI = [Public Key Infrastructure](#public-key-infrastructure)\
@@ -234,7 +236,10 @@ In the design of an identity system you need to answer a few questions.
 There's nobody that can intervene with the establishment of the authenticity of a control operation because you can verify all the way back to the root-of-trust.
 
 #### Backer
-The terms _Backer_ and _[Witness](#witness)_ is a synonym in KERI.
+The terms _Backer_ and _[Witness](#witness)_ are closely related in KERI.
+_Backers_ include both regular KERI witnesses and ledger-registered backers.
+<img src="../images/backer-witness.png" alt="How backers relate to witnesses" border="0" width="400">
+
 
 #### Binding
 In short, the technique of connecting two data elements together. In the context of KERI it is the association of data or an identifier with another identifier or a subject (a person, organization or machine), thereby lifting the privacy of the subject through that connection, i.e. binding.

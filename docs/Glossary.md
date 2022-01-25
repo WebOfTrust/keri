@@ -173,7 +173,7 @@ CT = [Certificate Transparency](#certificate-transparency)\
 DID = [Decentralized Identity](#decentralized-identity) or Digital Identity dependent of the context.\
 DIF = Decentralized Identity Foundation\
 DDO = DID Document, look up W3D DID standardization for more info\
-DHT = Distributed Hash Table\
+DHT = [Distributed Hash Table](#distributed-hash-table)\
 DIF = Decentralized Identity Foundation, https://identity.foundation.   \
 DKMI = Decentralized Key Mangement Infrastructure\
 GPG = [GNU Privacy Guard](#pgp-and-gpg)\
@@ -347,6 +347,8 @@ To properly extract and use the `public key` embedded in a self-certifying ident
 All crypto material appears in `KERI` in a fully qualified representation that includes a derivation code prepended to the crypto-material.
 <img src="../images/derivation-code.png" alt="Derivation Code" border="0" width="600">
 
+#### Distributed Hash Table
+Also DHT. It is a distributed system that provides a lookup service similar to a hash table: key-value pairs are stored in a DHT, and any participating node can efficiently retrieve the value associated with a given key. The main advantage of a DHT is that nodes can be added or removed with minimum work around re-distributing keys. Keys are unique identifiers which map to particular values, which in turn can be anything from addresses, to documents, to arbitrary data. ([Wikipedia](https://en.wikipedia.org/wiki/Distributed_hash_table))
 
 #### End verifiable
 If a log is end verifiable, this means that the log may be verified by any end user that receives a copy. No trust in intervening infrastructure is needed to verify the log and validate the content. 

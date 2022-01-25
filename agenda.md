@@ -29,10 +29,15 @@ https://join.slack.com/t/keriworld/shared_invite/zt-yv0d7jur-iq~lBTXUaAlkYAODfJB
 
 
 ## Meetings
+### 2022-01-25
 
-### 2022-01-11
 - Recording:
-- 
+ 
+- Terms and understanding - Henk
+    1. 'SAD' and 'SAID', for Europeans the difference in pronunciation of SAD and SAID is hard to grasp and reproduce.
+    Let alone the differences for native speakers in how they practically apply their tongue on those words.
+    And because the difference is highly relevant + SAD is quite different from SAID + still closely related it's recommendable to simplify the understanding in spoken language.
+    2. 'Backer' and 'Witness', are these a 100% synonym? And if so: why not use 'backer' and keep repeating now and again that it's about a synomym. If not: what's the exact difference?
 - Roadmap:
 
 - Reports from Implementers:
@@ -42,8 +47,13 @@ https://join.slack.com/t/keriworld/shared_invite/zt-yv0d7jur-iq~lBTXUaAlkYAODfJB
 - SKWA (Simple KERI for Web Auth)
 - Witness dissemination protocol (how Witnesses promulgate receipts to Validator network) // added by Michal
 
+- Henk: first draft of the [KERI MOOC](https://hackmd.io/nuUu5S8UQjOHXw_a53LvvA) - How to combine the main benefit of autonomic identifier systems, in our case KERI (which imho is 'better prospect for digital freedom in the world', not 'secure attribution') and growth of KERI knowledge, adoption and more programming capacity. For the latter I'd appreciate 5 minutes of your attention after you've glanced through the [draft](https://hackmd.io/nuUu5S8UQjOHXw_a53LvvA). What do think is a good way to develop KERI knowledge, provoke adoption and more programming capacity
 
-- 
+- A **rubric-based eval of did:keri** - Daniel Hardman: go to https://w3c.github.io/did-rubric/ and answer all the questions about did:keri. If you want, you can submit your answers as a PR — or you can simply do a writeup that’s published elsewhere.
+	Here is an example of a “rubric question” you can answer: https://w3c.github.io/did-rubric/#question-10
+	@Daniel : will do, after next week’s KERI meeting
+
+
 ### 2022-01-11
 - Recording
     - https://drive.google.com/file/d/10HzfvmpVlru1CecRerF8KULg0vVImJFB/view?usp=sharing
@@ -72,7 +82,7 @@ https://join.slack.com/t/keriworld/shared_invite/zt-yv0d7jur-iq~lBTXUaAlkYAODfJB
     - keripy
         - SADification and SAIDification of attachments
         - First implementation of CESR Proof Signatures, credential parsing moved to Parser
-        - Habery with explict multi-Habitat support (multiple prefix IDs per database)
+        - Habery with explict multi-Habitat support (multiple prefix IDs per database) - [related issue](https://github.com/WebOfTrust/keripy/issues/46)
         - Keep Repo Mithril and Material UX (https://github.com/WebOfTrust/keep)
     - keriox
         -  query mode done

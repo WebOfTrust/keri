@@ -2,6 +2,19 @@
 
 ## KERI Community Development Efforts
 
+### Associated Specifications
+The table below lists all deliverables of the KERI Community:
+| Acronym | Full Name of Deliverable | Link to Deliverable | Lead Authors | Status / Notes |
+|---|---|---|---|---|
+| KERI | Attributable (Autonomic) Identifiers (KERI) | [IETF KERI](https://github.com/WebOfTrust/ietf-keri) | Samuel Smith | |
+| SAID | Self-Addressing Identifiers | [IETF Draft](https://github.com/WebOfTrust/ietf-said) | Samuel Smith | |
+| CESR | Composable Event Streaming Representation | [IETF CESR Draft](https://github.com/WebOfTrust/ietf-cesr)
+| DID KERI | KERI DID Method | [Unofficial Draft Spec](https://identity.foundation/keri/did_methods/) | Phil Feairheller | |
+| ACDC | Authentic Chained Data Containers | [Pre-Draft Deliverable](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/ACDC.web.pdf) | Samuel Smith | [Slides from the original white paper](https://github.com/SmithSamuelM/Papers/blob/master/presentations/ACDC.web.pdf) |
+| CESR Proof| CESR Proof Signatures | [IETF CESR Proof Signatures Draft](https://github.com/WebOfTrust/ietf-cesr-proof) | Phil Feairheller | [Active Draft](https://datatracker.ietf.org/doc/draft-pfeairheller-cesr-proof/) | 
+| PTEL | Public Transaction Event Logs | [IETF PTEL Draft](https://github.com/WebOfTrust/ietf-ptel) | Phil Feairheller | | 
+| IEXP | Credential Issuance and Exchange Protocol | | Phil Feairheller | |
+
 ### Why Here? Why Now?
 
 After some crucial conversations, often painful, we have decided to resume the broader KERI development and standards process here under the auspices of the WebOfTrust/keri GitHub repository. An attempt to incubate the work at DIF was initially fruitful but DIF's policy of not allowing individual contribution except under very narrow conditions became an impediment to further progress in achieving the long term goals and aspirations of KERI, especially KERI's goal to be the trust spanning layer for the Internet. That goal depends on contributions from any source with minimal friction. Specifically, DIF's policy that any employee may not be an individual contributor at DIF unless that employee's respective employer entity is also a member of DIF prevented several would be valuable contributors from contributing to KERI. Should DIF ever change that policy we might reconsider reengaging with DIF, albeit highly unlikely because the benefit of incubation appears to have passed. Moving forward, however, we believe the IETF will prove itself to be a better home for KERI. Indeed the value statement and organizational principles of the IETF strongly resonate with KERI.

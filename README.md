@@ -13,7 +13,7 @@ The table below lists all deliverables of the KERI Community:
 | ACDC | Authentic Chained Data Containers | [Pre-Draft Deliverable](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/ACDC.web.pdf) | Samuel Smith | [Slides from the original white paper](https://github.com/SmithSamuelM/Papers/blob/master/presentations/ACDC.web.pdf) |
 | CESR Proof| CESR Proof Signatures | [IETF CESR Proof Signatures Draft](https://github.com/WebOfTrust/ietf-cesr-proof) | Phil Feairheller | [Active Draft](https://datatracker.ietf.org/doc/draft-pfeairheller-cesr-proof/) | 
 | PTEL | Public Transaction Event Logs | [IETF PTEL Draft](https://github.com/WebOfTrust/ietf-ptel) | Phil Feairheller | | 
-| IEXP | Credential Issuance and Exchange Protocol | | Phil Feairheller | |
+| IPEX | Issuance and Presentation Exchange protocol | | Phil Feairheller | |
 
 ### Why Here? Why Now?
 

@@ -29,29 +29,128 @@ https://join.slack.com/t/keriworld/shared_invite/zt-yv0d7jur-iq~lBTXUaAlkYAODfJB
 
 
 ## Meetings
+
+### Future Topics
+- Interopathon before IIW in April for KeriOX and KeriPY interoperability
+- Walkthrough of OpenAPI and Sphinx documentation support
+- Future extract Keep liberary to NPM library
+- - SKWA (Simple KERI for Web Auth)
+    - https://hackmd.io/AXJ35eciSCa04FtG5Yg9Zg
+    
+
+### 2022-02-22
+- Recording
+    
+    
+- Reports from Implementors:
+    - keriox
+        
+    - keripy
+        
+    - keriswift
+        
+    - IETF Standards
+        
+- Items
+    - Documentation (Henk)
+
+
+
+### 2022-02-08
+- Recording
+    https://drive.google.com/file/d/11TVWQAVIMqaWyY3NODJP-t7bXJ6D62Bx/view?usp=sharing
+- Reports from Implementors:
+    - keriox
+        - No new features since last time.
+        - Refactoring
+    - keripy
+        - Habery changes propogated through command line utils, and agent
+            - Changed archtecture, split shared resources from AID specific code
+            - Support for multiple AIDs per instance of KERIpy
+    - keriswift
+        - pushed repo
+        - Cross platform for iOS first eventually androic
+        - LLVM compiler
+    - IETF Standards
+        - CESR Proof Sigantures posted
+        - [ACDC spec moving IETF pipeline ToIP](https://github.com/trustoverip/tswg-acdc-specification)
+        - PTEL spec published
+        - IETF did:keri spec to be published
+        - 
+
+- New Getting Started with keripy
+    - Encrypted keystore
+    - SwaggerUI
+    - OOBIs
+    - 2-Factor Auth with Challenge/Response
+
+- How do you see DEL's (duplicitous event logs)?
+  - How they're created/maintained?
+  - Basic building blocks/what kind of messages it contains?
+      - Duplicity notice message
+  - Basic logic for detecting duplicity
+      - monotonic logic for first seen accepted event. Once seen, always seen, never unseen. No revision possible. Detection logic upon receipt of two versions of an event at the same sn for a given AID = duplicity. Live vs Dead duplicity. Dead means one version already accepted to other is duplicitous version. Live when two version but neither has yet been accepted because not fully witnessed. Hold in escrow until one or neither is accepted. If neither then hold in escrow until a subsequent rotation designates which of the two is the valid one and so one.
+      - Monotonic logic protects against continuous revision eclipse attack vulnerability such as is the case for PoW ledgers.
+
+
+- Henk: **Education** - first draft of the [KERI MOOC](https://hackmd.io/nuUu5S8UQjOHXw_a53LvvA) now backupped on [github](https://github.com/henkvancann/keri-1/blob/main/docs/KERI-Mooc.md) and logged-in users can edit the hackmd file.\
+What do you think is a good way to develop KERI knowledge, provoke adoption and develop more programming capacity?
+
+
+
+- A **rubric-based eval of did:keri** - Daniel Hardman: go to https://w3c.github.io/did-rubric/ and answer all the questions about did:keri.\
+Decision made Feb 8: we wait until the IETF draft for DID:KERI is finalized. Henk could contribute in draft and then propose his edits to team first.     
+    
+  
+- **Terms and understanding**
+***'SAD' and 'SAID'***, for Europeans the difference in pronunciation of SAD and SAID is hard to grasp and reproduce.
+    The terms are closely related so we are not very alarmed that people confuse the terms.
+
+
+
+
 ### 2022-01-25
 
 - Recording:
- 
-- Terms and understanding - Henk
-    1. 'SAD' and 'SAID', for Europeans the difference in pronunciation of SAD and SAID is hard to grasp and reproduce.
-    Let alone the differences for native speakers in how they practically apply their tongue on those words.
-    And because the difference is highly relevant + SAD is quite different from SAID + still closely related it's recommendable to simplify the understanding in spoken language.
-    2. 'Backer' and 'Witness', are these a 100% synonym? And if so: why not use 'backer' and keep repeating now and again that it's about a synomym. If not: what's the exact difference?
-- Roadmap:
+     https://drive.google.com/file/d/1136sR2QXKF7tCIm3ieXLlfC1sDqyeOtT/view?usp=sharing
+
 
 - Reports from Implementers:
+    - KERIOX
+        - Digest field SAID
+        - escrow for witness receipts
+    - KERIPY
+        - Conversion to Habery (Habitat Factory) allows multiple Habs (Habitats) per shared resources
+        - OpenAPI (Swagger) for ReST endpoints refactor to be more ReSTful
+        - Sphinx based documentation for KERIpy on ReadTheDocs and CodeCoverage unit tests 
+        - Working on command line changes for Habery vaccuous mode
+        - Passcode encrypted key store support in command line
+        - KIWI-KEEP UX UI Workflows plugin Task support for custom workflows
+        - Zipped Eletron Distribution with Mithril and Material.org UX bare
+        - KEEP has style guide
+        - Could be adapted to Rust Backend
+
+- Witness dissemination protocol (how Witnesses promulgate receipts to Validator network) // added by Michal
+    - Validator requests key state from its Watchers 
+    - Watchers request key state from other trusted watchers
+    - Watchers then request key state from published witnesses (after OOBI bootstrap)
+    - Witnesses may support push interface such as SSE so that Watchers can subscribe to witness updates of keystate
+    - CRitical role of watcher is monotonic view of Key state. First Seen Policy. First seen always seen never unseen.
+        - Enables duplicity detection
+        - Enables redundancy high availability
+        - Reconcilable duplicity
+    - Juror and Judge Deciders
+    - Juror difference between watcher is that Juror reports duplicity whereas watcher just drops
+    - 
 
 
 - OOBI
-- SKWA (Simple KERI for Web Auth)
-- Witness dissemination protocol (how Witnesses promulgate receipts to Validator network) // added by Michal
+    - https://hackmd.io/MxTAIBQTRkWU4-w140tNuA
+    - 
 
-- Henk: first draft of the [KERI MOOC](https://hackmd.io/nuUu5S8UQjOHXw_a53LvvA) - How to combine the main benefit of autonomic identifier systems, in our case KERI (which imho is 'better prospect for digital freedom in the world', not 'secure attribution') and growth of KERI knowledge, adoption and more programming capacity. For the latter I'd appreciate 5 minutes of your attention after you've glanced through the [draft](https://hackmd.io/nuUu5S8UQjOHXw_a53LvvA). What do think is a good way to develop KERI knowledge, provoke adoption and more programming capacity
-
-- A **rubric-based eval of did:keri** - Daniel Hardman: go to https://w3c.github.io/did-rubric/ and answer all the questions about did:keri. If you want, you can submit your answers as a PR — or you can simply do a writeup that’s published elsewhere.
-	Here is an example of a “rubric question” you can answer: https://w3c.github.io/did-rubric/#question-10
-	@Daniel : will do, after next week’s KERI meeting
+- Terms and understanding - Henk
+    2. 'Backer' and 'Witness', are these a 100% synonym? And if so: why not use 'backer' and keep repeating now and again that it's about a synomym. If not: what's the exact difference?
+- Roadmap:
 
 
 ### 2022-01-11

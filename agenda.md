@@ -24,15 +24,15 @@ Calendar Invite:
 https://us02web.zoom.us/meeting/tZ0lc-uhrjsrEtFmV2aSfAzR015DDL-ld-hg/ics?icsToken=98tyKuGhpj8oE9SVsRGCRpx5Go-ga_PziGJcj7d7kSm3AhNVQxnEZrMXFpZTXdTU
 
 KERI Slack: keriworld.slack.com
-https://join.slack.com/t/keriworld/shared_invite/zt-yv0d7jur-iq~lBTXUaAlkYAODfJBQHQ
-
+2022/02/23
+https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvbgFAQ
 
 
 ## Meetings
 
 ### Future Topics
 - Interopathon before IIW in April for KeriOX and KeriPY interoperability
-- Walkthrough of OpenAPI and Sphinx documentation support
+- IETF spec for OOBI discovery
 - Future extract Keep liberary to NPM library
 - - SKWA (Simple KERI for Web Auth)
     - https://hackmd.io/AXJ35eciSCa04FtG5Yg9Zg
@@ -44,16 +44,36 @@ https://join.slack.com/t/keriworld/shared_invite/zt-yv0d7jur-iq~lBTXUaAlkYAODfJB
     
 - Reports from Implementors:
     - keriox
+        - refactoring towards event driven architecture. Asynchronous event updates via escrows
+        - OOBI
         
     - keripy
+        - CLI now supports new Habery architecture.
+        - SWagger UI operational for ReST API
+        - Vacuuous bootstrap
+        - Current work to update delegation.
         
     - keriswift
+        - Serder and Saidify for the Matter class and subclasses
+        - Default Swift JSON encoder does not preserve property creation order.
+        - Message Types #110 
         
     - IETF Standards
-        
-- Items
-    - Documentation (Henk)
+        - New publication of KERI IETF did:keri specification
+        - New publication of KERI PTEL
+        - IPEX  Issuance and Presentation exchange protocol ToDo
+        - KERI ToDO
+        - Hidden Attribute Credentials (ACDC)
+            - XORA for one time use credentials
+            - https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/XORA.md
 
+
+- Items
+    - Documentation (Henk) -> sorry, not able to able to attend today, best regards, Henk
+
+    - Walkthrough of OpenAPI and Sphinx documentation support
+    - Fundamental security difference between PKI and non PKI trust bases
+        - EU Wallet initiative
 
 
 ### 2022-02-08

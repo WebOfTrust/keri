@@ -1,7 +1,7 @@
 ---
 tags: KERI, Partial Rotation, Ort
 email: sam@samuelsmith.org
-version: 2.01
+version: 2.02
 ---
 
 
@@ -133,6 +133,44 @@ This approach allows any threshold satisficing set of signers to rotate to a new
 }
 ```
 
+### Delegated Inception Event
+
+```json
+{
+  "v": "KERI10JSON0001ac_",
+  "t": "icp",
+  "d": "EL1L56LyoKrIofnn0oPChS4EyzMHEEk75INJohDS_Bug",
+  "i": "EL1L56LyoKrIofnn0oPChS4EyzMHEEk75INJohDS_Bug",
+  "s": "0",
+  "kt": "2", // 2 of 3
+  "k" :  
+    [
+      "DnmwyZ-i0H3ULvad8JZAoTNZaU6JR2YAfSVPzh5CMzS6b",
+      "DZaU6JR2nmwyZ-VPzhzSslkie8c8TNZaU6J6bVPzhzS6b",
+      "Dd8JZAoTNnmwyZ-i0H3U3ZaU6JR2LvYAfSVPzhzS6b5CM"
+    ],
+  "nt": "3",  // 3 of 5
+  "n" : 
+    [
+      "ETNZH3ULvYawyZ-i0d8JZU6JR2nmAoAfSVPzhzS6b5CM", 
+      "EYAfSVPzhzaU6JR2nmoTNZH3ULvwyZb6b5CMi0d8JZAS",
+      "EnmwyZdi0d8JZAoTNZYAfSVPzhzaU6JR2H3ULvS6b5CM",
+      "ETNZH3ULvS6bYAfSVPzhzaU6JR2nmwyZfi0d8JZ5s8bk",                       
+      "EJR2nmwyZ2i0dzaU6ULvS6b5CM8JZAoTNZH3YAfSVPzh", 
+    ],
+  "bt": "2",
+  "b": 
+    [
+      "BGKVzj4ve0VSd8z_AmvhLg4lqcC_9WYX90k03q-R_Ydo",
+      "BuyRFMideczFZoapylLIyCjSdhtqVb31wZkRKvPfNqkw",
+      "Bgoq68HCmYNUDgOz4Skvlu306o_NY-NrYuKAVhk3Zh9c"
+    ],
+  "c": [],
+  "a": [],
+  "di": "EJJR2nmwyYAZAoTNZH3ULvaU6Z-i0d8fSVPzhzS6b5CM"
+}
+```
+
 
 ## Delegated Rotation Event
 
@@ -147,7 +185,7 @@ Prior establishment event must use list of next key digests as above.
   "s" : "1",
   "p" : "EULvaU6JR2nmwyZ-i0d8JZAoTNZH3YAfSVPzhzS6b5CM",
   "kt": "2", // 2 of 3
-   "k" :  
+  "k" :  
     [
       "DnmwyZ-i0H3ULvad8JZAoTNZaU6JR2YAfSVPzh5CMzS6b",
       "DZaU6JR2nmwyZ-VPzhzSslkie8c8TNZaU6J6bVPzhzS6b",

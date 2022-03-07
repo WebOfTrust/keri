@@ -38,7 +38,7 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
 
 ### 2022-02-22
 - Recording
-    Forgot to record
+    https://drive.google.com/file/d/11lsFNbUh6MOfGkuaWShEcWttRdeudIRn/view?usp=sharing
     
 - Reports from Implementors:
     - keriox

@@ -32,18 +32,30 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
 - Interopathon before IIW in April for KeriOX and KeriPY interoperability
 
 - Future extract Keep liberary to NPM library
-- 
-- SKWA (Simple KERI for Web Auth)
-    - https://hackmd.io/AXJ35eciSCa04FtG5Yg9Zg
-    - keriAUTH / didAuth 
+- WebAuth 
+    - HCF Interactive Protocol
+    - SKWA (Simple KERI for Web Auth)
+        - https://hackmd.io/AXJ35eciSCa04FtG5Yg9Zg
+        - keriAUTH / didAuth 
+    - DIDAuth
         - https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/did-auth.md
 
 - Discuss https://github.com/WebOfTrust/keripy/issues/104 (added by Michal)
     - Auth and SKWA
 
 
-- OOBI initiated discovery for Witness SSE
 
+### 2022-04-19
+
+- Recording
+
+- Reports
+
+- Items
+    - OOBI initiated discovery for Witness SSE
+        OOBI for SSE service endpoint published in .well-known of witness controller Domain Name
+        Leveraging web search for discovery of OOBI
+        
 
 
 ### 2022-04-05

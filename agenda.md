@@ -30,10 +30,185 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
 
 ### Future Topics
 - Interopathon before IIW in April for KeriOX and KeriPY interoperability
-- IETF spec for OOBI discovery
+
 - Future extract Keep liberary to NPM library
-- - SKWA (Simple KERI for Web Auth)
+- 
+- SKWA (Simple KERI for Web Auth)
     - https://hackmd.io/AXJ35eciSCa04FtG5Yg9Zg
+    - keriAUTH / didAuth 
+        - https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/did-auth.md
+
+- Discuss https://github.com/WebOfTrust/keripy/issues/104 (added by Michal)
+    - Auth and SKWA
+
+
+- OOBI initiated discovery for Witness SSE
+
+
+
+### 2022-04-05
+
+- Recording
+
+    - Recording Feb 22 also used for March 8, March 8 not available?
+    - 
+- Reports from Implementors
+    - Keriox
+        - OOBI problems
+        - Tests for Partial Rotation
+        - 
+    - Keripy
+        - Finshised Habery changes
+            - Command Changes synchronized with ReST API
+        - New APIs to support Keep (ReST)
+            - Metadata for contacts in addition to AID 
+                - Signed metadata BADA
+            - UI support APIs for workflows
+    - Keriml
+        - No updates
+    - Keep Kimi Kiwi
+        - Screens
+    - Documentation Efforts
+        - MOOC
+
+
+- Items
+    - ACDC Spec Draft
+        - https://github.com/trustoverip/tswg-acdc-specification
+        - 
+    - Educational resources (added by Henk)
+        - Vid snippets & Subtitle automation 
+        - Commit HackMD to Github every month
+        - Suggest Authentication for Moodle (KERI) MOOC-trials (added by Henk)
+           https://moodle.org/plugins/browse.php?list=category&id=21 
+           Are we able to eat our own dog food?
+
+    - Discuss gossip dissemination protocol:
+        Disseminatin information:
+            Actors need something to communicate
+                Controller resposible to disseminate to Witnesses.
+                    Witnesses gossip through gossip
+                Watchers (Judges, Jurors)
+            Percolation JIT NTK approach
+                
+      - types of discovery from Witness or Watcher (any host with KEL Database)
+          - Known Specific Event Query  
+          - Unknown but Latest Event Query
+          - Waiting for anticipated event (such as delegation anchor, any multisig)
+              - push subscribe to wait for anticipated event
+              - HTTP SSE
+              - UDP Gossip pub/sub
+    - WebAuth
+        - 
+```plantuml   
+@startuml
+autonumber
+actor "DID Controller" as DID
+entity "Service Provider" as Service
+database "Service DB" as DB
+control OOBI as OOBI
+
+DID -> Service : Open service  
+note left
+DID controller can verify the service provider
+following same flow of DID Auth (mutal authentication)
+end note
+Service -> DID : Ask for DID
+DID -> Service : Provide DID
+Service -> DB : Stores DID and generate nounce
+Service -> DID : Generate challange for given DID
+note right
+Challenge include a nounce generated 
+for that specific DID
+end note
+DID -> Service : Respond to the challange
+note left
+The challenge can be scane via QR, click the link
+or any other transport. 
+end note
+note right
+Respond to the challange includes:
+- OOBI
+- Signed challange with private key of the DID controller
+end note
+Service -> OOBI : Retrive KEL of given DID
+Service -> Service : verify challange
+Service -> DID : Issue session token
+@enduml
+
+```
+        
+### 2022-03-22
+
+- Recording
+   https://drive.google.com/file/d/13IjKZpM_0WKVmhgIn0AHW16RxnwXvE5U/view?usp=sharing
+   
+- Reports from Implementors
+    - keripy
+        Habery Hab architecture to support multiple AIDs per set of resources
+        Data OOBIs  Doobie.
+        mime  schema+json  for JSON Schem
+        vlei serves up json schema
+        
+    - keriml
+        pronunced "Caramel"
+        KIMI Keri Interactive Mobile Interface 
+        
+    - keriox
+        - KEL changes new partial rotation field name alignment
+        - Ready to do interoperablity tests.
+        - Keriox on Android device
+            - Flutter (Google cross platform) Dart
+
+- Items
+    - Interoperbility testing
+        - Remote HCF into IIW interop demo
+    - OOBI and Doobie
+        - IETF spec for OOBI discovery (todo)
+            - OOBI  Out of band Infrastructure: Internet is out-of-band infrastructure WRT KERI.
+            - Leverge internet web discovery mechanisms 
+            - KERI always verifies so security of internet is not a dependency.
+            - OOBI infrastructure provides OOBI Introductions
+        - How OOBIs work
+            - Discover service endpoints that provide data in support of verifying an AID
+            - ReST endpoints
+
+
+### 2022-03-08
+
+- Recording
+    https://drive.google.com/file/d/11lsFNbUh6MOfGkuaWShEcWttRdeudIRn/view?usp=sharing
+    
+- Reports from Implementors:
+    - keriox
+        apache2.0 DIF EUPL
+        OOBI implementation  - ACDC OCA OOBI
+        Dart - Flutter for mobile
+
+    - keripy
+        Delegation and Multisig on Cmd Line with New Habery construct (multi-hab per shared resource set)
+        Multi-sig delegation
+        Partial Rotation support
+
+    - keri-swift
+        mit license forked to apache2 under web-of-trust for ordered serialization of maps
+        inception event
+        milo provenant 
+        
+    - keep
+        Being built to be a generic tool from UX perspective
+        Also task based workflows with workflow specific terminology
+
+- Items
+    - Interopathon before IIW in April for KeriOX and KeriPY interoperability
+        - Keripy generates json versions of kel and vlei with schema to send to Keriox team
+    - did:auth keri:auth
+    - OOBI blog post
+        - https://medium.com/@hvancann/510467856035
+    - Partial rotation support
+    
+    
+
     
 
 ### 2022-02-22
@@ -51,7 +226,7 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
         - Vacuuous bootstrap
         - Current work to update delegation.
         
-    - keriswift
+    - keri-swift
         - Serder and Saidify for the Matter class and subclasses
         - Default Swift JSON encoder does not preserve property creation order.
         - Message Types #110 
@@ -85,7 +260,7 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
         - Habery changes propogated through command line utils, and agent
             - Changed archtecture, split shared resources from AID specific code
             - Support for multiple AIDs per instance of KERIpy
-    - keriswift
+    - keri-swift
         - pushed repo
         - Cross platform for iOS first eventually androic
         - LLVM compiler

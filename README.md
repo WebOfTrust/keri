@@ -7,10 +7,10 @@ The table below lists all deliverables of the KERI Community:
 | Acronym | Full Name of Deliverable | Link to Deliverable | Lead Authors | Status / Notes |
 |---|---|---|---|---|
 | KERI | Attributable (Autonomic) Identifiers (KERI) | [IETF KERI Draft](https://github.com/WebOfTrust/ietf-keri) | Samuel Smith | |
-| SAID | Self-Addressing Identifiers | [IETF SAID Draft](https://github.com/WebOfTrust/ietf-said) | Samuel Smith | |
-| CESR | Composable Event Streaming Representation | [IETF CESR Draft](https://github.com/WebOfTrust/ietf-cesr)
+| SAID | Self-Addressing Identifiers | [IETF SAID Draft](https://github.com/WebOfTrust/ietf-said) | Samuel Smith | [Active Draft](https://datatracker.ietf.org/doc/draft-ssmith-said/) |
+| CESR | Composable Event Streaming Representation | [IETF CESR Draft](https://github.com/WebOfTrust/ietf-cesr)|[Active Draft](https://datatracker.ietf.org/doc/draft-ssmith-cesr/)|
 | DID KERI | KERI DID Method | [IETF DID KERI Method Draft](https://github.com/WebOfTrust/ietf-did-keri) | Phil Feairheller | |
-| ACDC | Authentic Chained Data Containers | [IETF ACDC Draft](https://github.com/trustoverip/tswg-acdc-specification) | Samuel Smith | [Slides from the original white paper](https://github.com/SmithSamuelM/Papers/blob/master/presentations/ACDC.web.pdf) |
+| ACDC | Authentic Chained Data Containers | [IETF ACDC Draft](https://github.com/trustoverip/tswg-acdc-specification) | Samuel Smith | [Active Draft](https://datatracker.ietf.org/doc/draft-ssmith-acdc/) |
 | CESR Proof| CESR Proof Signatures | [IETF CESR Proof Signatures Draft](https://github.com/WebOfTrust/ietf-cesr-proof) | Phil Feairheller | [Active Draft](https://datatracker.ietf.org/doc/draft-pfeairheller-cesr-proof/) | 
 | PTEL | Public Transaction Event Logs | [IETF PTEL Draft](https://github.com/WebOfTrust/ietf-ptel) | Phil Feairheller | [Active Draft](https://datatracker.ietf.org/doc/draft-pfeairheller-ptel/)| 
 | IPEX | Issuance and Presentation Exchange protocol | [IETF IPEX Draft](https://github.com/WebOfTrust/ietf-ipex) | Sam Smith, Phil Feairheller | |

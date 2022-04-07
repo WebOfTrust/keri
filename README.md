@@ -53,16 +53,17 @@ Passcode: 300255
 The meeting agenda may be found [here](https://github.com/WebOfTrust/keri/blob/main/agenda.md)
 
 ## Existing Implementations
-The reference implementation for KERI is the keripy implementation which may be found here:  
+The reference implementation for KERI is the keripy implementation. This is hosted here by the WebOfTrust project. The repository may be found here:  
 * [keripy](https://github.com/WebOfTrust/keripy) – under development  
+
 The keripy implementation is Apache2 licensed as are all repositories in the WebOfTrust project. 
 
-There is a Rust implementation of KERI also hosted by the WebOfTrust project which may be found here:   
+There is also an Apache2 licensed Rust implementation of KERI hosted by the WebOfTrust project which may be found here:   
 * [keriox](https://github.com/WebOfTrust/keriox) – under development  
 
-The primary contributors have moved their efforts to a private repository with a non Apache2 license. 
+The primary contributors to keriox have since moved their efforts elsewhere to a private repository with a non Apache2 license. 
 As a result the WebOfTrust keriox implementation above is somewhat behind the keripy implementation in terms of
-feature support. We encourage the community to step forward and continue development of an Apache2 licensed Rust implementation.
+feature support. We encourage the community to step forward and continue development of the Apache2 licensed Rust implementation.
 
 We also encourage implementations of KERI in other languages. We are happy to host other implementations here
 in the WebOfTrust project as long as they are Apache2 licensed.

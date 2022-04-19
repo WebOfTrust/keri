@@ -77,8 +77,12 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
         Leveraging web search for discovery of OOBI
         KeyStateNotice  SSE endpoint that pushed latest keystate notice  reuse sequence number from keystate for SSE sequence number
             oobi/ksn/
+            https://github.com/WebOfTrust/keripy/issues/110
+            
         
-    - WebAuth uses of KERI
+    - WebAuth uses of KERI SKWA
+      
+
     - Signature Threshold vs. Multi-Sig (software threhold)
       -  BLS signatures BBS+ signatures  (collective signature)
 

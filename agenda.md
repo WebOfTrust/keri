@@ -50,13 +50,37 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
 - Recording
 
 - Reports
+  Keripy 
+     Command LIne for Multisit
+     API for viewing escrow state
+     API for keystate.
+     Keying repo
+        swift interaction with keychain with local authentication
+        python wrapper ctypes
+    
+  Keriml
+  Keep
+    repackage  Electron app to invoke python backend
+    IIW demos on UX/UI
+  
+  KeriOX
+    development is happening on private repo EUPL private HCF
+  
+  Java
+  
+  
 
 - Items
-    - OOBI initiated discovery for Witness SSE
+    - OOBI initiated discovery for Witness.
+    -   HTML5 SSE replacement long polling comet push to clients polling 
         OOBI for SSE service endpoint published in .well-known of witness controller Domain Name
         Leveraging web search for discovery of OOBI
+        KeyStateNotice  SSE endpoint that pushed latest keystate notice  reuse sequence number from keystate for SSE sequence number
+            oobi/ksn/
         
-
+    - WebAuth uses of KERI
+    - Signature Threshold vs. Multi-Sig (software threhold)
+      -  BLS signatures BBS+ signatures  (collective signature)
 
 ### 2022-04-05
 

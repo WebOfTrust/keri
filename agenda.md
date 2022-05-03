@@ -43,6 +43,8 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
 - Discuss https://github.com/WebOfTrust/keripy/issues/104 (added by Michal)
     - Auth and SKWA
 
+- Cardarno as Ledger Registrar
+
 ### 2022-05-03
 
 - Recording
@@ -56,6 +58,53 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
 
 - Items
     - Henk: IIW recordings available?
+    - IIW Report
+        - Phil Feariheller Side Conversations so valuable
+        - Ledgers vs. KERI If you have a reason to use a ledger besides identifiers then you could use your ledger as a backer.
+        - Witnesses and Watchers discussed
+        - DID:ORB ledger agnostic KERI alternative?; it's Sidetree based. A sort of KERI light? KERI is more compact. Sam suggest using KERI as a bases for ORB.
+        - The demo of Philip and Kevin was very well attended
+        - KERI for Muggles https://docs.google.com/presentation/d/1mO1EZa9BcjAjWEzw7DWi124uMfyNyDeM3HuajsGNoTo/edit#slide=id.ga411be7e84_0_0
+        - GLEIF presence was very good as a demonstration of the maturity of KERI.
+        - KERI DID Tunnel  How to Build a Tunnel to KERI Island
+
+        - VC Credential Formats 
+        - Kevin GRiffith  first one in person
+            - Demo of Keep Async Multisig.
+            - Building of Reputation System using ACDC
+            - Demo KERI Tunnel
+            - Phil Session on KERI On Thursday
+        - Janet Gonzalez
+            - Keep UX session
+            - Wow!  Use Cases for KERI
+            - Timothy Ruff on Adoption "First usable credential anyone will have is a organization role creditial"
+            - KYC is more than just SSI
+        - Kent Bull
+            - Fun to see the level of interest in KERI and SSI
+            - TRaining courses 
+            - Still early in the industry making a decision vs waiting for standard. Premature optimization.
+            - CESR session
+            - 
+        - Randy Warshaw   GLEIF making an early decision and going for it.  GLEIF sessions use sessions
+            - Stephan Wolff  no technical all use cases
+            - Huge movement of people connection into KERI
+            - UI Walkthorugh
+            - ACDC sessions
+            - Great to meet people been zooming with for so long
+        - Alan Davies
+            - Credential Master - Sales Force
+            - First meeting
+            - VCs for education ACDC introduction
+            - Timothy's presentation: https://youtu.be/kLSLA8_VDFw               - 
+
+        - DidComm KERI Tunnel
+
+        - Syllabus for KERI
+            - Clone KERI experts via training
+
+        - Separate Zoom Chat converstion NOT!
+        - 
+
 
 ### 2022-04-19
 

@@ -14,7 +14,7 @@ The table below lists all deliverables of the KERI Community:
 | CESR Proof| CESR Proof Signatures | [IETF CESR Proof Signatures Draft](https://github.com/WebOfTrust/ietf-cesr-proof) | Phil Feairheller | [Active Draft](https://datatracker.ietf.org/doc/draft-pfeairheller-cesr-proof/) | 
 | PTEL | Public Transaction Event Logs | [IETF PTEL Draft](https://github.com/WebOfTrust/ietf-ptel) | Phil Feairheller | [Active Draft](https://datatracker.ietf.org/doc/draft-pfeairheller-ptel/)| 
 | IPEX | Issuance and Presentation Exchange protocol | [IETF IPEX Draft](https://github.com/WebOfTrust/ietf-ipex) | Sam Smith, Phil Feairheller | |
-| OOBI | Out-Of-Band-Introduction | [IETF OOBI Draft](https://github.com/WebOfTrust/ietf-oobi) | Sam Smith ||
+| OOBI | Out-Of-Band-Introduction | [IETF OOBI Draft](https://github.com/WebOfTrust/ietf-oobi) | Sam Smith |[Active Draft](https://datatracker.ietf.org/doc/draft-ssmith-oobi/)|
 
 ### Why IETF
 

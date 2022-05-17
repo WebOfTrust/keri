@@ -48,7 +48,17 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
 ### 2022-05-03
 
 - Recording
+- Reports
+- Agenda
+    - Ledger Registrars
+        - https://github.com/WebOfTrust/keripy/issues/90
+        - 
 
+
+### 2022-05-03
+
+- Recording
+https://drive.google.com/file/d/147yc11kAMB-yV58zdZFmdIQLs71PKf9r/view?usp=sharing
 - Reports
   - Keripy 
   - Keriml
@@ -109,7 +119,7 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
 ### 2022-04-19
 
 - Recording
-
+https://drive.google.com/file/d/13vqXoG7QvGeAe96tj35YZaT_V7PSgs83/view?usp=sharing
 - Reports 
     - Keripy Command LIne for Multisit API for viewing escrow state API for keystate. Keying repo swift interaction with keychain with local authentication python wrapper ctypes
 
@@ -137,7 +147,7 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
 ### 2022-04-05
 
 - Recording
-
+    https://drive.google.com/file/d/13T8QZQ0MCdRCscI0wGkbKoB3XSsXMplj/view?usp=sharing
     - Recording Feb 22 also used for March 8, March 8 not available?
     - 
 - Reports from Implementors

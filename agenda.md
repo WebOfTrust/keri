@@ -45,13 +45,40 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
 
 - Cardarno as Ledger Registrar
 
-### 2022-05-03
+### 2022-05-17
 
 - Recording
+    - https://drive.google.com/file/d/14WoVLlYILIaRw3BE4FnlpPONF8FR66AY/view?usp=sharing
+    - 
 - Reports
+  - Keripy 
+      - Python 3.10.4 support
+      - Packaging
+          
+  - Keriml
+  - Keep
+      - Make files to build for each Role type of users in vLEI ecosystem
+      - Github actions producing .dmgs .dep
+      - UX/UI development
+  - KeriOX
+      - EUPL licence next week
+      - NodeJS and Dart
+      - Async MultiSync
+  - Java
+
 - Agenda
+    - Kent Bull couldn't get the KeriPy demo running
+
+    - KeriPY build issues
+        - refresh virtual environment to be python3.10.4 and install dependencies
+        - pull latest master and keep
+    - RoadMap
+        - Hierachical Recovery Nested Delegations
+        - CESR versions of the KERI Messages
+        - Watchers
     - Ledger Registrars
         - https://github.com/WebOfTrust/keripy/issues/90
+        - Cardano Backer
         - 
 
 

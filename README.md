@@ -53,7 +53,7 @@ Passcode: 300255
 The meeting agenda may be found [here](https://github.com/WebOfTrust/keri/blob/main/agenda.md)
 
 ### Related Meetings
-A closely related specification that leverages KERI is ACDC. This is hosted at ToIP and meets on the alternate weeks at the same time as the KERI meetings. These meetings complement the KERI meetings hosted here. For information look here [ToIP ACDC Task Force](https://wiki.trustoverip.org/display/HOME/ACDC+Meeting+Page) and here [ACDC IETF Draft](https://github.com/trustoverip/tswg-acdc-specification).
+A closely related specification that leverages KERI is ACDC. This is hosted at ToIP and meets on the alternate weeks at the same time as the KERI meetings. These meetings complement the KERI meetings reference above. For information look here [ToIP ACDC Task Force](https://wiki.trustoverip.org/display/HOME/ACDC+Meeting+Page) and here [ACDC IETF Draft](https://github.com/trustoverip/tswg-acdc-specification).
 
 ## Existing Implementations
 The reference implementation for KERI is the keripy implementation. This is hosted here by the WebOfTrust project. The repository may be found here:  

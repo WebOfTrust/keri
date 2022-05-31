@@ -45,6 +45,40 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
 
 - Cardarno as Ledger Registrar
 
+
+
+
+
+(added by Michal)
+
+### 2022-05-31
+
+- Recording
+    - 
+    - 
+- Reports
+  - Keripy 
+      
+          
+  - Keriml
+  - 
+  - Keep
+      
+  - KeriOX
+      - EUPL licence next week
+      - NodeJS and Dart
+      - Async MultiSync
+
+- Agenda
+    - Update on DIF: IP issue resolved
+    - Escrow Maintenance Rules
+        - We currently issue as a controller the `/end/role/add` OOBI and send it to  Watcher. AFAIK there's no any real usage of this OOBI (yet?) from the Watcher perspective. Shall it be understood as an introduction to Watcher AUTH mechanism? In essence this OOBI becomes an introduction OOBI from the contorller perspective to Watcher. Watchers don't accept any request, but only those that are AUTHenticated first. Thanks to that Watchers support only these controllers that "registered" themselves. (added by Michal)
+        - When adding key events to various types of escrow's, how to ensure given escrow will not be fulfilled with some random events? Currently any type of key event that has proper semantics and where `d` field equals to `digest(event)` may be escrowed and stay there forever (because for example the signature is missing or `sn` doesn't match ). Possible solutions:
+        - escrows have some kind of retention policy 
+        - events in escrow have exp time
+        - escrows have limited capacity
+
+
 ### 2022-05-17
 
 - Recording

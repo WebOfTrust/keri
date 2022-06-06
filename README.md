@@ -64,7 +64,7 @@ The keripy implementation is Apache2 licensed as are all repositories in the Web
 There is also an Apache2 licensed Rust implementation of KERI hosted by the WebOfTrust project which may be found here:   
 * [keriox](https://github.com/WebOfTrust/keriox) – under development  
 
-The primary contributors to keriox have since moved their efforts elsewhere to a private repository with a non Apache2 license. 
+The primary contributors to keriox have since moved their efforts to a [repository](https://github.com/THCLab/keriox) with a non Apache2 license. 
 As a result the WebOfTrust keriox implementation above is somewhat behind the keripy implementation in terms of
 feature support. We encourage the community to step forward and continue development of the Apache2 licensed Rust implementation.
 

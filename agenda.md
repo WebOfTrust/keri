@@ -31,6 +31,7 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
 ### Future Topics
 
 - How to engage in the community
+    - Tests where API is stable
     - open issues to ask questions
     - learn by doing
         - unit tests

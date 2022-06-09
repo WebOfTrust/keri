@@ -29,7 +29,15 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
 ## Meetings
 
 ### Future Topics
-- Interopathon before IIW in April for KeriOX and KeriPY interoperability
+
+- How to engage in the community
+    - open issues to ask questions
+    - learn by doing
+        - unit tests
+        - test an api and then contribute the test
+        - once you fully understand how to use an API because to tested it then suggest an improvement via a pull request. 
+    - take notes of your journey in an issue
+    - 
 
 - Future extract Keep liberary to NPM library
 - WebAuth 
@@ -49,30 +57,46 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
 
 
 
-(added by Michal)
+
 
 ### 2022-05-31
 
 - Recording
-    - 
-    - 
+    - https://drive.google.com/file/d/15-ZiVKrpkjXHv6kLxkAV7K6x6BW-IseU/view?usp=sharing
+    
 - Reports
   - Keripy 
-      
-          
-  - Keriml
-  - 
+     - promiscuous percolated discovery through OOBIs using exn messages
+     - lock command for secure key store to be fixed in new push move to keep
+     - Ruth open issue
+  
   - Keep
-      
+      - new lock/unlock
+      - GLEIF vLEI ecosystem use case dominant
+          - eventually pull out more generic capability
+      - Support for one-way OOBI exchanges
+      - Packaging
+      - API additions for notifications
+      - 
+
+  - Keriml
+  
   - KeriOX
-      - EUPL licence next week
-      - NodeJS and Dart
-      - Async MultiSync
+      - KERIOX repo: https://github.com/THCLab/keriox
+      - Nodejs and Dart clients: https://github.com/THCLab/keri-bindings/tree/master/bindings 
+      - Docker imgs: https://hub.docker.com/r/humancolossus/keriox-witness and https://hub.docker.com/r/humancolossus/keriox-watcher
+      - demo use case using all the infrastructure https://github.com/THCLab/dkms-demo
+
+  - CAXE
+      - https://github.com/WebOfTrust/caxe
+      - XBRL with ACDC
 
 - Agenda
     - Update on DIF: IP issue resolved
+    - IETF-OOBI Draft  
+        - https://github.com/WebOfTrust/ietf-oobi
+    - We currently issue as a controller the `/end/role/add` OOBI and send it to  Watcher. AFAIK there's no any real usage of this OOBI (yet?) from the Watcher perspective. Shall it be understood as an introduction to Watcher AUTH mechanism? In essence this OOBI becomes an introduction OOBI from the contorller perspective to Watcher. Watchers don't accept any request, but only those that are AUTHenticated first. Thanks to that Watchers support only these controllers that "registered" themselves. (added by Michal)
     - Escrow Maintenance Rules
-        - We currently issue as a controller the `/end/role/add` OOBI and send it to  Watcher. AFAIK there's no any real usage of this OOBI (yet?) from the Watcher perspective. Shall it be understood as an introduction to Watcher AUTH mechanism? In essence this OOBI becomes an introduction OOBI from the contorller perspective to Watcher. Watchers don't accept any request, but only those that are AUTHenticated first. Thanks to that Watchers support only these controllers that "registered" themselves. (added by Michal)
         - When adding key events to various types of escrow's, how to ensure given escrow will not be fulfilled with some random events? Currently any type of key event that has proper semantics and where `d` field equals to `digest(event)` may be escrowed and stay there forever (because for example the signature is missing or `sn` doesn't match ). Possible solutions:
         - escrows have some kind of retention policy 
         - events in escrow have exp time

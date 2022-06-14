@@ -10,6 +10,7 @@ The table below lists all deliverables of the KERI Community:
 | SAID | Self-Addressing Identifiers | [IETF SAID Draft](https://github.com/WebOfTrust/ietf-said) | Samuel Smith | [Active Draft](https://datatracker.ietf.org/doc/draft-ssmith-said/) |
 | CESR | Composable Event Streaming Representation | [IETF CESR Draft](https://github.com/WebOfTrust/ietf-cesr)| Samuel Smith |[Active Draft](https://datatracker.ietf.org/doc/draft-ssmith-cesr/)|
 | DID KERI | KERI DID Method | [IETF DID KERI Method Draft](https://github.com/WebOfTrust/ietf-did-keri) | Phil Feairheller | |
+| DID KERI W3C Reg | KERI DID Method Registration | [Registration](https://github.com/w3c/did-spec-registries/blob/main/methods/keri.json) | Phil Feairheller | |
 | ACDC | Authentic Chained Data Containers | [IETF ACDC Draft](https://github.com/trustoverip/tswg-acdc-specification) | Samuel Smith | [Active Draft](https://datatracker.ietf.org/doc/draft-ssmith-acdc/) |
 | CESR Proof| CESR Proof Signatures | [IETF CESR Proof Signatures Draft](https://github.com/WebOfTrust/ietf-cesr-proof) | Phil Feairheller | [Active Draft](https://datatracker.ietf.org/doc/draft-pfeairheller-cesr-proof/) | 
 | PTEL | Public Transaction Event Logs | [IETF PTEL Draft](https://github.com/WebOfTrust/ietf-ptel) | Phil Feairheller | [Active Draft](https://datatracker.ietf.org/doc/draft-pfeairheller-ptel/)| 

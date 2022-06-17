@@ -30,7 +30,69 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
 
 ### Future Topics
 
-- How to engage in the community
+Demo of how to write tests for KeriPy
+
+
+### ToDo
+- Future extract Keep liberary to NPM library
+- Cardarno as Ledger Registrar
+- github actions for releases
+    - including docker containers
+- Creating webdriver (or selenium) tests for generic features of Keep.
+- Docker Container with port for ReST API
+
+### 2022-06-14
+- Recording
+  https://drive.google.com/file/d/16Lz1Amvlio4yfbkqtSVmgZGiomAy5miX/view?usp=sharing
+  
+- Reports
+    - keripy
+        - Mad dash pilot vLEI ecosystem
+        - tests scripts for sample vLEI ecosystem
+        - escrows fix for delegation approval IXN
+        - fix for escrow of messages credential issuance
+    - Keep
+        - Major improvements
+        - multiple builds
+    - Keriml
+        - Miho PR
+        - CESR Swift should it be separate
+            - 
+    - CESROX
+        - Anyone else interested in helping on CesrOX
+        - Apache2
+    - KeriOx
+        - HCF  restructuring
+            - Windows DLL and Unix
+            - 
+
+    - CAXE
+        - XBRL with ACDC
+        - Two commands 
+            - extract XBRL facts from XBRL report
+                - ACDC data attestation to facts
+            - verification server
+                - ixbrl veiwer Workiva  
+                - Arelle Plugin (ARELLE = python xbrl framework  https://arelle.org/arelle/)
+    - CESR4j
+        - scaffold for Bazel replaces Maven Apache2
+    
+- Agenda
+  - Proposal to goto git flow like policy for KERIpy
+      - Two branches
+          - main
+              - stable code
+              - regular or upon decision by community merge dev into main
+              - releases PyPi off from main
+              - unit tests 
+              - github actions to do releases
+              - docker containers
+          - dev
+              - active development
+              - feature branches of dev
+  - Trunk based versus Git Flow use case for git flow is community
+      - 
+  - How to engage in the community
     - Tests where API is stable
     - open issues to ask questions
     - learn by doing
@@ -38,25 +100,19 @@ https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvb
         - test an api and then contribute the test
         - once you fully understand how to use an API because to tested it then suggest an improvement via a pull request. 
     - take notes of your journey in an issue
-    - 
-
-- Future extract Keep liberary to NPM library
-- WebAuth 
-    - HCF Interactive Protocol
-    - SKWA (Simple KERI for Web Auth)
-        - https://hackmd.io/AXJ35eciSCa04FtG5Yg9Zg
-        - keriAUTH / didAuth 
-    - DIDAuth
-        - https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/did-auth.md
-
-- Discuss https://github.com/WebOfTrust/keripy/issues/104 (added by Michal)
-    - Auth and SKWA
-
-- Cardarno as Ledger Registrar
-
-
-
-
+    - Keep tests Opportunities
+    - CLI framework Wrapper
+        - 
+    - ReST framework Wrapper
+        - PostMan
+        - Paw
+        - Already Swagger OpenAPI
+        - docker contrainer with ReST API port
+    - Docker Containers
+    
+    - Test is best documentation
+        - But documenting code with comments is always welcome
+        - 
 
 
 

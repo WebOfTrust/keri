@@ -1,4 +1,4 @@
-**This document explains the what development tools have been used and why.**
+**This document explains what development tools have been used and why.**
 
 ## KERI in general
 ### Sphinx documentation builder

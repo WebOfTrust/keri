@@ -1,6 +1,15 @@
 **This document explains what development tools have been used and why.**
 
 ## KERI in general
+
+There are a few commons reasons to choose development tools. Mostly because they have the following features:
+- open source
+- not patented
+- best of breed
+- universally applicable
+
+We won't mention these fundamental feature for creating Autonomic Identifier systems in the rest of this document. Instead we'll focus on the specific reasons for choices compared to alternatives in the field. 
+
 ### Sphinx documentation builder
 According to the sphinx website:
 Sphinx is a documentation generator or a tool that translates a set of plain text source files into various output formats, automatically producing cross-references, indices, etc. That is, if you have a directory containing a bunch of reStructuredText or Markdown documents, Sphinx can generate a series of HTML files, a PDF file (via LaTeX), man pages and much more.\
@@ -87,6 +96,13 @@ Workiva brings together everything you need—teammates, datasets, and data sour
 #### Why Workiva and not something else?
 {TBW}
 
+## What is Docker?
+Docker is an open source platform for building, deploying, and managing containerized applications. Learn about containers, how they compare to virtual machines (VM), and why Docker is so widely adopted and used.
+#### Why is it relevant for KERI?
+With Docker the KERI development team is able to deliver a working stack for testing and demonstration purposes with a clear list of components and their versions.
+#### Why Docker and not something else?
+Docker is the most adopted and has various deployment options.
+
 ## Keripy
 
 ### What is Pypi?
@@ -97,3 +113,12 @@ PyPI helps you find and install software developed and shared by the Python comm
 The team wants to distribute KERI uniformly and as broad as possible.
 #### Why Pypi and not something else?
 It's the best of breed and most commonly used in the Python community.
+
+## KEEP
+
+### What is NPM?
+{TBW}
+#### Why is it relevant for KERI?
+{TBW}
+#### Why NPM and not something else?
+{TBW}

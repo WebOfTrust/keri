@@ -7,6 +7,7 @@ There are a few commons reasons to choose development tools. Mostly because they
 - not patented
 - best of breed
 - universally applicable
+- tested for a few years
 
 We won't mention these fundamental feature for creating Autonomic Identifier systems in the rest of this document. Instead we'll focus on the specific reasons for choices compared to alternatives in the field. 
 
@@ -102,6 +103,18 @@ Docker is an open source platform for building, deploying, and managing containe
 With Docker containization the KERI development team is able to deliver a working stack for testing and demonstration purposes with a clear list of components and their versions in a confined environment.
 #### Why Docker and not something else?
 Docker is the most adopted and has various deployment options.
+
+## What is NTRU?
+NTRU is an open-source public-key cryptosystem that uses lattice-based cryptography to encrypt and decrypt data. It consists of two algorithms: NTRUEncrypt, which is used for encryption, and NTRUSign, which is used for digital signatures. Unlike other popular public-key cryptosystems, it is resistant to attacks using Shor's algorithm. NTRUEncrypt was patented, but it was placed in the public domain in 2017. NTRUSign is patented, but it can be used by software under the GPL.\
+[Source](https://en.wikipedia.org/wiki/NTRU)
+#### Why is it relevant for KERI?
+It might be an alternative to our Libsodium libs. But...
+            - Looks like NTRUSign is broken. 
+            - NTRUEncrypt is usable. 
+            - pqNTRUSign uses large signature sizes so is not immediately suitable for IOT
+[More info](https://csrc.nist.gov/CSRC/media/Events/Second-PQC-Standardization-Conference/documents/accepted-papers/grobschadl-lighteight-implmentation-NTRUE.pdf)
+#### Why NTRU and not something else?
+It not as computational dense as alternatives. It is newer.
 
 ## Keripy
 

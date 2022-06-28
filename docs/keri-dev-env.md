@@ -97,9 +97,9 @@ Workiva brings together everything you need—teammates, datasets, and data sour
 {TBW}
 
 ## What is Docker?
-Docker is an open source platform for building, deploying, and managing containerized applications. Learn about containers, how they compare to virtual machines (VM), and why Docker is so widely adopted and used.
+Docker is an open source platform for building, deploying, and managing containerized applications. Learn about containers, how they compare to virtual machines (VM), and why Docker is so widely adopted and used. [Source](https://www.ibm.com/cloud/learn/docker)
 #### Why is it relevant for KERI?
-With Docker the KERI development team is able to deliver a working stack for testing and demonstration purposes with a clear list of components and their versions.
+With Docker containization the KERI development team is able to deliver a working stack for testing and demonstration purposes with a clear list of components and their versions in a confined environment.
 #### Why Docker and not something else?
 Docker is the most adopted and has various deployment options.
 

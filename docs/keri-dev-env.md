@@ -116,6 +116,22 @@ It might be an alternative to our Libsodium libs. But...
 #### Why NTRU and not something else?
 It not as computational dense as alternatives. It is newer.
 
+## What is Cesr4j
+IT's a JavaEE library for CESR encoding [Source](https://github.com/WebOfTrust/cesr4j)
+
+#### Why is it relevant for KERI?
+CESR is the main serialization tool for KERI. To extend the field of application of CESR we'd like to offer an JavaEE library.
+#### Why Cesr4j and not something else?
+It's custom made for CESR and KERI, there's nothing else.
+
+## What is CAXE?
+It's Credential Attribute XBRL Extraction. [Source](https://github.com/WebOfTrust/caxe)
+An XBRL with ACDCs in it.
+#### Why is it relevant for KERI?
+XBRL is the open international standard for digital business reporting. To extend the field of application of ACDC and KERI in reporting, we'd like to offer this.
+#### Why Cesr4j and not something else?
+It's custom made for ACDC and KERI, there's nothing else.
+
 ## Keripy
 
 ### What is Pypi?

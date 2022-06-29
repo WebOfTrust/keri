@@ -136,6 +136,12 @@ Git flow is a popular Git branching strategy aimed at simplifying release manage
 Multiple developers active and growing developers community needs simple but secure branching.
 #### Why GIT Flow and not something else?
 More secure than the easier versioning [Github Flow](https://www.gitkraken.com/learn/git/git-flow#github-flow) and [GitLab Flow](https://www.gitkraken.com/learn/git/git-flow#gitlab-flow)
+### What is DidComm?
+Powerful, high-trust, self-sovereign interactions over any transport [Source](https://didcomm.org/)
+#### Why is it relevant for KERI?
+To build KERI Tunnels
+#### Why DIDComm and not something else?
+It's the intended layer two of DID technology supported by Decentralized Identity Foundation (DIF) and the Trust over IP foundation (ToIP).
 
 ## Java
 
@@ -183,4 +189,13 @@ It is an object-oriented, class-based, garbage-collected language with C-style s
 #### Why is it relevant for KERI?
 
 #### Why Dart and not something else?
+{TBW}
+
+## KeriML
+
+## What is KeriML?
+KIMI Keri Interactive Mobile Interface, pronunced “Caramel”
+#### Why is it relevant for KERI?
+Keep repackage Electron app to invoke python backend IIW demos (April 2022) on UX/UI
+#### Why KeriML and not something else?
 {TBW}

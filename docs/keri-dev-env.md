@@ -146,8 +146,8 @@ It's the best of breed and most commonly used in the Python community.
 ## KEEP
 
 ### What is NPM?
-{TBW}
+NPM is two things: first and foremost, it is an *online repository* for the publishing of open-source Node.js projects; second, it is a *command-line utility* for interacting with said repository that aids in package installation, version management, and dependency management.
 #### Why is it relevant for KERI?
-{TBW}
+For the Node.js implementation of KERI it comes in handy. Also KEEP has been build in Node.js.
 #### Why NPM and not something else?
-{TBW}
+It's the number one solution for Node.js.

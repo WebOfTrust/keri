@@ -116,7 +116,17 @@ It might be an alternative to our Libsodium libs. But...
 #### Why NTRU and not something else?
 It not as computational dense as alternatives. It is newer.
 
-## What is Cesr4j
+### What is CAXE?
+It's Credential Attribute XBRL Extraction. [Source](https://github.com/WebOfTrust/caxe)
+An XBRL with ACDCs in it.
+#### Why is it relevant for KERI?
+XBRL is the open international standard for digital business reporting. To extend the field of application of ACDC and KERI in reporting, we'd like to offer this.
+#### Why CAXE and not something else?
+It's custom made for ACDC and KERI, there's nothing else.
+
+## Java
+
+### What is Cesr4j
 IT's a JavaEE library for CESR encoding [Source](https://github.com/WebOfTrust/cesr4j)
 
 #### Why is it relevant for KERI?
@@ -124,13 +134,12 @@ CESR is the main serialization tool for KERI. To extend the field of application
 #### Why Cesr4j and not something else?
 It's custom made for CESR and KERI, there's nothing else.
 
-## What is CAXE?
-It's Credential Attribute XBRL Extraction. [Source](https://github.com/WebOfTrust/caxe)
-An XBRL with ACDCs in it.
+### What is Bazel?
+Bazel is an open-source build and test tool that scalably supports multi-language and multi-platform projects.[Source](https://bazel.build/)
 #### Why is it relevant for KERI?
-XBRL is the open international standard for digital business reporting. To extend the field of application of ACDC and KERI in reporting, we'd like to offer this.
-#### Why Cesr4j and not something else?
-It's custom made for ACDC and KERI, there's nothing else.
+One tool, multiple languages: Build and test using Java, C++, Go, Android, iOS and many other languages and platforms. Bazel runs on Windows, macOS, and Linux.
+#### Why Bazel and not something else?
+It replaces [Maven](https://maven.apache.org/).Rebuild only what is necessary. Fast, incremental builds with Bazel's advanced local and distributed caching, optimized dependency analysis, and parallel execution.
 
 ## Keripy
 
@@ -146,7 +155,7 @@ It's the best of breed and most commonly used in the Python community.
 ## KEEP
 
 ### What is NPM?
-NPM is two things: first and foremost, it is an *online repository* for the publishing of open-source Node.js projects; second, it is a *command-line utility* for interacting with said repository that aids in package installation, version management, and dependency management.
+NPM is two things: first and foremost, it is an *online repository* for the publishing of open-source Node.js projects; second, it is a *command-line utility* for interacting with said repository that aids in package installation, version management, and dependency management. [Source](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/)
 #### Why is it relevant for KERI?
 For the Node.js implementation of KERI it comes in handy. Also KEEP has been build in Node.js.
 #### Why NPM and not something else?

@@ -160,6 +160,20 @@ One tool, multiple languages: Build and test using Java, C++, Go, Android, iOS a
 #### Why Bazel and not something else?
 It replaces [Maven](https://maven.apache.org/).Rebuild only what is necessary. Fast, incremental builds with Bazel's advanced local and distributed caching, optimized dependency analysis, and parallel execution.
 
+### What is WebAuth?
+WebAuthn is a new standard for authentication, which is published by the World Wide Web Consortium and is supported by the FIDO alliance. [Source](https://www.loginradius.com/blog/identity/webauth-secures-user-login/)
+#### Why is it relevant for KERI?
+{TBW}
+#### Why WebAuth and not something else?
+{TBW}
+
+### What is IPEX?
+Issuance and Exchange Protocol Specification for ACDC
+#### Why is it relevant for KERI?
+Provides a uniform mechanism for the issuance and presentation of ACDCs in a securely attributable manner. 
+#### Why IPEX and not something else?
+It's a greatly simplified exchange protocol. The simplification has two primary advantages. The first is enhanced security. A well-delimited protocol can be designed and analyzed to minimize and mitigate attack mechanisms. The second is convenience. A standard simple protocol is easier to implement, support, update, understand, and adopt. The tooling is more consistent.
+
 ## Keripy
 
 ### What is Pypi?

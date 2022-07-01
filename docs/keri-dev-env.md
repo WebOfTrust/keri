@@ -35,7 +35,8 @@ In 2015, the Swagger project was acquired by SmartBear Software. The Swagger Spe
 
 ### What exactly is a REST API?
 <img src="../images/restapi.png" alt="restapi-logo" border="1" width="250" style="float:left">
-There are numerous types of APIs, making it difficult for new developers to differentiate between each kind. In particular, REpresentational State Transfer (REST) is a software architectural style that developers apply to web APIs. REST APIs provide simple, uniform interfaces because they can be used to make data, content, algorithms, media, and other digital resources available through web URLs. Essentially, REST APIs are the most common APIs used across the web today.
+There are numerous types of APIs, making it difficult for new developers to differentiate between each kind. In particular, REpresentational State Transfer (REST) is a software architectural style that developers apply to web APIs. REST APIs provide simple, uniform interfaces because they can be used to make data, content, algorithms, media, and other digital resources available through web URLs. Essentially, REST APIs are the most common APIs used across the web today
+
 To make the API service RESTful, six guiding constraints must be satisfied:
 1.	Use of a uniform interface (UI): To have a uniform interface, multiple architectural constraints are required to guide the behavior of components. Additionally, resources should be unique so they are identifiable through a single URL.
 2.	Client-server based: The uniform interface separates user concerns from data storage concerns. The client’s domain concerns UI and request-gathering, while the server’s domain concerns focus on data access, workload management, and security. The separation of client and server enables each to be developed and enhanced independently of the other.
@@ -111,7 +112,8 @@ Workiva brings together everything you need—teammates, datasets, and data sour
 {TBW}
 
 ## What is Docker?
-<img src="../images/Docker.png" alt="Docker-logo" border="1" width="250"style="float:left">
+<img src="../images/Docker-logo.png" alt="Docker-logo" border="1" width="250"style="float:left">
+
 Docker is an open source platform for building, deploying, and managing containerized applications. Learn about containers, how they compare to virtual machines (VM), and why Docker is so widely adopted and used. [Source](https://www.ibm.com/cloud/learn/docker)
 
 #### Why is it relevant for KERI?
@@ -229,7 +231,8 @@ It's the number one solution for Node.js.
 ### What is Dart?
 <img src="../images/dart.png" alt="dart-logo" border="1" width="250" style="float:left"> 
 Dart is a programming language designed for client development, such as for the web and mobile apps. It is developed by Google and can also be used to build server and desktop applications.
-It is an object-oriented, class-based, garbage-collected language with C-style syntax.It can compile to either native code or JavaScript, and supports interfaces, mixins, abstract classes, reified generics and type inference.[Source](https://en.wikipedia.org/wiki/Dart_(programming_language))
+It is an object-oriented, class-based, garbage-collected language with C-style syntax.It can compile to either native code or JavaScript, and supports interfaces, mixins, abstract classes, reified generics and type inference.
+[Source](https://en.wikipedia.org/wiki/Dart)
 
 #### Why is it relevant for KERI?
 {TBW}

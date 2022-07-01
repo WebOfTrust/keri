@@ -11,10 +11,10 @@ There are a few commons reasons to choose development tools. Mostly because they
 
 We won't mention these fundamental feature for creating Autonomic Identifier systems in the rest of this document. Instead we'll focus on the specific reasons for choices compared to alternatives in the field. 
 
-### Sphinx documentation builder
-According to the sphinx website:
+### What is Sphinx?
+<img src="../images/sphinx.png" alt="Sphinx-logo" border="1" width="250">
 Sphinx is a documentation generator or a tool that translates a set of plain text source files into various output formats, automatically producing cross-references, indices, etc. That is, if you have a directory containing a bunch of reStructuredText or Markdown documents, Sphinx can generate a series of HTML files, a PDF file (via LaTeX), man pages and much more.\
-Sphinx experience is a great asset for a GNU Linux technical writer.
+Sphinx experience is a great asset for a GNU Linux technical writer. [Source](https://www.sphinx-doc.org/en/master/)
 #### Why is it relevant for KERI?
 {TBW}
 #### Why Sphinx and not something else?
@@ -23,7 +23,7 @@ Sphinx experience is a great asset for a GNU Linux technical writer.
 ### What is Swagger and OpenAPI?
 Formerly known as Swagger, OpenAPI has a long and established history. In 2010, Swagger started as an open source specification for designing and documenting RESTful APIs.
 In 2015, the Swagger project was acquired by SmartBear Software. The Swagger Specification was donated to the Linux foundation and renamed the OpenAPI.
-[source](https://www.udemy.com/course/openapi-beginner-to-guru/learn/lecture/17096798#overview)
+[Difference](https://swagger.io/blog/api-strategy/difference-between-swagger-and-openapi/)
 #### Why is it relevant for KERI?
 {TBW}
 #### Why Swagger / OpenAPI and not something else?

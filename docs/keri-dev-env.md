@@ -14,7 +14,9 @@ We won't mention these fundamental feature for creating Autonomic Identifier sys
 ### What is Sphinx?
 <img src="../images/Sphinx.png" alt="Sphinx-logo" border="1" width="250" style="float:left">
 Sphinx is a documentation generator or a tool that translates a set of plain text source files into various output formats, automatically producing cross-references, indices, etc. That is, if you have a directory containing a bunch of reStructuredText or Markdown documents, Sphinx can generate a series of HTML files, a PDF file (via LaTeX), man pages and much more.\
-Sphinx experience is a great asset for a GNU Linux technical writer. [Source](https://www.sphinx-doc.org/en/master/)
+Sphinx experience is a great asset for a GNU Linux technical writer.
+
+[Source](https://www.sphinx-doc.org/en/master/)
 
 #### Why is it relevant for KERI?
 {TBW}
@@ -25,6 +27,7 @@ Sphinx experience is a great asset for a GNU Linux technical writer. [Source](h
 <img src="../images/swagger.png" alt="swagger-logo" border="1" width="250" style="float:left">
 Formerly known as Swagger, OpenAPI has a long and established history. In 2010, Swagger started as an open source specification for designing and documenting RESTful APIs.
 In 2015, the Swagger project was acquired by SmartBear Software. The Swagger Specification was donated to the Linux foundation and renamed the OpenAPI.
+
 [Difference](https://swagger.io/blog/api-strategy/difference-between-swagger-and-openapi/)
 
 #### Why is it relevant for KERI?
@@ -45,7 +48,7 @@ To make the API service RESTful, six guiding constraints must be satisfied:
 5.	Layered system: REST allows for an architecture composed of hierarchical layers. In doing so, each component cannot see beyond the immediate layer with which they are interacting.
 6.	Code on demand: Because REST APIs download and execute code in the form of applets or scripts, there’s more client functionality. Oftentimes, a server will send back a static representation of resources in the form of XML or JSON. Servers can also send executable codes to the client when necessary.
 
-[source](https://blog.postman.com/rest-api-examples/)
+[Source](https://blog.postman.com/rest-api-examples/)
 
 #### Why is it relevant for KERI?
 {TBW}
@@ -56,7 +59,7 @@ To make the API service RESTful, six guiding constraints must be satisfied:
 A Wrapper Class (or the Wrapper Pattern) is where you declare a Class as a container for an sObject to extend the functionality only for display or processing purposes (i.e. you don't intend for that attribute to be persisted) - the classic example is a checkbox to select records. I would say that a DTO is a slightly dumbed down version of such a wrapper (used in conventional OOP to pass structured data between the layers)
 A REST Api wrapper is something slightly different. For example Salesforce exposes a REST Api and if you were to invoke that say from C#, you would have to perform a set of common steps such as login, query, etc. To make this available in C# by abstracting the innards of the actual REST calls to salesforce and exposing only the developer relevant detail, you could write a rest wrapper which performs these commonly used functions - creates requests, parses responses, etc
 
-[source](https://salesforce.stackexchange.com/questions/5834/can-somebody-explain-what-is-a-rest-api-wrapper)
+[Source](https://salesforce.stackexchange.com/questions/5834/can-somebody-explain-what-is-a-rest-api-wrapper)
 
 #### Why is it relevant for KERI?
 {TBW}
@@ -75,8 +78,9 @@ Postman is an API platform for building and using APIs. Postman simplifies each 
 
 ### What is Paw?
 <img src="../images/paw.png" alt="paw-logo" border="1" width="250" style="float:left">
-Paw is a full-featured HTTP client that lets you test and describe the APIs you build or consume. It has a beautiful native macOS interface to compose requests, inspect server responses, generate client code and export API definitions.\
-[source](https://paw.cloud)
+Paw is a full-featured HTTP client that lets you test and describe the APIs you build or consume. It has a beautiful native macOS interface to compose requests, inspect server responses, generate client code and export API definitions.
+
+[Source](https://paw.cloud)
 
 #### Why is it relevant for KERI?
 {TBW}
@@ -87,7 +91,8 @@ Paw is a full-featured HTTP client that lets you test and describe the APIs you 
 <img src="../images/XBRL.png" alt="XBRL-logo" border="1" width="250" style="float:left">
 XBRL is the open international standard for digital business reporting, managed by a global not for profit consortium, XBRL International. We are  committed to improving reporting in the public interest. XBRL is used around the world, in more than 50 countries. Millions of XBRL documents are created every year, replacing older, paper-based reports with more useful, more effective and more accurate digital versions.
 In a nutshell, XBRL provides a language in which reporting terms can be authoritatively defined. Those terms can then be used to uniquely represent the contents of financial statements or other kinds of compliance, performance and business reports. XBRL lets reporting information move between organisations rapidly, accurately and digitally.
-[source](https://www.xbrl.org/the-standard/what/an-introduction-to-xbrl/)
+
+[Source](https://www.xbrl.org/the-standard/what/an-introduction-to-xbrl/)
 
 #### Why is it relevant for KERI?
 {TBW}
@@ -96,8 +101,9 @@ In a nutshell, XBRL provides a language in which reporting terms can be authori
 
 ### What is Arelle?
 <img src="../images/Arelle.png" alt="Arelle-logo" border="1" width="250" style="float:left">
-Arelle is a project to provide the XBRL community with an easy to use open source platform for XBRL.  It supports XBRL and its extension features in an extensible manner.  It does this in a compact yet robust framework that can be used as a desktop application and can be integrated with other applications and languages utilizing its web service.\
-[source](https://arelle.org/arelle/)
+Arelle is a project to provide the XBRL community with an easy to use open source platform for XBRL.  It supports XBRL and its extension features in an extensible manner.  It does this in a compact yet robust framework that can be used as a desktop application and can be integrated with other applications and languages utilizing its web service.
+
+[Source](https://arelle.org/arelle/)
 
 #### Why is it relevant for KERI?
 {TBW}
@@ -107,7 +113,8 @@ Arelle is a project to provide the XBRL community with an easy to use open sourc
 ### What is Workiva?
 <img src="../images/workiva.png" alt="workiva-logo" border="1" width="250" style="float:left">
 Workiva brings together everything you need—teammates, datasets, and data sources—so you can work better in the cloud. Wherever you are, whatever you’re doing. Automate what’s slowing you down. Focus on what fires you up.
-[source](https://www.workiva.com/en-nl/)
+
+[Source](https://www.workiva.com/en-nl/)
 
 #### Why is it relevant for KERI?
 {TBW}
@@ -127,7 +134,7 @@ Docker is the most adopted and has various deployment options.
 
 ## What is NTRU?
 <img src="../images/ntru.png" alt="ntru-logo" border="1" width="250" style="float:left">
-NTRU is an open-source public-key cryptosystem that uses lattice-based cryptography to encrypt and decrypt data. It consists of two algorithms: NTRUEncrypt, which is used for encryption, and NTRUSign, which is used for digital signatures. Unlike other popular public-key cryptosystems, it is resistant to attacks using Shor's algorithm. NTRUEncrypt was patented, but it was placed in the public domain in 2017. NTRUSign is patented, but it can be used by software under the GPL.\
+NTRU is an open-source public-key cryptosystem that uses lattice-based cryptography to encrypt and decrypt data. It consists of two algorithms: NTRUEncrypt, which is used for encryption, and NTRUSign, which is used for digital signatures. Unlike other popular public-key cryptosystems, it is resistant to attacks using Shor's algorithm. NTRUEncrypt was patented, but it was placed in the public domain in 2017. NTRUSign is patented, but it can be used by software under the GPL.
 
 [Source](https://en.wikipedia.org/wiki/NTRU)
 
@@ -142,8 +149,10 @@ It not as computational dense as alternatives. It is newer.
 
 ### What is CAXE?
 <img src="../images/caxe.png" alt="caxe-logo" border="1" width="250" style="float:left">
-It's Credential Attribute XBRL Extraction. [Source](https://github.com/WebOfTrust/caxe)
-An XBRL with ACDCs in it.
+It's Credential Attribute XBRL Extraction. An XBRL with ACDCs in it. 
+
+[Source](https://github.com/WebOfTrust/caxe)
+
 #### Why is it relevant for KERI?
 XBRL is the open international standard for digital business reporting. To extend the field of application of ACDC and KERI in reporting, we'd like to offer this.
 #### Why CAXE and not something else?
@@ -183,7 +192,9 @@ It's the intended layer two of DID technology supported by Decentralized Identit
 ## Java
 <img src="../images/Java_logo.png" alt="Java-logo" border="1" width="250" style="float:left">
 ### What is Cesr4j
-IT's a JavaEE library for CESR encoding [Source](https://github.com/WebOfTrust/cesr4j)
+IT's a JavaEE library for CESR encoding 
+
+[Source](https://github.com/WebOfTrust/cesr4j)
 
 #### Why is it relevant for KERI?
 CESR is the main serialization tool for KERI. To extend the field of application of CESR we'd like to offer an JavaEE library.
@@ -214,6 +225,9 @@ WebAuthn is a new standard for authentication, which is published by the World W
 
 ### What is IPEX?
 Issuance and Exchange Protocol Specification for ACDC
+
+[Source](https://github.com/WebOfTrust/ietf-ipex)
+
 #### Why is it relevant for KERI?
 Provides a uniform mechanism for the issuance and presentation of ACDCs in a securely attributable manner. 
 #### Why IPEX and not something else?
@@ -235,9 +249,10 @@ It's the best of breed and most commonly used in the Python community.
 
 ### What is NPM?
 <img src="../images/npm.png" alt="npm-logo" border="1" width="250" style="float:left">
-NPM is two things: first and foremost, it is an *online repository* for the publishing of open-source Node.js projects; second, it is a *command-line utility* for interacting with said repository that aids in package installation, version management, and dependency management. 
+NPM is two things: first and foremost, it is an *online repository* for the publishing of open-source Node.js projects; second, it is a *command-line utility* for interacting with said repository that aids in package installation, version management, and dependency management.\
 
 [Source](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/)
+
 #### Why is it relevant for KERI?
 For the Node.js implementation of KERI it comes in handy. Also KEEP has been build in Node.js.
 #### Why NPM and not something else?

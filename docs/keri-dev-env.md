@@ -15,6 +15,7 @@ We won't mention these fundamental feature for creating Autonomic Identifier sys
 <img src="../images/Sphinx.png" alt="Sphinx-logo" border="1" width="250">
 Sphinx is a documentation generator or a tool that translates a set of plain text source files into various output formats, automatically producing cross-references, indices, etc. That is, if you have a directory containing a bunch of reStructuredText or Markdown documents, Sphinx can generate a series of HTML files, a PDF file (via LaTeX), man pages and much more.\
 Sphinx experience is a great asset for a GNU Linux technical writer. [Source](https://www.sphinx-doc.org/en/master/)
+
 #### Why is it relevant for KERI?
 {TBW}
 #### Why Sphinx and not something else?
@@ -25,6 +26,7 @@ Sphinx experience is a great asset for a GNU Linux technical writer. [Source](h
 Formerly known as Swagger, OpenAPI has a long and established history. In 2010, Swagger started as an open source specification for designing and documenting RESTful APIs.
 In 2015, the Swagger project was acquired by SmartBear Software. The Swagger Specification was donated to the Linux foundation and renamed the OpenAPI.
 [Difference](https://swagger.io/blog/api-strategy/difference-between-swagger-and-openapi/)
+
 #### Why is it relevant for KERI?
 {TBW}
 #### Why Swagger / OpenAPI and not something else?
@@ -62,6 +64,7 @@ A REST Api wrapper is something slightly different. For example Salesforce expos
 <img src="../images/postman.png" alt="postman-logo" border="1" width="250">
 Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. 
 [source](https://www.postman.com)
+
 #### Why is it relevant for KERI?
 {TBW}
 #### Why Postman and not something else?
@@ -80,6 +83,7 @@ Paw is a full-featured HTTP client that lets you test and describe the APIs you 
 XBRL is the open international standard for digital business reporting, managed by a global not for profit consortium, XBRL International. We are  committed to improving reporting in the public interest. XBRL is used around the world, in more than 50 countries. Millions of XBRL documents are created every year, replacing older, paper-based reports with more useful, more effective and more accurate digital versions.
 In a nutshell, XBRL provides a language in which reporting terms can be authoritatively defined. Those terms can then be used to uniquely represent the contents of financial statements or other kinds of compliance, performance and business reports. XBRL lets reporting information move between organisations rapidly, accurately and digitally.
 [source](https://www.xbrl.org/the-standard/what/an-introduction-to-xbrl/)
+
 #### Why is it relevant for KERI?
 {TBW}
 #### Why XBRL and not something else?
@@ -89,6 +93,7 @@ In a nutshell, XBRL provides a language in which reporting terms can be authori
 <img src="../images/Arelle.png" alt="Arelle-logo" border="1" width="250">
 Arelle is a project to provide the XBRL community with an easy to use open source platform for XBRL.  It supports XBRL and its extension features in an extensible manner.  It does this in a compact yet robust framework that can be used as a desktop application and can be integrated with other applications and languages utilizing its web service.
 [source](https://arelle.org/arelle/)
+
 #### Why is it relevant for KERI?
 {TBW}
 #### Why Arelle and not something else?
@@ -98,6 +103,7 @@ Arelle is a project to provide the XBRL community with an easy to use open sourc
 <img src="../images/workiva.png" alt="workiva-logo" border="1" width="250">
 Workiva brings together everything you need—teammates, datasets, and data sources—so you can work better in the cloud. Wherever you are, whatever you’re doing. Automate what’s slowing you down. Focus on what fires you up.
 [source](https://www.workiva.com/en-nl/)
+
 #### Why is it relevant for KERI?
 {TBW}
 #### Why Workiva and not something else?
@@ -106,6 +112,7 @@ Workiva brings together everything you need—teammates, datasets, and data sour
 ## What is Docker?
 <img src="../images/Docker.png" alt="Docker-logo" border="1" width="250">
 Docker is an open source platform for building, deploying, and managing containerized applications. Learn about containers, how they compare to virtual machines (VM), and why Docker is so widely adopted and used. [Source](https://www.ibm.com/cloud/learn/docker)
+
 #### Why is it relevant for KERI?
 With Docker containization the KERI development team is able to deliver a working stack for testing and demonstration purposes with a clear list of components and their versions in a confined environment.
 #### Why Docker and not something else?
@@ -115,6 +122,7 @@ Docker is the most adopted and has various deployment options.
 <img src="../images/ntru.png" alt="ntru-logo" border="1" width="250">
 NTRU is an open-source public-key cryptosystem that uses lattice-based cryptography to encrypt and decrypt data. It consists of two algorithms: NTRUEncrypt, which is used for encryption, and NTRUSign, which is used for digital signatures. Unlike other popular public-key cryptosystems, it is resistant to attacks using Shor's algorithm. NTRUEncrypt was patented, but it was placed in the public domain in 2017. NTRUSign is patented, but it can be used by software under the GPL.\
 [Source](https://en.wikipedia.org/wiki/NTRU)
+
 #### Why is it relevant for KERI?
 It might be an alternative to our Libsodium libs. But...
             - Looks like NTRUSign is broken. 
@@ -144,12 +152,15 @@ Hosted runners for every major OS make it easy to build and test all your projec
 ### What is Git Flow?
 <img src="../images/gitflow.png" alt="gitflow-logo" border="1" width="250">
 Git flow is a popular Git branching strategy aimed at simplifying release management, and was introduced by software developer Vincent Driessen in 2010. Fundamentally, Git flow involves isolating your work into different types of Git branches. [Source](https://www.gitkraken.com/learn/git/git-flow)
+
 #### Why is it relevant for KERI?
 Multiple developers active and growing developers community needs simple but secure branching.
 #### Why GIT Flow and not something else?
 More secure than the easier versioning [Github Flow](https://www.gitkraken.com/learn/git/git-flow#github-flow) and [GitLab Flow](https://www.gitkraken.com/learn/git/git-flow#gitlab-flow)
+
 ### What is DidComm?
 Powerful, high-trust, self-sovereign interactions over any transport [Source](https://didcomm.org/)
+
 #### Why is it relevant for KERI?
 To build KERI Tunnels
 #### Why DIDComm and not something else?
@@ -176,6 +187,7 @@ It replaces [Maven](https://maven.apache.org/).Rebuild only what is necessary. F
 ### What is WebAuth?
 <img src="../images/webauth.png" alt="webauth-logo" border="1" width="250">
 WebAuthn is a new standard for authentication, which is published by the World Wide Web Consortium and is supported by the FIDO alliance. [Source](https://www.loginradius.com/blog/identity/webauth-secures-user-login/)
+
 #### Why is it relevant for KERI?
 {TBW}
 #### Why WebAuth and not something else?
@@ -216,8 +228,9 @@ It's the number one solution for Node.js.
 <img src="../images/dart.png" alt="dart-logo" border="1" width="250">
 Dart is a programming language designed for client development, such as for the web and mobile apps. It is developed by Google and can also be used to build server and desktop applications.
 It is an object-oriented, class-based, garbage-collected language with C-style syntax.It can compile to either native code or JavaScript, and supports interfaces, mixins, abstract classes, reified generics and type inference.[Source](https://en.wikipedia.org/wiki/Dart_(programming_language))
-#### Why is it relevant for KERI?
 
+#### Why is it relevant for KERI?
+{TBW}
 #### Why Dart and not something else?
 {TBW}
 

@@ -46,6 +46,7 @@ To make the API service RESTful, six guiding constraints must be satisfied:
 6.	Code on demand: Because REST APIs download and execute code in the form of applets or scripts, there’s more client functionality. Oftentimes, a server will send back a static representation of resources in the form of XML or JSON. Servers can also send executable codes to the client when necessary.
 
 [source](https://blog.postman.com/rest-api-examples/)
+
 #### Why is it relevant for KERI?
 {TBW}
 #### Why REST API and not something else?
@@ -56,6 +57,7 @@ A Wrapper Class (or the Wrapper Pattern) is where you declare a Class as a conta
 A REST Api wrapper is something slightly different. For example Salesforce exposes a REST Api and if you were to invoke that say from C#, you would have to perform a set of common steps such as login, query, etc. To make this available in C# by abstracting the innards of the actual REST calls to salesforce and exposing only the developer relevant detail, you could write a rest wrapper which performs these commonly used functions - creates requests, parses responses, etc
 
 [source](https://salesforce.stackexchange.com/questions/5834/can-somebody-explain-what-is-a-rest-api-wrapper)
+
 #### Why is it relevant for KERI?
 {TBW}
 #### Why REST API wrapper and not something else?
@@ -73,8 +75,9 @@ Postman is an API platform for building and using APIs. Postman simplifies each 
 
 ### What is Paw?
 <img src="../images/paw.png" alt="paw-logo" border="1" width="250" style="float:left">
-Paw is a full-featured HTTP client that lets you test and describe the APIs you build or consume. It has a beautiful native macOS interface to compose requests, inspect server responses, generate client code and export API definitions.
+Paw is a full-featured HTTP client that lets you test and describe the APIs you build or consume. It has a beautiful native macOS interface to compose requests, inspect server responses, generate client code and export API definitions.\
 [source](https://paw.cloud)
+
 #### Why is it relevant for KERI?
 {TBW}
 #### Why Paw and not something else?
@@ -93,7 +96,7 @@ In a nutshell, XBRL provides a language in which reporting terms can be authori
 
 ### What is Arelle?
 <img src="../images/Arelle.png" alt="Arelle-logo" border="1" width="250" style="float:left">
-Arelle is a project to provide the XBRL community with an easy to use open source platform for XBRL.  It supports XBRL and its extension features in an extensible manner.  It does this in a compact yet robust framework that can be used as a desktop application and can be integrated with other applications and languages utilizing its web service.
+Arelle is a project to provide the XBRL community with an easy to use open source platform for XBRL.  It supports XBRL and its extension features in an extensible manner.  It does this in a compact yet robust framework that can be used as a desktop application and can be integrated with other applications and languages utilizing its web service.\
 [source](https://arelle.org/arelle/)
 
 #### Why is it relevant for KERI?
@@ -112,9 +115,10 @@ Workiva brings together everything you need—teammates, datasets, and data sour
 {TBW}
 
 ## What is Docker?
-<img src="../images/Docker-logo.png" alt="Docker-logo" border="1" width="250" style="float:left">
+<img src="../images/Docker.png" alt="Docker-logo" border="1" width="250" style="float:left">
 
-Docker is an open source platform for building, deploying, and managing containerized applications. Learn about containers, how they compare to virtual machines (VM), and why Docker is so widely adopted and used. [Source](https://www.ibm.com/cloud/learn/docker)
+Docker is an open source platform for building, deploying, and managing containerized applications. Learn about containers, how they compare to virtual machines (VM), and why Docker is so widely adopted and used.\
+[Source](https://www.ibm.com/cloud/learn/docker)
 
 #### Why is it relevant for KERI?
 With Docker containization the KERI development team is able to deliver a working stack for testing and demonstration purposes with a clear list of components and their versions in a confined environment.
@@ -124,6 +128,7 @@ Docker is the most adopted and has various deployment options.
 ## What is NTRU?
 <img src="../images/ntru.png" alt="ntru-logo" border="1" width="250" style="float:left">
 NTRU is an open-source public-key cryptosystem that uses lattice-based cryptography to encrypt and decrypt data. It consists of two algorithms: NTRUEncrypt, which is used for encryption, and NTRUSign, which is used for digital signatures. Unlike other popular public-key cryptosystems, it is resistant to attacks using Shor's algorithm. NTRUEncrypt was patented, but it was placed in the public domain in 2017. NTRUSign is patented, but it can be used by software under the GPL.\
+
 [Source](https://en.wikipedia.org/wiki/NTRU)
 
 #### Why is it relevant for KERI?
@@ -147,7 +152,8 @@ It's custom made for ACDC and KERI, there's nothing else.
 ### What is Github Actions?
 <img src="../images/gh-actions.png" alt="gh-actions-logo" border="1" width="250" style="float:left">
 
-GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub. Make code reviews, branch management, and issue triaging work the way you want. [Source](https://github.com/features/actions)
+GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub. Make code reviews, branch management, and issue triaging work the way you want.\
+[Source](https://github.com/features/actions)
 #### Why is it relevant for KERI?
 {TBW}
 #### Why Github Actions and not something else?
@@ -155,7 +161,9 @@ Hosted runners for every major OS make it easy to build and test all your projec
 
 ### What is Git Flow?
 <img src="../images/gitflow.png" alt="gitflow-logo" border="1" width="250" style="float:left">
-Git flow is a popular Git branching strategy aimed at simplifying release management, and was introduced by software developer Vincent Driessen in 2010. Fundamentally, Git flow involves isolating your work into different types of Git branches. [Source](https://www.gitkraken.com/learn/git/git-flow)
+Git flow is a popular Git branching strategy aimed at simplifying release management, and was introduced by software developer Vincent Driessen in 2010. Fundamentally, Git flow involves isolating your work into different types of Git branches.
+
+[Source](https://www.gitkraken.com/learn/git/git-flow)
 
 #### Why is it relevant for KERI?
 Multiple developers active and growing developers community needs simple but secure branching.
@@ -163,7 +171,9 @@ Multiple developers active and growing developers community needs simple but sec
 More secure than the easier versioning [Github Flow](https://www.gitkraken.com/learn/git/git-flow#github-flow) and [GitLab Flow](https://www.gitkraken.com/learn/git/git-flow#gitlab-flow)
 
 ### What is DidComm?
-Powerful, high-trust, self-sovereign interactions over any transport [Source](https://didcomm.org/)
+Powerful, high-trust, self-sovereign interactions over any transport
+
+[Source](https://didcomm.org/)
 
 #### Why is it relevant for KERI?
 To build KERI Tunnels
@@ -182,7 +192,10 @@ It's custom made for CESR and KERI, there's nothing else.
 
 ### What is Bazel?
 <img src="../images/bazel-logo.png" alt="bazel-logo" border="1" width="250" style="float:left">
-Bazel is an open-source build and test tool that scalably supports multi-language and multi-platform projects.[Source](https://bazel.build/)
+Bazel is an open-source build and test tool that scalably supports multi-language and multi-platform projects.
+
+[Source](https://bazel.build/)
+
 #### Why is it relevant for KERI?
 One tool, multiple languages: Build and test using Java, C++, Go, Android, iOS and many other languages and platforms. Bazel runs on Windows, macOS, and Linux.
 #### Why Bazel and not something else?
@@ -190,7 +203,9 @@ It replaces [Maven](https://maven.apache.org/).Rebuild only what is necessary. F
 
 ### What is WebAuth?
 <img src="../images/webauth.png" alt="webauth-logo" border="1" width="250" style="float:left">
-WebAuthn is a new standard for authentication, which is published by the World Wide Web Consortium and is supported by the FIDO alliance. [Source](https://www.loginradius.com/blog/identity/webauth-secures-user-login/)
+WebAuthn is a new standard for authentication, which is published by the World Wide Web Consortium and is supported by the FIDO alliance.
+
+[Source](https://www.loginradius.com/blog/identity/webauth-secures-user-login/)
 
 #### Why is it relevant for KERI?
 {TBW}
@@ -208,8 +223,9 @@ It's a greatly simplified exchange protocol. The simplification has two primary 
 
 ### What is Pypi?
 The Python Package Index (PyPI) is a repository of software for the Python programming language.\
-PyPI helps you find and install software developed and shared by the Python community. Learn about installing packages. Package authors use PyPI to distribute their software. Learn how to package your Python code for PyPI.
-[source](https://pypi.org/)
+PyPI helps you find and install software developed and shared by the Python community. Learn about installing packages. Package authors use PyPI to distribute their software. Learn how to package your Python code for PyPI.\
+[Source](https://pypi.org/)
+
 #### Why is it relevant for KERI?
 The team wants to distribute KERI uniformly and as broad as possible.
 #### Why Pypi and not something else?
@@ -219,7 +235,9 @@ It's the best of breed and most commonly used in the Python community.
 
 ### What is NPM?
 <img src="../images/npm.png" alt="npm-logo" border="1" width="250" style="float:left">
-NPM is two things: first and foremost, it is an *online repository* for the publishing of open-source Node.js projects; second, it is a *command-line utility* for interacting with said repository that aids in package installation, version management, and dependency management. [Source](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/)
+NPM is two things: first and foremost, it is an *online repository* for the publishing of open-source Node.js projects; second, it is a *command-line utility* for interacting with said repository that aids in package installation, version management, and dependency management. 
+
+[Source](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/)
 #### Why is it relevant for KERI?
 For the Node.js implementation of KERI it comes in handy. Also KEEP has been build in Node.js.
 #### Why NPM and not something else?
@@ -232,6 +250,7 @@ It's the number one solution for Node.js.
 <img src="../images/dart.png" alt="dart-logo" border="1" width="250" style="float:left"> 
 Dart is a programming language designed for client development, such as for the web and mobile apps. It is developed by Google and can also be used to build server and desktop applications.
 It is an object-oriented, class-based, garbage-collected language with C-style syntax.It can compile to either native code or JavaScript, and supports interfaces, mixins, abstract classes, reified generics and type inference.
+
 [Source](https://en.wikipedia.org/wiki/Dart)
 
 #### Why is it relevant for KERI?

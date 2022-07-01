@@ -112,7 +112,7 @@ Workiva brings together everything you need—teammates, datasets, and data sour
 {TBW}
 
 ## What is Docker?
-<img src="../images/Docker-logo.png" alt="Docker-logo" border="1" width="250"style="float:left">
+<img src="../images/Docker-logo.png" alt="Docker-logo" border="1" width="250" style="float:left">
 
 Docker is an open source platform for building, deploying, and managing containerized applications. Learn about containers, how they compare to virtual machines (VM), and why Docker is so widely adopted and used. [Source](https://www.ibm.com/cloud/learn/docker)
 
@@ -171,7 +171,7 @@ To build KERI Tunnels
 It's the intended layer two of DID technology supported by Decentralized Identity Foundation (DIF) and the Trust over IP foundation (ToIP).
 
 ## Java
-<img src="../images/Java_logo.png" alt="Java-logo" border="1" width="250" style=""float:left">
+<img src="../images/Java_logo.png" alt="Java-logo" border="1" width="250" style="float:left">
 ### What is Cesr4j
 IT's a JavaEE library for CESR encoding [Source](https://github.com/WebOfTrust/cesr4j)
 

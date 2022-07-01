@@ -12,7 +12,7 @@ There are a few commons reasons to choose development tools. Mostly because they
 We won't mention these fundamental feature for creating Autonomic Identifier systems in the rest of this document. Instead we'll focus on the specific reasons for choices compared to alternatives in the field. 
 
 ### What is Sphinx?
-<img src="../images/Sphinx.png" alt="Sphinx-logo" border="1" width="250">
+<img src="../images/Sphinx.png" alt="Sphinx-logo" border="1" width="250" style="float:left">
 Sphinx is a documentation generator or a tool that translates a set of plain text source files into various output formats, automatically producing cross-references, indices, etc. That is, if you have a directory containing a bunch of reStructuredText or Markdown documents, Sphinx can generate a series of HTML files, a PDF file (via LaTeX), man pages and much more.\
 Sphinx experience is a great asset for a GNU Linux technical writer. [Source](https://www.sphinx-doc.org/en/master/)
 
@@ -30,11 +30,11 @@ In 2015, the Swagger project was acquired by SmartBear Software. The Swagger Spe
 #### Why is it relevant for KERI?
 {TBW}
 #### Why Swagger / OpenAPI and not something else?
-<img src="../images/openapi.png" alt="openapi-logo" border="1" width="250">
+<img src="../images/openapi.png" alt="openapi-logo" border="1" width="250" style="float:left">
 {TBW}
 
 ### What exactly is a REST API?
-<img src="../images/restapi.png" alt="restapi-logo" border="1" width="250">
+<img src="../images/restapi.png" alt="restapi-logo" border="1" width="250" style="float:left">
 There are numerous types of APIs, making it difficult for new developers to differentiate between each kind. In particular, REpresentational State Transfer (REST) is a software architectural style that developers apply to web APIs. REST APIs provide simple, uniform interfaces because they can be used to make data, content, algorithms, media, and other digital resources available through web URLs. Essentially, REST APIs are the most common APIs used across the web today.
 To make the API service RESTful, six guiding constraints must be satisfied:
 1.	Use of a uniform interface (UI): To have a uniform interface, multiple architectural constraints are required to guide the behavior of components. Additionally, resources should be unique so they are identifiable through a single URL.
@@ -61,7 +61,7 @@ A REST Api wrapper is something slightly different. For example Salesforce expos
 {TBW}
 
 ### What is Postman? 
-<img src="../images/postman.png" alt="postman-logo" border="1" width="250">
+<img src="../images/postman.png" alt="postman-logo" border="1" width="250" style="float:left">
 Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. 
 [source](https://www.postman.com)
 
@@ -71,6 +71,7 @@ Postman is an API platform for building and using APIs. Postman simplifies each 
 {TBW}
 
 ### What is Paw?
+<img src="../images/paw.png" alt="paw-logo" border="1" width="250" style="float:left">
 Paw is a full-featured HTTP client that lets you test and describe the APIs you build or consume. It has a beautiful native macOS interface to compose requests, inspect server responses, generate client code and export API definitions.
 [source](https://paw.cloud)
 #### Why is it relevant for KERI?
@@ -90,7 +91,8 @@ In a nutshell, XBRL provides a language in which reporting terms can be authori
 {TBW}
 
 ### What is Arelle?
-<img src="../images/Arelle.png" alt="Arelle-logo" border="1" width="250">
+<img src="../images/Arelle.png" alt="Arelle-logo" border="1" width="250" style="float:left>
+
 Arelle is a project to provide the XBRL community with an easy to use open source platform for XBRL.  It supports XBRL and its extension features in an extensible manner.  It does this in a compact yet robust framework that can be used as a desktop application and can be integrated with other applications and languages utilizing its web service.
 [source](https://arelle.org/arelle/)
 
@@ -100,7 +102,8 @@ Arelle is a project to provide the XBRL community with an easy to use open sourc
 {TBW}
 
 ### What is Workiva?
-<img src="../images/workiva.png" alt="workiva-logo" border="1" width="250">
+<img src="../images/workiva.png" alt="workiva-logo" border="1" width="250" style="float:left>
+
 Workiva brings together everything you need—teammates, datasets, and data sources—so you can work better in the cloud. Wherever you are, whatever you’re doing. Automate what’s slowing you down. Focus on what fires you up.
 [source](https://www.workiva.com/en-nl/)
 
@@ -110,7 +113,8 @@ Workiva brings together everything you need—teammates, datasets, and data sour
 {TBW}
 
 ## What is Docker?
-<img src="../images/Docker.png" alt="Docker-logo" border="1" width="250">
+<img src="../images/Docker.png" alt="Docker-logo" border="1" width="250"style="float:left >
+
 Docker is an open source platform for building, deploying, and managing containerized applications. Learn about containers, how they compare to virtual machines (VM), and why Docker is so widely adopted and used. [Source](https://www.ibm.com/cloud/learn/docker)
 
 #### Why is it relevant for KERI?
@@ -119,7 +123,8 @@ With Docker containization the KERI development team is able to deliver a workin
 Docker is the most adopted and has various deployment options.
 
 ## What is NTRU?
-<img src="../images/ntru.png" alt="ntru-logo" border="1" width="250">
+<img src="../images/ntru.png" alt="ntru-logo" border="1" width="250" style="float:left>
+
 NTRU is an open-source public-key cryptosystem that uses lattice-based cryptography to encrypt and decrypt data. It consists of two algorithms: NTRUEncrypt, which is used for encryption, and NTRUSign, which is used for digital signatures. Unlike other popular public-key cryptosystems, it is resistant to attacks using Shor's algorithm. NTRUEncrypt was patented, but it was placed in the public domain in 2017. NTRUSign is patented, but it can be used by software under the GPL.\
 [Source](https://en.wikipedia.org/wiki/NTRU)
 
@@ -133,7 +138,8 @@ It might be an alternative to our Libsodium libs. But...
 It not as computational dense as alternatives. It is newer.
 
 ### What is CAXE?
-<img src="../images/caxe.png" alt="caxe-logo" border="1" width="250">
+<img src="../images/caxe.png" alt="caxe-logo" border="1" width="250" style="float:left>
+
 It's Credential Attribute XBRL Extraction. [Source](https://github.com/WebOfTrust/caxe)
 An XBRL with ACDCs in it.
 #### Why is it relevant for KERI?
@@ -142,7 +148,8 @@ XBRL is the open international standard for digital business reporting. To exten
 It's custom made for ACDC and KERI, there's nothing else.
 
 ### What is Github Actions?
-<img src="../images/gh-actions.png" alt="gh-actions-logo" border="1" width="250">
+<img src="../images/gh-actions.png" alt="gh-actions-logo" border="1" width="250" style="float:left>
+
 GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub. Make code reviews, branch management, and issue triaging work the way you want. [Source](https://github.com/features/actions)
 #### Why is it relevant for KERI?
 {TBW}
@@ -167,7 +174,8 @@ To build KERI Tunnels
 It's the intended layer two of DID technology supported by Decentralized Identity Foundation (DIF) and the Trust over IP foundation (ToIP).
 
 ## Java
-<img src="../images/Java-logo.png" alt="Java-logo" border="1" width="250">
+<img src="../images/Java_logo.png" alt="Java-logo" border="1" width="250" style="float:left>
+
 ### What is Cesr4j
 IT's a JavaEE library for CESR encoding [Source](https://github.com/WebOfTrust/cesr4j)
 
@@ -177,7 +185,8 @@ CESR is the main serialization tool for KERI. To extend the field of application
 It's custom made for CESR and KERI, there's nothing else.
 
 ### What is Bazel?
-<img src="../images/bazel-logo.png" alt="bazel-logo" border="1" width="250">
+<img src="../images/bazel-logo.png" alt="bazel-logo" border="1" width="250" style="float:left>
+
 Bazel is an open-source build and test tool that scalably supports multi-language and multi-platform projects.[Source](https://bazel.build/)
 #### Why is it relevant for KERI?
 One tool, multiple languages: Build and test using Java, C++, Go, Android, iOS and many other languages and platforms. Bazel runs on Windows, macOS, and Linux.
@@ -214,7 +223,8 @@ It's the best of breed and most commonly used in the Python community.
 ## KEEP
 
 ### What is NPM?
-<img src="../images/npm.png" alt="npm-logo" border="1" width="250">
+<img src="../images/npm.png" alt="npm-logo" border="1" width="250" style="float:left>
+
 NPM is two things: first and foremost, it is an *online repository* for the publishing of open-source Node.js projects; second, it is a *command-line utility* for interacting with said repository that aids in package installation, version management, and dependency management. [Source](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/)
 #### Why is it relevant for KERI?
 For the Node.js implementation of KERI it comes in handy. Also KEEP has been build in Node.js.
@@ -225,7 +235,8 @@ It's the number one solution for Node.js.
 ## KeriOX
 
 ### What is Dart?
-<img src="../images/dart.png" alt="dart-logo" border="1" width="250">
+<img src="../images/dart.png" alt="dart-logo" border="1" width="250" style="float:left> 
+
 Dart is a programming language designed for client development, such as for the web and mobile apps. It is developed by Google and can also be used to build server and desktop applications.
 It is an object-oriented, class-based, garbage-collected language with C-style syntax.It can compile to either native code or JavaScript, and supports interfaces, mixins, abstract classes, reified generics and type inference.[Source](https://en.wikipedia.org/wiki/Dart_(programming_language))
 

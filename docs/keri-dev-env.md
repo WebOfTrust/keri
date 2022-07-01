@@ -249,8 +249,7 @@ It's the best of breed and most commonly used in the Python community.
 
 ### What is NPM?
 <img src="../images/npm.png" alt="npm-logo" border="1" width="250" style="float:left">
-NPM is two things: first and foremost, it is an *online repository* for the publishing of open-source Node.js projects; second, it is a *command-line utility* for interacting with said repository that aids in package installation, version management, and dependency management.\
-
+NPM is two things: first and foremost, it is an *online repository* for the publishing of open-source Node.js projects; second, it is a *command-line utility* for interacting with said repository that aids in package installation, version management, and dependency management.
 [Source](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/)
 
 #### Why is it relevant for KERI?

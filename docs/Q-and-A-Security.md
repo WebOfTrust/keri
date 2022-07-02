@@ -585,7 +585,7 @@ To be able to horizontally scale your identifier system, that consists of a root
 ## *Q: What do I need a self-signing identifier for?
 
 Often it is an efficiecy measure where the identifier includes the signature as your `content-addressable hash`.\
-_(SamMSmith)_
+*(SamMSmith)*
 
 ## **Q: What do I need a non-transferable identifier for, as KERI supports transferable identifiers?
 
@@ -593,15 +593,18 @@ Its use is different. Many applications of self-certifying identifiers only requ
 Because a non-transferable (ephemeral) identifier is not recoverable in the event of compromise, the only recourse is to replace the identifier with another identifier. In some applications this may be preferable, given the comparable simplicity of maintaining key state.\
 In either of these cases a non-transferable self-certifying identifier is sufficient.
 
-## **Q: Could you give an example of solely a cryptographically verifiable inception statement 
+## **Q: Could you give an example of solely a cryptographically verifiable inception statement
+
 This is a basic self certifyin identifier (`SCI`). The identifier itself is derived from a public key that is in the identifier. Nothing is connecting that binding of the identifier to the inception statement. Someone could create an different inception statement with other fields, the only thing that need to be the same is the key list. Everything else in the inception statement could be different.\
 So that means the only way to know which inception statement is the right one is duplicity detection. So `First seen`  becomes the only means you have to check which inception steatement is the authortiative for that identifier, in case you need an inception statement. 
 
 ## **Q: Could you give an example of strongly binding the inception statement to the identifier
+
 This a self-addressing self-certifying identifier (`SASCI`) In this case the identifier itself is derived from the inception statement. Now there can only be one inception statement for this identifier. If you'd change just a single bit, other than the identifier field itself, and it's *different* identifier. You can't have duplicitious inception statements. It's not possible. It locks down at least the  inception part and that help in duplicity detection. There can only be one inception statement to start a duplicity log with. From that point on you can have duplicitous next events, but not before. But it still means the effort it takes has to engage in CreatING duplicity, becomes much harder because for example if you include witnesses in the inception statement then any duplicitous event has to publish through the witnesses, and that adds a barrier. Basically it locks down at least the inception part, You can't change it.\
 In some cases it would be useful to be able to strongly bind the inception statement to the identifier and not merely rely on a cryptographically verifiable inception statement for the associated identifier. 
 
 ## **Q: Why ever go for a basic self-certifying identifier (`SCI`) when KERI offers self addressing SCI (`SASCI`) with a better security guarantee?
+
 Because there are many applications where you don't want to have to depend on a KEL because a basic SCI is self-certifying without a KEL. It's more light-weight. For example the non-transferable version of a SCI you can still have an inception event so that basically any tracking anybody does there is still a nominal KEL for that identifier so you can look it up that way, discovering everything, there is always a legitimate version of an inception event for every identifier. 
 
 In many cases you want identifiers that are ephemeral, that you know the only event that could be would be is the inception event. You don't need to see the inception event, if you're using it in an ephemeral context.\
@@ -617,80 +620,107 @@ In KERI the closest to 1. is DID:Key. Instead of having multiple DID methods, KE
 
 Look for more info in the KERI slidedeck ["KERI for the DIDified"]({to do}).
 
-## ***Q: Identifiers aren’t self-managing or self-certifying. That’s just not a thing?!
-_Identifiers are managed by systems and humans using systems. Identifiers are not actors. That sort of slippery language is the kind of meaningless hyperbole that borders on disingenuous._
+## ***Q: Identifiers aren’t self-managing or self-certifying. That’s just not a thing?
+
+*Identifiers are managed by systems and humans using systems. Identifiers are not actors. That sort of slippery language is the kind of meaningless hyperbole that borders on disingenuous.*
 
 KERI's creator is using semantics from several different disciplines and then making _new_ semantics when there is not a good fit. So it all sound like new semantics. _But only a few are truly new to KERI._ 
 But since we can't know what the set of new and not new is for any expert exactly, we can't know what to spend more effort on defining vs what to assume. That is why an [adaptive discussion](#q-as-an-ssi-expert-i-totally-can-get-stuck-in-the-semantics-of-keri-how-to-overcome-this) works much more efficiently.
 
 ## **Q: How does a Sybil attack present itself in KERI and what is the damage that can be done.
+
 In short: A Sybil in KERI has at most the power of DDOS attack.
 
 KERI distributed hash table (DHT) is most vulnerable to Sybil attacking/corrupting a portion of a table. They can't rewrite the cache so a Sybil attack cannot invalidate KERI, but they can DDOS the pipeline of KELs with invalid KELs so the user never get a valid KEL to process.
 KERIdemlia would, for example, be DDOS-able if it were used to index KERI nodes; KERI verifying data before replicating it slows down DHT formation, but keeps the DHT safer from Sybil attacks via user-permissioning or micro “reputation system”.\
 Sidenote: user-permissioning of watchers is where most of this verification happens at scale
 
-# Q&A section Event logs
+---
+
+## Q&A section Event logs
+
+---
 
 ## *Q: What is a Key Event Log?
+
 It's the basis of the source of truth for KERI identifiers. KERI enables cryptographic proof-of-control-authority (provenance) for each identifier. A proof is in the form of an identifier’s key event receipt log (KERL), after a validator verified the registered events, in the chain of events: the key event log (KEL).\
 *(@henkvancann)*
 
 ## Why is a Key Event Log crucially important?
+
 Without KELs, we wouldn't have a chain of registered and signed key events for an identifier. The availability and consistency of the KEL is crucial for next steps: verification of events and duplicity checks. Without verified KELs there will be no KERL for identifiers at hand.\
 *(@henkvancann)*
 
 ## How do I create a KEL?
+
 By a key [`inception event`](./Glossary.md#inception-event). A controller creates a key pair and binds this to his/her KERI identifier.
 There will be wallet software and an API available in the course of code development and also a DID scheme (DID:UN) that invokes calls to those APIs during resolution of the DID.\
 *(@henkvancann)*
 
 ## How can I trust a KEL?
+
 It is secured by a `Distributed Hash Table`, so internal inconsistencies are cryptographically provable. If they they are internal consistent the first level of trust is established. Furthermore a KERL is end-verifiable to the root-of-trust. You don't need the whole KERL at all times [Read more why](https://github.com/henkvancann/keri/blob/master/docs/Q-and-A.md#do-i-need-to-show-the-full-log-kel-to-anybody-i-transact-with-even-though-id-only-like-to-show-a-part-of-it-for-example-a-virtual-credential). Together with the external consistency (duplicity check)
 *(@henkvancann)*
 
-# Q&A section Inconsistency and duplicity
+---
+
+## Q&A section Inconsistency and duplicity
+
+---
 
 ## What kind of Inconsistencies do we have?
+
 An internally inconsistent KEL, this simply won't verify. 
 External inconsistency: two versions of the key event log (KEL).
 
 ## How can it be garantueed than an identifier represents a certain identity and not another one?
+
 KERI takes advantage of its cryptographic root of trust with strong bindings, to get an inviable guarantee, based on both internal consistency for the cryptographic root of trust and external consistency using ambient duplicity detection.
 
 ## *Q: What is Duplicity?
+
 See the [definition](#duplicity). What it means is that we have a way to make judgements about trust in entities.\
 *(@henkvancann)*
 
 ## **Q: What does duplicity look like?
+
 Duplicity takes two forms. In the first form, a `controller` may be deemed duplicitous whenever it produces an event message that is inconsistent with another event message it previously produced. In the second form, a witness may be deemed duplicitous when it produces an event _receipt_ that is in- consistent with another event receipt it previously produced.\
-_(SamMSmith)_
+*(SamMSmith)*
 
 ## *Q: Why should we care about Duplicity?
-Duplicity becomes a basis for distrust in a controller or its witnesses. _(SamMSmith)_
+
+Duplicity becomes a basis for distrust in a controller or its witnesses. *(SamMSmith)*
 
 ## **Q: What is the main benefit we get from duplicity detection?
+
 Duplicity detection **buys validators protection** without the need of anything more than a duplicity detection network.
 
-# Q&A section Key rotation
+---
+
+## Q&A section Key rotation
+
+---
 
 ## *Q: What is Key Rotation?
+
 Changing the key, i.e., replacing it by a new key. The places that use the key or keys derived from it (e.g., authorized keys derived from an identity key, legitimate copies of the identity key, or certificates granted for a key) typically need to be correspondingly updated.
 
 the main purpose of key rotation it to either prevent or recover from a successful compromise of one or more private keys by an exploiter.\
 [Source](https://csrc.nist.gov/glossary/term/Key_Rotation).
 
 ## **Q: Why bother about key rotation?
+
 The primary purpose of rotating encryption keys is not to decrease the probability of a key being broken, but to reduce the amount of content encrypted with that key so that the amount of material leaked by a single key compromise is less.
 
 However, for _signing keys_ there is a concrete reason: say it takes X months of computation (expected value given your threat model) to crack a key, and you rotate your signing key every 𝑋−1 months and revoke the old one, then by the time an attacker has cracked the key, any new signatures produced by the attacker will either be A) rejected by clients because of key expiry, or B) back-dated to before the key revocation (which should also raise warning in clients).\
 [Source](https://crypto.stackexchange.com/questions/41796/whats-the-purpose-of-key-rotation).
 
-## **Q: Why does KERI solve interoperability with its key rotation scheme? 
+## **Q: Why does KERI solve interoperability with its key rotation scheme?
+
 KERI uses plain old digital signatures from PKI, intentionally, so that it may be truly universally applied. KERI solves that hard problem of PKI, that is, key rotation in a standard way. Without a standard way of addressing key rotation, there is no interoperability between systems, they break when you rotate keys because no one knows how to verify the key rotation was done properly. KERI solves that problem.
 
-
 ## **Q: What is Pre-rotation?
+
 Pre-rotation is a _cryptographical commitment (a hash)_ to the _next_ private key in the rotation-scheme. (*@henkvancann*)\
 The pre-rotation scheme provides secure verifiable rotation that mitigates successful exploit of a given set of signing private keys from a set of (public, private) key-pairs when that exploit happens sometime **after** its creation _and_ its first use to issue a `self-certifying identifier`. In other words, it assumes that the private keys remains private **until after** issuance of the associated identifier.\
 [Source: chapter Pre-rotation in whitepaper](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf)
@@ -700,30 +730,38 @@ I first wrote about in 2018, it's been public knowledge ever since. I guess peop
 (*SamMSmith*)
 
 ## *Q: What do I need to do step by step to rotate my keys?
+
 <img src="../images/key-rotation-muggles-steps1-2.png" alt="key rotation steps 1 and 2" border="0" width="500"><img src="../images/key-rotation-muggles-steps3-4.png" alt="key rotation steps 3 and 4" border="0" width="500" align="right">
 <img src="../images/key-rotation-muggles-steps5-6.png" alt="key rotation steps 5 and 6" border="0" width="500"><img src="../images/key-rotation-muggles-steps7-8.png" alt="key rotation steps 7 and 8" border="0" width="500" align="right">
 <img src="../images/key-rotation-muggles-steps9-10.png" alt="key rotation steps 9 and 10" border="0" width="500">
 
-# Q&A section KEL and KERL
+---
+
+## Q&A section KEL and KERL
+
+---
 
 ## **Q What is the difference between KEL and KERL?
+
 The word 'Receipt' explains it all: the sender signs off the verification of the KEL done by the recipient. That _Receipt_ is hosted in the KERL and is the root-of-trust for KERI.\
 <img src="../images/Direct-mode-kel-kerl.png" alt="Direct mode: kel and kerl difference charted" border="0" width="600" style="float:left">
 The analogy is the difference between a _two-way_ - and a _three-way handshake_: Did I, the recepient, only verify that the sender's message was valid (two-way using KEL, arrow left to right) or did the sender _sign off the receipt_ of that verification by the recipient (three-way in KERL, arrow right to left)
 *(@henkvancann)*
 
 ## Can a KEL grow too big, so that performance becomes an issue eventually?
+
 In short, No, KERI has several fall-back options to deal with lingering enlargements of KELs or declining performance, if ever actual. And that is batching and horizontal scaling the issuers.
 
 A few relevant features of KELs within KERI, supposing we have a _big_ KEL, which means a long* chain of hashed data:
-- A KEL will always be order of magnitude smaller than public blockchains, because they are more specialised structures that do not need to contain total ordering
-- Once a KEL has been verfied by a user, it can be archived by this user.
-- The core key events in KERI like inception, rotation and delegation are worst case still irrelevant to the scale of volume of a KEL.
-- The seals of Interaction Events don't need to be put in the KEL one by one, you could put a whole bunch of Transaction-seals in a _sparse Merkle tree_ and only register the Merkle root in the KEL.
-- Private KEL are small per design, because in private interactions the identifier have no public value attached to them
-- Public KEL can be associated with public entities like humans, organisations and devices and therefore accumulate value on the identifier through interactions. 
-- For security garuantee there is no difference between a big KEL and a small KEL. Both need to be internally consistent and verifiable to the root-of-trust.
-- We have the opportunity to create delegated identifiers and delegate KELs.
+
+* A KEL will always be order of magnitude smaller than public blockchains, because they are more specialised structures that do not need to contain total ordering
+* Once a KEL has been verfied by a user, it can be archived by this user.
+* The core key events in KERI like inception, rotation and delegation are worst case still irrelevant to the scale of volume of a KEL.
+* The seals of Interaction Events don't need to be put in the KEL one by one, you could put a whole bunch of Transaction-seals in a _sparse Merkle tree_ and only register the Merkle root in the KEL.
+* Private KEL are small per design, because in private interactions the identifier have no public value attached to them
+* Public KEL can be associated with public entities like humans, organisations and devices and therefore accumulate value on the identifier through interactions. 
+* For security garuantee there is no difference between a big KEL and a small KEL. Both need to be internally consistent and verifiable to the root-of-trust.
+* We have the opportunity to create delegated identifiers and delegate KELs.
 *a _big_ KEL is a _long_ KEL
 
 #### Now suppose a KEL of a long-lived public identifier gets too big, even if that is not very likely to happen. What are our options:
@@ -821,7 +859,7 @@ Instead, KERI is a key compromise discovery mechanism. And if there is a comprom
 ## *Q: What is the scenario for a Verifier to check the key status?
 A verifier that gets a VC checks the issuer. with the public key.\
 So it's approximately equivalent to resolving a DID in most cases.\
-_(CharlesCunningham)_ and _(RobertMitwicki)_
+*(CharlesCunningham)* and *(RobertMitwicki)*
 
 ## *Q: What is the scenario for a Verifier to check the key status?
 _KERI has a content centric approach_: it's what we get and not where we get it. So as soon as you have the KEL (get it from anywhere, what matters is the consistency of that log. The public key is stored in the KEL.
@@ -833,7 +871,7 @@ Both are validators. Jurors report duplicity, validators won’t.
 
 ## ***Q: Is it possible to create a KERI DID that is permanently locked to the "did:key" style / ephemeral?
 It is. Sections 2.2.3 - 2.3.1 of the [white paper](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf) explains transferrability and the "basic"-type identifier, which always represents a public key and may be either transferrable (can be updated) or non-transferrable (ephemeral/did:key style). section 14.2 actually details how these are encoded, basically check the first few chars of the identifier.\
-_(CharlesCunningham)_
+*(CharlesCunningham)*
 
 ## ***Q: DID data model supports verification methods which are not based on public keys or even any cryptography at all. KERI can't do this? 
 _In many ways KERI is "better" than DIDs, especially when it comes to proof-of-control. But I think this is one thing that DIDs can do that KERI can't: verification methods which are not based on public keys or even any cryptography at all._
@@ -841,16 +879,17 @@ _In many ways KERI is "better" than DIDs, especially when it comes to proof-of-c
 KERI can support them, with some special event type, they use it to store CRDT ops.\
 (_@OR13b_)
 The point of KERI is to maintain to control of key-derived identifiers. It's not intended to provide all the capabilities of DID.\
-(_@_stevetodd__)
+(*@_stevetodd*)
 
-## ***Q: Is it fair to say that DID resolution in general is a security weakness and then push forward KERI in that name? 
-_Although some DIDs have not kept up with design goals* of DIDs, e.g. did:web, it is too strong to state this in general. It simply depends on the DID method?\
-*decentralization, persistence, cryptographic verifiability._
+## ***Q: Is it fair to say that DID resolution in general is a security weakness and then push forward KERI in that name?
+
+*Although some DIDs have not kept up with design goals* of DIDs, e.g. did:web, it is too strong to state this in general. It simply depends on the DID method?\
+*decentralization, persistence, cryptographic verifiability.*
 
 In brief: we argue that the chain is as strong as its weakest ring.
 
 Security is not build into the protocol but indeed as the eloborate question mentions, it depends on the DID method. Which overall is a huge risk for community as people needs to know the security level which each did method brings. From that perspective without unified security model brings us to the similar situation where, me having private email server in the basement to avoid spying by google, I send out my e-mail to you having it on gmail. I have high security and privacy but other side have just security without privacy. The outcome is that security model is applied in wrong place and KERI aims to fix it.\
-_(RobertMitwicki)_
+*(RobertMitwicki)*
 
 ## ***Q: Because the DID data model theoretically allows DID methods and verification methods that may NOT be based on cryptographic keys, KERI is capable of spanning all DIDs?
 
@@ -864,12 +903,12 @@ It's true KERI is all about cryptographic commitment. But KERI can also support 
 *Is it not a helpful exercise to game out the things required to support 95% of DID use cases with other DID system developers?*
 
 It's considered a privacy property of KERI, that you cannot enumerate all identitiess, in the same way that finding all minorities of certain religious preference might not be a feature.\
-(_@OR13b_)
+(*@OR13b*)
 
-Discovery is a layer on top of what KERI provides. KERI doesn't preclude DID, nor does it need to implement all of DID. KERI will participate in the DID ecosystem. (_@_stevetodd__)\
+Discovery is a layer on top of what KERI provides. KERI doesn't preclude DID, nor does it need to implement all of DID. KERI will participate in the DID ecosystem. (*@_stevetodd*)\
 It doesn't need/want to solve/serve that slice of the use case pie.
 
-#### **Q: Follow up question 1: Why does KERI rule out 95% of the DID-based use cases upfront, where we need public discoverability on a decentralized deterministically iterable registry?
+### **Q: Follow up question 1: Why does KERI rule out 95% of the DID-based use cases upfront, where we need public discoverability on a decentralized deterministically iterable registry?
 
 ```text
 The vast majority of users use apps and services that are exchanges between or about the well-known, 
@@ -889,7 +928,7 @@ But that said, I'm interested in hearing other opinions or counter arguments to 
 *There is an implicit need for the registry to track its entries as DIDs. I guess those 95% use cases will have to get other types of DIDs for that?*
 
 It's possible to make a DID doc that represents a KERI identifier. If you want to resolve it, you can put it in any number of blockchains. That just publishes it. However, they don't have to be published to work. \
-(_@_stevetodd__)
+(*@_stevetodd*)
 
 Or for example TOR hidden services, these are not designed to be discoverable. In fact, the whole point of tool is to provide anonymity. Anonymity is a property of set membership, and it's destroyed by making the sets small or enumerable.
 (_@OR13b_)
@@ -897,40 +936,48 @@ Or for example TOR hidden services, these are not designed to be discoverable. I
  In many scenarii, what the elaborate question explains makes sense. I can understand a different design goal/priority for KERI, I think the rationale is quite clear in terms of where it stands in the DID space.
 (_@fimbault_)
 
-#### **Q: Follow up question 2: That's not deterministic?! 
-_You can't have Registry A magically just trust that a DID from Other System B, it would need to be native to it?_
-_Any registry with deterministically resolvable entries requires the entry controllers' IDs and resolutions be native to it. That's an empirical computer science wall type of requirement._ \
-_Imagine I want to register a DID in a decentralized deterministically iterable registry - something anyone can run and deterministically know all entries registered with it, wherein the registry has no central entities or authorities that determine the bindings between entries and those who control them..._\
-**_Nowhere in any paper on this planet is this a solved problem, because it's basically NP hard_**
+#### **Q: Follow up question 2: That's not deterministic?!
+
+*You can't have Registry A magically just trust that a DID from Other System B, it would need to be native to it?*
+*Any registry with deterministically resolvable entries requires the entry controllers' IDs and resolutions be native to it. That's an empirical computer science wall type of requirement.* \
+*Imagine I want to register a DID in a decentralized deterministically iterable registry - something anyone can run and deterministically know all entries registered with it, wherein the registry has no central entities or authorities that determine the bindings between entries and those who control them...*\
+
+***Nowhere in any paper on this planet is this a solved problem, because it's basically NP hard***
 
 It depends on what you mean by resolve. The [white paper](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf) explains the points brought up in this question.
-(_@_stevetodd__)
+(*@_stevetodd*)
 
 {TBW prio 1}
 
-
 ## **Q : Nowhere in any paper on this planet is this a solved problem, because it's basically NP hard
-It's considered a privacy property of KERI, that you cannot enumerate all identities.\
-_(@Or13)_
 
+It's considered a privacy property of KERI, that you cannot enumerate all identities.\
+*(@Or13)*
+
+---
 
 # Q&A Security Guarantees
 
+---
+
 ## **Q: What are the security risks of KERI with regard to the identity protocol?
+
 Harm that can be done to the a `controller`: Unavailability, loss of control authority, externally forced duplicity\
-Harm that can be done to a `validator`: _Inadvertent acceptance_ of verifiable - but forged or duplicitous events 
+Harm that can be done to a `validator`: *Inadvertent acceptance* of verifiable - but forged or duplicitous events.
 
 Breaking the promise of global consistency by a controller is a provable liability. However, global consistency may only matter after members of that community need to interact, not before.\
 (*SamMSmith*)
 
 ## *Q: How secure is the KERI infrastructure?
-KERI changes the discussion about security. From a discussion about the security of _infrastructure_ to a discussion about the security of your _key management infrastructure_. Most people when they think security, the think "oh, blockchain!": permissioned or permissionless, how hard is it to get 51% attack, etc.Non of that matters for KERI. KERI is all about "are your private keys private?!" And if _yes_, that drastically slims down the security discussion to brute force attacks to public keys. And because the next public keys are in fact protected by a hash, you have to brute force the hash algorithm, that is post-quantum secure.
+
+KERI changes the discussion about security. From a discussion about the security of *infrastructure* to a discussion about the security of your *key management infrastructure*. Most people when they think security, the think "oh, blockchain!": permissioned or permissionless, how hard is it to get 51% attack, etc.Non of that matters for KERI. KERI is all about "are your private keys private?!" And if *yes*, that drastically slims down the security discussion to brute force attacks to public keys. And because the next public keys are in fact protected by a hash, you have to brute force the hash algorithm, that is post-quantum secure.
 So that is a very high level of infrastructural security.
 
 So private key management and protection is the root of your security in KERI.
 
 ## **Q: Can I rotate keys with Tangem in KERI?
-_Suppose I'd trust a Tangem card for generating public private key pairs at will and the NFC communication allowing to interact with a wallet app._
+
+*Suppose I'd trust a Tangem card for generating public private key pairs at will and the NFC communication allowing to interact with a wallet app.*
 
 One of the main concerns is that there is a theoretical link (a binding) between the cards and a user, via the card-ID (CID). However the CID is used only for checking the authenticity and integrity of the chip itself. Tangem publishes and anchors a list of CIDs with corresponding public addresses in a public blockchain. When checking authenticity, the verifier looks up the pub CID and corresponding pub address in the published list, and verifies that the chip controls the correct pub address by means of a challenge-response scheme. 
 Even though for blockchain or SSI interactions, a completely new wallet with new pub/priv keypair is generated, the pub/priv key of the CID is used when the authenticity of the chip is checked by means of a challenge response scheme. Everything happens in the client app (2021: iOS or Android; and the client code is open source), where there is no communication with Tangem, so Tangem is not able to see any activity conducted by this CID in an authenticity check.
@@ -944,49 +991,57 @@ On the issue of Rotation:
 {TBW prio 2}
 
 ## **Q: DHTs are not an immutable linear chronology oracle, which is the heart of the actual security problem. You claim KERI solves the security problem with DHTs?!
+
 The immutable linear chronology is provided by the key event log (`KEL`) data structure itself. Getting a full copy is all you need. When retrieving a KEL over a network, then as you say a witness can prune some amount of the latest events, but every witness would have to be compromised for that to be undetectable.\
 If parties are so concerned, they could establish a large collectivised set of witnesses that sign and distribute all key events presented to this network (this would essentially be a `Proof of Authority`/federated blockchain but would require (configurable)% compromise for undetectable pruning of recent history. Only PoA/federated because the witness sets are designated by the controllers, so you could not just use arbitrary witnesses who join and leave the network at leisure (afaik).
 
 The difference between the chain and the DHT is that not all DHT nodes act as witnesses for all KELs in the system (in the sense that they dont provide receipts for every KEL and arent referenced in the witness sets of every KEL), but they could all (or at least the ones holding the KEL you seek) still provide availability for KELs and thus would have to all be compromised in order to hide a recent-history-pruning, only one has to transmit the new/complete version to prove all the other versions as being old/incomplete.\
-_(CharlesCunningham)_
+*(CharlesCunningham)*
 
 The point of KERI is to encapsulate all the guarantees within `KEL`s nothing else is needed. DHT is just for resolution process to find a place from where I can get it. This place can change as you like I could even get it in p2p interaction from someone else. DHT seems to be the most reasonable way to build solid infrastructure for resolution process but none of the nodes can actually inject or tamper KELs so you don't have to trust them or get any guarantees from them. Since if the node will miss behave it is very easy to detect that.\
-_(RobertMitwicki)_
+*(RobertMitwicki)*
 
 ## **Q: You are arguing KERI affords greater security than a decentralized linear event system like Bitcoin?
-_...you would be fundamentally arguing that you can record a singular, immutable linear event history more securely than Bitcoin, and I see nothing in KERI that would indicate that._
+
+*...you would be fundamentally arguing that you can record a singular, immutable linear event history more securely than Bitcoin, and I see nothing in KERI that would indicate that.*
 
 Read the answer to [this](#keri-is-basically-a-series-of-pay2publickeyhash-transactions) first.
 
 If you read Szabo's paper on threshold structures, you get security of the same type when ever you use a threshold structure, be it MFA, Multi-Sig, or Distributed consensus. They all are using a combination of multiple relatively weak attack surfaces that must be simulatenously compromised for a successful attack. So multiplying simulatneous weak surfaces = functional equivalent of a stronger attack surface.  So when you look at KERI you see that the security is primarily due to cryptographic strength and the witnesses are not the primary source of security but merely secure one thing, that is the availability of the KEL for an identifier. Not the KEL itself. The KEL iteself is secured by signatures.\
 From a Validator perspective their security is due to duplicity detection. Successful attack against duplicity detection requires an eclipse attack. Ledgers such as bitcoin are also susceptible to eclipse attacks. So in an apples to apples (resistance to eclipse attack) a KERI watcher network of comparable reach (1000's of watchers) would have comparable resistance to an eclipse attack.
 
-#### ***Q: Differences between blockchain-based security and KERI security
-- Where KERI doesn't need total ordering in its logs, blockchain do need that. What KERI needs is watchers that construct string of event in the relative order of reception of the KEL  {TBW please explain or improve this: what is this, why is it important?}
-- Another characteristic is that KERI identifiers are transferable and blockchain-based identifiers are not, they are bound to their ledger.
+### ***Q: Differences between blockchain-based security and KERI security
+
+* Where KERI doesn't need total ordering in its logs, blockchain do need that. What KERI needs is watchers that construct string of event in the relative order of reception of the KEL  {TBW please explain or improve this: what is this, why is it important?}
+* Another characteristic is that KERI identifiers are transferable and blockchain-based identifiers are not, they are bound to their ledger.
 
 ### ***Q: How does FIFO prevent effective DOS attacks in Out-of-order KAACE?
-_An escrow cache of unverified out-of-order event provides an opportunity for malicious attackers to send forged event that may fill up the cache as a type of denial of service attack. For this reason escrow caches are typically FIFO (first-in-first-out) where older events are flushed to make room for newer events. [Paragraph 11.3.1]((https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf))_
-_Question: how does FIFO prevent effective DOS attacks?_
+
+*An escrow cache of unverified out-of-order event provides an opportunity for malicious attackers to send forged event that may fill up the cache as a type of denial of service attack. For this reason escrow caches are typically FIFO (first-in-first-out) where older events are flushed to make room for newer events. [Paragraph 11.3.1]((https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf))*\
+*Question: how does FIFO prevent effective DOS attacks?*
 
 By loadbalancing the incoming messages. If you dont have any loadbalancing, the messages are going to be processed First In First Out. Only when an attacker has full bandwith available to overload the buffer, they could frustrate the process to get honest messages in.
 As soon as you’re able to balance the receipt of messages in the buffer, you’ll be able to get the right messages (from honest senders) through.
 (*@henkvancann*)
 
-## ***Q: I don’t feel KERI is capable of delivering on all the promises made. It’s trivial to have a witness strategy that fails to meet those promises. 
-_Which is not true for bitcoin. Nobody gets to alter the witness strategy of bitcoin without a HUGE amount of demonstrable proof, politicking, and advocacy. Most of my problems with innovative DLTs or other distributed systems are that I struggle to internalize **how they actually guarantee anything**._
+## ***Q: I don’t feel KERI is capable of delivering on all the promises made. It’s trivial to have a witness strategy that fails to meet those promises.
 
-If you are very familiar with `PoW` and therefore Bitcoin and Ethereum but not _non-PoW_ `Byzantine Agreement` (`BA`), that where the cutting edge is for understanding the security model of KERI.\ 
-_Non-PoW_ `Byzantine Agreement` (`BA`) and therefore KAACE on KERI witnesses which are a simplified variant of BA and under the hood look nothing like proof of work. Actually KERI with witnesses and KAACE looks the most like Stellar an open permission-less `Byzantine Agreement` algorithm. If these concepts are unfamiliar to you, yu might as a result have no intuition about why KERI could work because you then have little familiarity with distributed consensus mechanisms that provide PoW like guarantees, but are not `PoW`.\
-Actually BA came years before PoW so its the other way around (PoW provides BA like guarantees) but thats a quibble.  So anyone trying to grasp how KERI security is guaranteed should first learn how _non-PoW_ BA works before he/she could begin to believe why KERI could even work at all. Once you see this, then the dominos will start to fall.
+*Which is not true for bitcoin. Nobody gets to alter the witness strategy of bitcoin without a HUGE amount of demonstrable proof, politicking, and advocacy. Most of my problems with innovative DLTs or other distributed systems are that I struggle to internalize **how they actually guarantee anything***
 
-#### ***Q: The guarantees stated about KERI are inappropriate without a particular witness structure?
-_...and then you have to evaluate the witness strategy, which means KERI on its own doesn’t have the guarantees that the KERI creator keeps claiming._
+If you are very familiar with `PoW` and therefore Bitcoin and Ethereum but not *non-PoW* `Byzantine Agreement` (`BA`), that where the cutting edge is for understanding the security model of KERI.\
+*Non-PoW* `Byzantine Agreement` (`BA`) and therefore KAACE on KERI witnesses which are a simplified variant of BA and under the hood look nothing like proof of work. Actually KERI with witnesses and KAACE looks the most like Stellar an open permission-less `Byzantine Agreement` algorithm. If these concepts are unfamiliar to you, yu might as a result have no intuition about why KERI could work because you then have little familiarity with distributed consensus mechanisms that provide PoW like guarantees, but are not `PoW`.\
+Actually BA came years before PoW so its the other way around (PoW provides BA like guarantees) but thats a quibble.  So anyone trying to grasp how KERI security is guaranteed should first learn how *non-PoW* BA works before he/she could begin to believe why KERI could even work at all. Once you see this, then the dominos will start to fall.
+
+### ***Q: The guarantees stated about KERI are inappropriate without a particular witness structure?
+
+*...and then you have to evaluate the witness strategy, which means KERI on its own doesn’t have the guarantees that the KERI creator keeps claiming.*
 
 A KERI witness structure never needs to provide total ordering (where total ordering is precisely defined in the literature for distributed consensus algorithms as providing one ordering for the union of transactions from multiple sets of transactions from  multiple sets of clients where each set of transactions is ordered independently by each client that generates it. I.e. all the transactions from all the clients are combined into one set with one ordering = one total ordering. Most people can't define this correctly whenever asked. 
 
 Byzantine fault tolerant total ordering is the hard problem of distributed consensus. **Safe agreement which is all that KERI provides is much much simpler.** So almost any witness structure is much simpler and will still work good enough. And its not the witness structure alone but the witness and watcher structure:
-- Witness for controllers
-- Watchers for validators 
+
+* Witness for controllers
+* Watchers for validators
+
 Both are simpler consensus mechanisms compared to DLT algorithms. Distributed consensus describes a family of algorithms of which BFT Total Ordering distributed consensus is a subset. Pretty much all cloud databases that have redundant copies use some form of distributed consensus for synchronizing the copies of the database. They all use some form of authentication for securing that consensus but they are not in any real sense of the term  using Byzantine Fault tolerant total ordering distributed consensus. Setting up  witness pools and watcher pools in KERI is of comparable complexity to spinning up a redundant Postgres or CouchDB cluster. So KERI's guarantees come from nothing much more complicated than that. Nobody thinks that a CouchDB cluster is too complex to understand but few actually know the algorithmic details of its low level of distributed consensus.\
 (*SamMSmith*)

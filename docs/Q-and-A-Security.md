@@ -493,6 +493,16 @@ So the simplification does not come at a cost, it's an outrght improvement becau
 
 ---
 
+## *Q: All you need is a secret key that underlies your entire online identity?
+More precisely put you need a Public Private key pair of which the private key is kept secret. Merely a secret key is not good enough. It must be PKI. KERI is a new take on PKI that fixes the flaws in existing PKI systems without needing blockchain as a crutch.\
+(*SamMSmith*)\
+
+### Missing a point
+*Why not? One way function(s) in PKI derive the Public key(s), so in my understanding a secret key with sufficient entropy is the start of it all. Where do I miss a point?*
+
+*SamMSmith*:
+Yes, you're mission a point. You can use secret keys with symmetric cryptographic operations. Both asymmetric and symmetric start with a secret key but asymmetric goes on to create a public private keypair. So its not only a secret key you need but one that results in a `SCID`. Someone who is used to symmetric cryptography would get the wrong impression.
+
 ## **Q: How is a KERI identifier different than a regular identifier in DID methods?
 
 A self-sovereign identifier that is not self-certifying is dependent of infrastructure and is not fully autonomous and not fully porteable. KERI uses autonomic identifiers, fully cryptographically derivable and portable.
@@ -905,6 +915,7 @@ It is. Sections 2.2.3 - 2.3.1 of the [white paper](https://github.com/SmithSamue
 *(CharlesCunningham)*
 
 ## ***Q: DID data model supports verification methods which are not based on public keys or even any cryptography at all. KERI can't do this?
+
 *In many ways KERI is "better" than DIDs, especially when it comes to proof-of-control. But I think this is one thing that DIDs can do that KERI can't: verification methods which are not based on public keys or even any cryptography at all.*
 
 KERI can support them, with some special event type, they use it to store CRDT ops.\
@@ -987,7 +998,7 @@ It's considered a privacy property of KERI, that you cannot enumerate all identi
 
 ---
 
-# Q&A Security Guarantees
+## Q&A Security Guarantees
 
 ---
 

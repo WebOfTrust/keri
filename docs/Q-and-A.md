@@ -372,7 +372,7 @@ Yes, KERI sat under the *Decentralized Identity Foundation*, [DIF](https://ident
 In 2022 KERI sits mainly under 
 [WebOfTrust](https://github.com/WebOfTrust), which is a github repository collection of *Standards Relating to a Web Of Trust Based on Autonomic Identifier Systems*
 
-The integrated work also leads to [IETF](https://datatracker.ietf.org/person/sam@prosapien.com) drafts.
+The integrated work also leads to [IETF](https://datatracker.ietf.org/person/sam@prosapien.com) drafts. The value statement and organizational principles of the IETF strongly resonate with KERI. Read more about why IETF [here](https://github.com/WebOfTrust/keri/blob/main/README.md#why-ietf).
 
 The work is done together with TrustoverIP in the Task Force [ACDC](https://wiki.trustoverip.org/display/HOME/ACDC+%28Authentic+Chained+Data+Container%29+Task+Force).
 (*SamMSmith and @henkvancann*)

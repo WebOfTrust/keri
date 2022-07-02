@@ -326,7 +326,7 @@ Due to its licensing structure, KERI isn't owned by anyone and everyone at the s
 
 ### KERI core
 
-On github KERI is - and will become even more - a thickening bunch of repositories:
+On github KERI[^1] is - and will become even more - a thickening bunch of repositories:
 
  1. [KERIpy](https://github.com/weboftrust/KERIpy)  Python Implementation of the KERI Core Libraries
  2. [KERIjs](https://github.com/decentralized-identity/kerijs)  JavaScript (nodes) Implementation of the KERI core library.
@@ -818,13 +818,15 @@ Because total linear ordering is not needed for a given identifier's event seque
 The registry is logically centralized (in that there is a consensus between participants) but there is no central registry (needed, ed.), which gatekeeps access to the data.\
 (*@Chunningham*)
 
-## *Q: How do I explain the significance of KERI to someone?
+## *Q: How do I explain the significance of KERI's blockchain-less-ness?
 
-*Could I say that the Transactions Per Second of a KERI-based system will always beat the TPS of a blockchain-based system.*\
+In brief: identifier portability is significant.
 
-*Is that a fair statement? Is there some "order of magnitude" characterization of that inherent advantage?*
+The key answer to *How can you control your own online identity?* is that it must be portable. The system **must have** the property of **identifier portability**. 
 
-{TBW prio 2}
+> This is analogous to the property that mobile telephone numbers now have (but didn't have for  decades) that is number portability between providers.  Likewise a blockchain based identity system suffers from the lack of identifier portability.
+
+It doesn't matter that the blockchain has a decentralized governance structure, the identifier is not portable and so the user is not truly totally sovereign over their identifiers and hence their identity based on those identifiers. KERI is an authenticatable system that supports portability.
 
 ---
 

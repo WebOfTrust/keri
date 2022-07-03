@@ -42,7 +42,7 @@ _Ambient_ means all around, abundantly available. It is a new term to better des
 
 #### Best Available Data Acceptance mechanism
 
-The BADA security model provides a degree of replay attack protection. The attributate originator (issuer, author, source) is provided by an attached signature couple or quadruple. A single reply could have multiple originators. When used as an authorization the reply attributes may include the identifier of the authorizer and the logic for processing the associated route may require a matching attachment.\
+The BADA security model provides a degree of replay attack protection. The attributive originator (issuer, author, source) is provided by an attached signature couple or quadruple. A single reply could have multiple originators. When used as an authorization the reply attributes may include the identifier of the authorizer and the logic for processing the associated route may require a matching attachment.\
 BADA is part of KERI's _[Zero Trust Computing Architecture for Data Management](https://hackmd.io/Qsrfj7Y-TIGl5ESvrxWGxw): How to support Secure Async Data Flow Routing in KERI enabled Applications_
 
 #### Composable derivation codes on cryptographic material primitives 
@@ -52,7 +52,7 @@ KERI's design both requires - and benefits from - a universal compact encoding f
 
 #### Composable Event Streaming Representation
 
-This compact encoding scheme fully supports both textual and binary streaming applications of attached crypto material of all types. This approach includes composability in both the textual and binary streaming domains. The primitives may be the minimum possible but still composable size. Making composablity a guaranteed property allows future extensible support of new compositions of streaming formats based on pre-existing core primitives and compositions of core primitives. This enables optimized stream processing in both the binary and text domains. \
+This compact encoding scheme fully supports both textual and binary streaming applications of attached crypto material of all types. This approach includes compose-ability in both the textual and binary streaming domains. The primitives may be the minimum possible but still composable size. Making compose-ability a guaranteed property allows future extensible support of new compositions of streaming formats based on pre-existing core primitives and compositions of core primitives. This enables optimized stream processing in both the binary and text domains. \
 (new invention) More info in [KID0001](https://github.com/decentralized-identity/keri/blob/master/kids/kid0001Comment.md)
 and [CESR explained](https://medium.com/happy-blockchains/cesr-one-of-sam-smiths-inventions-is-as-controversial-as-genius-d757f36b88f8)
 
@@ -64,12 +64,12 @@ Or DEL. This is a record of _inconsistent_ event messages produced by a given co
 
 In `KERI` consistency is is used to described data that is internally consistent and cryptographically verifiably so. Duplicity is used to describe **external inconsistency**. Publication of two or more versions of a `KEL`, each of which is internally consistent is duplicity. Given that signatures are non-repudiable any duplicity is detectable and provable given possession of any two mutually inconsistent versions of a `KEL`.  
 
-In common language 'duplicity' has a slightly different connotation: 'two-facedness', 'dishonesty', 'deceitfulness', 'deviousness,'two-facedness', 'falseness'.
+In common language 'duplicity' has a slightly different connotation: 'two-faced-ness', 'dishonesty', 'deceitfulness', 'deviousness,'two-faced-ness', 'falseness'.
 
 #### First seen
 
 "First seen" in KERI is the first **verified** event, accepted in the `KEL`. It has no effect on the timing of what has arrived in escrow for example; in escrow there can be garbage.
-Every 'first seen' event is propagated world wide within micro-seconds to the watchers. Only in this microseconds windows that you could have a live key conprise attack. If that happens, this where you have to look after this duplicity-attack a bit more in depth to handle it safely. E.g. a valid key rotation.
+Every 'first seen' event is propagated world wide within micro-seconds to the watchers. Only in this microseconds windows that you could have a live key comprise attack. If that happens, this where you have to look after this duplicity-attack a bit more in depth to handle it safely. E.g. a valid key rotation.
 
 #### Generic classes of self-certifying identifiers 
 
@@ -101,11 +101,11 @@ What if PBFT and Stellar had a baby that was missing liveness and total ordering
 
 #### KERI Implementation/Improvement Docs
 
-Or KIDs. These docs are modular so teams of contributors can independently work and create PRs of individual KIDs; KIDs answer the question "how we do it". We add commentary to the indivudual KIDs that elaborate on the _why_. It has been split from the _how_ to not bother implementors with the _why_.
+Or KIDs. These docs are modular so teams of contributors can independently work and create PRs of individual KIDs; KIDs answer the question "how we do it". We add commentary to the individual KIDs that elaborate on the _why_. It has been split from the _how_ to not bother implementors with the _why_.
 
 #### Keridemlia
 
-It is a contraction of KERI and [Kademlia](https://en.wikipedia.org/wiki/Kademlia). It's the distributed database of Witness IP-addresses based on a Distributed Hash Tabel. It also does the CNAME - stuff that DNS offers for KERI: the mapping between an identifier and it's controller AID stored in the KEL to its current wittness AID and the wittness AID to the IP address.\
+It is a contraction of KERI and [Kademlia](https://en.wikipedia.org/wiki/Kademlia). It's the distributed database of Witness IP-addresses based on a Distributed Hash Tabel. It also does the CNAME - stuff that DNS offers for KERI: the mapping between an identifier and it's controller AID stored in the KEL to its current witness AID and the witness AID to the IP address.\
 (_@henkvancann_)
 
 #### Key compromise
@@ -135,7 +135,7 @@ KERI is an identifier system that fixes the internet. It's a fully decentralized
 (_@henkvancann_)
 
 While attribution has always been a non-exact science, we could come as close to attribution as “beyond a reasonable doubt”, those days are over with KERI.\
-KERI provides a trust spanning layer for the internet, because **the protocol solves the secure attribution problem** in a general, portable, fully decentralized way. There are more types of trust IN KERI but they all depend on the most important _attributional_ trust.\
+KERI provides a trust spanning layer for the internet, because **the protocol solves the secure attribution problem** in a general, portable, fully decentralized way. There are more types of trust IN KERI but they all depend on the most important _attributive_ trust.\
 From KERI we've learned that _secure attribution_ is the essential problem for _any_ `identifier system` to solve.\
 (_@henkvancann_)
 
@@ -178,7 +178,7 @@ Validation is done based on [BADA](#best-available-data-acceptance-mechanism) Mo
 
 #### Pre-rotation
 
-It is a new invention in KERI. Pre-rotation is a _cryptographical commitment (a hash)_ to the _next_ private key in the rotation-scheme.\
+It is a new invention in KERI. Pre-rotation is a _cryptographic commitment (a hash)_ to the _next_ private key in the rotation-scheme.\
 The pre-rotation scheme provides secure verifiable rotation that mitigates successful exploit of a given set of signing private keys from a set of (public, private) key-pairs when that exploit happens sometime **after** its creation _and_ its first use to issue a `self-certifying identifier`. In other words, it assumes that the private keys remains private **until after** issuance of the associated identifier.\
 [Source: chapter Pre-rotation in whitepaper](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf)
 
@@ -193,7 +193,7 @@ Any validator may therefore cryptographically verify the authoritative state of 
 So KERI introduces for the first time many entirely new innovative concepts that are derived from many well known concepts. 
 Each new invention is by itself worthy of its own white paper.
 This results in new terminology. Some are entirely new words used in entirely new ways. Others are adaptations of existing
-terms but defined more precisiely for the KERI innovative use.
+terms but defined more precisely for the KERI innovative use.
 ```
 
 We move forward with **Not KERI specific Terminology**.
@@ -213,7 +213,7 @@ DIF = Decentralized Identity Foundation\
 DDO = DID Document, look up W3D DID standardization for more info\
 DHT = [Distributed Hash Table](#distributed-hash-table)\
 DIF = Decentralized Identity Foundation, https://identity.foundation.   \
-DKMI = Decentralized Key Mangement Infrastructure\
+DKMI = Decentralized Key Management Infrastructure\
 GPG = [GNU Privacy Guard](#pgp-and-gpg)\
 HSM = Hardware Security Module\
 IPv4 = standard Internet Protocol, version 4\
@@ -263,7 +263,7 @@ More on [Wikipedia](https://en.wikipedia.org/wiki/Append-only)
 
 #### Autonomic Computing Systems
 
-Self managing computing systems using algorithmic governance, from the 90's way way way before DAOs. KERI creator Sma Smith worked at funded Navy research in the 90's on _autonomic surviveable systems_ as in  "self-healing" systems: "We called them autonomic way back then".
+Self managing computing systems using algorithmic governance, from the 90's way way way before DAOs. KERI creator Sma Smith worked at funded Navy research in the 90's on _autonomic survivable systems_ as in  "self-healing" systems: "We called them autonomic way back then".
 
 #### Autonomic Identifier
 
@@ -326,7 +326,7 @@ An assertion of the truth of something, typically one which is disputed or in do
 
 #### Consensus mechanisms  
 
-How groups of entitities come to decisions. In general to learn about consensus mechanisms read any textbook on decision making, automated reasoning, multi-objective decision making, operations research etc.
+How groups of entities come to decisions. In general to learn about consensus mechanisms read any textbook on decision making, automated reasoning, multi-objective decision making, operations research etc.
 
 A fundamental problem in distributed computing and multi-agent systems is to achieve overall system reliability in the presence of a number of faulty processes. This often requires coordinating processes to reach consensus, or agree on some data value that is needed during computation.
 
@@ -362,7 +362,7 @@ The slides of a 2009 lecture to get to the idea [here](http://www.eeci-institute
 
 #### Correlation
 
-An identifier used to indicate that external parties have observed how wallet contents are related. For example, when a public key is reused, it conveys that some common entity is controlling both identifiers. Tracking correlation allows for software to warn when some new information might be about to be exposed, for example: "Looks like you are about to send crypo currency, from an account you frequently use to a new account you just created."
+An identifier used to indicate that external parties have observed how wallet contents are related. For example, when a public key is reused, it conveys that some common entity is controlling both identifiers. Tracking correlation allows for software to warn when some new information might be about to be exposed, for example: "Looks like you are about to send cryptocurrency, from an account you frequently use to a new account you just created."
 
 #### Crypto libraries
 
@@ -395,7 +395,7 @@ More on [Wikipedia](https://en.wikipedia.org/wiki/Strong_cryptography)
 
 #### Decentralized Identity
 
-DID; Decentralized identity is a technology that uses cryptography to allow individuals to create and control their own unique identifiers. They can use these identifiers to obtain `Verifiable Credentials` from trusted organisations and, subsequently, present elements of these credentials as proof of claims about themselves. In this model, the individual takes ownership of their own identity and need not cede control to centralized service providers or companies.
+DID; Decentralized identity is a technology that uses cryptography to allow individuals to create and control their own unique identifiers. They can use these identifiers to obtain `Verifiable Credentials` from trusted organizations and, subsequently, present elements of these credentials as proof of claims about themselves. In this model, the individual takes ownership of their own identity and need not cede control to centralized service providers or companies.
 
 `KERI`s definition of decentralization (centralization) is about _control_ not _spatial distribution_. In our definition _decentralized_ is not necessarily the same as _distributed_. By distributed we mean that activity happens at more than one site. Thus decentralization is about _control_ and distribution is about _place_. To elaborate, when we refer to decentralized infrastructure we mean infrastructure under decentralized (centralized) control no matter its spatial distribution. Thus _decentralized infrastructure_ is infrastructure sourced or controlled by more than one `entity`.
 
@@ -427,7 +427,7 @@ The term entropy is also used to describe the degree of unpredictability of a me
 
 #### Establishment Event
 
-An event that establishes control authority. What are the authoritative key-pairs in any point in time. For a trivial system this is one authoritative keypair and it never changes. However, if we need persistance in our identifier and we want to be able to for example overcome compromise of our keys, we need to be able to do something like rotate keys.
+An event that establishes control authority. What are the authoritative key-pairs in any point in time. For a trivial system this is one authoritative key pair and it never changes. However, if we need persistance in our identifier and we want to be able to for example overcome compromise of our keys, we need to be able to do something like rotate keys.
 
 #### End verifiable log
 
@@ -440,13 +440,13 @@ Entities are not limited to natural persons but may include groups, organization
 #### Event sourced architecture
 
 It is an Event driven architecture. However in Event Driven you can't ever replay an event.\
-In the Event Sourced architecture you recreate states in an asynchronous way. That has in general great scaleability and resiliance characteristics. However, in KERI the driver for event sourcing is security.
+In the Event Sourced architecture you recreate states in an asynchronous way. That has in general great scalability and resilience characteristics. However, in KERI the driver for event sourcing is security.
 
 #### External consistency
 
-Two or more logs are _externally consistent_ if they are both verfiable internally consistent, to begin with, and the reported copies of the logs that are the same. 
+Two or more logs are _externally consistent_ if they are both verifiable internally consistent, to begin with, and the reported copies of the logs that are the same. 
 
-External logs that are _inconsitent_, have at least two reported copies of the logs that are different. That means I have a duplicitous log. We need duplicity detection to be able to garantuee _external consistency_ or put in an different way: duplicity detection protects against external inconsistency.
+External logs that are _inconsistent_, have at least two reported copies of the logs that are different. That means I have a duplicitous log. We need duplicity detection to be able to guarantee _external consistency_ or put in an different way: duplicity detection protects against external inconsistency.
 
 #### Identifier System
 
@@ -500,7 +500,7 @@ Or JOSE. JOSE is a framework intended to provide a method to securely transfer c
 
 #### Key
 
-A mechanism for granting or restricing access to something. MAY be used to issue and prove, MAY be used to transfer and control over _identity_ and _cryptocurrency_. [More](https://en.wikipedia.org/wiki/Key_(cryptography))
+A mechanism for granting or restricting access to something. MAY be used to issue and prove, MAY be used to transfer and control over _identity_ and _cryptocurrency_. [More](https://en.wikipedia.org/wiki/Key_(cryptography))
 
 #### Key Event
 
@@ -511,9 +511,9 @@ A data structure that consist of a header (Key Event header), a configuration se
 
 #### Key management
 
-Refers to management of cryptographic keys in a cryptosystem. This includes dealing with the generation, exchange, storage, use, crypto-shredding (destruction) and replacement of keys (also [rotation](#key-rotation)). It includes cryptographic protocol design, key servers, user procedures, and other relevant protocols.
+Refers to management of cryptographic keys in a crypto-system. This includes dealing with the generation, exchange, storage, use, crypto-shredding (destruction) and replacement of keys (also [rotation](#key-rotation)). It includes cryptographic protocol design, key servers, user procedures, and other relevant protocols.
 
-Successful key management is critical to the _security_ of a cryptosystem. It is the more challenging side of cryptography in a sense that it involves aspects of social engineering such as system policy, user training, organizational and departmental interactions, and coordination between all of these elements, in contrast to pure mathematical practices that can be automated.
+Successful key management is critical to the _security_ of a crypto-system. It is the more challenging side of cryptography in a sense that it involves aspects of social engineering such as system policy, user training, organizational and departmental interactions, and coordination between all of these elements, in contrast to pure mathematical practices that can be automated.
 
 More on [wikipedia](https://en.wikipedia.org/wiki/Key_management)
 
@@ -534,7 +534,7 @@ More on [Stackexchange](https://security.stackexchange.com/questions/149125/how-
 #### Levels of Assurance
 
 Also `LOA`; Identity and other trust decisions are often not binary. They are judgement calls. Any time that judgement is not a simple “Yes/No” answer, you have the option for levels of assurance.
-KERI has the same LOAs for entropy and trust in human behaviour preservering the security of keypairs and preservering their own privacy. It has high LOAs for the cryptographical bindings of controllers and identifiers. Also the validation of witnesses and watchtowers has high a LOA.
+KERI has the same LOAs for entropy and trust in human behavior preserving the security of key pairs and preserving their own privacy. It has high LOAs for the cryptographic bindings of controllers and identifiers. Also the validation of witnesses and watchtowers has high a LOA.
 
 #### Liveness
 
@@ -564,8 +564,8 @@ The primary purpose of the [KA2CE](#keri-agreement-algorithm-for-control-establi
 
 #### MultiCodec
 
-Is a self-describing multiformat, it wraps other formats with a tiny bit of self-description. A multicodec identifier is both a varint (variable length integer) and the code identifying data. See more at [GitHub Multicodec](https://github.com/multiformats/multicodec)
-Multicodec is an agreed-upon codec table. It is designed for use in binary representations, such as keys or identifiers (i.e CID). It is then used as a prefix to identify the data that follows.
+Is a self-describing multi-format, it wraps other formats with a tiny bit of self-description. A multi-codec identifier is both a variant (variable length integer) and the code identifying data. See more at [GitHub Multi-codec](https://github.com/multiformats/multicodec)
+Multi-codec is an agreed-upon codec table. It is designed for use in binary representations, such as keys or identifiers (i.e CID). It is then used as a prefix to identify the data that follows.
 
 #### Namespace
 
@@ -595,12 +595,12 @@ The main innovation of KERI is that it provides a universal decentralized mechan
 
 #### Normative
 
-In general, we call a theory “normative” if it, in some sense, tells you what you should do - what action you should take. If it includes a usable procedure for determining the optimal action in a given scenario. [Souce](https://www.quora.com/What-is-the-difference-between-normative-and-non-normative?share=1).
+In general, we call a theory “normative” if it, in some sense, tells you what you should do - what action you should take. If it includes a usable procedure for determining the optimal action in a given scenario. [Source](https://www.quora.com/What-is-the-difference-between-normative-and-non-normative?share=1).
 
 #### Non-normative
 
 A theory is called non-normative if it does not do what has described under 'Normative'. In general, the purpose of non-normative theories is not to give answers, but rather to describe possibilities or predict what might happen as a result of certain actions.
-[Souce](https://www.quora.com/What-is-the-difference-between-normative-and-non-normative?share=1).
+[Source](https://www.quora.com/What-is-the-difference-between-normative-and-non-normative?share=1).
 
 #### One way functions
 
@@ -609,12 +609,12 @@ More on [Wikipedia](https://en.wikipedia.org/wiki/One-way_function)
 
 #### Payload
 
-The term 'payload' is used to distinguish between the 'interesting' information in a chunk of data or similar, and the overhead to support it. It is borrowed from transportation, where it refers to the part of the load that 'pays': for example, a tanker truck may carry 20 tons of oil, but the fully loaded vehicle weighs much more than that - there's the vehicle itself, the driver, fuel, the tank, etc. It costs money to move all these, but the customer only cares about (and pays for) the oil, hence, 'pay-load'. [source](https://softwareengineering.stackexchange.com/questions/158603/what-does-the-term-payload-mean-in-programming).
+The term 'payload' is used to distinguish between the 'interesting' information in a chunk of data or similar, and the overhead to support it. It is borrowed from transportation, where it refers to the part of the load that 'pays': for example, a tanker truck may carry 20 tons of oil, but the fully loaded vehicle weighs much more than that - there's the vehicle itself, the driver, fuel, the tank, etc. It costs money to move all these, but the customer only cares about (and pays for) the oil, hence, 'pay-load'. [Source](https://softwareengineering.stackexchange.com/questions/158603/what-does-the-term-payload-mean-in-programming).
 
-Now payload in `KERI`. The payload of an item in an `Event Log` is one the following cryptographical building blocks in KERI:
+Now payload in `KERI`. The payload of an item in an `Event Log` is one the following cryptographic building blocks in KERI:
 
 - a content digest hash 
-- a root hash of a Merkletree
+- a root hash of a Merkle-tree
 - a public key
 Note that the KERI never puts raw data or privacy sensitive data in a `KEL` or `KERL`.
 
@@ -627,7 +627,7 @@ More on [wikipedia](https://en.wikipedia.org/wiki/GNU_Privacy_Guard)
 
 #### Prefix
 
-A prefix that is composed of a basic Base-64 (URL safe) derivation code prepended to Base-64 encoding of a basic public digital signing key.\
+A prefix that is composed of a basic Base-64 (URL safe) derivation code pre-pended to Base-64 encoding of a basic public digital signing key.\
 Including the derivation code in the prefix binds the derivation process along with the public key to the resultant identifier. 
 
 >An example of the prefix with a one character derivation code and a 32 byte public key encoded into a 44 character Based-64 string follows:
@@ -704,11 +704,11 @@ The binding in a Self-Addressing Identifier between inception data and private k
 
 In short, A self-certifying identifier cryptographically binds an identifier to a public private key pair.\
 It is an identifier that can be proven to be the one and only identifier tied to a public key using cryptography alone.\
-A controller issues an own Identifier by binding a generated public private keypair to an identifier. After this a controller is able to sign the identifier and create a certificate. Also called a _cryptonym_. The simplest form of a self-certifying identifier includes either the public key or a unique fingerprint of the public key as a `prefix` in the identifier.
+A controller issues an own Identifier by binding a generated public private key pair to an identifier. After this a controller is able to sign the identifier and create a certificate. Also called a _cryptonym_. The simplest form of a self-certifying identifier includes either the public key or a unique fingerprint of the public key as a `prefix` in the identifier.
 
 <img src="../images/sci_issue_bind.png" alt="Self Certifying Identifier issuance and binding" border="0" width="400">
 
-The root-of-trust is fully cryptographic, there is no infrastructure associated with it. If we start there we can build a secure system on top of that. It means SCI gives us strong bindings between the keypair, the controller and the identifier. And so it fixes the main weakness of any administratively issued identifier asserting the binding between the keypair and the identifier and between the controller and the identifier, replacing them with all cryptographically strong bindings.
+The root-of-trust is fully cryptographic, there is no infrastructure associated with it. If we start there we can build a secure system on top of that. It means SCI gives us strong bindings between the key pair, the controller and the identifier. And so it fixes the main weakness of any administratively issued identifier asserting the binding between the key pair and the identifier and between the controller and the identifier, replacing them with all cryptographically strong bindings.
 
 <img src="../images/sci_ssi_book.png" alt="Self Certifying Identifier Generation and Publishing" border="0" width="400">
 
@@ -716,10 +716,10 @@ The root-of-trust is fully cryptographic, there is no infrastructure associated 
 
 #### Self Sovereign Identity
 
-It is information given out by a party involved. It is empowering the individual to help governments doing their job.  With SSI a criminal can’t cheat without being caught. SSI reduces the state's expense per individual.  SSI makes tough investigation easier and false judgements rarer. The mechanism verifies automaticly and handles broken cases gracefully.
+It is information given out by a party involved. It is empowering the individual to help governments doing their job.  With SSI a criminal can’t cheat without being caught. SSI reduces the state's expense per individual.  SSI makes tough investigation easier and false judgments rarer. The mechanism verifies automatically and handles broken cases gracefully.
 
 SSI is a new model for Internet-scale digital identity based on an emerging set of protocols, cutting edge cryptography and open standards. Technological and social movements have come together that make SSI possible. ([Source](https://livebook.manning.com/book/self-sovereign-identity/chapter-1/v-8/14)).\
-Decentralisation of the `root-of-trust` and `verifiable credentials` come into play and delivers  “user-centric identity”: more control and self-determination of individuals, machines and combinations of these, that identify as one.\
+Decentralization of the `root-of-trust` and `verifiable credentials` come into play and delivers  “user-centric identity”: more control and self-determination of individuals, machines and combinations of these, that identify as one.\
 _(@henkvancann)_
 
 #### Signatures
@@ -777,13 +777,13 @@ Known definitions of **validator** are:
 - _Validator of any VDS_ 
 - _Validator as a node in distributed consensus or participant_
 
-A _validator_ in KERI is anybody that wants to estblish control-authority over an identifier, created by the controller of the identifier. Validators verify the log, they apply duplicity detection or they leverage somebody else's duplicity detection or apply any other logic so they can say "Yes, these are events I can trust".
+A _validator_ in KERI is anybody that wants to establish control-authority over an identifier, created by the controller of the identifier. Validators verify the log, they apply duplicity detection or they leverage somebody else's duplicity detection or apply any other logic so they can say "Yes, these are events I can trust".
 
 During validation of virtual credentials for example, a `verifier` checks to see if a `verifiable credential` (VC) has been signed by the controller of this VC using the applicable verification method.
 
 #### Verifiable Credential
 
-Verifiable Credentials standardize formal conversation.  VCs structure discussion between two [or more] parties, it’s private and the proofs that an indvidual has got from  an authority can’t be denied.  Every statement can be checked, and no statement can be either deleted or changed.
+Verifiable Credentials standardize formal conversation.  VCs structure discussion between two [or more] parties, it’s private and the proofs that an individual has got from  an authority can’t be denied.  Every statement can be checked, and no statement can be either deleted or changed.
 
 VC; A data model for conveying claims made by an issuer about a subject. See [vc-data-model](https://www.w3.org/TR/vc-data-model/) for more.\
 Credentials are a part of our daily lives; driver's licenses are used to assert that we are capable of operating a motor vehicle, university degrees can be used to assert our level of education, and government-issued passports enable us to travel between countries. This specification provides a mechanism to express these sorts of credentials on the Web in a way that is cryptographically secure, privacy respecting, and machine-verifiable. [Know more](https://www.w3.org/TR/vc-data-model/)
@@ -828,4 +828,4 @@ More in the [whitepaper](https://github.com/SmithSamuelM/Papers/blob/master/whit
 In short, a Zero Trust approach trusts no one.\
 Zero Trust is a shift of network defenses toward a more comprehensive IT security model that allows organizations to restrict access controls to networks, applications, and environment without sacrificing performance and user experience. As more organizations do more computing outside their perimeter in the cloud, security teams find it increasingly difficult to trust or identify who and what should be allowed or trusted with access to their networks. As a result, an increasing number of organizations are adopting Zero Trust as an element or a component of their trust network architecture and enterprise security strategy.
 
-Zero Trust is a security concept that requires all users, even those inside the organization’s enterprise network, to be authenticated, authorized, and continuously validating security configuration and posture, before being granted or keeping access to applications and data. This approach leverages advanced technologies such as multifactor authentication, identity and access management (IAM), and next-generation endpoint security technology to verify the user’s identity and maintain system security.
+Zero Trust is a security concept that requires all users, even those inside the organization’s enterprise network, to be authenticated, authorized, and continuously validating security configuration and posture, before being granted or keeping access to applications and data. This approach leverages advanced technologies such as multi-factor authentication, identity and access management (IAM), and next-generation endpoint security technology to verify the user’s identity and maintain system security.

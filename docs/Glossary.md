@@ -124,7 +124,13 @@ More in the security sections of [Universal Identifier Theory](https://github.co
 
 Also `KEL`. Hash-chained Key Events, these are blockchains in a narrow definition, but not in the sense of ordering (not ordered) or global consensus mechanisms (not needed).
 _(SamMSmith)_ \
-A KEL is KERI's `VDS`: the proof of key state of its identifier.
+
+A KEL is KERI's [Verifiable Data Structure](#verifiable-data-structure): the proof of key state of its identifier. That's the _why_ of its existence.\
+This is _what_ it is:\
+A log that keeps track of status changes of secret keys & derived keys. 
+
+Mind you, a KEL is always about one Identifier; its history up till now. Because there are events happening to this identifier, its state changes and this could create many more derived identifiers, rotated keys, delegated keys and revoked keys in time.
+(_@henkvancann_)
 
 #### Key Event Receipt Infrastructure
 

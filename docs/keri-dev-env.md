@@ -23,12 +23,10 @@ Sphinx experience is a great asset for a GNU Linux technical writer.
 [Source](https://www.sphinx-doc.org/en/master/)
 
 #### Why is it relevant for KERI?
-
-{TBW}
+KERI's first implementation is in Python. Documenting the why of the code is human effort. Documenting *what the code does* is easily achieved with Sphinx, in multiple output formats.
 
 #### Why Sphinx and not something else?
-
-{TBW}
+Best suited for documenting Python-code as you go as a developer.
 
 ### What is Swagger and OpenAPI?
 
@@ -39,13 +37,13 @@ In 2015, the Swagger project was acquired by SmartBear Software. The Swagger Spe
 [Difference](https://swagger.io/blog/api-strategy/difference-between-swagger-and-openapi/)
 
 #### Why is it relevant for KERI?
-
-{TBW}
+KERI is trustless and is a multi layered identity-system generator. A full-functioning KERI install uses many different nodes to talk to (Witnesses, watchers, wallets). RESTfull APIs are best suited for this task.
 
 #### Why Swagger / OpenAPI and not something else?
 
 <img src="../images/openapi.png" alt="openapi-logo" border="1" width="250" style="float:left">
-{TBW}
+
+OpenAPI (former Swagger, before version 2.0) is more important than the company Swagger to KERI, CESR and ACDC. It's open sourced and has many ready-usable extensions in JSON available.
 
 ### What exactly is a REST API?
 
@@ -66,11 +64,11 @@ To make the API service RESTful, six guiding constraints must be satisfied:
 
 #### Why is it relevant for KERI?
 
-{TBW}
+KERI is multi layered and has duplicity detection as one of its main consensus mechanisms.
 
 #### Why REST API and not something else?
 
-{TBW}
+Stateless REST APIs are vital for the implementation of the KERI design.
 
 ### What is a REST API wrapper?
 
@@ -81,20 +79,20 @@ A REST Api wrapper is something slightly different. For example Salesforce expos
 
 #### Why is it relevant for KERI?
 
-{TBW}
+KERI will be written in multiple programming languages. A wrapper is able to expose the result of API calls cross boundary (exceeding the developers direct intentions) or viewable / shareable a different programming language.
 
 #### Why REST API wrapper and not something else?
 
-{TBW}
+It's simply the most obvious solution for the applications mentioned above.
 
 ### What is Postman? 
 <img src="../images/postman.png" alt="postman-logo" border="1" width="250" style="float:left">
-Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. 
+Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster.
 [source](https://www.postman.com)
 
 #### Why is it relevant for KERI?
 
-{TBW}
+It is a sophisticated EDI for KERI APIs.
 
 #### Why Postman and not something else?
 
@@ -115,6 +113,7 @@ Paw is a full-featured HTTP client that lets you test and describe the APIs you 
 #### Why Paw and not something else?
 
 {TBW}
+{Why not use containers for this?}
 
 ### What is XBRL?
 
@@ -127,11 +126,11 @@ In a nutshell, XBRL provides a language in which reporting terms can be authori
 
 #### Why is it relevant for KERI?
 
-{TBW}
+It's especially relevant for the GLEIF vLEI implementation of KERI and ACDC.
 
 #### Why XBRL and not something else?
 
-{TBW}
+It is *the* open international standard for digital business reporting.
 
 ### What is Arelle?
 

@@ -26,7 +26,8 @@ Sphinx experience is a great asset for a GNU Linux technical writer.
 KERI's first implementation is in Python. Documenting the why of the code is human effort. Documenting *what the code does* is easily achieved with Sphinx, in multiple output formats.
 
 #### Why Sphinx and not something else?
-Best suited for documenting Python-code as you go as a developer.
+Best suited for documenting Python-code as you go as a developer.\
+Sphinx uses reStructuredText as its markup language, and many of its strengths come from the power and straightforwardness of reStructuredText and its parsing and translating suite, the Docutils.
 
 ### What is Swagger and OpenAPI?
 
@@ -38,6 +39,7 @@ In 2015, the Swagger project was acquired by SmartBear Software. The Swagger Spe
 
 #### Why is it relevant for KERI?
 KERI is trustless and is a multi layered identity-system generator. A full-functioning KERI install uses many different nodes to talk to (Witnesses, watchers, wallets). RESTfull APIs are best suited for this task.
+
 
 #### Why Swagger / OpenAPI and not something else?
 

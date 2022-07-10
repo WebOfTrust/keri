@@ -167,7 +167,9 @@ This superseding rule may be recursively applied to multiple levels of delegatio
 #### Out-of-band Introductions
 
 Discovery and validation of IP resources for KERI autonomic identifiers.\
-The simplest form of a KERI OOBI is a namespaced string, a tuple, a mapping, a structured message, or structured attachment that contains both a KERI AID and a URL. The OOBI associates the URL with the AID. In tuple form this abstractly:
+The simplest form of a KERI OOBI is a namespaced string, a tuple, a mapping, a structured message, or structured attachment that contains both a KERI AID and a URL.\
+**Discovery via URI, trust via KERI.**\
+ The OOBI associates the URL with the AID. In tuple form this abstractly:
 
 ```code
 (url, aid)
@@ -244,9 +246,16 @@ WASM = [WebAssembly](#WebAssembly)\
 
 ### General definitions in alphabetic order
 
+#### Authentic Chained Data Container
+
+Or `ACDC`. In brief, an ACDC or [authentic data container] proves digital data consistency and authenticity in one go. An ACDC cryptographically secures commitment to data contained, and its identifiers are self-addressing, which means they point to themselves and are also contained ìn the data.
+
+
 #### Authentic Chained Data Container Task Force
 
 The purpose of the Authentic Chained Data Container (ACDC) Task Force  is to draft a TSS (ToIP Standard Specification) that defines the standard requirements for the semantics of Authentic Provenance Chaining of Authentic Data Containers. [See more](https://wiki.trustoverip.org/display/HOME/ACDC+%28Authentic+Chained+Data+Container%29+Task+Force)
+
+
 
 #### Ambient verifiability
 
@@ -689,7 +698,7 @@ Information controlled by an identity. MAY be used to derive _key_s.
 
 In short: "whodunit?!" in cyberspace.
 
-`Controller` makes statements to the `Validator`, who in turn validates them. Secure attribution means making and proving statements. The Controller fully "_owns_" the statement: content and attribution via digital signatures. 
+`Controller` makes statements to the `Validator`, who in turn validates the statements issued. Secure attribution means making and proving statements. The Controller fully "_owns_" the statement: content and attribution via digital signatures. 
 _Secure attribution of a statement_ is a way of proving that **the statement is an authentic statement of the `controller`**. _Secure_ means a **`Validator` may cryptographically verify**.
 
 #### Security Overlay

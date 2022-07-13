@@ -463,6 +463,14 @@ Two or more logs are _externally consistent_ if they are both verifiable interna
 
 External logs that are _inconsistent_, have at least two reported copies of the logs that are different. That means I have a duplicitous log. We need duplicity detection to be able to guarantee _external consistency_ or put in an different way: duplicity detection protects against external inconsistency.
 
+#### Habery
+
+`Hab` comes from ‘Habitat’. It’s a place where multi-sigs and AIDs are linked. `Habery` manages a collection of Habs. A Hab is a datastructure (a Python object).
+
+{TBW-prio2}
+
+The only hit (2022) in a Google search pointing to a github site 'habery _DOT_ github _DOT_ io' is NOT related.
+
 #### Identifier System
 
 The properties of an _identifier system_:

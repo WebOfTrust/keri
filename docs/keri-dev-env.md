@@ -2,6 +2,13 @@
 
 **This document explains what development tools have been used and why.**
 
+We're **not** addressing:
+- Cypher Libraries used by the different KERI implementations. 
+> Look for information here: [CypherSuites KeriPy](https://github.com/WebOfTrust/keripy/blob/development/ref/CypherSuites.md)
+- Coding Style Guides in different KERI implementations.
+> Look for information here: [Style Guide for KeriPy](https://github.com/WebOfTrust/keripy/blob/development/ref/PythonStyleGuide.md)
+
+
 ## KERI in general
 
 There are a few commons reasons to choose development tools. Mostly because they have the following features:

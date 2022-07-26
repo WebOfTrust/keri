@@ -26,6 +26,8 @@ https://us02web.zoom.us/meeting/tZ0lc-uhrjsrEtFmV2aSfAzR015DDL-ld-hg/ics?icsToke
 KERI Slack: keriworld.slack.com
 https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvbgFAQ
 
+Explanation of KERI development tools and techniques (preliminary link): [KERI development environment](https://github.com/henkvancann/keri-1/blob/main/docs/keri-dev-env.md)
+
 ## Meetings
 
 ### Future Topics
@@ -40,6 +42,156 @@ Demo of how to write tests for KeriPy
     - including docker containers
 - Creating webdriver (or selenium) tests for generic features of Keep.
 - Docker Container with port for ReST API
+- Split out keripy core from keripy Rest API
+
+### Discussion items
+
+### 2022-07-26
+
+- Recording
+    - https://drive.google.com/file/d/1daSaLeQwU6gwgMsZLQXbWUQtwcDQJqS-/view?usp=sharing
+
+
+- Reports
+    - keripy
+        - No new developments. Cleanup from pilot
+    - caxe 
+    - keep
+        - PR arshdeep
+    - keriml
+    - cesrox
+    - keriox
+        - Progress for async multi-sig
+        - delegation
+
+- Agenda
+    - Announcements:
+        - IETF BoF 114
+            - SAT (Secure Asset Transfer)
+            - https://datatracker.ietf.org/meeting/agenda
+            - https://www.ietf.org/how/meetings/114/
+            - 
+    - plan for a bi-weekly meeting (KERI-ACDC for noobs) that does two things: work on documentation / terms / Q&A and at the same time education / AMA sessions.
+        - Suggest time slot in the KERI Slack  Suggestion: Thursday 10 AM ET  
+        - 
+    - XBRL signing questions:
+        - How generate facts file
+    - Cover the proposed new rotation mechanism
+        - 
+
+### 2022-07-12
+
+- Recording
+    - https://drive.google.com/file/d/1mXTfwyZsgUHQAjXoheOkeu5ZMwt383hx/view?usp=sharing
+- Reports
+    - keripy
+        - Finished up pilot
+        - Rename master to name and development (shorten to dev)
+            - main stable release
+            - dev unstable but unit tests
+            - Rest Scripts and CLI script updates (push to main)
+            - will publish new docker container
+        - pilot
+    - caxe 
+    - keep
+        - vLEI ecosystem fixes enhancements
+        - goal to extract vLEI stuff out
+    - keriml
+        - mijo is available work on CESR
+    - cesrox
+    - keriox
+        - HCF
+            - Exposed DART, 
+            - Time escrow expiration of events
+                - Async multi-sig
+        - 
+    
+
+
+- Agenda
+    - Announcements:
+        - [RWOT sept2022 Europe - The Hague](https://github.com/WebOfTrustInfo/rwot11-the-hague/blob/master/advance-readings/rwot-primer.md) 
+        - [proposal CESR adapter](https://hackmd.io/GbQO3p6QTge-8eQMGuMaeQ#CESR-adapter-for-sophisticated-multisigmd)
+        
+    - Partial queiries of KEL. Since sequence number query supported in KERIPY
+
+
+    - Cleanup Items and Questions
+        - Agenda items Henk:
+          1. What is "Merging Habery PR"? Hab comes from 'Habitat'. It's a place where multi-sigs and AIDs are linked. _Habery_ manages a collection of Habs. A Hab is a datastructure (a Python object)
+          The only hit (2022) in a Google search pointing to a github site 'habery _DOT_ github _DOT_ io' is NOT related.
+
+            2. KERI / ACDC glossary alignment with ToIP concepts-terminology-wg [Example ACDC glossary](https://github.com/trustoverip/acdc/wiki) and eSSIF : [concepts terminologie](https://essif-lab.github.io/framework/docs/essifLab-glossary)
+
+            3. Cleaning up KERI repos on WebOfTrust GitHub ?
+                - Phil add to keri.readme to table of active repos
+    
+    - Ledger Registrar Backer vs KERI Tunnel
+        - Discovery (KERI Tunnel)
+            - Resolution Infrastructure
+            - Service endpoints
+            - Witnesses
+        - Secondary Root-of-Trust
+            - Replacing witnesswith with Ledger Registrar and Ledger Oracle
+        - Hybrid secondary Root-of-Trust
+            Not anchoring every event periodic anchor
+            Snapshot Checkpoint KELs
+          - Augmented Watcher Network
+            - detect duplicity
+
+    - New Tweaks in Pre-Rotation IETF-KERI Draft
+        - 
+
+### 2022-06-28
+
+- Recording
+    - https://drive.google.com/file/d/1XHmuB9vJOwa1AgJWUK6-_E0cfTbTlEoe/view?usp=sharing
+    - 
+- Reports
+    - keripy
+    - caxe 
+        - 
+    - keep
+    - kiwi
+    - keriml
+    - keriox
+        - HCF keriox
+        - Dart client https://pub.dev/packages/keri
+    - cesr4j
+        - 
+    - cesrox
+        - 
+
+- Agenda
+    - Developments
+        - Cardano Proposal for Registrar Backers
+        - IETF BoF in July Week of 25th
+            - SAT meeting on 26th 3-5 EST
+            - SAT secure asset transfer working group
+                - keri
+            - https://www.ietf.org/mailman/listinfo/sat 
+            - https://web3.mit.edu
+            - https://datatracker.ietf.org/meeting/114/agenda
+        - XBRL Report Signing Pilot GLEIF annual report
+            - multiple signers
+            - partial facts signers
+            - multisig ACDCs authorizing signers
+            - cloud agent Keep demo'd
+        - 
+        
+    - Issues
+        - Is NTRU algo worth looking at in context of "KERI meets embedded systems"?
+            - https://csrc.nist.gov/CSRC/media/Events/Second-PQC-Standardization-Conference/documents/accepted-papers/grobschadl-lighteight-implmentation-NTRUE.pdf
+            - Looks like NTRUSign is broken. 
+            - NTRUEncrypt is usable. 
+            - pqNTRUSign uses large signature sizes so is not immediately suitable for IOT
+            - Too Much Crypto paper https://eprint.iacr.org/archive/2019/1492/1577734684.pdf
+        - pull request from Henk
+    https://github.com/WebOfTrust/keri/pull/19
+        - Cardano Backer Registrar
+            - metadata on cardano
+            - 
+        
 
 ### 2022-06-14
 - Recording
@@ -64,7 +216,7 @@ Demo of how to write tests for KeriPy
     - KeriOx
         - HCF  restructuring
             - Windows DLL and Unix
-            - 
+            - Dart
 
     - CAXE
         - XBRL with ACDC

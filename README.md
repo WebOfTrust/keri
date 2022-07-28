@@ -56,6 +56,8 @@ The meeting agenda may be found [here](https://github.com/WebOfTrust/keri/blob/m
 ### Related Meetings
 A closely related specification that leverages KERI is ACDC. This is hosted at ToIP and meets on the alternate weeks at the same time as the KERI meetings. These meetings complement the KERI meetings reference above. For information look here [ToIP ACDC Task Force](https://wiki.trustoverip.org/display/HOME/ACDC+Meeting+Page) and here [ACDC IETF Draft](https://github.com/trustoverip/tswg-acdc-specification).
 
+The KERI concepts and terms are being discussed in the bi-weekly *Concepts, Terms and Education Zoom meeting* ([agenda](https://github.com/WebOfTrust/WOT-terms/blob/main/agenda.md)) as well as in the Slack channel '[edu](https://keriworld.slack.com/archives/C03RB6ASVUM)'. The repo for the Web of Trust terminology and glossaries is [here](https://github.com/WebOfTrust/WOT-terms). 
+
 ## Existing Implementations
 The reference implementation for KERI is the keripy implementation. This is hosted here by the WebOfTrust project. The repository may be found here:  
 * [keripy](https://github.com/WebOfTrust/keripy) – under development  

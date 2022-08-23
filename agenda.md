@@ -26,12 +26,12 @@ https://us02web.zoom.us/meeting/tZ0lc-uhrjsrEtFmV2aSfAzR015DDL-ld-hg/ics?icsToke
 KERI Slack: keriworld.slack.com
 https://join.slack.com/t/keriworld/shared_invite/zt-14326yxue-p7P~GEmAZ65luGSZvbgFAQ
 
-Explanation of KERI development tools and techniques (preliminary link): [KERI development environment](https://github.com/henkvancann/keri-1/blob/main/docs/keri-dev-env.md)
+Explanation of KERI development tools and techniques: [KERI development environment](https://github.com/WebOfTrust/keri/blob/main/docs/keri-dev-env.md)
 
 ## Meetings
 
 ### Future Topics
-
+Custodial Agents
 Demo of how to write tests for KeriPy
 
 
@@ -45,6 +45,97 @@ Demo of how to write tests for KeriPy
 - Split out keripy core from keripy Rest API
 
 ### Discussion items
+
+### 2022-08-23
+
+- Recording
+    - 
+- Reports
+    - cesrox
+        - Questions
+                - Hackmd of what can be done: https://hackmd.io/W2Z39cuSSTmD2TovVLvAPg
+            - What should the scope of CESROX be?
+            - Where is the interface?
+            - Does it parse and process events or does it just parse?
+            - Should it be [SAX](https://dev.w3.org/XInclude-Test-Suite/libxml2-2.4.24/libxml2-2.4.24/doc/interface.html) like
+            - keriox slack channel
+    - keripy
+        - Change encoding to stable readable value element in primitives
+        - New count codes for better organization for collections and pipelining.
+        - Blind OOBI support added, all witnesses now expose a blind OOBI (https://weboftrust.github.io/ietf-oobi/draft-ssmith-oobi.html#section-6 )
+        - Agent updates to notifications and SSE messages
+    - keep
+        - separate ward from Keep UX
+        - packaging how to build and distribute for MacOX
+            - Cloud Agent Keripy without Keep but CLI or ReST API packaged build desktop
+        - rebranding GLEIF future
+    - KeriOx
+        - Delegation work
+        - Exn messages
+
+- Items
+    - Change to CESR encoding
+    - ToIP Tech stack
+        - Autonomous Identifier
+            - "system"
+
+
+### 2022-08-09
+
+- Recording
+    
+
+
+- Reports
+    - keripy
+        - Tholder now supports CESR signing/next thresholds
+            - CESR weighted threshold is variable length code (same as CESR proof path)
+        - Witness endpoint dissemination by controller
+            - Eliminates the need to configure witness pools with knowledge of each other
+    - caxe 
+    - keep
+        - Proposed split into two repositories
+            - Agent and UX/UI
+    - keriml (CESR in Swift)
+    - cesrox (https://github.com/WebOfTrust/cesrox)
+        - (would obviate the need for CESR in Swift)
+        - Provenant interested in contributing after Mid September
+        - CESR NOM library to parse
+        - serdes in Rust
+        - 
+    - keriox
+        
+
+- Agenda
+    - Announcements:
+        - Video Steven and Phil (IIW revisit session) : the kli interview and how it hopefully has become an integrated eduction resource : [here](https://hackmd.io/pv11Cne-TiG4zhXUS-T6IA). Straight to the subtitled vid on Youtube: [here](https://www.youtube.com/watch?v=GqjsRuu0V5A&list=PLXVbQu7JH_LHVhs0rZ9Bb8ocyKlPljkaG) 
+        - Keri Concepts and Terminology
+            - Every other Thursdays:  [Zoomlink](https://us02web.zoom.us/j/89893527631?pwd=S1VheVF4d2xpTTRTdERYbFFGUFdPUT09). Next Aug 9.
+
+    
+    - Upcoming (Heads Up) Proposed Changes to CESR
+        - Support for CESR Native KERI Key Event Message Body
+            - New codes
+        - Change to encoding of fixed size primitives for enhanced readability of value portion
+            - useful for numeric values like numeric thresholds, and sequence numbers
+            - useful for non-keri useof CESR
+                - proposed solution to CBOR vs JSON debate in IETF standards bodies
+                - 
+    - Quick questions:
+        - What is an 'inquisitor'
+        - Where can I find the (explanation of) dip, icp, di tags 
+            - Answer: in the `development` branch of keripy in file 'src/keri/app/habbing.py'
+        - What do we exactly mean with 'escrow state'
+        - 
+    -  OpenWallet Foundation
+        -  Hyperledger Linux Foundation (consortium of supporters Ping, MS etc)
+        -  in Opposition to proprietary Apple and Google Wallets, Open source standard wallet specification
+        -  Different types of wallets but the concept of OpenWallet is one type
+        -  EU also Digital Identity Wallet related
+        -  Concerned about undesirable feature selection
+            -  Jim St Clair is an organizer 
+    - RWoT Hague
+        - Henk Participating
 
 ### 2022-07-26
 

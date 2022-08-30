@@ -31,8 +31,9 @@ Explanation of KERI development tools and techniques: [KERI development environm
 ## Meetings
 
 ### Future Topics
-Custodial Agents
-Demo of how to write tests for KeriPy
+- Custodial Agents
+- Demo of how to write tests for KeriPy
+- Relationship between DIDComm and KERI/ACDC
 
 
 ### ToDo

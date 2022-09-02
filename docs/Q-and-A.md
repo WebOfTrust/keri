@@ -387,11 +387,11 @@ The [whitepaper](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/
 
 A [KID](../kids) used to be focussed on Implementation; "this is how we do it"  We add commentary to the individual KIDs that elaborate on the why. It has been split from the *how* to not bother implementors with the *why*.
 
-The KIDS concept has been abandoned but a remnant of them can still be found [here](https://github.com/decentralized-identity/keri/tree/master/kids). Now the first time you should read are the `ietf-` drafts repos, for example ietf-cesr:  https://github.com/WebOfTrust/ietf-cesr and ietf-keri: https://github.com/WebOfTrust/ietf-keri.
+The KIDS concept has been abandoned but a remnant of them can still be found [here](https://github.com/decentralized-identity/keri/tree/master/kids). Now the first thing you should read are the `ietf-` drafts repos, for example ietf-cesr:  https://github.com/WebOfTrust/ietf-cesr and ietf-keri: https://github.com/WebOfTrust/ietf-keri.
 
 ## ***Q Where is the corresponding KIDS directory for WebOfTrust?
-In 2021 he KIDS quickly felt out of date and the team abandoned the concept for doing the IETF drafts.
-Now the place to be for the technical concepts and technical designs are the `ietf-` drafts repos, for example ietf-cesr:  https://github.com/WebOfTrust/ietf-cesr and ietf-keri: https://github.com/WebOfTrust/ietf-keri.
+In 2021 "the KIDS quickly felt out of date" (source Phil Feairheller 2022) and the team abandoned the concept for doing the IETF drafts.
+Now the place to be for studying technical concepts and technical designs are the `ietf-` drafts repos, for example (but not exhaustively listed): [ietf-cesr](https://github.com/WebOfTrust/ietf-cesr) and [ietf-keri](https://github.com/WebOfTrust/ietf-keri).
 
 ## *Q: KERI has invented its own key representation and signature format. Why not conforn to current standards already available?
 
@@ -693,7 +693,9 @@ A second reason is the method of verification and attestation in the PGP web-of-
 
 #### **Q: Can I use a PGP public private key pair for KERI?
 
-In theory we could list a PGP public key in the KERI [KID0001](https://github.com/henkvancann/keri/blob/master/kids/kid0001.md) - Prefixes, Derivation and derivation reference tables. However it's not very practical, because PGP itself is a conglomerate format that has its own derivation codes on board for different cryptographic functions. That means the PGP public key already has protocol semantic on board and that's one layer higher up than what we need for KERI in the key data structure design. KERI has it's own derivation codes and the *minimization* design principle dictates that it makes no sense to support PGP, because as an inception key pair for KERI it has no added value, and it has redundancy on board.\
+In theory we could list a PGP public key in the KERI [KID0001](https://github.com/henkvancann/keri/blob/master/kids/kid0001.md) - Prefixes, Derivation and derivation reference tables. \
+{TBW prio 3: Old reference to abandoned KIDs at DIF, renew}\
+However it's not very practical, because PGP itself is a conglomerate format that has its own derivation codes on board for different cryptographic functions. That means the PGP public key already has protocol semantic on board and that's one layer higher up than what we need for KERI in the key data structure design. KERI has it's own derivation codes and the *minimization* design principle dictates that it makes no sense to support PGP, because as an inception key pair for KERI it has no added value, and it has redundancy on board.\
 (@henkvancann)
 {TBW 3}
 

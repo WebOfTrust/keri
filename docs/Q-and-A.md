@@ -385,7 +385,13 @@ See the [definitions](#normative) section for what both terms mean. For example,
 
 The [whitepaper](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf) is the historically grown and expanded design document of `KERI`.
 
-A [KID](../kids) is focussed on Implementation; "this is how we do it"  We add commentary to the individual KIDs that elaborate on the why. It has been split from the *how* to not bother implementors with the *why*.
+A [KID](../kids) used to be focussed on Implementation; "this is how we do it"  We add commentary to the individual KIDs that elaborate on the why. It has been split from the *how* to not bother implementors with the *why*.
+
+The KIDS concept has been abandoned but a remnant of them can still be found [here](https://github.com/decentralized-identity/keri/tree/master/kids). Now the first time you should read are the `ietf-` drafts repos, for example ietf-cesr:  https://github.com/WebOfTrust/ietf-cesr and ietf-keri: https://github.com/WebOfTrust/ietf-keri.
+
+## ***Q Where is the corresponding KIDS directory for WebOfTrust?
+In 2021 he KIDS quickly felt out of date and the team abandoned the concept for doing the IETF drafts.
+Now the place to be for the technical concepts and technical designs are the `ietf-` drafts repos, for example ietf-cesr:  https://github.com/WebOfTrust/ietf-cesr and ietf-keri: https://github.com/WebOfTrust/ietf-keri.
 
 ## *Q: KERI has invented its own key representation and signature format. Why not conforn to current standards already available?
 

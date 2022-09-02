@@ -386,7 +386,7 @@ It is an object-oriented, class-based, garbage-collected language with C-style s
 
 ## KeriML
 
-## What is KeriML?
+### What is KeriML?
 
 KIMI Keri Interactive Mobile Interface, pronounced “Caramel”
 
@@ -397,3 +397,15 @@ Keep repackage Electron app to invoke python backend IIW demos (April 2022) on U
 #### Why KeriML and not something else?
 
 {TBW}
+
+## HIO
+
+### What is HIO?
+Weightless Hierarchical asynchronous coroutines and I/O in Python.\
+Rich Flow Based Programming Hierarchical Structured Concurrency with Asynchronous IO.
+
+#### Why is it relevant for KERI?
+Choosing HIO fits the asynchronous nature of KERI. See more at Github [Repository](https://github.com/ioflo/hio)
+
+#### Why KeriML and not something else?
+The minimal sufficient means design principle of KERI and the leading KERIpy implementation.

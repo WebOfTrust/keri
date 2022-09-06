@@ -33,23 +33,40 @@ Explanation of KERI development tools and techniques: [KERI development environm
 ### Future Topics
 - Custodial Agents
 - Demo of how to write tests for KeriPy
-- Relationship between DIDComm and KERI/ACDC
+
 
 
 ### ToDo
-- Future extract Keep liberary to NPM library
+- Future extract Keep library to NPM library
 - Cardarno as Ledger Registrar
 - github actions for releases
     - including docker containers
 - Creating webdriver (or selenium) tests for generic features of Keep.
 - Docker Container with port for ReST API
 - Split out keripy core from keripy Rest API
+- 
 
 ### Discussion items
+
+### 2022-09-06
+
+- Recording
+    - TDB
+- Reports
+    - CESRox
+        - ...
+    - KERIpy
+    - Keep
+    - KERIox
+- Items
+    -  Relationship between DIDComm and KERI/ACDC
+    -  More CESR
+        -  
 
 ### 2022-08-23
 
 - Recording
+    - https://drive.google.com/file/d/1X6z6MtplLP-fEqyBHbShgpG2JNwzfx5l/view?usp=sharing
     - 
 - Reports
     - cesrox
@@ -84,7 +101,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
 ### 2022-08-09
 
 - Recording
-    
+    https://drive.google.com/file/d/1UFlIhg0Dg7YZWaCaoqIF1Q_XDEJAlp90/view?usp=sharing
 
 
 - Reports

@@ -33,6 +33,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
 ### Future Topics
 - Custodial Agents
 - Demo of how to write tests for KeriPy
+- More discussions for Witnesses and Watchers.  Gossip protocol, UDP, ecosystem configuration.
 
 
 
@@ -54,14 +55,64 @@ Explanation of KERI development tools and techniques: [KERI development environm
     - TDB
 - Reports
     - CESRox
-        - ...
+        - Meeting on Thursday.  Decided on some first steps.
+        - Porting some code from KERIox to CESRox in the next few weeks
     - KERIpy
+        - `neo` branch updates to CESR.  New serialization mechanism.  Stable codes
+            - Should merge into development this week
+            - Will break any scripts or configs that rely on stable AIDs generated from salts
     - Keep
+        - Usability updates from lessons learned from Pilot
+        - GLEIF Root-of-Trust Build for production ready
+        - Bug Fixes
+        - Ubisecure
+            - trying to use keep multi-sig inception of root delegation
+        
     - KERIox
+        - Continue work on delegation
+    - CESR
+        - Updated spec with new serialization conversions. Bin <-> Raw <-> Text.
+        - CESR native versions of KERI event messages specification on the way
+        - CESR native version of thresholds.
+        - Modifications to the group codes.
+        - Improvements aimed at helping CESR move beyond KERI and cryptographic primitives
+    - Provenant
+        - Working towards become a vLEI QVI.  
+        - Working on stable deployment of witness network(s).
+            - Relative to Stable Net / Builder Net in blockchain world like Sovrin
+            - Moving into a "production mode" in infrastructure.
+        - Recognition that this is will be a common problem for community
 - Items
-    -  Relationship between DIDComm and KERI/ACDC
+    -  Future of the Witness Network and Watcher Network
+        -  What will it look like in the future?  
+            -  Witnesses for "high stakes" identifiers will run on proprietary infrastructure
+            -  Witness as a Service (WiaS).  Witness hosting that can be provisioned on demand
+        -  What will the Watcher Network look like in the future?
+            -  Community collaboration.
+            -  Watcher as a Service (Waas?).
+        -  Are these networks interconnected?
+            -  There will be gossip protocol between Watchers.  Universally watches key state and detects duplicity and shares via gossip across the network.  Similar to the ceritficate transparency protocol used for SSL certs.  Will KERI it is either duplicity or not.  No guess work.
+        -  Is it safe to assume that the Watcher network exists?
+            -  Sam:  A verifier is a watcher.  Right now in the core, watchers are dumb.  If there is duplicity, it is simply discarded.  In the future, watchers will report on that duplicity and share both KERLs and duplicity across other Watchers.  
+        -  Global vs Contextual Watcher networks?
+            -  Varying layers of watcher networks...  Major companies, ecosystem and global watcher networks all sharing with each other.  
+            -  The only attack on KERI is an eclipse attack so the larger your watcher network reach is the better your protection from this type of attack.  The only limitation is a resource constraint.  
+            -  Where do the Judges run?  AT&T vs T-Mobile.  The only "fault" that is apparent is an attach on the KEL.  And that can only occur via key compromise.  So a successful multi-threshold attach causing duplicity is the only thing Watchers are looking for.  So even competitors will want to share across the entire ecosystem.  Similar to certificate transparency, all competitors in the internet hosting space share the information with each other because it is in their best interest to eliminate fraud / duplicity.
+            -  Up to the ecosystems to cooporate on Watcher networks, controlled by the validators.
+        -  Key compromise is very difficult, especially with multi-sig.  So there should be very few dupicitous occurances(sp?) across the KERI ecosystem.
+        -  Pub-Sub push interface for current witness code plus running a witness in promiscuous(sp?) mode to make a watcher.
+            -  Down the road, UDP gossip interface for witnesses and watchers sharing KELs
+    -  Relationship between DIDComm and KERI/ACDC (Daniel Hardman)
+        -  DIDComm and KERI have complimentary emphasis.
+        -  Significant Overlaps across DIDComm and KERI
+        -  Presentation from Daniel (proposal for how to "combine" the communities):
+            -  https://bit.ly/3BeC9Wf
+        -  Call for members of the KERI community to join DIDComm conversation and +1 calls for using CESR encoding in DIDComm
+        -  DIDComm v2 just ratified in DIF and the conversation for v3 is now open.
+            -  This is the time to start working towards unification.
+            
     -  More CESR
-        -  
+
 
 ### 2022-08-23
 

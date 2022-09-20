@@ -34,6 +34,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
 - Custodial Agents
 - Demo of how to write tests for KeriPy
 - More discussions for Witnesses and Watchers.  Gossip protocol, UDP, ecosystem configuration.
+- Signify: KERI Key Manager at the edge
 
 
 
@@ -45,9 +46,72 @@ Explanation of KERI development tools and techniques: [KERI development environm
 - Creating webdriver (or selenium) tests for generic features of Keep.
 - Docker Container with port for ReST API
 - Split out keripy core from keripy Rest API
-- 
+
 
 ### Discussion items
+
+### 2022-09-20
+
+- Recording
+    - TDB
+
+- Reports
+    - CESRox
+    - KERIpy
+        - NEO Branch merged into development.  New support for stable value CESR codes.  Useful for non-crypto primitives.
+        - Sam: working on changes to allow new rotation logic.  
+            - Reserve signers and custodial signers.  Support indices that are not the same for the current and former signer list
+            - Add support for dual indices to the idex code count table and Indexer class
+        - Kevin: Adding support for privacy preserving attributes (nonce field) as well as compact credentials
+        - Phil: Minor fixes and improvements for Agent interaction with the GLEIF Root of Trust roll out.
+        - Arshdeep's pull request for KLI Apis
+    - vLEI
+        - Kevin:  Updating the vLEI schema for compact credential support and consistency across all schema
+    - Keep
+        - Support for all the GLEIF uses of the KEEP Root External and Internal
+    - KERIox
+    - CESR
+        - Modified code table for index signatures
+        - Updated CESR spec, include changes for stable values in all codes
+    - Provenant
+        - Working on becoming a QVI, technical and people dimensions.
+        - Standing up witnesses
+        - Will need and become involve in CESRox
+
+- Items
+    - Question regarding adding new code support to CESR.  
+        - Collective signatures that have variable length
+        - https://github.com/WebOfTrustInfo/rwot11-the-hague/blob/master/advance-readings/CESR-adapter-for-sophisticated-multisig.md
+        - Will be able to use the new variable length codes to support these new signature types
+    - RootsID - Encountering KERI in the wild in conversations with clients, etc.
+    - Article:  https://www.ksoeteman.nl/2022/08/self-sovereign-identity-can-do-just-fine-blockchain-less/
+    - W3C TPAC Meeting.  Sam attended as an invited expert to give talk on ACDC.  Outcome unclear.  
+        - Discussion about adding JSON Schema support
+        - Discussion about registries.  Append-to-extend is ACDC solution to no registries.
+        - https://github.com/w3c/vc-data-model/issues/934  JSON Schema
+    - Time to start talking about IIW presentations and collaborations.
+        - GLEIF - announcing the completed vLEI root of trust.  
+        - KERI and DIDComm for DIDComm v3
+        - ToIP Technical Architecture v2
+    - Design principles being discussed at the KERI concepts meeting (edu) on Thursday
+    - Discussion topic:  Root of trust and key management.
+        - Sam paper:  Universal Identifier Theory.
+            - https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/IdentifierTheory_web.pdf
+            - 3 Types we care about.
+                - 1. Cryptonomous Identifier.  Self certifying.  Derived from pub/priv key pairs
+                    - Transferable vs Non-transferable identifiers (persistent vs ephemeral)
+                - 2. Public Identfiers that are not cryptonomous.  DNS domain, social security number, etc.  (Non-cryptographically generated ID)
+                - 3. Local Identifiers, Aliases.  Only have meaning to a local entity.  Not shared, avoids collisions.  
+                    - Pet Names: Take local identifiers and share them with "friends".  Trying to solve Zooko's Triangle.
+                        - https://en.wikipedia.org/wiki/Zooko%27s_triangle
+                        - Can be solved with an identifier graph.  
+                    - Problem with collisions.  
+            - To solve the problems with #2 you have a trust domain.  You place each identifier in a trust domain resolved by the cryptonomous identifiers associated in the trust domain.  This avoids the need for a centralized registry or locus of control.  Because we solved the collision problem of namespacing.
+            - Multi-factor association of loci of control.  For example, GLEIF will publish the root of trust to multiple public sources.  The set of these publication has loci of control which allows us to bootstrap the root of trust.
+    - Classification of identifiers.  "Important identifiers" that hold credentials vs ephemeral identifiers used for short term communications.
+        - If you can afford to discard the identifier, use non-transferable identifiers, for example witnesses.
+        - If your identifier is going to have reputation that can't be discarded use transferable identifiers.
+
 
 ### 2022-09-06
 
@@ -112,6 +176,11 @@ Explanation of KERI development tools and techniques: [KERI development environm
             -  This is the time to start working towards unification.
             
     -  More CESR
+
+- Terms relevant in the (roll-out of) KERI watcher network:
+1. https://github.com/trustoverip/acdc/wiki/eclipse-attack
+2. https://github.com/trustoverip/acdc/wiki/promiscuous-mode
+3. https://github.com/trustoverip/acdc/wiki/protocol
 
 
 ### 2022-08-23

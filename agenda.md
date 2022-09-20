@@ -99,7 +99,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
             - https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/IdentifierTheory_web.pdf
             - 3 Types we care about.
                 - 1. Cryptonomous Identifier.  Self certifying.  Derived from pub/priv key pairs
-                    - Transferable vs Non-transferable identifiers (persistent vs ephemeral)
+                    - [Transferable](https://github.com/trustoverip/acdc/wiki/transferable-identifier) vs [Non-transferable](https://github.com/trustoverip/acdc/wiki/non-transferable-identifier) identifiers ([persistent](https://github.com/trustoverip/acdc/wiki/persistent-identifier) vs ephemeral)
                 - 2. Public Identfiers that are not cryptonomous.  DNS domain, social security number, etc.  (Non-cryptographically generated ID)
                 - 3. Local Identifiers, Aliases.  Only have meaning to a local entity.  Not shared, avoids collisions.  
                     - Pet Names: Take local identifiers and share them with "friends".  Trying to solve Zooko's Triangle.

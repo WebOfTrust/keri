@@ -565,6 +565,15 @@ Depends on what you mean with *proof*. KERI is content agnostic, so any cryptogr
 In general they can proof the authoritive control over a private key at a certain point back in time.
 *(@henkvancann)*
 
+## **Q: ‘In the keripy repository what is “sid”, “wan”, “red”
+What is the meaning of “sid”, “wan”, and “red” in `tests/vc/test_protocoling.py` in the test : _test_issuing_?
+
+Phil Feairheller answers in 2022:
+- **ian**: issuer     of cred (start with ‘i’)
+- **sid**: signer     of cred (start with ‘s’)
+- **wan**: witnesses          (start with ‘w’)
+- **red**: receipient of cred (start with ‘r’)
+
 ## **Q: Do verifiers, validators, witnesses and watchers all sign off `payloads`?
 
 Yes they do. For every cause there is a different payload. The main reason why all roles sign off cryptographic references is commitment to those sources (the payload in KERI is often a digest of sources) at a certain point in time.\
@@ -1037,6 +1046,7 @@ Why do we want portable identifiers instead of the Ledger Locked IDs, since we h
 
 *Or does (Delegated, Multi-sig) Self-Addressing do the job?*
 {TBW Prio 2}
+
 
 ### Acknowledgements
 

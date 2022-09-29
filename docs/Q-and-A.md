@@ -389,6 +389,17 @@ A [KID](../kids) used to be focussed on Implementation; "this is how we do it"  
 
 The KIDS concept has been abandoned but a remnant of them can still be found [here](https://github.com/decentralized-identity/keri/tree/master/kids). Now the first thing you should read are the `ietf-` drafts repos, for example ietf-cesr:  https://github.com/WebOfTrust/ietf-cesr and ietf-keri: https://github.com/WebOfTrust/ietf-keri.
 
+## **Q: What's the status of all the IETF Drafts concerning KERI, CESR, IPEX, ACDC and so on?
+_When nobody is involved or reads them, how can we be sure it's relevant and becoming a standard?_
+
+The goal of the IETF's specification or standard's path is not to drive adoption through a standard. The adoption plan for KERI is:
+
+> **to build an open source stack of libraries that once completed will largely hide the complexity from the users**
+
+Once that stack becomes a defacto standard due to usage then the IETF standard's process will remove other adoption barriers that may arise unless its an official standard of some kind.
+
+Driving adoption by first getting a standard is a very slow very expensive process. Adoption is most rapid when a library is useful and open.  IETF is the **minimally sufficient standards process** that does not interfere with building the KERI stack.
+
 ## ***Q Where is the corresponding KIDS directory for WebOfTrust?
 In 2021 "the KIDS quickly felt out of date" (source Phil Feairheller 2022) and the team abandoned the concept for doing the IETF drafts.
 Now the place to be for studying technical concepts and technical designs are the `ietf-` drafts repos, for example (but not exhaustively listed): [ietf-cesr](https://github.com/WebOfTrust/ietf-cesr) and [ietf-keri](https://github.com/WebOfTrust/ietf-keri).

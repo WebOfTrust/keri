@@ -224,7 +224,7 @@ The main design principles have a designated page "[Concepts](../../WOT-terms/Co
 
 This lead to the understanding that KERI in nothing is like something else in the SSI space. It's the [Internet identifier Platypus](#keri-the-internet-identifier-platypus).
 
-Because of this many new concepts and new terms had to be specified, and always thoroughly anchored in relevant scientific resources. A new type of language emerged, not seldom lovingly addressed as a "Sam-ism" (referring to the language used by its founder). According to KERI's objective (and ACDC's follow-up on this in the Verifiable Credentials arena) the Universal Identity Theory.
+Because of this many new concepts and new terms had to be specified, and always thoroughly anchored in relevant scientific resources. A new type of language emerged, not seldom lovingly addressed as a "Sam-ism" (referring to the language used by its founder). According to KERI's objective (and ACDC's follow-up on this in the Verifiable Credentials arena) the [Universal Identity Theory]() could be completed.
 Hence, KERI's complexity stems from three main aspects of its current nature:
 - it's a new concept
 - it's different from anything else in the field
@@ -236,7 +236,26 @@ There are some reasons why KERI might be perceived as complex where instead it c
 
 - People think they could pick some ideas from KERI and then bolt this onto there own developments. This doesn't advance clarity in the field. Moreover, KERI's design principle (3. above) "Minimal sufficient means" causes that the KERI team are very much interested in what somebody think he/she could leave out and still meet all the fundamental objectives; `security` to begin with.
 
-Yes, KERI is perceived as being complex, we won't deny this or look away. We're working as hard as we can to create educational resources, explanatory websites and we will continue to do so. The current resources:
+Yes, KERI is perceived as being complex, we won't deny this or look away. We're working as hard as we can to create educational resources, explanatory websites and we will continue to do so. The current (fall 2022) resources listed below.
+
+#### Resources
+[Technical Concepts](https://keri.one/keri-resources) developed by and explained by prof. Samuel M. Smith\
+Direct links: All relevant [white papers](https://github.com/SmithSamuelM/Papers) and a table of [IETF-drafts](https://github.com/WebOfTrust/keri) of which the status is kept up to date.
+
+Explanatory articles from Henk van Cann about KERI, CESR, OOBI, Autonomic identifiers:
+
+- [Medium-articles](https://medium.com/happy-blockchains) with a bit more sophisticated layout and response options. Medium is a company.
+- [Markdown alternatives](https://henkvancann.github.io) on Github userpage of Henk van Cann
+
+[KERI](https://github.com/SmithSamuelM/Papers/blob/master/presentations/KERI_for_Muggles.pdf) and [ACDC](https://docs.google.com/presentation/d/1mO1EZa9BcjAjWEzw7DWi124uMfyNyDeM3HuajsGNoTo/edit#slide=id.ga411be7e84_0_0) for Muggles by Drummond Reed / Sam Smith
+
+[Docs](https://github.com/WebOfTrust/keri/tree/main/docs) about technical concepts behind KERI: Questions and Answers [general](https://github.com/WebOfTrust/keri/blob/main/docs/Q-and-A.md) and focussed on [security](https://github.com/WebOfTrust/keri/blob/main/docs/Q-and-A-Security.md), [Glossary KERI](https://github.com/WebOfTrust/keri/blob/main/docs/Glossary.md) and [Glossary ACDC](https://github.com/trustoverip/acdc/wiki).
+
+Explanation of KERI development tools and techniques (preliminary link): [KERI development environment](https://github.com/henkvancann/keri-1/blob/main/docs/keri-dev-env.md)
+
+Howto's of WebofTrust documentation effort in github project page: [Howto](https://github.com/WebOfTrust/WOT-terms/tree/gh-pages/howto)
+
+
 
 ### *Q: How does KERI look like?
 

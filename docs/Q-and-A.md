@@ -210,6 +210,34 @@ Key Event Receipt Infrastructure; a **secure identifier overlay** for the intern
 Hmm, a mouthful of terms. Let's start with the identifier. One of the basic (!) forms of KERI identifiers is this example: 
 <img src="../images/basic-scid.png" alt="identifier" border="0" width="600">
 
+## ***Q: Why is KERI and all its supporting tools so complex?
+
+"Complexity" is relative. Compared to what is KERI and ACDC complex?
+
+Based on the constructive ideas the founder Samuel Smith has developed over time in his career plus the awareness that in the self-sovereign identity field there had been to little attention for security as the most important feature of digital identifiers, KERI had to be build from the ground up.
+
+The main design principles have a designated page "[Concepts](../../WOT-terms/Concepts.md)" but in brief:
+1. Security first, confidentiality second, privacy third
+2. Offer a remedy for the [broken internet](#qa-section-why-the-internet-is-broken)
+3. Minimal sufficient means
+4. Use of proven -, seasoned -, but _dumb_ cryptography
+
+This lead to the understanding that KERI in nothing is like something else in the SSI space. It's the [Internet identifier Platypus](#keri-the-internet-identifier-platypus).
+
+Because of this many new concepts and new terms had to be specified, and always thoroughly anchored in relevant scientific resources. A new type of language emerged, not seldom lovingly addressed as a "Sam-ism" (referring to the language used by its founder). According to KERI's objective (and ACDC's follow-up on this in the Verifiable Credentials arena) the Universal Identity Theory.
+Hence, KERI's complexity stems from three main aspects of its current nature:
+- it's a new concept
+- it's different from anything else in the field
+- it's all encompassing
+
+There are some reasons why KERI might be perceived as complex where instead it could involve other aspects:
+
+- KERI is the new kid on the block who undermines reasons for existence of others with a pretty solid case. The KERI team calls this _progress_ and whoever it involves might have to reconsider their tenets. All are invited to merge efforts or contribute to KERI and move forward together. The KERI team wishes to contribute to other projects as soon as it's move forward.
+
+- People think they could pick some ideas from KERI and then bolt this onto there own developments. This doesn't advance clarity in the field. Moreover, KERI's design principle (3. above) "Minimal sufficient means" causes that the KERI team are very much interested in what somebody think he/she could leave out and still meet all the fundamental objectives; `security` to begin with.
+
+Yes, KERI is perceived as being complex, we won't deny this or look away. We're working as hard as we can to create educational resources, explanatory websites and we will continue to do so. The current resources:
+
 ### *Q: How does KERI look like?
 
 This is most probably the form in which you might get to see KERI (just as an example!):

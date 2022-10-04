@@ -35,6 +35,9 @@ Explanation of KERI development tools and techniques: [KERI development environm
 - Demo of how to write tests for KeriPy
 - More discussions for Witnesses and Watchers.  Gossip protocol, UDP, ecosystem configuration.
 - Signify: KERI Key Manager at the edge
+- Watcher / ACDC Watcher
+- Mental model of Verifiable Data Structures all the way down
+- Append to Extend
 
 
 
@@ -50,10 +53,82 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### Discussion items
 
+
+### 2022-10-04
+- Recording
+    - TBD
+
+- Reports
+    - CESRox
+        - Define an approach to building library
+        - Create a beginning of a Roadmap
+        - Sam:  Count code table contains many exploratory codes that can be ignored, recent changes to indexed signature changes
+        
+    - KERIpy
+        - Sam:  added support for dual indexed signatures in CESR and keripy.  Final step for reserve participants and custodial participants in partial rotation.  Prior next key list and current signing list are no longer the same.  Allows for flexibility needed for new rotation logic.
+        - New codes which indicate what type (single, same, different, missing) of indices exist for a give signature.
+        - Support for privacy preserving credentials in kli and agent
+        - Compact credential support being added this week
+    - vLEI
+        - Sally reporting server - https://github.com/GLEIF-IT/sally
+        - example of verification service / ACDC watcher
+    - Keep
+        - Rebranding for vLEI
+    - KERIox
+    - CESR
+        - Dual indexed signature codes
+
+- Items
+    - Signify  (Signing at the Edge with keys at the edge)
+        - Backgroud
+            - Only a small set of activities that need to be protected in infrastructure for key management
+                - key pair creation
+                - key pair storage
+                - event generating 
+                - event signing
+                - event verification
+            - Trade off where these actions happen based on where you can secure / protect things.
+            - Secure code supply chain for key pair creation and event signing.  Then storage is secured by encrypting where the keys are store
+            - Signing is another level of security because you have to USE the private keys
+            - What are the liabilities do a cloud host have to worry about.
+                - Cloud host does not want to see keys (non-repudiation).  So we want to move event signing out of the cloud agent
+                - Key state (next digest and current signing key) come from the client.
+                - Cloud host ensures that the code supply chain is secure and never sees the private keys
+            - Think of credential signing as yet another event generation and signing
+            - We want to minimize what we program in the client.  Simplify the client to only the things we don't want in the cloud
+                - key pair creation
+                - event signing (the problem we want to avoid)
+            - Key storage is stored encrypted on the client and can be backed up encrypted on the cloud so the cloud never sees the keys
+            - Escrow - used it protocol design to handle out of order events.  Store the event and wait for the other stuff to show up and then continue processing of the event
+            - Firebase approach of using SSE events to ping the client that a dataset has changed and needs attention.  Same approach used here to notify client that something needs to be signed or key pairs need to be created.  Those would be datasets that a client can check at anytime (start up, after loss of connection, after SSE event shows up).
+            - Wallet - loaded term.  
+            - Signify has nothing to attack at rest.  Encrypted secrets stored in the cloud.  A stateless wallet.
+            - How does Signify trust that what she is signing is the correct thing.
+                - Have to trust that the cloud provider has secured the agent code is running correctly
+                - Cloud host could sign everything it sends to Signify
+
+
+        -Signify is a web client event signing and key pair creation app that minimizes the use of KERI on the client. The web host cloud agent never sees any of the client's private keys in the clear, these are only unlocked in memory on the client only using the client's passcode which can be used to derive an asymmetric encryption/decryption key pair. The client creates key pairs and then sends them encrypted to the cloud agent that stores them encrypted. Whenever the client needs something signed, the cloud agent does the event generation in response to the client's commands and then sends the generated event back to the client along with the necessary encrypted private signing keys.  The client can then decrypt the private keys to sign and send back the signatures on the event. The client can then delete those private keys from memory. So Signify is key creation and event signing in the edge with key storage, event generation, and event verification in the cloud.  
+Because event verification happens in the cloud it can use full KERI ACDCs etc and all signify clients can use full-featured web agents. The edge devices running the client only need to be able to create key pairs and sign events so they don't need to actually implement any KERI Core-specific functionality.  Although CESR would be nice to have. They don't do verification, they don't talk to witnesses or watchers, that is all done by the web-hosted cloud agent. This minimizes the liability of the cloud agent's web host provider because they never see private keys, and the client app is just a client app but with a back channel for decrypting and signing events generated on the agent and does key pair creation locally. It is not a wallet, The cloud agent is the cloud wallet but the private keys are only used in the edge.
+
+We think this might be a good trade space for facilitating web clients that do not need to store anything and all the heavy lifting is done in the cloud.
+
+Clearly, because event generation and verification are happening in the cloud an attacker who successfully attacks the cloud code supply chain can cause mischief by tricking the client into signing events that the client doesn't really want to sign. But that mischief never rises to the level of key compromise.
+
+- Implementation
+    - Leverage existing KERI Agent but add a Signify API
+    - Change Manager of KeyStore to have a remote signing mode. Whenit gets signing requenst from cloud agent sends the request on back channel to Signify client to sign.
+    - Make the controller signing look like witness signing
+    - Escrow eventings waiting for them to collect enought signatures or receipts to meeting a threshold of acceptance.
+    - Store and Forward cloud agent. Client does not have to keep state from session to session. All state is kept in the cloud. Use SSE (server sent events) to notify client that state has changed.
+    - Stateless Wallet
+
+
+
 ### 2022-09-20
 
 - Recording
-    - TDB
+    - TBD
 
 - Reports
     - CESRox

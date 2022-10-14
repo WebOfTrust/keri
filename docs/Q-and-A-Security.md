@@ -158,6 +158,7 @@ We've done our best to protect the privacy of the Github by investigating the im
 
 * [General](./Q-and-A.md#qa-section-general)
 * [Why the internet is broken](./Q-and-A.md#qa-section-why-the-internet-is-broken)
+* [Open source licenses](./Q-and-A.md#open-source-licences)
 * [KERI and DIDs](./Q-and-A.md#qa-keri-and-dids)
 * [Wallets](./Q-and-A.md#qa-section-wallets)
 * [Signatures](./Q-and-A.md#qa-section-signatures)

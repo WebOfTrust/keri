@@ -173,6 +173,7 @@ We've done our best to protect the privacy of Github users by investigating the 
 
 * [General](#qa-section-general)
 * [Why the internet is broken](#qa-section-why-the-internet-is-broken)
+* [Open source licenses](open-source-licenses)
 * [KERI and DIDs](#qa-KERI-and-dids)
 * [Wallets](#qa-section-wallets)
 * [Signatures](#qa-section-signatures)
@@ -363,11 +364,6 @@ KERI solves the problem of **secure attribution to identifiers**. By using self-
 <img src="../images/sci-muggles.png" alt="self-certifying identifiers" border="0" width="400">
 <img src="../images/key-event-log-muggles.png" alt="key event log" border="0" width="400">
 
-## *Q: Who is KERI? Is it a company or a not for profit?
-
-KERI sat under the *Decentralized Identity Foundation* until mid 2021, [DIF](https://identity.foundation), in its own working group "KERI".\
-It had started off in 2020 under the *Identity and Discovery* Workgroup of DIF.\
-Due to its licensing structure, KERI isn't owned by anyone and everyone at the same time. The Intellectual Property Right of KERI was hosted with `DIF` until Mid 2021. It is an open source project. KERI find its IP hosted in `IETF` from 2021.
 
 ## *Q What is KERI made of?
 
@@ -416,8 +412,7 @@ Where Christopher Allen is talking about *portability of information* related to
 ## *Q: Does KERI cooperate with other projects in the self-sovereign Identity field?
 
 Yes, KERI sat under the *Decentralized Identity Foundation*, [DIF](https://identity.foundation), and was part of the *Identity and Discovery* Workgroup. In 2021 the increased activity around KERI and its specific nature needed to have an own group within DIF. There are also non-formal relation with the newly launched trust-over-ip foundation, and there's good reasons to fit KERI into trust-over-ip.\
-In 2022 KERI sits mainly under 
-[WebOfTrust](https://github.com/WebOfTrust), which is a github repository collection of *Standards Relating to a Web Of Trust Based on Autonomic Identifier Systems*
+In 2022 KERI sits mainly under [WebOfTrust](https://github.com/WebOfTrust), which is a github repository collection of *Standards Relating to a Web Of Trust Based on Autonomic Identifier Systems*
 
 The integrated work also leads to [IETF](https://datatracker.ietf.org/person/sam@prosapien.com) drafts. The value statement and organizational principles of the IETF strongly resonate with KERI. Read more about why IETF [here](https://github.com/WebOfTrust/keri/blob/main/README.md#why-ietf).
 
@@ -484,7 +479,6 @@ Ledgers co-mingle secure state machines into one another, Ledger are total order
 
 You use the KERI Duplicity detection to determine the authoritative key is used at a certain point in time.
 
-Since March 2021 KERI is a separate DIF working group and it would possible to create a dedicated project within the working group to research smart contracting with KERI.
 *(@henkvancann)*
 
 ## *Q How does KERI relate to the decentralized identity field?
@@ -549,6 +543,54 @@ With a waist and a neck. <img src="../images/platform_locked_trust.png" alt="Pla
 Much of the operation of internet infrastructure is inherently decentralized, but control over the value transported across this infrastructure may be much less so.\
 Centralized value capture systems concentrate value and power and thereby provide both strong temptations for malicious administrators to wield that concentrated power to extract value from participants. \
 We believe that *decentralization of value transfer* is essential to building trust. Consequently a key component for a decentralized foundation of trust is an interoperable decentralized identity system. [Source: whitepaper page 7](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf)
+
+
+---
+
+## Open source licenses
+
+---
+## *Q: Who is KERI? Is it a company or a not for profit?
+
+KERI sat under the *Decentralized Identity Foundation* until mid 2021, [DIF](https://identity.foundation), in its own working group "KERI".\
+It had started off in 2020 under the *Identity and Discovery* Workgroup of DIF.\
+Due to its licensing structure, KERI isn't owned by anyone and everyone at the same time. The Intellectual Property Right of KERI was hosted with `DIF` until Mid 2021. It is an open source project. KERI find its IP hosted in `IETF` from 2021.
+
+## **Q: What is the open source licensing policy of KERI?
+All the repos in the [WoT project](https://github.com/WebOfTrust) where the KERI code and related standards reside, have a '*outgoing == incoming*' policy. This means that someones use (outgoing) of a contribution (incoming) is on the same basis or license. This prevents contributions from being poisoned by other contributions that have a different i.e. more restrictive outgoing license, because once contributed there is no way to separate contributions. 
+
+## **Q: What's wrong with mixing open source licenses while embracing contributions?
+It becomes a soup. Have a look below at the Q&A regarding DIF, W3C and KERI.
+
+## ***Q: What's the difference between split licenses and comprehensive licenses?
+*And what does KERI prefer?*
+
+By _comprehensive_ we mean all contributions of any and all kinds are covered by one license. One can have multiple comprehensive licenses where a given license takes priority for terms but allows for relaxed terms of use in some circumstance. But all contributions are still covered. 
+
+In fact any organization including the W3C that has multiple mutually exclusive split licenses instead of one comprehensive license or licenses instead of a set of comprehensive licenses is disputably only viable because of the good will of the contributors.\
+There just isn’t enough legal precedent to trust such constructions. 
+
+So **worst case the contribution is no freer than the most restrictive license**. Stacking licenses this way is a common legal approach, but splitting is not. Splitting contributions between different licenses is problematic because of the difficulty in defining the boundary. And the worst case is that its not free at all.
+
+## **Q: What happened between DIF and KERI with regard to open source licenses?
+
+Under DIF license all source code contributions are apache2. So a pull request from an apache2 licensed repository should not be a problem. Unfortunately, DIF uses a combination of the W3C patent policy and the CC4 license for non-source code contributions and so that is where there is significant ambiguity especially since the W3C Patent Policy as written only provides provisions for management by the W3C, not DIF.\
+Therefore you can't pull KERI code from DIF into WoT as of **June 2022** because in our perspective it's poisoned after this date.
+
+## **Q: Can I pull code for DIF and use it at the current WOT repo?
+
+In **June of 2022** there was a determination by DIF that there were no patentable contribution to the DIF KERI repo for which the W3C patent policy would apply. So any pull requests from *code donated to DIF before June of 2022 are clean*. Anything after that we should not accept because there is ambiguity as to what is “source code” and what is not when it comes to contributions at DIF. Frankly I consider DIF’s IP policy to be broken because IMHO there is no way to unambiguously determine if a contribution is source code or not. 
+
+> Example: 
+> Is javascript or python code pasted into an issue raised on DIF’s github repo count as source code and falls under apache2? Or is it text and falls under CCby4, or is it a patentable description of a process? 
+
+## *Q What are incoming and outgoing licenses?
+Incoming means the license that is imposed on contributions (`git push`). Outgoing means the license adhered to code from WoT, used somewhere else (`git pull`).
+
+## **Q Do incoming and outgoing licenses have the same restriction in KERI?
+It is possible to have less restrictive outgoing than incoming or have multiple outgoing licenses that are of the same or less level of restriction but with different names because some consumers want to consume (outgoing) under a different license. This is OK as long as its part of the license structure known by contributors.  
+> Example 
+> IETF requires that IETF spec language be contributed under BSD not Apache2. But BSD is no less restrictive than Apache2 for outgoing so it does not poison the apache2 contributions. A consumer can consume under apache2 or via IETF through BSD. BSD is no more restrictive than Apache2. The license for the IETF spec repos in WoT include the BSD outgoing in addition to Apache2 for this reason.
 
 ---
 

@@ -33,7 +33,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
 ### Future Topics
 
 - How to KERI KEL anchored Seals, KEL/ACDC/TEL/NoTEL, to make any data authentic
-    - KERI -> Authentic Web
+    - KERI -> Authentic Web as a verifiable data structure built from signed hash chained content addressable data
     - Versioned Authentic data
         - TEL transfer registry for versioned authentic data
         - TEL transfer registry for NFTs

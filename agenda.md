@@ -34,8 +34,12 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 - How to  make any data authentic using KERI and friends -> Authentic Web
     - Authentic Web as a verifiable data structure built from signed hash chained content addressable data
+    - Solves the hard problem of zero-trust architectures = signed-at-rest
+        - key state at rest
+        - signed data at rest wrt key state of peristent identifiers
+        - signed in motion is relatively easy because can use ephemeral identifiers with ephemeral key state
     - Mental model of Verifiable Data Structures all the way down
-        - Genealized hash chained signed data structures
+        - Genealized hash chained signed data structures (provenanceable)
             - hashed list. 
             - hash of concatenated hashes in list
             - hash of cat blineded hashes in list
@@ -47,6 +51,9 @@ Explanation of KERI development tools and techniques: [KERI development environm
             - Signed Hash Graph
                 - Signed Hash DAG
                     - ACDC is a type of Custom signed Hash DAG iteself and distribute universal Hash DAG fragment
+            - Cryptographic Accumulators
+                - Collective Signatures (BBS+)
+                - CL Signatures (AnonCreds)
         - Hash Log
             - KEL is a hash log for key state
             - TEL is a hash log for every other kind of state anchored to key state
@@ -56,6 +63,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
             - universaly unique identifers as indexes = secure distributable database 
             - SAID as index = crypto agile interoperable universally unique identifiers as indexes
                 - ACDC is a type of content addressable SAID database fragment, graph fragment
+            - B-Tree branch 
     - Append to Extend
         - permissionless data type registry
         - permissionless rules registry

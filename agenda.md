@@ -73,7 +73,11 @@ Explanation of KERI development tools and techniques: [KERI development environm
         - TEL transfer registry for NFTs
         - TEL/ACDC for authentic messaging registry
         - TEL/ACDC for authentic versioned document registry
-    - BADA/RUN when not use KEL Seals
+    - BADA/RUN when not use KEL Seals for distributed authentic database
+        - replay attack protection through monotonicity
+            - replay signed date-time stamped message 
+            - replay stale keys to newly date-time stamp and sign message
+            - 
 - Eclipse Attack Comparison KERI vs PoW
 - More discussions for Witnesses and Watchers.  Gossip protocol, UDP, ecosystem configuration.
 - Custodial Agents

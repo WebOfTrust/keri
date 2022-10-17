@@ -32,12 +32,8 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### Future Topics
 
-- How to KERI KEL anchored Seals, KEL/ACDC/TEL/NoTEL, to make any data authentic
-    - KERI -> Authentic Web as a verifiable data structure built from signed hash chained content addressable data
-    - Versioned Authentic data
-        - TEL transfer registry for versioned authentic data
-        - TEL transfer registry for NFTs
-        - TEL/ACDC for authentic messaging registry
+- How to  make any data authentic using KERI and friends -> Authentic Web
+    - Authentic Web as a verifiable data structure built from signed hash chained content addressable data
     - Mental model of Verifiable Data Structures all the way down
         - Genealized hash chained signed data structures
             - hashed list. 
@@ -61,6 +57,14 @@ Explanation of KERI development tools and techniques: [KERI development environm
             - SAID as index = crypto agile interoperable universally unique identifiers as indexes
                 - ACDC is a type of content addressable SAID database fragment, graph fragment
     - Append to Extend
+        - permissionless data type registry
+        - permissionless rules registry
+        - ecosystem governance through permissionless but trusted (reputable) (web-of-trust)  registries
+    - Versioned Authentic data
+        - TEL transfer registry for versioned authentic data
+        - TEL transfer registry for NFTs
+        - TEL/ACDC for authentic messaging registry
+        - TEL/ACDC for authentic versioned document registry
     - BADA/RUN when not use KEL Seals
 - Eclipse Attack Comparison KERI vs PoW
 - More discussions for Witnesses and Watchers.  Gossip protocol, UDP, ecosystem configuration.

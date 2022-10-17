@@ -31,13 +31,41 @@ Explanation of KERI development tools and techniques: [KERI development environm
 ## Meetings
 
 ### Future Topics
+
+- How to KERI KEL anchored Seals, KEL/ACDC/TEL/NoTEL, to make any data authentic
+    - KERI -> Authentic Web
+    - Versioned Authentic data
+        - TEL transfer registry for versioned authentic data
+        - TEL transfer registry for NFTs
+        - TEL/ACDC for authentic messaging registry
+    - Mental model of Verifiable Data Structures all the way down
+        - Genealized hash chained signed data structures
+            - hashed list. 
+            - hash of concatenated hashes in list
+            - hash of cat blineded hashes in list
+            - Hash Graph
+                - Hash DAG
+                - Custom Hash DAG
+                - Merkle root hash (binary tree) Sparse Merkle Tree
+                - Patricia Merkle (Trie) root hash 
+            - Signed Hash Graph
+                - Signed Hash DAG
+                    - ACDC is a type of Custom signed Hash DAG iteself and distribute universal Hash DAG fragment
+        - Hash Log
+            - KEL is a hash log for key state
+            - TEL is a hash log for every other kind of state anchored to key state
+                - TEL as versioned hash log
+        - Content Addressable (Hash indexed) Database
+            - De-duplication
+            - universaly unique identifers as indexes = secure distributable database 
+            - SAID as index = crypto agile interoperable universally unique identifiers as indexes
+                - ACDC is a type of content addressable SAID database fragment, graph fragment
+    - Append to Extend
+    - BADA/RUN when not use KEL Seals
+- Eclipse Attack Comparison KERI vs PoW
+- More discussions for Witnesses and Watchers.  Gossip protocol, UDP, ecosystem configuration.
 - Custodial Agents
 - Demo of how to write tests for KeriPy
-- More discussions for Witnesses and Watchers.  Gossip protocol, UDP, ecosystem configuration.
-- Signify: KERI Key Manager at the edge
-- Watcher / ACDC Watcher
-- Mental model of Verifiable Data Structures all the way down
-- Append to Extend
 
 
 

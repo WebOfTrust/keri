@@ -32,52 +32,6 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### Future Topics
 
-- How to  make any data authentic using KERI and friends -> Authentic Web
-    - Authentic Web as a verifiable data structure built from signed hash chained content addressable data
-    - Solves the hard problem of zero-trust architectures = signed-at-rest
-        - key state at rest
-        - signed data at rest wrt key state of peristent identifiers
-        - signed in motion is relatively easy because can use ephemeral identifiers with ephemeral key state
-    - Mental model of Verifiable Data Structures all the way down
-        - Genealized hash chained signed data structures (provenanceable)
-            - hashed list. 
-            - hash of concatenated hashes in list
-            - hash of cat blineded hashes in list
-            - Hash Graph
-                - Hash DAG
-                - Custom Hash DAG
-                - Merkle root hash (binary tree) Sparse Merkle Tree
-                - Patricia Merkle (Trie) root hash 
-            - Signed Hash Graph
-                - Signed Hash DAG
-                    - ACDC is a type of Custom signed Hash DAG iteself and distribute universal Hash DAG fragment
-            - Cryptographic Accumulators
-                - Collective Signatures (BBS+)
-                - CL Signatures (AnonCreds)
-        - Hash Log
-            - KEL is a hash log for key state
-            - TEL is a hash log for every other kind of state anchored to key state
-                - TEL as versioned hash log
-        - Content Addressable (Hash indexed) Database
-            - De-duplication
-            - universaly unique identifers as indexes = secure distributable database 
-            - SAID as index = crypto agile interoperable universally unique identifiers as indexes
-                - ACDC is a type of content addressable SAID database fragment, graph fragment
-            - B-Tree branch 
-    - Append to Extend
-        - permissionless data type registry
-        - permissionless rules registry
-        - ecosystem governance through permissionless but trusted (reputable) (web-of-trust)  registries
-    - Versioned Authentic data
-        - TEL transfer registry for versioned authentic data
-        - TEL transfer registry for NFTs
-        - TEL/ACDC for authentic messaging registry
-        - TEL/ACDC for authentic versioned document registry
-    - BADA/RUN when not use KEL Seals for distributed authentic database
-        - replay attack protection through monotonicity
-            - replay signed date-time stamped message 
-            - replay stale keys to newly date-time stamp and sign message
-            - 
 - Eclipse Attack Comparison KERI vs PoW
 - More discussions for Witnesses and Watchers.  Gossip protocol, UDP, ecosystem configuration.
 - Custodial Agents
@@ -97,6 +51,101 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### Discussion items
 
+
+### 2022-10-18
+- Recording
+    - TBD
+
+- Reports
+    - CESRox
+        - Which repo to choose from for basis of code
+        - Provenant contributing a full time Rust dev
+    - KERIpy
+        - Sam: working on changes for reserve and custodial rotation logic
+        - Phil: Simplifyihg extening KLI scripts (KERI Command Line INterface)
+        - Kevin: Compact credentials stuff still TBD
+    - vLEI
+        - Schema changes all final in vLEI
+        - Privacy language final 
+        - XBRL digital signature WG try to influence the use of vLEI
+    - Keep
+        - Branding updates:  changes to new GLEIF green color scheme.  
+        - Plan: fork Keep to GLEIF repo then revert branding back to non-GLEIF colors for community repo
+    - KERIox
+        - Started updating to match the new encodings (NEO)
+    - CESR
+        - Spec changes relative to the new encoding format captured in the NEO branch updates to KERIpy
+        - Stable codes and stable values via pre-padding before the b64 conversion
+
+- Items
+    - IIW
+        - Solid KERI / ACDC track
+        - KERI Breakfast Table before Opening Circle 
+            - Each morning to plan sessions for the day
+    - Likeihood of US regulatory organizations standardizing on LEI
+        - Reporting:  XBRL, etc
+        - Financial Data Transparency Act
+    - Witnesses, Watchers and Blockchain
+        - Indirect Replay Mode with Ledger Oracle diagram from Identifier Theory Paper
+            - Validator looks up the backer (via ledger address) in the KEL of the AID which provides a cryptographic commitment to the ledger being the source of truth as a backer.
+            - A rotation event would contain new ledger backer configuration information to change backers
+            - A seal could be provided back as a receipt to the KEL event to include the hash address in the ledger.  This seal could be stored alongside the event to point to the place in the ledger.
+            - When you have a ledger backer you don't have witnesses.
+            - You can only have one ledger backer because you are relying on the total global ordering of the ledger.
+            - Anything that verifies is technically also a watcher.  So a witness is also performing watcher services.
+    - How to make any data authentic using KERI and friends -> Authentic Web
+        - Authentic Web as a verifiable data structure built from signed hash chained content addressable data
+        - Solves the hard problem of zero-trust architectures = signed-at-rest
+            - signed in motion is relatively easy because can use ephemeral identifiers with ephemeral key state for tokens
+            - key state at rest is hard because have to solve key rotation problem for persistent identifiers
+            - signed data at rest using key state at rest of persistent identifiers
+                - Use ephemeral identifiers as auxiliaries to persistent identifers
+                - Ambient verifiability:  everything can be verified offline, even copies.
+
+        - Mental model of Verifiable Data Structures all the way down
+            - Genealized hash chained signed data structures (provenanceable)
+                - hashed list. 
+                - hash of concatenated hashes in list
+                - hash of cat blineded hashes in list
+                - Hash Graph
+                    - Hash DAG
+                    - Custom Hash DAG
+                    - Merkle root hash (binary tree) Sparse Merkle Tree
+                    - Patricia Merkle (Trie) root hash 
+                - Signed Hash Graph
+                    - Signed Hash DAG
+                        - ACDC is a type of Custom signed Hash DAG iteself and distribute universal Hash DAG fragment
+                - Cryptographic Accumulators
+                    - Collective Signatures (BBS+)
+                    - CL Signatures (AnonCreds)
+            - Hash Log
+                - KEL is a hash log for key state
+                - TEL is a hash log for every other kind of state anchored to key state
+                    - TEL as versioned hash log
+            - Content Addressable (Hash indexed) Database
+                - De-duplication
+                - universaly unique identifers as indexes = secure distributable database 
+                - SAID as index = crypto agile interoperable universally unique identifiers as indexes
+                    - ACDC is a type of content addressable SAID database fragment, graph fragment
+                - B-Tree branch 
+        - Append to Extend
+            - permissionless data type registry
+            - permissionless rules registry
+            - ecosystem governance through permissionless but trusted (reputable) (web-of-trust)  registries
+        - Versioned Authentic data
+            - TEL transfer registry for versioned authentic data
+            - TEL transfer registry for NFTs
+            - TEL/ACDC for authentic messaging registry
+            - TEL/ACDC for authentic versioned document registry
+            - ACDCs are modeled as graph fragments.
+        - BADA/RUN when not use KEL Seals for distributed authentic database
+            - replay attack protection through monotonicity
+                - replay signed date-time stamped message 
+                - replay stale keys to newly date-time stamp and sign message
+                - ephemeral identifiers as auxilaries to persistent identifers
+                    - signed at rest of auxiliary ephemeral identifier
+
+            
 
 ### 2022-10-04
 - Recording

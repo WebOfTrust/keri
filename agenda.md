@@ -33,7 +33,9 @@ Explanation of KERI development tools and techniques: [KERI development environm
 ### Future Topics
 
 - Eclipse Attack Comparison KERI vs PoW
+- Questions around backers
 - More discussions for Witnesses and Watchers.  Gossip protocol, UDP, ecosystem configuration.
+- Direct Mode Agents
 - Custodial Agents
 - Demo of how to write tests for KeriPy
 
@@ -51,10 +53,67 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### Discussion items
 
+### 2022-11-01
+- Recording
+    - TBD
+
+- Reports
+    - CESRox
+    - CESR
+    - KERIpy
+        - In current implementation, 2 rotations required to change control authority.  
+        - In new rotation rules, you can rotate to new keys that aren't in the prior next key digests.  You just need to reach the appropriate thresholds of prior next threshold and current signing threshold.  So you now only need one rotation to change control authority.
+        - This change was the forcing function to require dual index codes in CESR
+        - KLI usability enhancements.  Multisig Shell for creating multisig AIDs.
+        - Fixed agent endpoint for challenge response.
+    - KERIox
+    - vLEI
+        - Staging GLEIF Root AID, using staging GLEIF witness network.
+        - Working on staging GLEIF External AID and GLEIF External AID this week.
+    - Keep
+        - Fork of repository to GLEIF-IT that now has the GLEIF branding.
+        - Pending push to WoT repo to generic branding.
+
+- Items
+    - DID:KERI method implementation
+        - BCGov Discussion how to make KERI more interoperable with DID infrastructure.
+            - DID Resolver
+                - did:keri   OOBI service endpoint tunnel
+                - did:keri did doc with more features with local secured did resolver
+                    - Discover from a did everything from KERI withnesses and watchers in did:doc
+                    - 
+            - Exchange Protoocol (DIF Presetntation)
+            - How to understand ACDC
+        - did:keri:<aid>:<oobi url>?seq=4&dig=<SAID>
+          - essentially and end verifiable did:web URL
+          - adding a query string to the end of the did allows for specifying key state
+        - did:web:http://example.com/oobi/<aid>/controller
+          - did:web is essentially all blind OOBIs
+        - can easily rewrite any existing query message as a URL query string
+    - Witness Rotation 
+        - Forwarding responsibility of witnesses being rotated out.  They are required to publish up to the last event that rotated them out.
+        - For lost or misbehaving witnesses, you need another mechanism to publish your key state and new witness information, like the watcher network.
+        - If all your witnesses go down at the same time, you have a problem.  So your availability contraints drive your decision about how many witnesses/watchers you need.
+        - Backer registrar could have a forwarding event on the ledger to track a move to another ledger.
+
+    - Eclipse Attack Comparison KERI vs PoW
+        - Primarily attacks on permissionless networks, to succeed in a double spend hack
+        - Assume I have a full node on a PoW network.  When a full node gets a chain longer than the one they currently have (fork) the rule is to take the longer chain and throw away the shorter fork.
+        - Take over all the neighbor nodes of the target of the attack and share a longer, invalid chain with the "eclipsed" target node.  Then double spend the resource taken from the target node.  Then release the eclipse.
+        - The target is the gossip protocol.
+    - KERI resistence to Eclipse Attack
+        - KERI's first seen rule.  Once key state is seen, it can't be unseen.
+        - Reconciliation mechanisms to recover an AID if duplicity is seen.
+        - To eclipse KERI you would have to attack the watcher network.
+        - The verifier is always protected because of this rule.
+        - The worst case in KERI of an Eclipse Attack is a denial of service.
+    - Need for a published release and merge to main
+        - We will publish a list of upcoming changes to be merged into main on Slack and give folks time to respond
+
 
 ### 2022-10-18
 - Recording
-    - TBD
+    - https://drive.google.com/file/d/12SdEy0-wKX5Ky9KWAIee0iS_B9n3xkzF/view?usp=share_link
 
 - Reports
     - CESRox
@@ -62,7 +121,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
         - Provenant contributing a full time Rust dev
     - KERIpy
         - Sam: working on changes for reserve and custodial rotation logic
-        - Phil: Simplifyihg extening KLI scripts (KERI Command Line INterface)
+        - Phil: Simplifyihg extending KLI scripts (KERI Command Line INterface)
         - Kevin: Compact credentials stuff still TBD
     - vLEI
         - Schema changes all final in vLEI
@@ -149,7 +208,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### 2022-10-04
 - Recording
-    - TBD
+    - [Recording](https://drive.google.com/file/d/11iLCtrewBhgwzaUzZA5vWdqgQdZFww54/view?usp=share_link)
 
 - Reports
     - CESRox
@@ -221,7 +280,7 @@ Clearly, because event generation and verification are happening in the cloud an
 ### 2022-09-20
 
 - Recording
-    - TBD
+    - [Recording](https://drive.google.com/file/d/1jwJ2eCgrO44uqjI8jS4S4y_adqZ0PdMY/view?usp=share_link)
 
 - Reports
     - CESRox
@@ -284,7 +343,7 @@ Clearly, because event generation and verification are happening in the cloud an
 ### 2022-09-06
 
 - Recording
-    - TDB
+    - https://drive.google.com/file/d/1mfnOVjeZlVmWtUsf0hMlrMlI7sKUYdJc/view?usp=sharing
 - Reports
     - CESRox
         - Meeting on Thursday.  Decided on some first steps.

@@ -216,3 +216,72 @@ If each component uses OOBIs to retrieve the authentication proofs from other co
 Each KERI installation may also optionally provide an OOBI permissioning record list associated with each habitat to indicate
 which OOBI queries it will respond to.  This may also be inited with
 a config file.
+
+## Addendum
+
+This is an attempt to provide configuration information to an agent to enhance the current OOBI resolution process with a well known verification process for multi-factor authentication of an AID provided by an OOBI in the configuration file. This process will be used in the vLEI ecosystem configuration files to bootstrap resolution and authentication of the GLEIF RoOT and GLEIF External AIDs for all agents in the ecosystem.
+
+The proposed approach would be to add a new top level key to the configuration file (murls or wurls) that contains a list of well-known OOBIs with AIDs. The OOBI resolution process would be updated such that after the successful resolution of endpoints for an AID from an OOBI URL in the iurls section, the system would scan the well-known URLs in array in this new key for all URLs that contain the AID just resolved. The system would then resolve each URL by making a successful HTTP request against that URL. A successful HTTP request would be one that returns either a 2xx or 3xx HTTP status code. After successfully resolving all URLs for the AID, the system would make the contact created for the new AID with a new authenticated status.
+
+Currently, the Keep software sets a verified field to True after a successful 12-word challenge response has been received from the AID that was just resolved with an OOBI. To accommodate this new method of multi-factor authentication, we would change the field name on the contact to authenticated and change the value from boolean to a status value representing the type of authentication that was performed. In addition, we would add an authenticated_date field to the contact to indicate the date and time on which any MFA was performed.
+
+The proposed status values are SIGNED_CHALLENGE for the current Keep challenge / response authentication and WELL_KNOWN for the new well-known resolution challenge response.
+
+Given the following configuration file:
+
+{
+  "dt": "2022-01-20T12:57:59.823350+00:00",
+  "iurls": [
+    "http://127.0.0.1:5642/oobi/BBilc4-L3tFUnfM_wJr4S4OJanAv_VmF_dJNN6vkf2Ha/controller",
+    "http://127.0.0.1:5644/oobi/BIKKuvBwpmDVA4Ds-EpL5bt9OqPzWPja2LigFYZN2YfX/controller",
+    "http://127.0.0.1:5643/oobi/BLskRTInXnMxWaGqcpSyMgo0nYbalW99cGZESrz3zapM/controller",
+    "http://20.121.171.161:7723/.well-known/keri/oobi/EL0QKj5uCRRAawr91sVWCVvKM1XNMQ3WJGo_g0O9s-BG?name=GLEIF%20Root"
+  ],
+  "durls": [
+    "http://127.0.0.1:7723/oobi/EIL-RWno8cEnkGTi9cr7-PFg_IXTPx9fZ0r9snFFZ0nm",
+    "http://127.0.0.1:7723/oobi/EJEMDhCDi8gLqtaXrb36DRLHMfC1c08PqirQvdPPSG5u",
+    "http://127.0.0.1:7723/oobi/EDqjl80uP0r_SNSp-yImpLGglTEbOwgO77wsOPjyRVKy",
+    "http://127.0.0.1:7723/oobi/EOhcE9MV90LRygJuYN1N0c5XXNFkzwFxUBfQ24v7qeEY",
+    "http://127.0.0.1:7723/oobi/EK0jwjJbtYLIynGtmXXLO5MGJ7BDuX2vr2_MhM9QjAxZ",
+    "http://127.0.0.1:7723/oobi/ED_PcIn1wFDe0GB0W7Bk9I4Q_c9bQJZCM2w7Ex9Plsta",
+    "http://127.0.0.1:7723/oobi/ELqriXX1-lbV9zgXP4BXxqJlpZTgFchll3cyjaCyVKiz"
+  ],
+  "murls": [
+    "https://www.gleif.org/.well-known/keri/oobi/EL0QKj5uCRRAawr91sVWCVvKM1XNMQ3WJGo_g0O9s-BG",
+    "https://github.io/WebOfTrust/vLEI/.well-known/keri/oobi/EL0QKj5uCRRAawr91sVWCVvKM1XNMQ3WJGo_g0O9s-BG",
+    "https://github.io/GLEIF-IT/vLEI/.well-known/keri/oobi/EL0QKj5uCRRAawr91sVWCVvKM1XNMQ3WJGo_g0O9s-BG",
+    "https://www.first-roc-member.com/.well-known/keri/oobi/EL0QKj5uCRRAawr91sVWCVvKM1XNMQ3WJGo_g0O9s-BG",
+    "https://www.another-roc-member.com/.well-known/keri/oobi/EL0QKj5uCRRAawr91sVWCVvKM1XNMQ3WJGo_g0O9s-BG"
+  ]
+}
+The resolution of the OOBI for AID EL0QKj5uCRRAawr91sVWCVvKM1XNMQ3WJGo_g0O9s-BG from the iurls array (the last one in the list) would result in a redirect to a witness or controller endpoint that would be saved in the database and associated with the contact with the alias “GLEIF Root”. After completion, the system would scan the array at the key murls and find 5 well-known URLs that contain the AID just resolved. If would perform an HTTP GET request on each URL in turn and if every URL results in a 2xx or 3xx status code it would update the contain for the new AID to the following (JSON representation):
+
+{
+  "alias": "GLEIF Root",
+  "authenticated": "WELL_KNOWN",
+  "authenticated_date": "2022-10-02T12:57:59.823350+00:00"
+}
+Nothing would prevent the controller of the agent using this configuration file to perform a 12-word challenge / response protocol with the new AID in the future and updating the values in the contact with a new authenticated status and new date in authenticated_date. In this way the controller can leverage the MFA provided in the configuration file but later upgrade the authentication by engaging in a live session challenge.
+
+Consideration was given to allowing for a threshold to be specified for indicating how many URLs in the murls key need to succeed for a given AID for it to be considered authenticated. Since the configuration file is under the control of the distributors of the software, stale values will not affect controllers that have already authenticated the AIDs during their initial start up. There is no need to allow for permanent failures of well known URLs because they can be removed from the configuration file for any new installations of the software. Controllers with older versions will have already performed the initial set up and no longer need a full set of valid well knowns. Temporary failure of well knowns can be accounted for with a simple retry mechanism that is already in place for all OOBI resolutions.
+
+This method can be extended in the future to allow for both a command line version of well known authentication as well as agent based verification. All that would be required is additions to the current kli oobi resolve command to include specifying a list of urls (multi-option collection) as an option to the command as well as an addition key pointing to an array in the body of the POST /oobi endpoint in the agent.
+
+
+
+Samuel Smith
+10/03/22
+Suggest that the authenticated field value could be a list so that both WELL_KNOWN and SIGNED_CHALLENGE types of authentication could be applied to the same AID and not either or.
+In the future other types of authentication could then be supported.
+
+
+
+Samuel Smith
+31m
+Just noticed that I could not find any documentation of the field labels in the config file .json
+
+I know we discussed these someplace but couldn’t find it.
+
+So we should create a json schema for config files that in the description field of each label defines
+
+what the label means

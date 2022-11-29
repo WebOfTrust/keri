@@ -32,8 +32,10 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### Future Topics
 
-- Eclipse Attack Comparison KERI vs PoW
-- Questions around backers
+ - Trust Anchor as Discovery Bootstrap
+    - Trust Anchor TRust Domain Trust Culture (Ecosystem)
+
+- Demo of KERI CArdano Backer RootsID
 - More discussions for Witnesses and Watchers.  Gossip protocol, UDP, ecosystem configuration.
 - Direct Mode Agents
 - Custodial Agents
@@ -53,9 +55,53 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### Discussion items
 
+
+### 2022-11-29
+- Recording
+    - 
+
+- Reports
+    
+    - CESR
+        - updated version CESR spec
+        - added versioning CESR protocol genus and version 
+    - CESRox
+        - Updates IIW ported code from WoT repo unit tests neo 
+        - error
+    - KERIpy
+        - Additions and modification to KLI vLEI delegated
+    - Education
+        - Argolia search meeting
+        - CAncelled next education meeting
+    - Cardano
+        - KERI backer POC running
+        - https://github.com/roots-id/keri-roots
+    - KeriOX HCF
+        - extract all the logic for CESR from KERIOX with neo branch encodiing
+    - Keep
+        - forked the WoT clean implemention GLEIF
+        - GLEIF brand version on GLEIF's repo
+
+- Announcements
+    - GLEIF vLEI Root in production KERIpy AID 
+    - 
+
+- Items
+    - CESR Versioning
+        - What is the mime text/cesr  should not use + json unless completely json
+        - 
+    - HCF KERIOX Licensing Model
+        - thread on slack KeriOX
+        - HCF building components around KERI
+        - Summary items
+            - picked the UPL 1.2 not a strong copy left. Is a reciprocal license.
+            - with community for community
+    - LEI members
+        - UBISecure is one of largest LEI issuers
+   
 ### 2022-11-01
 - Recording
-    - TBD
+    - https://drive.google.com/file/d/1IaOwD3BvWYfecFYNwLpnPuWfgTkZrgAe/view?usp=share_link
 
 - Reports
     - CESRox

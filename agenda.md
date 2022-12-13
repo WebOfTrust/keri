@@ -40,8 +40,13 @@ Explanation of KERI development tools and techniques: [KERI development environm
 - Direct Mode Agents
 - Custodial Agents
 - Demo of how to write tests for KeriPy
-
-
+- How to Christen the current produciton release with a version set.
+- Trust Anchor as Discovery Bootstrap
+        - Trust Anchor Trust Domain Trust Culture (Ecosystem)
+        - did:keri did:peer similarities differences
+        - Public vs Private AIDs
+    - keripy merge development to main!
+        - future versioning strategies
 
 ### ToDo
 - Future extract Keep library to NPM library
@@ -55,6 +60,56 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### Discussion items
 
+### 2022-12-13
+- Recording
+
+- Reports
+    - CESR
+    - CESRox
+        - create suggested extension point
+        - dual index support to controller signatures
+    - KERIpy
+        - lots of KLI fixes under the hood
+            - recursive percolation of service endpoints (OOBIs) and KELs
+            - mailbox inspection tool
+    - Education
+        - Working on Argolia search engine on white papers, specs, etc.
+        - Upcoming meeting this Thursday to review current progress: test the searchbar here: [WOT-terms site](https://dwarshuis.com/test/wot-terms2/4/resrc_draft-ssmith-keri.html)
+        - Next Thursday: Ask me anything too.
+    - Cardano
+        - Ready to Demo today!
+    - KERIox HCF
+        - Extracted CESR logic from KERIox into separate repo
+        - https://github.com/THCLab/cesrox
+    - Keep
+        - Pending upstream changes from GLEIF fork.
+        - Reach out to get generic branded screen set into WebOfTrust repo
+    - Signify
+        - Initial implementation of cryptographic primitives in TypeScript
+        - Key generation, event signing at the edge. Encrypted key storage, Event generation, Event Validation in the cloud.
+        - Will convert HackMD write up to Markdown file in the repo
+        - https://github.com/WebOfTrust/signify-ts
+
+- Announcements
+    - GLEIF vLEI in production! 
+        - Keri, Keripy, ACDC, CESR, vLEI, Witnesses
+        - currently in development branch
+
+- Topics
+    - Cardano Backer Demo Rodolfo
+        - Modification of indirecting.py and witness start command to support witness using Cardano
+        - Created an inception event with Cardano address in anchor, rotated every minute with witness receiving events
+        - Question: should we add configuration item in "c" field of inception event to indicate a Cardano ledger backer
+        - Do we need to include the Cardano address in every establishment event?  
+            - Probably just in inception event unless rotating to new address
+        - TODO:  Download the KEL from the blockchain and validate it off or the events from Cardano
+        - https://github.com/roots-id/keri-roots
+        - https://github.com/WebOfTrust/keripy/issues/90
+    - Witness misbehaving during our run to production.  How to catch it?
+        - Problems were with the mailbox service running on the same host as the witness
+            - need to break out
+        - Wintess itself test to resolve OOBI and then query witness
+    
 
 ### 2022-11-29
 - Recording

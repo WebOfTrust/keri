@@ -32,8 +32,6 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### Future Topics
 
- - Trust Anchor as Discovery Bootstrap
-    - Trust Anchor TRust Domain Trust Culture (Ecosystem)
 
 - Demo of KERI CArdano Backer RootsID
 - More discussions for Witnesses and Watchers.  Gossip protocol, UDP, ecosystem configuration.
@@ -45,8 +43,8 @@ Explanation of KERI development tools and techniques: [KERI development environm
         - Trust Anchor Trust Domain Trust Culture (Ecosystem)
         - did:keri did:peer similarities differences
         - Public vs Private AIDs
-    - keripy merge development to main!
-        - future versioning strategies
+- keripy merge development to main!
+    - future versioning strategies
 
 ### ToDo
 - Future extract Keep library to NPM library
@@ -59,6 +57,66 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 
 ### Discussion items
+
+### 2023-01-10
+- Recording
+
+- Reports
+    - CESR
+        - New codes in the next few weeks
+    - CESRide - the project formerly known as CESRox
+        - New name is CESRide - reop created and registered in crates.io
+        - Acknowledged the fork and CESRide will be Apache2 in WoT
+        - Architecture proposal to match existing naming conventions (as closely as possible) in Rust
+        - Full discussion to follow in the CESRide meeting
+    - KERIpy
+        - New rotation rules using dual index signatures are now in place
+        - Allows you to introduce new signing keys that weren't previously part
+        - Hold signing keys in reserve.  Partial rotation and custodial rotation support.
+        - Removal of assumption that digests were all using the same algorithm
+        - Walk the KEL for group multisig - should not be afraid to walk the kel for decisions regarding prior key state
+    - Education
+    - Cardano
+        - PR submitted.  Refactored to match KERIpy
+        - Work in process, looking for comments about what should be included in the repo
+    - KERIox HCF
+    - Keep
+    - Signify
+        - So support for the client side functionality with ported unit tests
+        - Now working on the host server side = Signify Agent
+        - Refactor the Hab and GroupHab and SignifyHab
+        - Architecture (single multi-tenant agent versus multiple agents)
+            - https://github.com/WebOfTrust/signifypy
+            - https://github.com/WebOfTrust/signify-ts
+
+- Announcements
+    - Grand Unification Theory (GUT) of Trust
+        - https://docs.google.com/presentation/d/1ksqVxeCAvqLjr67htWZ4JYaSnI8TUZIO7tDMF5npHTo/edit?usp=sharing
+    - Specific asks for KERI in regards to DIDComm
+        - [eventually] Adopt DIDComm's composable protocols to get peer-to-peer, n-wise, offline.
+        - [eventually] Design a DIDComm protocol for contractually protected disclosure.
+        - [eventually] Adopt (and improve) DIDComm's confidential envelopes/routing to complete privacy story.
+        - [ASAP] Produce "KERI lite" DID impl to replace peer DID libs.
+        - Removing ecdh-1pu, when you know the AID might as well use TLS
+        - Proposal to create KERI-lite as a minimal subset for existing non-KERI solutions to adopt KERI
+            - Useful for authentic data without concern for shared identities
+    - Thin waist of trust diagram.
+        - Authentic
+        - Confidential / Private
+        - Empowered Peers
+        - Daniel's ask for the KERI community is to make a strong case for privacy.
+
+ - Trust Anchor as Discovery Bootstrap
+    - Trust Anchor Trust Domain Trust Culture (Ecosystem)
+    - How does an AcaPy wallet talk KERI
+        - For ledger based DIDs, the ledger _also_ provides discovery along with security
+        - KERI does not have a known single source of discovery
+            - No fixed point of discovery, KERI relies on OOBIs and percolated discovery
+            - did:peer has the same points of discovery problems that KERI does
+                - to "discover" a did:peer DID you need to first exchange DIDDocs
+        - With an EGF with public known witnesses, you have a Trust Anchor for the ecosystem and thus a discovery mechanism for that ecosystem
+            - For example, the vLEI has their published witnesses so AIDs of vLEI holders can be discovered
+        - did:keri can have a backing store and backing watchers to keep an eye on ecosystem trust anchors
 
 ### 2022-12-13
 - Recording

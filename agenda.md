@@ -363,7 +363,14 @@ Explanation of KERI development tools and techniques: [KERI development environm
                 - ephemeral identifiers as auxilaries to persistent identifers
                     - signed at rest of auxiliary ephemeral identifier
 
-            
+Glossary items added:
+https://github.com/trustoverip/acdc/wiki/authentic-web
+https://github.com/trustoverip/acdc/wiki/RUN
+https://github.com/trustoverip/acdc/wiki/extensible-business-reporting-language
+WOT-term page added:
+https://github.com/WebOfTrust/WOT-terms/blob/gh-pages/resources/res_IdentifierTheory-ssmith-uidt.md markdown version of Universal Identifier Theory whitepaper
+https://github.com/WebOfTrust/WOT-terms/blob/gh-pages/Mental-model.md Mental model description of the Authentic Web
+
 
 ### 2022-10-04
 - Recording

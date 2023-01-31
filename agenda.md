@@ -13,7 +13,7 @@ Co-Chair: Philip Feairheller [email](pfeairheller@gmail.com)
 Meeting Bi-weekly starting on 2021-10-19 at 10 am EDT
 
 Agenda:
-https://github.com/WebOfTrust/keri/blob/main/agenda.md
+https://hackmd.io/-soUScAqQEaSw5MJ71899w
 
 Zoom Meeting:
 https://us02web.zoom.us/j/89842900185?pwd=OEpXSU5pa29FR1A3OXFkUithZFNwQT09

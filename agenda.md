@@ -13,7 +13,7 @@ Co-Chair: Philip Feairheller [email](pfeairheller@gmail.com)
 Meeting Bi-weekly starting on 2021-10-19 at 10 am EDT
 
 Agenda:
-https://hackmd.io/-soUScAqQEaSw5MJ71899w
+https://github.com/WebOfTrust/keri/blob/main/agenda.md
 
 Zoom Meeting:
 https://us02web.zoom.us/j/89842900185?pwd=OEpXSU5pa29FR1A3OXFkUithZFNwQT09
@@ -57,6 +57,112 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 
 ### Discussion items
+
+
+
+### 2023-02-07
+- Recording  
+    - https://drive.google.com/file/d/13h0tVm3Bj0REWW9hErnwJQO9rLAvRDk6/view?usp=sharing
+
+- Reports
+    - CESR
+        - Exploring some integration with Python
+            - https://github.com/WebOfTrust/cesride/pull/59
+        - Uniffi investigation underway for support of Python, Ruby, Swift, Kotlin
+            - https://github.com/mozilla/uniffi-rs
+        - 38% complete of a 1.0 milestone
+            - https://github.com/WebOfTrust/cesride/milestone/1
+        - Work continues on Indexer
+    - KERIpy
+        - Beginning implementation of superceding recovery rules for delegated identifiers
+            - Leveraging cooperative delegation to allow for a recovery rotation over a rotation (latest seal wins)
+            - Uses order of appearance of seal in delegator's KEL
+            - Requires walking up the delegation tree when one exists
+        - SignifyHab for integrating with Signify client
+    - Education
+        - Now ready to introduce the Levels of information and glossary.
+        - Using React to guide users based on Level 1, 2 or 3.
+        - More information on Thursday
+    - Cardano
+    - KERIox HCF
+        - Start implementing partial rotation rules
+    - Signify
+        - Added new repo for Signifypy for Python agent that will work with Signify client
+        - Request and response signing using Signature-Input and Signature structure field value HTTP headers
+    - Keep
+        - Janet G. Designer will export .fig figma file for all the open source UX designs for Keep
+        - Anyone can then export and create assets
+        - GLEIF roadmap continue development of Root GAR and Person Builds of Keep and push back upstream from GLEiF Fork
+    - did:keri
+        - Refactored and published in the did-keri-resolver for the KERI-lite version of did:keri
+        - 3 flavors of did:keri
+
+- Announcements
+    - Ruth - Provenant as Legal Entity issued first ever ECR to Timothy Ruff as Corporate Director
+    - Neil - Looking at authentic provenance chains and Trust Registries over at ToIP Data Modeling and Representation Group 12:00pm EST
+    - Feb 14,15,16 W3C VC working group holding F-2-F meeting in Miami to resolve an issue that has not been resolvable to date
+    - If "@context" and JSON-LD is a MUST in v2.0 of VC Data Model Spec "Big Tent vs Little Tent"
+    - Could allow for ACDCs to be complaint implementations of W3c VCs
+    - GLEIF now W3C member
+    - Sam presenting to ToIP in the Technical Stack Working Group 2/8 9am MT - KERI as a proposal for Trust Spanning Layer
+        - Trust Spanning Protocol Task Force within the Technical Stack Working Group
+        - Prior "reading" Sams presentation of the hour glass theorum 
+        - https://zoom.us/rec/share/rddaWi5PcDp_axmoLhK617WbmM3EWpFUBfX2GS4q_feuhhzn_Of9Yy0cSuS3IFFw.8DLf29JpSmCViVc0
+    - Daniel to present in a few weeks
+
+- Review Issues
+    - Define and create 1.0 version of KERIpy
+    - Roadmap Big Frogs for KERIpy
+        - Superceding rotation delegation rules - [Issue 26](https://github.com/WebOfTrust/keripy/issues/26)
+        - CESR updates for CESR native events - [Issue 212](https://github.com/WebOfTrust/keripy/issues/212)
+        - Split topics across KERI and CESR topic meetings
+    - Call to action for community members to review issues and bring of issues of interest next meeting
+
+- Question from Joseph regarding Signify
+    - I am slightly confused why a new agent is required for Signify. Why existing agent does not work?
+        - existing agent runs by locking/unlocking and stores salt in memory thus private keys not a good cloud deployment model (never deployed)
+        - many apis rely on an unlocked datastore
+        - helps with extracting the agent from KERIpy
+            - signifypy - https://github.com/WebOfTrust/signifypy
+
+- Discussion Items
+
+
+### 2023-01-24
+- Recording
+    - 
+
+- Reports
+    - CESR
+        - English semantic naming by Sam (see recording)
+        - Future of CESR - "roadmap" issues
+        - cesride/parside split
+        - sunset weboftrust/cesrox
+        - CESRide - the project formerly known as CESRox
+        - Matter PR
+        - cesr-dev 
+    - KERIpy
+        - refactor to support dual index signatures and multisig formation (robustness)
+    - Education
+        - next Thu (26th) same time Education meeting about the switch to Docusaurus as the documentation system of our future.
+    - Cardano
+        - PR in keripy
+    - KERIox HCF
+        - refactoring and new bindings for group events
+    - Keep
+    - Signify
+
+- Announcements
+    
+    - Rodolfo presents "didcomm-keri-light"
+        - "keri-light" not meaning to water down KERI
+        - potential to replace did:peer with did:keri (or the implementation of did:peer utilizes keri?)
+        - uses keri/core/eventing
+        - uses in memory kel (hack)
+        - python didcomm lib (?name)
+        - couldn't use non-transferable AID with data in inception event (so it validates)
+            - use transferable with no next keys, can't rotate but you get an icp (effectively ephemeral)
+        - https://github.com/rodolfomiranda/keripy/blob/didcomm-keri-light/didcomm/keri-lite.py
 
 ### 2023-01-10
 - Recording
@@ -363,14 +469,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
                 - ephemeral identifiers as auxilaries to persistent identifers
                     - signed at rest of auxiliary ephemeral identifier
 
-Glossary items added:
-https://github.com/trustoverip/acdc/wiki/authentic-web
-https://github.com/trustoverip/acdc/wiki/RUN
-https://github.com/trustoverip/acdc/wiki/extensible-business-reporting-language
-WOT-term page added:
-https://github.com/WebOfTrust/WOT-terms/blob/gh-pages/resources/res_IdentifierTheory-ssmith-uidt.md markdown version of Universal Identifier Theory whitepaper
-https://github.com/WebOfTrust/WOT-terms/blob/gh-pages/Mental-model.md Mental model description of the Authentic Web
-
+            
 
 ### 2022-10-04
 - Recording

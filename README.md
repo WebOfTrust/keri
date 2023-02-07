@@ -6,7 +6,8 @@
 The table below lists all deliverables of the KERI Community:
 | Acronym | Full Name of Deliverable | Link to Deliverable | Lead Authors | Status / Notes |
 |---|---|---|---|---|
-| KERI | Attributable (Autonomic) Identifiers (KERI) | [IETF KERI Draft](https://github.com/WebOfTrust/ietf-keri) | Samuel Smith | |
+| KERI | Key Event Receipt Infrastructure | [IETF KERI Draft](https://github.com/WebOfTrust/ietf-keri) | Samuel Smith | |
+| AID | Attributable (Autonomic) Identifiers (KERI) | [IETF KERI Draft](https://github.com/WebOfTrust/aid) | Samuel Smith | |
 | SAID | Self-Addressing Identifiers | [IETF SAID Draft](https://github.com/WebOfTrust/ietf-said) | Samuel Smith | [Active Draft](https://datatracker.ietf.org/doc/draft-ssmith-said/) |
 | CESR | Composable Event Streaming Representation | [IETF CESR Draft](https://github.com/WebOfTrust/ietf-cesr)| Samuel Smith |[Active Draft](https://datatracker.ietf.org/doc/draft-ssmith-cesr/)|
 | DID KERI | KERI DID Method | [IETF DID KERI Method Draft](https://github.com/WebOfTrust/ietf-did-keri) | Phil Feairheller | |

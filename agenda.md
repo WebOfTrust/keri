@@ -12,8 +12,7 @@ Co-Chair: Philip Feairheller [email](pfeairheller@gmail.com)
 
 Meeting Bi-weekly starting on 2021-10-19 at 10 am EDT
 
-Agenda:
-https://github.com/WebOfTrust/keri/blob/main/agenda.md
+Agenda: https://hackmd.io/-soUScAqQEaSw5MJ71899w (linked from [github](https://github.com/WebOfTrust/keri/blob/main/agenda.md) but edited in HackMD)
 
 Zoom Meeting:
 https://us02web.zoom.us/j/89842900185?pwd=OEpXSU5pa29FR1A3OXFkUithZFNwQT09
@@ -130,7 +129,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### 2023-01-24
 - Recording
-    - 
+    - No Recording made
 
 - Reports
     - CESR
@@ -166,6 +165,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### 2023-01-10
 - Recording
+        - https://drive.google.com/file/d/1TsnU2jTa2RzfMft8asx5O8-7pcTrwyRw/view?usp=share_link
 
 - Reports
     - CESR
@@ -226,7 +226,8 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### 2022-12-13
 - Recording
-
+    https://drive.google.com/file/d/1Vnn7i428XcxeBV_-EBK1K3c74zv_VQze/view?usp=share_link
+    
 - Reports
     - CESR
     - CESRox
@@ -277,7 +278,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### 2022-11-29
 - Recording
-    - 
+    - https://drive.google.com/file/d/1nahPgRTX4yqZ8-wO9AJ0H1nxcxPweh1N/view?usp=share_link
 
 - Reports
     

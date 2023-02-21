@@ -31,8 +31,6 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### Future Topics
 
-
-- Demo of KERI CArdano Backer RootsID
 - More discussions for Witnesses and Watchers.  Gossip protocol, UDP, ecosystem configuration.
 - Direct Mode Agents
 - Custodial Agents
@@ -44,6 +42,8 @@ Explanation of KERI development tools and techniques: [KERI development environm
         - Public vs Private AIDs
 - keripy merge development to main!
     - future versioning strategies
+- How could we use KERI/ACDC to attest to definitions in the Education material
+- Does anything in the Keri/ACDC world replace DNS? If not entirely, does it replace any aspect of DNS
 
 ### ToDo
 - Future extract Keep library to NPM library
@@ -57,7 +57,55 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### Discussion items
 
+### 2023-02-21
+- Recording
 
+- Reports
+    - CESR
+        - Saider, Sadder done or in PR
+        - Refactor to allow for accepting all arguments into a single method.
+        - Prefixer in the works but need to refactor tests
+        - PR waiting for review on Seqner
+    - KERIpy
+        - Utility class pushed for cleaning up unresolable OOBIs
+        - Outstanding PR on its way for SignifyHab
+    - Education
+        - Testing with ChatGPT for explanations of typical KERI/ACDC terminology.
+        - Looking for help reviewing the output of ChatGPT
+        - Looking to discuss how we could use KERI/ACDC to attest to definitions, Q&As and other educational resources.
+        - We've been testing with ChatGPT to offer various levels in educational or explanatory resources. All outcomes need te be reviewed. How could we use KERI identifiers to commit to either reviews or explanations given in meetings. We should grab every opportunity to consolidate a review (in an ACDC?) by experts in our team.
+    - Signify
+        - Signify-TS work currently on hold from GLEIF resources
+        - SignifyPy is a python client library for working against the new cloud agent in KERIA
+    - KERIA
+        - New cloud agent for being controlled by a Signify Client
+    - KERIox HCF
+    - Cardano
+        - Outstanding PR to review and decide what to do.
+    
+    
+- Announcements
+    - W3C VC Face-to-Face outcome
+        - Meeting scheduled to solve the "@context optional" discussion.
+        - Media types being used to differentiate between types of credentials and verifiable credentials.
+        - Decision to create a "base media type" that is `credential+ld+json.`  Other media types of credentials are allowed by must provide either unidirectional or bidirectional transformations.  So for example we would create credential+acdc+json and provide a unidirectional transformation to credential+ld+json.
+        - VC-ACDC to become a proof format peer to VC-JWT in the W3C specification.
+        - Unidirectional transformation means we don't have to make any security compromises with what we send over the wire.
+        - https://github.com/andrewwhitehead/anoncreds-w3c-mapping
+    - ToIP Trust Spanning Layer Task Force
+        - Proposals from Sam Smith, Daniel Hardman already made with others to follow
+        - Looking to come together on the different proposals to consolidate into one definition of Trust Spanning Layer
+        - Task force is mandated to produce Specifications.
+        - https://github.com/trustoverip/trust-spanning-protocol/discussions
+    - Sam to talk at the ToIP Data Modeling group meeting Tuesday 3/7/2023
+        - Discuss the experience setting up the RoOT of Official Trust at GLEIF in the vLEI
+        - What does it look like to provide and retain those chains.
+        - Remote Attestations (Ratts Group, IETF).  Establishing a hardware root of trust using authentic attestations to the state of hardware components.
+
+
+- Discussion Items
+    - Does anything in the Keri/ACDC world replace DNS? If not entirely, does it replace any aspect of DNS
+        - Neil: Jacques Latour (CIRA) is advocating that KERI/ACDC need to work w DNS and particularly DNSSEC (current tech work) vs. attempting to replace it.
 
 ### 2023-02-07
 - Recording  

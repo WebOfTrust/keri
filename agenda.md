@@ -31,6 +31,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### Future Topics
 
+- IIW upcoming April planning
 - More discussions for Witnesses and Watchers.  Gossip protocol, UDP, ecosystem configuration.
 - Direct Mode Agents
 - Custodial Agents
@@ -44,6 +45,8 @@ Explanation of KERI development tools and techniques: [KERI development environm
     - future versioning strategies
 - How could we use KERI/ACDC to attest to definitions in the Education material
 - Does anything in the Keri/ACDC world replace DNS? If not entirely, does it replace any aspect of DNS
+- KERI Lite
+    - Sam:  Service endpoint bound to DID, so we can't change the endpoint without changing the DID.
 
 ### ToDo
 - Future extract Keep library to NPM library
@@ -56,6 +59,73 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 
 ### Discussion items
+
+### 2023-03-07
+- Recording
+
+- Reports
+    - CESR
+        - Created inception event in CESRide, will be moved to Signifide
+        - PR submitted for exposing a WASM module from CESRide, may also be moved to Signifide
+        - Work on Uniffi was submitted for CESRide, being compared with other FFI approaches
+            - Work may be moved into Parside
+    - KERIpy
+        - Propose merge branch as 1.0 main
+        - New utility for rolling back an accidential event not yet published totnesses
+        - Signing at edge working on
+        - ed448
+            - 57 bytes 156 pr keripy and cesride pull request
+    - Education
+        - Added 2 working sessions to get the site up and running
+        - Converting some Markdown files by hand
+        - Testing with ChatGPT for creating answers based on user levels.  (beginner, moderate, expert)
+        - Governanace related to attestations about terms / definitions in KERI ecosystem
+    - Signify
+        - GLEIF supporting signify clients in python and rust
+        - testing with keria agent and signify client
+        - working towared multisig
+        - signified (rust signify)
+        - JNI Rust spike from Signifide
+    - KERIA
+        - IN tandem with Signify (cloud agent)
+        - Signature and Signature-Input request signing added on both client requests and server responses
+    - KERIox HCF
+        - Implemented partial rotation
+    - Cardano
+        - RootsID partnership with Cardano Foundation - IoT, Supply Chain, GLEIF governance.
+    - GUT Keri-Lite
+        - Aries keri-lite demo
+        - Concerned about Maverick Rodolfo
+    - Provenant
+        - Attended Mobile World Congress conference (90k attendees).  
+        - Upcoming potential announcements about KERI in telecomm
+        
+- Announcements
+    - Attend the Trust Spanning Layer ToIP meetings - Next meeting 3/08 - 09:00am MT
+    - IIW in just over a month, should coordinate KERI track
+    - Next Thursday, KERI Edu Meeting at 07:00 PST
+    - Schema "stitching" utility.  KASL repo upcoming. 
+        -  Could be placed in ACDC schema repo in WoT.
+        -  https://github.com/WebOfTrust/schema
+    
+- Discussion Items
+    - Discussion on main 1.0 KERI
+        - PR to upgrade docker file for deploying witnesses
+        - Ongoing work on KERIa is forcing some potential breaking changes
+        - Propose merge of develement into Main cut new docker file, update keri on pypi
+            - versionsing 1.0
+            - keri protocol 10
+        - Unanimous vote approving the proposal to merge development into main.
+        - Bug fixes get a patch release version update
+        - New features get a minor release version update
+        - Document using development pip install locally (pip install -e .)
+        - Process around announcing and voting on both major and minor release updates.
+            - Daniel was triggered.  Can we version CESR code tables separately from KERIpy
+            - Version of KERI, KERIpy and CESR code table protocol versions do not need to be kept in lock step
+            
+    - KERI Lite
+        - Sam:  Service endpoint bound to DID, so we can't change the endpoint without changing the DID.
+
 
 ### 2023-02-21
 - Recording

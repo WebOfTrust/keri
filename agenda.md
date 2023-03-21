@@ -31,6 +31,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### Future Topics
 
+- keri-lite options trade-offs
 - IIW upcoming April planning
 - More discussions for Witnesses and Watchers.  Gossip protocol, UDP, ecosystem configuration.
 - Direct Mode Agents
@@ -58,7 +59,73 @@ Explanation of KERI development tools and techniques: [KERI development environm
 - Split out keripy core from keripy Rest API
 
 
-### Discussion items
+## Weekly Agendas
+
+
+### 2023-03-21
+- Recording
+
+- Reports
+    - CESR
+        - PRs to clean up memory "left behind".
+        - WASM PR outstanding, might be moved to Signifide
+        - Minor releases being published, currently at 0.3.0
+    - KERIpy
+        - Bunch of work on development exposing the new rotation rules to app level code
+        - exposing group member ids (key list offsets) in KLI
+        - KERIpy 1.0 released
+        
+    - Education
+        - Review of vLEI EGF with comparisons to community EGF captured in spreadsheet
+    - Signify
+        - PR in Signifide for moving primitives out of CESRide
+        - GLEIF sponsoring a community approach to working on Signify libraries
+        - 
+    - KERIA
+        - Finished AID creation including delegation
+        - now working on multi-sig
+    - KERIox HCF
+    - Cardano
+        - Cardano Foundation remains interested in Cardano Backer
+        - Interested in creating a community list of Trust Anchors and including Cardano
+            - Listing the attributes of each network
+    - GUT KERI-Lite
+        - Aries community moving forward with did:peer numalgo2 method and not KERI-Lite
+        - did:keri url leveraging the url dereferencing process
+    - Provenant
+        - Working on a trial with YouMail, high speed VOIP
+        - Pending demo with XBRL
+
+- Announcements
+    - Sam is doing a presentation in 1.5 hours on ACDC Provenance Chains.  In the Data Modeling ToIP group.
+        - https://zoom.us/j/99186768208?pwd=TUwxOUIvYW5xL0JHaEJTRlp5ZnNlUT09
+    - Lance received his OOR vLEI!
+    - VC-ACDC Proposal to VCWG, as a valid external proof format.
+        - Rough consensus was not reached on either proposal
+        - Confusion on how the compromise in Miami F2F is being interpreted.
+        - Could we leverage the work being done on OpenID Connect (OIDC).  
+    - IIW on its way.
+        - Bring your ideas for session to the April 4th KERI meeting so we can collaborate on sessions.
+        - Make sure to get your tickets, may be sold out.
+    
+
+- Discussion Items
+    - Cardano Backer
+        - Where to create a registry of Trust Anchors (witness pools or backers)
+            - How to create an appraisable trust basis for and AID based on the key state, signing algo, delegation, multisig and configuration of backers.  Reputation is added via credentials issued to the AID.  
+            - Appraisability is how we solve the difficult problems of trust.
+        - Current PR:
+            - backering for using something other than witnesses as backer, cardano code for Cardano specific backer.  Perhaps refactor to allow Cardano code to be moved externally.
+            - Phil and Sam to code review the PR and figure out how to externalize third party backers.
+            
+    - KERI Authorization for SSH (KASSH)
+        - proof of concept for uploading documents using sftp or ssh. Motivated using a KERI AID for SSH.
+        - Run a service on any VM (verification service from GLEIF reporting api)
+        - Create SSH Auth Credential.
+        - Authorization service looks for SSH Auth Credential
+        - creates ssh .pem file from public key for KERI AID
+        - KASSH has embeded watcher that automatically processes rotation to export ssh keys from new rotation
+        - https://github.com/pfeairheller/kassh
 
 ### 2023-03-07
 - Recording

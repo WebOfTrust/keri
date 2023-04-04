@@ -32,7 +32,6 @@ Explanation of KERI development tools and techniques: [KERI development environm
 ### Future Topics
 
 - keri-lite options trade-offs
-- IIW upcoming April planning
 - More discussions for Witnesses and Watchers.  Gossip protocol, UDP, ecosystem configuration.
 - Direct Mode Agents
 - Custodial Agents
@@ -42,8 +41,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
         - Trust Anchor Trust Domain Trust Culture (Ecosystem)
         - did:keri did:peer similarities differences
         - Public vs Private AIDs
-- keripy merge development to main!
-    - future versioning strategies
+- Future versioning strategies
 - How could we use KERI/ACDC to attest to definitions in the Education material
 - Does anything in the Keri/ACDC world replace DNS? If not entirely, does it replace any aspect of DNS
 - KERI Lite
@@ -61,6 +59,76 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ## Weekly Agendas
 
+### 2023-04-04
+- Recording
+
+- Reports
+    - KERIpy
+        - 1.0.0 pushed tp PyPi keri
+
+    - CESR
+        - Closed issues in last meeting
+        - CESRide code run against tests in KERIpy (test_coring)
+        - Whiteboarding session planned for IIW
+        - Making decisions on where classes / structs belong (CESRide, Parside, Signifide)
+    - Education
+        - Update to ToIP glossary.  Split definitions by higher level concepts.
+        - Max 1 criterium with 1 term matching  1 knowledge artefact from 1 conceptual model.
+        - Education session with Cardano on GLEIF EGF and Trust Registries
+        - Need to revisit the EFG for WoT
+        - keri.one open for crawling for education purposes (thanks Sam!)
+        
+    - Signify
+        - Incept, Rotate, Interact with salty keys, Incept with randy and group keys.
+        - Signifide branch coming together.
+    - KERIA
+        - Incept, Rotate, Interact with salty keys, Incept with randy and group keys.
+        - Endpoints for key state and key event logs, oobi resolution
+
+- Announcements
+    - ToIP TSP
+        - [SPAC Paper](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/SPAC_Message.md)
+            - TSP Whiteboarding Session on Thursday 1PM PDT at ToIP for 1 or 2 hours
+    - Abydos Tutorial: Learn KERI, ACDC by issuing and verifying credentials
+        - [Tutorial Link](https://bit.ly/keri-abydos-tutorial)
+        - KASLCred [submitted](https://github.com/WebOfTrust/schema/pull/2) to WebOfTrust/schema
+    
+
+- Discussion
+    - Python 3.11 on Dev?
+        - Moving to 3.11 on dev branch of keripy
+        - KERIA, Signify, Hio, vLEI all getting upgraded
+    - IIW Topics Sessions
+        - KERI 101 Session - Nuttawut/Phil Introducing KERI
+            - Fit into the IIW 101 Series they hold every session
+        - KERI 201 Session - Kent (an accelerated developer introduction to KERI and ACDC)
+            - Possibly move to demo hour
+        - QuiIdentity - demo hour
+            - Break out hour on getting KERI / decentralization adopted.
+        - RootID participating in DIDComm 2 hack-a-thon - chat, issuance
+        - did:keri - Watcher variant
+        - Logging into SSH with KERI
+        - CESRide/Parside/Signifide whiteboarding session
+        - VC-ACDC talk around how to create other Proof Formats for W3C VCs
+        - Sam possibly doing talk about SPAC Paper / ESSR (Meta-Cryptographic Systems)
+        - Randy (Provenant) doing vLEI in Telecom, cross boarder KYC problems.
+            - Binding actors to actions, making communications authentic
+        - Salty Nonce drinking game
+        - Signify / KERIA planning session (third day session)
+        - Create a Google sheet for planning sessions - Phil
+        - Sam session on reputation
+        
+    - The AI Dilemma
+        - From the folks that made Social Dilemma
+            - https://vimeo.com/809258916/92b420d98a
+            - https://www.youtube.com/watch?v=bhYw-VlkXTU
+        - Could we mitigate effects with KERI?
+            - Its not enough to have cryptograpic authenticity you need reference for who said what
+            - String authentication to a natural person  
+            - Strong reputation (credentials) for an identifier
+            - Content is no longer good source of reputation
+        - Start with really strong authenticiation, but need to mitigate the cheap pseudonymity problem
+        - Someone training chatGPT to hack into APIs
 
 ### 2023-03-21
 - Recording

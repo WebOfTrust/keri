@@ -59,9 +59,76 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ## Weekly Agendas
 
-### 2023-04-04
+### 2023-05-02
 - Recording
 
+- Reports
+    - KERIpy
+        - No significant updates
+        - Sam is refactoring event injestion to verify SAID as early as possible
+        
+    - CESR
+        - last version pushed was 0.5
+        - Creder added by Jason, working on integration with Parside
+        - Discussions ongoing about the relationship between CERSide, Parside, Signifide, etc and how to merge/share them
+        
+    - Education
+        - Proposal to re-evaluate the need for bi-weekly meetings for EDU.  Perhaps pause them for the time being.
+        - Could consider moving the meeting to other time slot
+        - Pausing meeting starting this week, will reevaluate
+        
+    - Signify
+        - Jupyter notebook pushed with Randy key integration test and documentation in notebook
+            - https://github.com/WebOfTrust/signifypy/blob/main/integration/app/test_randy.ipynb
+        - SHIM - Signify HSM Integration Module, first implemetation using GCP KSM
+                
+    - KERIA
+        - Added test coverage, dockerfile, CI, etc.
+        
+- Announcements
+    - See last week's ACDC meeting recording for updates on IIW KERI/ACDC
+        - https://wiki.trustoverip.org/display/HOME/ACDC+Meeting+Page (meeting notes here, video link tdb)
+
+    - Session at IIW about IPR at KERI.  
+        - Outcome is that DIF tombstoned all repos and landing page for KERI
+        - DIF published the result of the call for patent disclosures and that there was a clean handoff to WebOfTrust
+        - Recognition that we are a BDFL.
+        - Intent is to move standards goverance to IETF or other standards bodies.
+
+    - Meeting about did:keri (last week)
+        - suggested set up biweekly meeting
+        - https://keriworld.slack.com/files/U035R1TFEET/F055E0EKNSZ/2023-01-27-did-keri-did-method-resolver.pdf
+
+- Discussion
+    - IRL Credentials
+        - "In Real Live" credentials.  Leveraging ACDC chaining to attest to "knowing" someone.
+        - A credential to prove that someone is not an AI, not an IoT, not software and not an Org
+        - Some members in the community have vLEIs and have gone through NIST IAL2 authentication already
+        - Credential certifies three things:
+            - Assertion that an in person interaction for some period of time  with first/last name
+            - Some form of OOB interaction occurred subsequently (like an email)
+            - Proposed schema (see presentation).
+        - A form of reputation by reference.
+        - Proposal to be able to issue these credentials at the next IIW.
+        - Daniel to publish a PR of potential schema to the schema repo in WebOfTrust
+        - Badge for IRL credentials?
+        
+    - mDL "identifiers"?
+        - Issued to a "number"?  The number of the physical driver's license.
+        - IAL proofs during the issuance of the mDL.
+        - Bound to the device or to the biometric.
+        - Suggestion to ask the question on ToIP Slack.  Lots of experience over there.
+
+    - Breakdown of Rust repositories (Kevin)
+        - keride repo with "Features".
+            - method of selectively consuming on the portions of a library you want
+        - trying to answer questions like "Where does Serder go?"
+        
+
+
+### 2023-04-04
+- Recording
+    https://drive.google.com/file/d/1akJzrYiGKvdvNb0oYGCBh4hJwMvV1BXN/view?usp=sharing
 - Reports
     - KERIpy
         - 1.0.0 pushed tp PyPi keri
@@ -132,7 +199,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### 2023-03-21
 - Recording
-
+    https://drive.google.com/file/d/1gioQIM2itEbQrfcTy5YsX7KvdkLOwU2g/view?usp=sharing
 - Reports
     - CESR
         - PRs to clean up memory "left behind".
@@ -197,7 +264,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### 2023-03-07
 - Recording
-
+    https://drive.google.com/file/d/18jf8AvPitYEaphcpo9cVjb31Y64oQDk8/view?usp=sharing
 - Reports
     - CESR
         - Created inception event in CESRide, will be moved to Signifide
@@ -264,7 +331,8 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### 2023-02-21
 - Recording
-
+    Did not record
+    
 - Reports
     - CESR
         - Saider, Sadder done or in PR

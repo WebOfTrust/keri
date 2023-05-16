@@ -59,9 +59,79 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ## Weekly Agendas
 
+### 2023-05-16
+- Recording
+    - TBD
+- Reports
+    - KERIpy
+        - New version of Serder, work in progress.  Target to integrate this week
+            - Support auto-verification of SAID
+            - Table based configuration for any packet type/event type
+            - Serdery Factory to parse out the event types
+        - Secp256(r/k)1 PR merged in this week.
+    - CESR
+        - Added Creder recently
+        - Wrapped up the CESR calls, implementation at a 1.0 state
+        - Should do a 1.0 release
+    - Education
+        - Argolia free version not customizable enough
+        - Switched from Argolia to TypeSense (sp?)
+            - https://typesense.org/
+        - Looking for anyone who has experience.
+    - Signify
+        - SignifyPy Passcode rotation with new key generation mechanism Sandy algo
+        - Interaction with Keria Agent
+        - Have signify-ts running in a browser client
+            - Boot calls being built now
+        - Signify HSM Integration Module (SHIM) built using Trezor device 
+            - https://github.com/roots-id/trezor-shim
+            - Demo in repo using SignifyPy
+        - SHIM build using Google Cloud KSM
+        - Keride Repo has cesride stuff
+    - KERIA
+        - multisig group demo planned for July
+            - https://github.com/WebOfTrust/keria/discussions/32
+    - Schema Registy in WoT
+        - Daniel pushed several new updates to schema registry
+            - A JSON file with links to available schema
+        - GitHub deployment to GitHub pages could be used.
+        
+- Announcements
+- Discussion
+    - ACDC Graph - Different schema at each "layer", where to encode Root of Trust AID
+        - Defined production root of trust AID for ecosystem, should/could this be hardcoded into the Schema
+            - Could be a good idea because it removes extra "business logic" to verify the SAID outside the Schema
+            - Could be bad because a loss of Root causes versioning of schema
+            - Could be bad because it prevents reuse of Schema in multiple environments (dev/prod/etc).
+            - Probably not one answer for all ecosystems.
+            - Community would love feedback over time to see how this works.  Pros / cons.
+    - ACDC Schema defined to ONLY allow SAID of Rules section, not expanded Rules section.
+        - Is this legal, a good idea?
+            - Yes, this is a fine approach.
+        - Good to add as a discussion item for next week's ACDC call
+        - Changes to allow packet types for all composite pieces of an ACDC credential
+            - Adds performant streaming and caching for all parts of an ACDC
+    
+    - Schema registry
+        - Relative vs Absolute URLs.
+            - Sam proposing to use relative URLs to avoid name (SAID) squatting
+            - Attempting to ensure we have a permissionless registry
+            - Daniel to do a PR to update to relative URLs
+            - Kevin and Phil to coordinate on CI/CD to deploy to GitHub pages and validate SAID
+        - Open PR for IRL (now, Face-2-Face) credential registry type, please provide feedback
+            - https://github.com/WebOfTrust/schema/pull/3
+            
+    - KERI Dev Call
+        - Thursday's call combined and repurposed to be Development calls.
+            - No theory, all implementation!
+            - Pigs and Chickens stuff
+            
+    - Review Signify Protocol Discussion
+        - https://github.com/WebOfTrust/keria/discussions/34
+
 ### 2023-05-02
 - Recording
-
+    https://drive.google.com/file/d/1-7tXOHswCS-5_Nsm2kF9ZhagWeTt2eUz/view?usp=sharing
 - Reports
     - KERIpy
         - No significant updates

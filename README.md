@@ -1,5 +1,7 @@
 # Keri Community
 
+## KERI Community Development Efforts
+
 ### Associated Specifications
 The table below lists all deliverables of the KERI Community:
 | Acronym | Full Name of Deliverable | Link to Deliverable | Lead Authors | Status / Notes |

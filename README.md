@@ -66,7 +66,7 @@ A closely related specification that leverages KERI is ACDC. This is hosted at T
 
 #### Education
 
-Community members have an education/documnetation effort in progress here [edu](https://keriworld.slack.com/archives/C03RB6ASVUM)'. The repo for the Web of Trust terminology and glossaries is [here](https://github.com/WebOfTrust/WOT-terms). 
+Community members have an education/documentation effort in progress here [edu](https://keriworld.slack.com/archives/C03RB6ASVUM)'. The repo for the Web of Trust terminology and glossaries is [here](https://github.com/WebOfTrust/WOT-terms). 
 
 ## Existing Implementations
 The reference implementation for KERI is the keripy implementation. This is hosted here by the WebOfTrust project. The repository may be found here:  

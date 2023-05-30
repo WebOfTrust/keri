@@ -36,12 +36,6 @@ Explanation of KERI development tools and techniques: [KERI development environm
 - Direct Mode Agents
 - Custodial Agents
 - Demo of how to write tests for KeriPy
-- How to Christen the current produciton release with a version set.
-- Trust Anchor as Discovery Bootstrap
-        - Trust Anchor Trust Domain Trust Culture (Ecosystem)
-        - did:keri did:peer similarities differences
-        - Public vs Private AIDs
-- Future versioning strategies
 - How could we use KERI/ACDC to attest to definitions in the Education material
 - Does anything in the Keri/ACDC world replace DNS? If not entirely, does it replace any aspect of DNS
 - KERI Lite
@@ -58,6 +52,61 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 
 ## Weekly Agendas
+
+### 2023-05-16
+- Recording
+    - TBD
+- Announcements
+    - New Dev Meeting, every Thursday at 10:00am ET / 8:00am MT / 7:00am PT
+        - KERI Dev channel in Slack
+        - https://us02web.zoom.us/j/89842900185?pwd=OEpXSU5pa29FR1A3OXFkUithZFNwQT09
+    - QuiIdentity went live with a closed beta last week
+    - KERIsse
+        - KERISSE development : https://github.com/WebOfTrust/WOT-terms/discussions/30 Report of current responses
+    
+- Reports
+    - KERIpy
+        - Sam: continued work on refactor of event protocol messages and ACDC protocol messages.
+            - Table based configuration of fields for messages
+        - Phil PR against Main branch. for revoke.
+    - Keria (keri agent)
+        - continuing moving functionality
+        - Imp passcode rotation in both KERIa and Signifypy and SignifyTS
+        - response headers signing
+        - Sandy algorithm new hybrid of Salty and Randy key algorithms
+        - KERIA test agent running on AWS
+            - https://keria-dev.rootsid.cloud
+    - SignifyPY
+        - try for interop between clients SignifyPy and SignifyTS
+        - integration tests script support
+    - SignifyTS
+        - Salty and Randy Group ID key management
+        - Passcode rotation
+        - Trying to maintin parity with SignifyPY
+        - Integration tests
+    - Cesride
+        - move some modules stuff
+        - Salty and Randy for rust
+        - Encrypter and Decrypter
+        - Signature header http in rust
+    - KERIsse
+        - ongoing discussion about the focal functionality to provide. [Current responses](https://weboftrust.github.io/WOT-terms/docs/intro?level=3) can be reviewed before contributing in 1-on-1 Zoom interviews. KERISSE can be tested [here](https://weboftrust.github.io/WOT-terms/docs/intro?level=3).
+    - Provenant
+        - Issues
+        
+- Discussion
+    - Status Update on Watcher and Revocation
+        - Working through technical debt to get to implementation of Watcher.
+        - Watcher is basically a witness that is not declared in a KEL
+    - Roadmap for Watcher Implementation:
+        - In KERIA agent and KERIpy kli, all querying for KEL should go through a Watcher if one is configured
+        - Q3 implementation of Watcher
+    - Credential revocation
+        - Credential chaining revocation does not automatically revoke "downstream" credentials but makes them no longer valid
+        - When is a credential revoked?
+            - Based on the timestamp on the revocation event message in the TEL
+            - How to handle the situation where a malicious issuer posts a revocation event with a prior date?
+            - The grace period for downstream vLEI credentials is based on the revocation of QVIs
 
 ### 2023-05-16
 - Recording

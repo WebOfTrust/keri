@@ -53,7 +53,85 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ## Weekly Agendas
 
-### 2023-05-16
+### 2023-05-30
+- Recording
+    - TBD
+- Announcements
+    - DICE - IIW Europe.
+        - Last week, 160 attendees.  Same format as IIW
+        - Topics:
+            - OpenID4VC topics
+                - Not a replacement for identify, it would replace DIDComm
+                - Using OpenID tooling to secure the issuance and presentation exchange.
+            - What is going to happen with Indy
+            - Michal did: The "Sam Smith" tech stack
+                - Trying to share the technology and stress the growth of the community
+            - HCF also did a showcase of their existing tech stack - providing SSH access using KERI/ACDC
+            - Henk's work with KERISSE is important
+            - Rumors being spread that Sam is the single point of failure for KERI/ACDC
+            - Specification:  
+                - What is the status of the spec?
+                    - Actively working to move spec to ToIP.  Attempted to do this when we left DIF, but was blocked by DIF
+                    - But now all KERI work has been archived on DIF, we will get this done.
+                    - Includes:  ACDC, KERI, CESR, SAIDs, etc. (10 in total).
+    
+        
+    
+- Reports
+    - KERIpy
+        - Sam: Updating protocol for Serder
+            - Allows for versioning of KERI and ACDC protocols.
+            - Converting KSN from KERI events to an object class (no version, no packet type).  Can only embed KSNs in KERI events now.
+            - Leading up to new superceding delegation rotation event.
+        - Phil: planning to add support for joining MS group in a rotation not at inception.
+       
+    - KERIA (keri agent)
+        - Work on adding support for credential issuance verificationa and managment
+        - Regsitry creation API added
+            - Long running operation support needed
+        
+    - SignifyPY
+        - Script for issuing a credential to an AID hosted in KERIA
+        - Support for list and 
+        
+    - SignifyTS
+        - Added OOBIs, keystate, delegation, credential lists
+        - Working on multisig now
+       
+    - Cesride
+        - No updates
+       
+    - KERIsse
+        - Scrapped blogs of community, indexed.
+        - Discussion:
+            - Kor and I would like to know whether devs would appreciate the compact version of the Search Engine part of KERISSE here https://dwarshuis.com/test/wot-terms/view/docs/Visualisations/Kent%20Bull%20viz/ or the more spacious version of the layout in production here: https://weboftrust.github.io/WOT-terms/
+        
+    - Provenant
+        - No updates
+        
+        
+- Discussion
+    - GLEIF EGF Documents:
+        - https://www.gleif.org/en/vlei/introducing-the-vlei-ecosystem-governance-framework
+    - Creating AIDs from file hashes
+        - An AID where the inception event includes file hashes in anchors.
+        - Used to secure data.  Asserting control over the AID and the data in the files that were hashed.
+        - Used to assert to the parameters of an LLM
+            - Source of provenance of your use of it, not of ownership over it.
+        - Attach SAIDs to any data coming out of it.
+        - Optimized compact sparse merkle tree (OCSMT)
+            - all operations are logn
+        
+    - DID Methods, did:keri, did:webs
+        - A proposal to create a new DID Method specification called did:webs that is did:web like secured by did:webs
+        - What is the relationship between a did:webs and did:keri DID?
+            - Are they subsets of each other?
+        - Discussion at last KERI Dev call:
+            - https://github.com/WebOfTrust/keri/discussions/31
+            
+
+
+### 2023-05-30
 - Recording
     - TBD
 - Announcements
@@ -69,7 +147,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
         - Sam: continued work on refactor of event protocol messages and ACDC protocol messages.
             - Table based configuration of fields for messages
         - Phil PR against Main branch. for revoke.
-    - Keria (keri agent)
+    - KERIA (keri agent)
         - continuing moving functionality
         - Imp passcode rotation in both KERIa and Signifypy and SignifyTS
         - response headers signing

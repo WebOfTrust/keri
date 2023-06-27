@@ -53,9 +53,73 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ## Weekly Agendas
 
-### 2023-06-13
+### 2023-06-27
 - Recording
     - TBD
+- Announcements
+    - IEEE P7012 standard effort formalize graduated disclosure for terms and conditions  Doc Searls
+        - Machine Readable Privacy Terms "Riccardian Contracts"
+    - 
+    
+        
+- Reports
+    - KERIpy
+        - Continuing port to new Serder object versioning of protocol and packet types
+        - 
+        
+    - KERIA (keri agent)
+        -  PoC of Credential Issuance integration with signifypy signifyts
+        -  route normalization http resources 
+        -  cueing system
+        -  google spreadsheet 
+        
+    - SignifyPY
+        - minor updates to align with route normalizion
+        
+    - SignifyTS
+        - some updates to match KERIA start implement credential issuance
+       
+    - Cesride
+        - Implementing selective disclosure with compacting exn 
+        - SealsSourceTriples Anchors to another KEL prefix sn said, 
+        - 
+       
+    - KERIsse
+     
+        KERI Suite Search Engine
+        (KERISSE) report:
+        1. We* now have shareable links into the search engine pop-up; example: [ixn](https://weboftrust.github.io/WOT-terms/visualisations/?Wot-terms%5Bquery%5D=ixn&searchModalStatus=open)
+        2. First repo scraped and indexed: Weboftrust-keripy. You can filter on repos in the left menu.
+
+           We have new [responses](https://github.com/WebOfTrust/WOT-terms/discussions/30) to what KERISSE should mean to the community, thanks to our respondents! 
+
+            '* When I say “we” it’s Kor Dwarshuis and myself our small team has two technical meetings a week.
+    - Provenant
+        - streamlining vLEI issuance using Keria and Signify
+
+
+        
+        
+- Discussion
+    - (Jason) Anchoring EXN messages to the KEL, is it needed for verifiability?
+        - Sam: No, since credentials are already anchored to the KEL then you can send signatures of the ACDCs and then sign the EXN message and send those signatures with EXN messages for verifiability.
+    - Duplicity Recovery
+        - Does it break non-repudiation (no)
+            - No, it doesn't break non-repudiation. The legal person or entity controlling a KERI identifier is responsible for any events that go into a KEL, including duplicitous events.
+            - The policy is to not trust an identifier that is duplicitous.
+            - Once the duplicitous identifiers enables full reconciliation of all events in the KELs, inculding duplicitous KELs, by acknowledging disputed events in rotation recovery events, then it can be trusted again. This sort of a trust decision is ecosystem-specific, business-case specific.
+        - Specify in the EGF (Ecosystem Governance Framework) all of your event types and recovery from duplicity for each event.
+    - SAD SAID concept for opaque data
+        - [Daniel Hardman Presentation Link](https://docs.google.com/document/d/1PDFUmmeAzC_PoFISbZzbB7UT0LPcmVQFBWo8bwzA97U/edit?pli=1#heading=h.o1dvjnn6h4xi)
+    - Replay Attack non-interactive
+        - Did not get to this on today's call, postponed to next meeting.
+    
+            
+
+
+### 2023-06-13
+- Recording
+    - https://drive.google.com/file/d/1oJ1aXV8q79GCp2dALWjBVDUtbmAClvsr/view?usp=drive_link
 - Announcements
     - DICE - IIW Europe.
         - Last week, 160 attendees.  Same format as IIW
@@ -133,7 +197,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### 2023-05-30
 - Recording
-    - TBD
+    - https://drive.google.com/file/d/1-y-57ynny4xtpHdyxbsmHJJQVZrBnQjr/view?usp=drive_link
 - Announcements
     - New Dev Meeting, every Thursday at 10:00am ET / 8:00am MT / 7:00am PT
         - KERI Dev channel in Slack
@@ -188,7 +252,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### 2023-05-16
 - Recording
-    - TBD
+    - https://drive.google.com/file/d/1idSUoWZpwwVvH5QESNMC9H58vsX0HQ1D/view?usp=drive_link
 - Reports
     - KERIpy
         - New version of Serder, work in progress.  Target to integrate this week

@@ -53,7 +53,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ## Weekly Agendas
 
-### 2023-05-30
+### 2023-06-13
 - Recording
     - TBD
 - Announcements

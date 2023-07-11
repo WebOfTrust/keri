@@ -53,6 +53,72 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ## Weekly Agendas
 
+### 2023-07-11
+- Recording
+    - TBD
+    
+- Announcements
+    - Change the source of glossary from ToIP back to WebOfTrust.  The source of truth will be WoT, but can be sync'ed back to ToIP.
+    - GLEIF successful demo PoC vLEI with regulatory body.     
+    - Looking to demo issuance of ACDCs to IIW participants
+    
+- Reports
+    - KERIpy
+        - Updating state notifications for key state and transaction state, from KERI events to plain SADs.
+        - Added to dev multi-sig rotation kli support  future new member of group push to dev.
+        - Main 1.01 no breaking
+        
+    - KERIsse
+        - Adapted KERIsse to have new source of truth.
+        - Updated the "How we did it" documentation.
+        - Implementing TypeSense search engine, scraping related sites including GitHub repositories.
+        - Automation of source material clean-up to remove problematic characters.
+        - Adding Levels across individual paragraphs and articles.
+        
+    - KERIA
+        - Changes: addition of advanced searching for credentials in wallet. Help issuers to show issued credentials. create indices using SAD path language with pagaination. Using CESRSuber for indices
+        - Several fixes to address bugs in credential issuance and presentation
+        
+    - SignifyPy
+        - Few updates to integration script.
+        - issue-ecr.sh shell script
+        
+    - SignifyTS
+        - Working on credential issuance and credential issuance with witnesses
+        - Updates to fix challenge response APIs
+        - Upcoming: revocation and credential querying API support
+        - Fixes to support running from Node
+        
+    - CESRide
+        - Tests against the WASM stuff added earlier this year
+        - Aiming to move CESR primitives(sp?) from CESRide into Signify-TS 
+    
+- Discussions
+    - Moving the specifications to ToIP and impact of that on meeting structure
+        - In the process of moving the specifications for the protocols in support of ACDCs into ToIP
+            - We originally wanted to move everything to ToIP when we left DIF but that was blocked.
+            - Code repos will stay at WebOfTrust, just the spec text.
+        - For meetings, do we want to continue with this WoT meeting or fold into the ToIP meeting?
+            - Suggestion to have a rolling format across meetings based on what the group wants to talk about
+            - Membership required to contribute to the meetings - Membership for individuals is free for ToIP
+        - The current charter for ACDC in ToIP already includes reference to all the supporting protocols.
+            - All specifications would be moved including, KERI, CESR, SAID, PTEL, OOBI, etc.
+        - Combining the meetings will make it less confusing for newcombers to only have to join ToIP and find one meeting.
+        - Change the focus of the meeting to the KERI/ACDC stack and let the community decide.
+        - How should this effect Slack?
+            - Keeping KERIWorld or merging everything into ToIP Slack.
+            - Argument to keep KERIWorld because that is where source code is coming from and where those discussions should remain because the ToIP charter specifically states that no source code is being delivered
+        - Need to be aware of stropiness in the processes of ToIP and user management.
+        - Resolution to combine the meetings into the existing ToIP meeting passed.
+            - No changes until we get specifications moved, an announcement will be made.
+        
+    - Question regarding credential search API
+        - GET vs POST for search API?  
+            - GET is "RESTy" but the parameters are overly expressive and results in long URL
+            - POST is not RESTy
+            - For now we are putting parameters in BODY of GET.
+            - Open for suggestions.
+
 ### 2023-06-27
 - Recording
     - TBD

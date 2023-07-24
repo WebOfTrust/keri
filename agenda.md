@@ -77,6 +77,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
     - did:webs developments, collaborations and papers
     - Migration from kli to KERIA via multisig rotation
     - Agents and Mailboxes replacing Witnesses (no, not like that).
+    - Move to ToIP meeting schedule and "location" (Zoom)
 
 
 ### 2023-07-11

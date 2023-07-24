@@ -53,6 +53,32 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ## Weekly Agendas
 
+### 2023-07-25
+- Recording
+    - TBD
+    
+- Announcements
+    - 
+    
+- Reports
+    - KERIpy
+
+    - KERIsse
+       
+    - KERIA
+        
+    - SignifyPy
+        
+    - SignifyTS
+        
+    - CESRide 
+    
+- Discussions
+    - did:webs developments, collaborations and papers
+    - Migration from kli to KERIA via multisig rotation
+    - Agents and Mailboxes replacing Witnesses (no, not like that).
+
+
 ### 2023-07-11
 - Recording
     - TBD

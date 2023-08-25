@@ -821,7 +821,12 @@ More in [The Architecture of Identity Systems](https://www.windley.com/archives/
 
 ## **Q: How multi-tasking is the key infrastructure?
 
-KERI has `univalent`, `bivalent` and `multivalent` infrastructures.\
+KERI has `univalent`, `bivalent` and `multivalent` infrastructures.  Definitions from the keri whitepaper: \
+
+> 9.5.1 Key Management Infrastructure Valence
+
+> When all storage and signing operations both administrative and not are supported by one computing device or component we call this a **univalent** architecture or infrastructure. When storage and signing operations are split between two computing devices or components, we call this a **bivalent** architecture or infrastructure. In general when storage and signing are split between two or more key computing devices or components, we call this a **multivalent** architecture or infrastructure.
+
 <img src="../images/key-infra-valence.png" alt="Key Infrastruction Valence levels" border="0" width="600">
 You need Key-pair Generation and Key-Event-Signing Infrastructure. And KERI doesn't care how you do it.\
 From `bivalent` delegation {fill out?!} comes into play. But in fact you can have `multivalent` infrastructures, all with their own security guarantees and its own key management policies.\

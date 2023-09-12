@@ -53,9 +53,166 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ## Weekly Agendas
 
-### 2023-05-30
+### 2023-07-25
 - Recording
     - TBD
+    
+- Announcements
+    - 
+    
+- Reports
+    - KERIpy
+
+    - KERIsse
+       
+    - KERIA
+        
+    - SignifyPy
+        
+    - SignifyTS
+        
+    - CESRide 
+    
+- Discussions
+    - did:webs developments, collaborations and papers
+    - Migration from kli to KERIA via multisig rotation
+    - Agents and Mailboxes replacing Witnesses (no, not like that).
+    - Move to ToIP meeting schedule and "location" (Zoom)
+
+
+### 2023-07-11
+- Recording
+    - TBD
+    
+- Announcements
+    - Change the source of glossary from ToIP back to WebOfTrust.  The source of truth will be WoT, but can be sync'ed back to ToIP.
+    - GLEIF successful demo PoC vLEI with regulatory body.     
+    - Looking to demo issuance of ACDCs to IIW participants
+    
+- Reports
+    - KERIpy
+        - Updating state notifications for key state and transaction state, from KERI events to plain SADs.
+        - Added to dev multi-sig rotation kli support  future new member of group push to dev.
+        - Main 1.01 no breaking
+        
+    - KERIsse
+        - Adapted KERIsse to have new source of truth.
+        - Updated the "How we did it" documentation.
+        - Implementing TypeSense search engine, scraping related sites including GitHub repositories.
+        - Automation of source material clean-up to remove problematic characters.
+        - Adding Levels across individual paragraphs and articles.
+        
+    - KERIA
+        - Changes: addition of advanced searching for credentials in wallet. Help issuers to show issued credentials. create indices using SAD path language with pagaination. Using CESRSuber for indices
+        - Several fixes to address bugs in credential issuance and presentation
+        
+    - SignifyPy
+        - Few updates to integration script.
+        - issue-ecr.sh shell script
+        
+    - SignifyTS
+        - Working on credential issuance and credential issuance with witnesses
+        - Updates to fix challenge response APIs
+        - Upcoming: revocation and credential querying API support
+        - Fixes to support running from Node
+        
+    - CESRide
+        - Tests against the WASM stuff added earlier this year
+        - Aiming to move CESR primitives(sp?) from CESRide into Signify-TS 
+    
+- Discussions
+    - Moving the specifications to ToIP and impact of that on meeting structure
+        - In the process of moving the specifications for the protocols in support of ACDCs into ToIP
+            - We originally wanted to move everything to ToIP when we left DIF but that was blocked.
+            - Code repos will stay at WebOfTrust, just the spec text.
+        - For meetings, do we want to continue with this WoT meeting or fold into the ToIP meeting?
+            - Suggestion to have a rolling format across meetings based on what the group wants to talk about
+            - Membership required to contribute to the meetings - Membership for individuals is free for ToIP
+        - The current charter for ACDC in ToIP already includes reference to all the supporting protocols.
+            - All specifications would be moved including, KERI, CESR, SAID, PTEL, OOBI, etc.
+        - Combining the meetings will make it less confusing for newcombers to only have to join ToIP and find one meeting.
+        - Change the focus of the meeting to the KERI/ACDC stack and let the community decide.
+        - How should this effect Slack?
+            - Keeping KERIWorld or merging everything into ToIP Slack.
+            - Argument to keep KERIWorld because that is where source code is coming from and where those discussions should remain because the ToIP charter specifically states that no source code is being delivered
+        - Need to be aware of stropiness in the processes of ToIP and user management.
+        - Resolution to combine the meetings into the existing ToIP meeting passed.
+            - No changes until we get specifications moved, an announcement will be made.
+        
+    - Question regarding credential search API
+        - GET vs POST for search API?  
+            - GET is "RESTy" but the parameters are overly expressive and results in long URL
+            - POST is not RESTy
+            - For now we are putting parameters in BODY of GET.
+            - Open for suggestions.
+
+### 2023-06-27
+- Recording
+    - TBD
+- Announcements
+    - IEEE P7012 standard effort formalize graduated disclosure for terms and conditions  Doc Searls
+        - Machine Readable Privacy Terms "Riccardian Contracts"
+    - 
+    
+        
+- Reports
+    - KERIpy
+        - Continuing port to new Serder object versioning of protocol and packet types
+        - 
+        
+    - KERIA (keri agent)
+        -  PoC of Credential Issuance integration with signifypy signifyts
+        -  route normalization http resources 
+        -  cueing system
+        -  google spreadsheet 
+        
+    - SignifyPY
+        - minor updates to align with route normalizion
+        
+    - SignifyTS
+        - some updates to match KERIA start implement credential issuance
+       
+    - Cesride
+        - Implementing selective disclosure with compacting exn 
+        - SealsSourceTriples Anchors to another KEL prefix sn said, 
+        - 
+       
+    - KERIsse
+     
+        KERI Suite Search Engine
+        (KERISSE) report:
+        1. We* now have shareable links into the search engine pop-up; example: [ixn](https://weboftrust.github.io/WOT-terms/visualisations/?Wot-terms%5Bquery%5D=ixn&searchModalStatus=open)
+        2. First repo scraped and indexed: Weboftrust-keripy. You can filter on repos in the left menu.
+
+           We have new [responses](https://github.com/WebOfTrust/WOT-terms/discussions/30) to what KERISSE should mean to the community, thanks to our respondents! 
+
+            '* When I say “we” it’s Kor Dwarshuis and myself our small team has two technical meetings a week.
+    - Provenant
+        - streamlining vLEI issuance using Keria and Signify
+
+
+        
+        
+- Discussion
+    - (Jason) Anchoring EXN messages to the KEL, is it needed for verifiability?
+        - Sam: No, since credentials are already anchored to the KEL then you can send signatures of the ACDCs and then sign the EXN message and send those signatures with EXN messages for verifiability.
+    - Duplicity Recovery
+        - Does it break non-repudiation (no)
+            - No, it doesn't break non-repudiation. The legal person or entity controlling a KERI identifier is responsible for any events that go into a KEL, including duplicitous events.
+            - The policy is to not trust an identifier that is duplicitous.
+            - Once the duplicitous identifiers enables full reconciliation of all events in the KELs, inculding duplicitous KELs, by acknowledging disputed events in rotation recovery events, then it can be trusted again. This sort of a trust decision is ecosystem-specific, business-case specific.
+        - Specify in the EGF (Ecosystem Governance Framework) all of your event types and recovery from duplicity for each event.
+    - SAD SAID concept for opaque data
+        - [Daniel Hardman Presentation Link](https://docs.google.com/document/d/1PDFUmmeAzC_PoFISbZzbB7UT0LPcmVQFBWo8bwzA97U/edit?pli=1#heading=h.o1dvjnn6h4xi)
+    - Replay Attack non-interactive
+        - Did not get to this on today's call, postponed to next meeting.
+    
+            
+
+
+### 2023-06-13
+- Recording
+    - https://drive.google.com/file/d/1oJ1aXV8q79GCp2dALWjBVDUtbmAClvsr/view?usp=drive_link
 - Announcements
     - DICE - IIW Europe.
         - Last week, 160 attendees.  Same format as IIW
@@ -133,7 +290,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### 2023-05-30
 - Recording
-    - TBD
+    - https://drive.google.com/file/d/1-y-57ynny4xtpHdyxbsmHJJQVZrBnQjr/view?usp=drive_link
 - Announcements
     - New Dev Meeting, every Thursday at 10:00am ET / 8:00am MT / 7:00am PT
         - KERI Dev channel in Slack
@@ -188,7 +345,7 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### 2023-05-16
 - Recording
-    - TBD
+    - https://drive.google.com/file/d/1idSUoWZpwwVvH5QESNMC9H58vsX0HQ1D/view?usp=drive_link
 - Reports
     - KERIpy
         - New version of Serder, work in progress.  Target to integrate this week

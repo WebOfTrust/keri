@@ -32,9 +32,9 @@ Quoting from [The Tao of IETF](https://www.ietf.org/about/participate/tao/), **e
 >> + Facilitating technology transfer from the Internet Research Task Force (IRTF) to the wider Internet community  
 >> + Providing a forum for the exchange of information within the Internet community between vendors, users, researchers, agency contractors, operators, and network managers 
 >>  
->The IETF mission further states that the Internet isn't value-neutral, and neither is the IETF. The IETF wants the Internet to be useful for communities that share our commitment to openness and fairness. The IETF embraces technical concepts such as decentralized control, edge-user empowerment and sharing of resources, because those concepts resonate with the core values of the IETF community. These concepts have little to do with the technology that's possible, and much to do with the technology that we choose to create.  
+>The IETF mission further states that the Internet isn't value-neutral, and neither is the IETF. The IETF wants the Internet to be useful for communities that share our commitment to openness and fairness. The IETF embraces technical concepts such as decentralized control, edge-user empowerment and sharing of resources because those concepts resonate with the core values of the IETF community. These concepts have little to do with the technology that's possible, and much to do with the technology that we choose to create.  
 
-We always believed that the end state for KERI standards would be at IETF but were willing to incubate them elsewhere in advance of the formal IETF RFC standards track process if for no other reason than familiarity. We believe that there is now no longer any need for incubation. The last year has seen the keripy implementation reach beta status including support for fully functional verifiable credentials. We believe that this has sufficiently informed KERI to propose a set of IETF Internet-Draft submissions for KERI and related technology which are being pursued under the auspices of this project, [WebOfTrust](https://github.com/WebOfTrust), with associated repositories for both code and IETF Internet-Drafts. Like a phoenix from the ashes we believe that KERI fixes the limitations of the orignal PKI based [Web-Of-Trust](https://en.wikipedia.org/wiki/Web_of_trust). With a KERI enabled decentralized Web-Of-Trust we truly have a path forward to achieve a truly decentralized **trust spanning layer** for the Internet; (see [Hourglass Model](https://cacm.acm.org/magazines/2019/7/237714-on-the-hourglass-model/fulltext)).
+We always believed that the end state for KERI standards would be at IETF but were willing to incubate them elsewhere in advance of the formal IETF RFC standards track process if for no other reason than familiarity. We believe that there is now no longer any need for incubation. The last year has seen the keripy implementation reach beta status including support for fully functional verifiable credentials. We believe that this has sufficiently informed KERI to propose a set of IETF Internet-Draft submissions for KERI and related technology which are being pursued under the auspices of this project, [WebOfTrust](https://github.com/WebOfTrust), with associated repositories for both code and IETF Internet-Drafts. Like a phoenix from the ashes, we believe that KERI fixes the limitations of the original PKI based [Web-Of-Trust](https://en.wikipedia.org/wiki/Web_of_trust). With a KERI-enabled decentralized Web-Of-Trust we truly have a path forward to achieve a truly decentralized **trust spanning layer** for the Internet; (see [Hourglass Model](https://cacm.acm.org/magazines/2019/7/237714-on-the-hourglass-model/fulltext)).
 
 #### Previous Work
 
@@ -43,26 +43,27 @@ https://github.com/decentralized-identity/keri
 
 
 ### Policy
-See the documents in this repo titled [LICENSE.md](https://github.com/WebOfTrust/Keri/blob/main/LICENSE.md) and [CONTRIBUTING.md](https://github.com/WebOfTrust/Keri/blob/main/CONTRIBUTING.md) for licensing and contributing policy. Besides the IETF licensing terms, these include the comprehensive Apache2 license for all associated intellectual property (IP) including patents. The advantage of one comprehensive license for all contributions is that there will always be alignment between all contibutors and for any type of contribution. This alignment includes an **inbound=outbound** [policy](https://opensource.guide/legal/) for all related IP. We only want contributions to KERI made here in the WebOfTrust project that are licensed as free, and [nonreciprocal](https://opensource.org/node/875) open source be it software or specification.  
+See the documents in this repo titled [LICENSE.md](https://github.com/WebOfTrust/Keri/blob/main/LICENSE.md) and [CONTRIBUTING.md](https://github.com/WebOfTrust/Keri/blob/main/CONTRIBUTING.md) for licensing and contributing policy. Besides the IETF licensing terms, these include the comprehensive Apache2 license for all associated intellectual property (IP) including patents. The advantage of one comprehensive license for all contributions is that there will always be alignment between all contributors and for any type of contribution. This alignment includes an **inbound=outbound** [policy](https://opensource.guide/legal/) for all related IP. We only want contributions to KERI made here in the WebOfTrust project that are licensed as free, and [nonreciprocal](https://opensource.org/node/875) open source be it software or specification.  
 
 ## Meetings
 
 ### Dev call
 We meet every Thursday at 10 am EDT (or EST).
-The zoom link is here:
+The Zoom link is here:
 https://us06web.zoom.us/j/81679782107?pwd=cTFxbEtKQVVXSzNGTjNiUG9xVWdSdz09
 Meeting ID: 898 4290 0185
 Passcode: 300255
+
 ### Community call
 We meet every other Tuesday at 10 am EDT (or EST). (First meeting was  2021 October, 19 )
-The zoom link is here:
+The Zoom link is here:
 https://us02web.zoom.us/j/89842900185?pwd=OEpXSU5pa29FR1A3OXFkUithZFNwQT09
 Passcode: 379242
 
-The agenda is organized via slack and meeting notes recorded at [here](https://github.com/WebOfTrust/keri/discussions/categories/meetings)
+The agenda is organized via Discord and meeting notes are recorded [here](https://github.com/WebOfTrust/keri/discussions/categories/meetings)
 
 ### Related Meetings
-A closely related specification that leverages KERI is ACDC. This is hosted at ToIP and meets on the alternate weeks at the same time as the KERI meetings. These meetings complement the KERI meetings reference above. For information look here [ToIP ACDC Task Force](https://wiki.trustoverip.org/display/HOME/ACDC+Meeting+Page) and here [ACDC IETF Draft](https://github.com/trustoverip/tswg-acdc-specification).
+A closely related specification that leverages KERI is ACDC. This is hosted at ToIP and meets on alternate weeks at the same time as the KERI meetings. These meetings complement the KERI meetings referenced above. For information look here [ToIP ACDC Task Force](https://wiki.trustoverip.org/display/HOME/ACDC+Meeting+Page) and here [ACDC IETF Draft](https://github.com/trustoverip/tswg-acdc-specification).
 
 #### Education
 
@@ -74,9 +75,6 @@ The reference implementation for KERI is the keripy implementation. This is host
 
 The keripy implementation is Apache2 licensed as are all repositories in the WebOfTrust project. 
 
-There is also an Apache2 licensed Rust implementation of KERI hosted by the WebOfTrust project which may be found here:   
-* [keride](https://github.com/WebOfTrust/keride) – under development  
-
-We also encourage implementations of KERI in other languages. We are happy to host other implementations here
+We also encourage the implementation of KERI in other languages. We are happy to host other implementations here
 in the WebOfTrust project as long as they are Apache2 licensed.
 

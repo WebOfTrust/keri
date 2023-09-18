@@ -6,7 +6,8 @@
 The table below lists all deliverables of the KERI Community:
 | Acronym | Full Name of Deliverable | Link to Deliverable | Lead Authors | Status / Notes |
 |---|---|---|---|---|
-| KERI | Attributable (Autonomic) Identifiers (KERI) | [IETF KERI Draft](https://github.com/WebOfTrust/ietf-keri) | Samuel Smith | |
+| KERI | Key Event Receipt Infrastructure | [IETF KERI Draft](https://github.com/WebOfTrust/ietf-keri) | Samuel Smith | |
+| AID | Attributable (Autonomic) Identifiers (KERI) | [IETF KERI Draft](https://github.com/WebOfTrust/aid) | Samuel Smith | |
 | SAID | Self-Addressing Identifiers | [IETF SAID Draft](https://github.com/WebOfTrust/ietf-said) | Samuel Smith | [Active Draft](https://datatracker.ietf.org/doc/draft-ssmith-said/) |
 | CESR | Composable Event Streaming Representation | [IETF CESR Draft](https://github.com/WebOfTrust/ietf-cesr)| Samuel Smith |[Active Draft](https://datatracker.ietf.org/doc/draft-ssmith-cesr/)|
 | DID KERI | KERI DID Method | [IETF DID KERI Method Draft](https://github.com/WebOfTrust/ietf-did-keri) | Phil Feairheller | |
@@ -75,6 +76,9 @@ A closely related specification that leverages KERI is ACDC. This is hosted at T
 #### Education
 
 Community members have an education/documentation effort in progress here [edu](https://keriworld.slack.com/archives/C03RB6ASVUM)'. The repo for the Web of Trust terminology and glossaries is [here](https://github.com/WebOfTrust/WOT-terms). 
+
+Technical meeting on [KERISSE](kerisse.org) take place twice a week. Drop us a line if you're considering participation by creating an issue [here](https://github.com/WebOfTrust/WOT-terms/issues). 
+The KERI concepts (and its terminology) are being discussed in weekly *Zoom meeting* ([Agenda on KERI/ACDC meeting page](https://wiki.trustoverip.org/display/HOME/ACDC+Meeting+Page)) as well as in our [Discord channels](https://discord.gg/uhUzPsUz). The repo for the Web of Trust terminology and glossaries is [here](https://github.com/WebOfTrust/WOT-terms). 
 
 ## Existing Implementations
 The reference implementation for KERI is the keripy implementation. This is hosted here by the WebOfTrust project. The repository may be found here:  

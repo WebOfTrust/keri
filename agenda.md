@@ -12,8 +12,7 @@ Co-Chair: Philip Feairheller [email](pfeairheller@gmail.com)
 
 Meeting Bi-weekly starting on 2021-10-19 at 10 am EDT
 
-Agenda:
-https://hackmd.io/-soUScAqQEaSw5MJ71899w
+Agenda: https://hackmd.io/-soUScAqQEaSw5MJ71899w (linked from [github](https://github.com/WebOfTrust/keri/blob/main/agenda.md) but edited in HackMD)
 
 Zoom Meeting:
 https://us02web.zoom.us/j/89842900185?pwd=OEpXSU5pa29FR1A3OXFkUithZFNwQT09
@@ -32,19 +31,15 @@ Explanation of KERI development tools and techniques: [KERI development environm
 
 ### Future Topics
 
-
-- Demo of KERI CArdano Backer RootsID
+- keri-lite options trade-offs
 - More discussions for Witnesses and Watchers.  Gossip protocol, UDP, ecosystem configuration.
 - Direct Mode Agents
 - Custodial Agents
 - Demo of how to write tests for KeriPy
-- How to Christen the current produciton release with a version set.
-- Trust Anchor as Discovery Bootstrap
-        - Trust Anchor Trust Domain Trust Culture (Ecosystem)
-        - did:keri did:peer similarities differences
-        - Public vs Private AIDs
-- keripy merge development to main!
-    - future versioning strategies
+- How could we use KERI/ACDC to attest to definitions in the Education material
+- Does anything in the Keri/ACDC world replace DNS? If not entirely, does it replace any aspect of DNS
+- KERI Lite
+    - Sam:  Service endpoint bound to DID, so we can't change the endpoint without changing the DID.
 
 ### ToDo
 - Future extract Keep library to NPM library
@@ -56,10 +51,796 @@ Explanation of KERI development tools and techniques: [KERI development environm
 - Split out keripy core from keripy Rest API
 
 
-### Discussion items
+## Weekly Agendas
+
+### 2023-07-25
+- Recording
+    - TBD
+    
+- Announcements
+    - 
+    
+- Reports
+    - KERIpy
+
+    - KERIsse
+       
+    - KERIA
+        
+    - SignifyPy
+        
+    - SignifyTS
+        
+    - CESRide 
+    
+- Discussions
+    - did:webs developments, collaborations and papers
+    - Migration from kli to KERIA via multisig rotation
+    - Agents and Mailboxes replacing Witnesses (no, not like that).
+    - Move to ToIP meeting schedule and "location" (Zoom)
+
+
+### 2023-07-11
+- Recording
+    - TBD
+    
+- Announcements
+    - Change the source of glossary from ToIP back to WebOfTrust.  The source of truth will be WoT, but can be sync'ed back to ToIP.
+    - GLEIF successful demo PoC vLEI with regulatory body.     
+    - Looking to demo issuance of ACDCs to IIW participants
+    
+- Reports
+    - KERIpy
+        - Updating state notifications for key state and transaction state, from KERI events to plain SADs.
+        - Added to dev multi-sig rotation kli support  future new member of group push to dev.
+        - Main 1.01 no breaking
+        
+    - KERIsse
+        - Adapted KERIsse to have new source of truth.
+        - Updated the "How we did it" documentation.
+        - Implementing TypeSense search engine, scraping related sites including GitHub repositories.
+        - Automation of source material clean-up to remove problematic characters.
+        - Adding Levels across individual paragraphs and articles.
+        
+    - KERIA
+        - Changes: addition of advanced searching for credentials in wallet. Help issuers to show issued credentials. create indices using SAD path language with pagaination. Using CESRSuber for indices
+        - Several fixes to address bugs in credential issuance and presentation
+        
+    - SignifyPy
+        - Few updates to integration script.
+        - issue-ecr.sh shell script
+        
+    - SignifyTS
+        - Working on credential issuance and credential issuance with witnesses
+        - Updates to fix challenge response APIs
+        - Upcoming: revocation and credential querying API support
+        - Fixes to support running from Node
+        
+    - CESRide
+        - Tests against the WASM stuff added earlier this year
+        - Aiming to move CESR primitives(sp?) from CESRide into Signify-TS 
+    
+- Discussions
+    - Moving the specifications to ToIP and impact of that on meeting structure
+        - In the process of moving the specifications for the protocols in support of ACDCs into ToIP
+            - We originally wanted to move everything to ToIP when we left DIF but that was blocked.
+            - Code repos will stay at WebOfTrust, just the spec text.
+        - For meetings, do we want to continue with this WoT meeting or fold into the ToIP meeting?
+            - Suggestion to have a rolling format across meetings based on what the group wants to talk about
+            - Membership required to contribute to the meetings - Membership for individuals is free for ToIP
+        - The current charter for ACDC in ToIP already includes reference to all the supporting protocols.
+            - All specifications would be moved including, KERI, CESR, SAID, PTEL, OOBI, etc.
+        - Combining the meetings will make it less confusing for newcombers to only have to join ToIP and find one meeting.
+        - Change the focus of the meeting to the KERI/ACDC stack and let the community decide.
+        - How should this effect Slack?
+            - Keeping KERIWorld or merging everything into ToIP Slack.
+            - Argument to keep KERIWorld because that is where source code is coming from and where those discussions should remain because the ToIP charter specifically states that no source code is being delivered
+        - Need to be aware of stropiness in the processes of ToIP and user management.
+        - Resolution to combine the meetings into the existing ToIP meeting passed.
+            - No changes until we get specifications moved, an announcement will be made.
+        
+    - Question regarding credential search API
+        - GET vs POST for search API?  
+            - GET is "RESTy" but the parameters are overly expressive and results in long URL
+            - POST is not RESTy
+            - For now we are putting parameters in BODY of GET.
+            - Open for suggestions.
+
+### 2023-06-27
+- Recording
+    - TBD
+- Announcements
+    - IEEE P7012 standard effort formalize graduated disclosure for terms and conditions  Doc Searls
+        - Machine Readable Privacy Terms "Riccardian Contracts"
+    - 
+    
+        
+- Reports
+    - KERIpy
+        - Continuing port to new Serder object versioning of protocol and packet types
+        - 
+        
+    - KERIA (keri agent)
+        -  PoC of Credential Issuance integration with signifypy signifyts
+        -  route normalization http resources 
+        -  cueing system
+        -  google spreadsheet 
+        
+    - SignifyPY
+        - minor updates to align with route normalizion
+        
+    - SignifyTS
+        - some updates to match KERIA start implement credential issuance
+       
+    - Cesride
+        - Implementing selective disclosure with compacting exn 
+        - SealsSourceTriples Anchors to another KEL prefix sn said, 
+        - 
+       
+    - KERIsse
+     
+        KERI Suite Search Engine
+        (KERISSE) report:
+        1. We* now have shareable links into the search engine pop-up; example: [ixn](https://weboftrust.github.io/WOT-terms/visualisations/?Wot-terms%5Bquery%5D=ixn&searchModalStatus=open)
+        2. First repo scraped and indexed: Weboftrust-keripy. You can filter on repos in the left menu.
+
+           We have new [responses](https://github.com/WebOfTrust/WOT-terms/discussions/30) to what KERISSE should mean to the community, thanks to our respondents! 
+
+            '* When I say “we” it’s Kor Dwarshuis and myself our small team has two technical meetings a week.
+    - Provenant
+        - streamlining vLEI issuance using Keria and Signify
+
+
+        
+        
+- Discussion
+    - (Jason) Anchoring EXN messages to the KEL, is it needed for verifiability?
+        - Sam: No, since credentials are already anchored to the KEL then you can send signatures of the ACDCs and then sign the EXN message and send those signatures with EXN messages for verifiability.
+    - Duplicity Recovery
+        - Does it break non-repudiation (no)
+            - No, it doesn't break non-repudiation. The legal person or entity controlling a KERI identifier is responsible for any events that go into a KEL, including duplicitous events.
+            - The policy is to not trust an identifier that is duplicitous.
+            - Once the duplicitous identifiers enables full reconciliation of all events in the KELs, inculding duplicitous KELs, by acknowledging disputed events in rotation recovery events, then it can be trusted again. This sort of a trust decision is ecosystem-specific, business-case specific.
+        - Specify in the EGF (Ecosystem Governance Framework) all of your event types and recovery from duplicity for each event.
+    - SAD SAID concept for opaque data
+        - [Daniel Hardman Presentation Link](https://docs.google.com/document/d/1PDFUmmeAzC_PoFISbZzbB7UT0LPcmVQFBWo8bwzA97U/edit?pli=1#heading=h.o1dvjnn6h4xi)
+    - Replay Attack non-interactive
+        - Did not get to this on today's call, postponed to next meeting.
+    
+            
+
+
+### 2023-06-13
+- Recording
+    - https://drive.google.com/file/d/1oJ1aXV8q79GCp2dALWjBVDUtbmAClvsr/view?usp=drive_link
+- Announcements
+    - DICE - IIW Europe.
+        - Last week, 160 attendees.  Same format as IIW
+        - Topics:
+            - OpenID4VC topics
+                - Not a replacement for identify, it would replace DIDComm
+                - Using OpenID tooling to secure the issuance and presentation exchange.
+            - What is going to happen with Indy
+            - Michal did: The "Sam Smith" tech stack
+                - Trying to share the technology and stress the growth of the community
+            - HCF also did a showcase of their existing tech stack - providing SSH access using KERI/ACDC
+            - Henk's work with KERISSE is important
+            - Rumors being spread that Sam is the single point of failure for KERI/ACDC
+            - Specification:  
+                - What is the status of the spec?
+                    - Actively working to move spec to ToIP.  Attempted to do this when we left DIF, but was blocked by DIF
+                    - But now all KERI work has been archived on DIF, we will get this done.
+                    - Includes:  ACDC, KERI, CESR, SAIDs, etc. (10 in total).
+    
+        
+    
+- Reports
+    - KERIpy
+        - Sam: Updating protocol for Serder
+            - Allows for versioning of KERI and ACDC protocols.
+            - Converting KSN from KERI events to an object class (no version, no packet type).  Can only embed KSNs in KERI events now.
+            - Leading up to new superceding delegation rotation event.
+        - Phil: planning to add support for joining MS group in a rotation not at inception.
+       
+    - KERIA (keri agent)
+        - Work on adding support for credential issuance verificationa and managment
+        - Regsitry creation API added
+            - Long running operation support needed
+        
+    - SignifyPY
+        - Script for issuing a credential to an AID hosted in KERIA
+        - Support for list and 
+        
+    - SignifyTS
+        - Added OOBIs, keystate, delegation, credential lists
+        - Working on multisig now
+       
+    - Cesride
+        - No updates
+       
+    - KERIsse
+        - Scrapped blogs of community, indexed.
+        - Discussion:
+            - Kor and I would like to know whether devs would appreciate the compact version of the Search Engine part of KERISSE here https://dwarshuis.com/test/wot-terms/view/docs/Visualisations/Kent%20Bull%20viz/ or the more spacious version of the layout in production here: https://weboftrust.github.io/WOT-terms/
+        
+    - Provenant
+        - No updates
+        
+        
+- Discussion
+    - GLEIF EGF Documents:
+        - https://www.gleif.org/en/vlei/introducing-the-vlei-ecosystem-governance-framework
+    - Creating AIDs from file hashes
+        - An AID where the inception event includes file hashes in anchors.
+        - Used to secure data.  Asserting control over the AID and the data in the files that were hashed.
+        - Used to assert to the parameters of an LLM
+            - Source of provenance of your use of it, not of ownership over it.
+        - Attach SAIDs to any data coming out of it.
+        - Optimized compact sparse merkle tree (OCSMT)
+            - all operations are logn
+        
+    - DID Methods, did:keri, did:webs
+        - A proposal to create a new DID Method specification called did:webs that is did:web like secured by did:webs
+        - What is the relationship between a did:webs and did:keri DID?
+            - Are they subsets of each other?
+        - Discussion at last KERI Dev call:
+            - https://github.com/WebOfTrust/keri/discussions/31
+            
+
+
+### 2023-05-30
+- Recording
+    - https://drive.google.com/file/d/1-y-57ynny4xtpHdyxbsmHJJQVZrBnQjr/view?usp=drive_link
+- Announcements
+    - New Dev Meeting, every Thursday at 10:00am ET / 8:00am MT / 7:00am PT
+        - KERI Dev channel in Slack
+        - https://us02web.zoom.us/j/89842900185?pwd=OEpXSU5pa29FR1A3OXFkUithZFNwQT09
+    - QuiIdentity went live with a closed beta last week
+    - KERIsse
+        - KERISSE development : https://github.com/WebOfTrust/WOT-terms/discussions/30 Report of current responses
+    
+- Reports
+    - KERIpy
+        - Sam: continued work on refactor of event protocol messages and ACDC protocol messages.
+            - Table based configuration of fields for messages
+        - Phil PR against Main branch. for revoke.
+    - KERIA (keri agent)
+        - continuing moving functionality
+        - Imp passcode rotation in both KERIa and Signifypy and SignifyTS
+        - response headers signing
+        - Sandy algorithm new hybrid of Salty and Randy key algorithms
+        - KERIA test agent running on AWS
+            - https://keria-dev.rootsid.cloud
+    - SignifyPY
+        - try for interop between clients SignifyPy and SignifyTS
+        - integration tests script support
+    - SignifyTS
+        - Salty and Randy Group ID key management
+        - Passcode rotation
+        - Trying to maintin parity with SignifyPY
+        - Integration tests
+    - Cesride
+        - move some modules stuff
+        - Salty and Randy for rust
+        - Encrypter and Decrypter
+        - Signature header http in rust
+    - KERIsse
+        - ongoing discussion about the focal functionality to provide. [Current responses](https://weboftrust.github.io/WOT-terms/docs/intro?level=3) can be reviewed before contributing in 1-on-1 Zoom interviews. KERISSE can be tested [here](https://weboftrust.github.io/WOT-terms/docs/intro?level=3).
+    - Provenant
+        - Issues
+        
+- Discussion
+    - Status Update on Watcher and Revocation
+        - Working through technical debt to get to implementation of Watcher.
+        - Watcher is basically a witness that is not declared in a KEL
+    - Roadmap for Watcher Implementation:
+        - In KERIA agent and KERIpy kli, all querying for KEL should go through a Watcher if one is configured
+        - Q3 implementation of Watcher
+    - Credential revocation
+        - Credential chaining revocation does not automatically revoke "downstream" credentials but makes them no longer valid
+        - When is a credential revoked?
+            - Based on the timestamp on the revocation event message in the TEL
+            - How to handle the situation where a malicious issuer posts a revocation event with a prior date?
+            - The grace period for downstream vLEI credentials is based on the revocation of QVIs
+
+### 2023-05-16
+- Recording
+    - https://drive.google.com/file/d/1idSUoWZpwwVvH5QESNMC9H58vsX0HQ1D/view?usp=drive_link
+- Reports
+    - KERIpy
+        - New version of Serder, work in progress.  Target to integrate this week
+            - Support auto-verification of SAID
+            - Table based configuration for any packet type/event type
+            - Serdery Factory to parse out the event types
+        - Secp256(r/k)1 PR merged in this week.
+    - CESR
+        - Added Creder recently
+        - Wrapped up the CESR calls, implementation at a 1.0 state
+        - Should do a 1.0 release
+    - Education
+        - Argolia free version not customizable enough
+        - Switched from Argolia to TypeSense (sp?)
+            - https://typesense.org/
+        - Looking for anyone who has experience.
+    - Signify
+        - SignifyPy Passcode rotation with new key generation mechanism Sandy algo
+        - Interaction with Keria Agent
+        - Have signify-ts running in a browser client
+            - Boot calls being built now
+        - Signify HSM Integration Module (SHIM) built using Trezor device 
+            - https://github.com/roots-id/trezor-shim
+            - Demo in repo using SignifyPy
+        - SHIM build using Google Cloud KSM
+        - Keride Repo has cesride stuff
+    - KERIA
+        - multisig group demo planned for July
+            - https://github.com/WebOfTrust/keria/discussions/32
+    - Schema Registy in WoT
+        - Daniel pushed several new updates to schema registry
+            - A JSON file with links to available schema
+        - GitHub deployment to GitHub pages could be used.
+        
+- Announcements
+- Discussion
+    - ACDC Graph - Different schema at each "layer", where to encode Root of Trust AID
+        - Defined production root of trust AID for ecosystem, should/could this be hardcoded into the Schema
+            - Could be a good idea because it removes extra "business logic" to verify the SAID outside the Schema
+            - Could be bad because a loss of Root causes versioning of schema
+            - Could be bad because it prevents reuse of Schema in multiple environments (dev/prod/etc).
+            - Probably not one answer for all ecosystems.
+            - Community would love feedback over time to see how this works.  Pros / cons.
+    - ACDC Schema defined to ONLY allow SAID of Rules section, not expanded Rules section.
+        - Is this legal, a good idea?
+            - Yes, this is a fine approach.
+        - Good to add as a discussion item for next week's ACDC call
+        - Changes to allow packet types for all composite pieces of an ACDC credential
+            - Adds performant streaming and caching for all parts of an ACDC
+    
+    - Schema registry
+        - Relative vs Absolute URLs.
+            - Sam proposing to use relative URLs to avoid name (SAID) squatting
+            - Attempting to ensure we have a permissionless registry
+            - Daniel to do a PR to update to relative URLs
+            - Kevin and Phil to coordinate on CI/CD to deploy to GitHub pages and validate SAID
+        - Open PR for IRL (now, Face-2-Face) credential registry type, please provide feedback
+            - https://github.com/WebOfTrust/schema/pull/3
+            
+    - KERI Dev Call
+        - Thursday's call combined and repurposed to be Development calls.
+            - No theory, all implementation!
+            - Pigs and Chickens stuff
+            
+    - Review Signify Protocol Discussion
+        - https://github.com/WebOfTrust/keria/discussions/34
+
+### 2023-05-02
+- Recording
+    https://drive.google.com/file/d/1-7tXOHswCS-5_Nsm2kF9ZhagWeTt2eUz/view?usp=sharing
+- Reports
+    - KERIpy
+        - No significant updates
+        - Sam is refactoring event injestion to verify SAID as early as possible
+        
+    - CESR
+        - last version pushed was 0.5
+        - Creder added by Jason, working on integration with Parside
+        - Discussions ongoing about the relationship between CERSide, Parside, Signifide, etc and how to merge/share them
+        
+    - Education
+        - Proposal to re-evaluate the need for bi-weekly meetings for EDU.  Perhaps pause them for the time being.
+        - Could consider moving the meeting to other time slot
+        - Pausing meeting starting this week, will reevaluate
+        
+    - Signify
+        - Jupyter notebook pushed with Randy key integration test and documentation in notebook
+            - https://github.com/WebOfTrust/signifypy/blob/main/integration/app/test_randy.ipynb
+        - SHIM - Signify HSM Integration Module, first implemetation using GCP KSM
+                
+    - KERIA
+        - Added test coverage, dockerfile, CI, etc.
+        
+- Announcements
+    - See last week's ACDC meeting recording for updates on IIW KERI/ACDC
+        - https://wiki.trustoverip.org/display/HOME/ACDC+Meeting+Page (meeting notes here, video link tdb)
+
+    - Session at IIW about IPR at KERI.  
+        - Outcome is that DIF tombstoned all repos and landing page for KERI
+        - DIF published the result of the call for patent disclosures and that there was a clean handoff to WebOfTrust
+        - Recognition that we are a BDFL.
+        - Intent is to move standards goverance to IETF or other standards bodies.
+
+    - Meeting about did:keri (last week)
+        - suggested set up biweekly meeting
+        - https://keriworld.slack.com/files/U035R1TFEET/F055E0EKNSZ/2023-01-27-did-keri-did-method-resolver.pdf
+
+- Discussion
+    - IRL Credentials
+        - "In Real Live" credentials.  Leveraging ACDC chaining to attest to "knowing" someone.
+        - A credential to prove that someone is not an AI, not an IoT, not software and not an Org
+        - Some members in the community have vLEIs and have gone through NIST IAL2 authentication already
+        - Credential certifies three things:
+            - Assertion that an in person interaction for some period of time  with first/last name
+            - Some form of OOB interaction occurred subsequently (like an email)
+            - Proposed schema (see presentation).
+        - A form of reputation by reference.
+        - Proposal to be able to issue these credentials at the next IIW.
+        - Daniel to publish a PR of potential schema to the schema repo in WebOfTrust
+        - Badge for IRL credentials?
+        
+    - mDL "identifiers"?
+        - Issued to a "number"?  The number of the physical driver's license.
+        - IAL proofs during the issuance of the mDL.
+        - Bound to the device or to the biometric.
+        - Suggestion to ask the question on ToIP Slack.  Lots of experience over there.
+
+    - Breakdown of Rust repositories (Kevin)
+        - keride repo with "Features".
+            - method of selectively consuming on the portions of a library you want
+        - trying to answer questions like "Where does Serder go?"
+        
+
+
+### 2023-04-04
+- Recording
+    https://drive.google.com/file/d/1akJzrYiGKvdvNb0oYGCBh4hJwMvV1BXN/view?usp=sharing
+- Reports
+    - KERIpy
+        - 1.0.0 pushed tp PyPi keri
+
+    - CESR
+        - Closed issues in last meeting
+        - CESRide code run against tests in KERIpy (test_coring)
+        - Whiteboarding session planned for IIW
+        - Making decisions on where classes / structs belong (CESRide, Parside, Signifide)
+    - Education
+        - Update to ToIP glossary.  Split definitions by higher level concepts.
+        - Max 1 criterium with 1 term matching  1 knowledge artefact from 1 conceptual model.
+        - Education session with Cardano on GLEIF EGF and Trust Registries
+        - Need to revisit the EFG for WoT
+        - keri.one open for crawling for education purposes (thanks Sam!)
+        
+    - Signify
+        - Incept, Rotate, Interact with salty keys, Incept with randy and group keys.
+        - Signifide branch coming together.
+    - KERIA
+        - Incept, Rotate, Interact with salty keys, Incept with randy and group keys.
+        - Endpoints for key state and key event logs, oobi resolution
+
+- Announcements
+    - ToIP TSP
+        - [SPAC Paper](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/SPAC_Message.md)
+            - TSP Whiteboarding Session on Thursday 1PM PDT at ToIP for 1 or 2 hours
+    - Abydos Tutorial: Learn KERI, ACDC by issuing and verifying credentials
+        - [Tutorial Link](https://bit.ly/keri-abydos-tutorial)
+        - KASLCred [submitted](https://github.com/WebOfTrust/schema/pull/2) to WebOfTrust/schema
+    
+
+- Discussion
+    - Python 3.11 on Dev?
+        - Moving to 3.11 on dev branch of keripy
+        - KERIA, Signify, Hio, vLEI all getting upgraded
+    - IIW Topics Sessions
+        - KERI 101 Session - Nuttawut/Phil Introducing KERI
+            - Fit into the IIW 101 Series they hold every session
+        - KERI 201 Session - Kent (an accelerated developer introduction to KERI and ACDC)
+            - Possibly move to demo hour
+        - QuiIdentity - demo hour
+            - Break out hour on getting KERI / decentralization adopted.
+        - RootID participating in DIDComm 2 hack-a-thon - chat, issuance
+        - did:keri - Watcher variant
+        - Logging into SSH with KERI
+        - CESRide/Parside/Signifide whiteboarding session
+        - VC-ACDC talk around how to create other Proof Formats for W3C VCs
+        - Sam possibly doing talk about SPAC Paper / ESSR (Meta-Cryptographic Systems)
+        - Randy (Provenant) doing vLEI in Telecom, cross boarder KYC problems.
+            - Binding actors to actions, making communications authentic
+        - Salty Nonce drinking game
+        - Signify / KERIA planning session (third day session)
+        - Create a Google sheet for planning sessions - Phil
+        - Sam session on reputation
+        
+    - The AI Dilemma
+        - From the folks that made Social Dilemma
+            - https://vimeo.com/809258916/92b420d98a
+            - https://www.youtube.com/watch?v=bhYw-VlkXTU
+        - Could we mitigate effects with KERI?
+            - Its not enough to have cryptograpic authenticity you need reference for who said what
+            - String authentication to a natural person  
+            - Strong reputation (credentials) for an identifier
+            - Content is no longer good source of reputation
+        - Start with really strong authenticiation, but need to mitigate the cheap pseudonymity problem
+        - Someone training chatGPT to hack into APIs
+
+### 2023-03-21
+- Recording
+    https://drive.google.com/file/d/1gioQIM2itEbQrfcTy5YsX7KvdkLOwU2g/view?usp=sharing
+- Reports
+    - CESR
+        - PRs to clean up memory "left behind".
+        - WASM PR outstanding, might be moved to Signifide
+        - Minor releases being published, currently at 0.3.0
+    - KERIpy
+        - Bunch of work on development exposing the new rotation rules to app level code
+        - exposing group member ids (key list offsets) in KLI
+        - KERIpy 1.0 released
+        
+    - Education
+        - Review of vLEI EGF with comparisons to community EGF captured in spreadsheet
+    - Signify
+        - PR in Signifide for moving primitives out of CESRide
+        - GLEIF sponsoring a community approach to working on Signify libraries
+        - 
+    - KERIA
+        - Finished AID creation including delegation
+        - now working on multi-sig
+    - KERIox HCF
+    - Cardano
+        - Cardano Foundation remains interested in Cardano Backer
+        - Interested in creating a community list of Trust Anchors and including Cardano
+            - Listing the attributes of each network
+    - GUT KERI-Lite
+        - Aries community moving forward with did:peer numalgo2 method and not KERI-Lite
+        - did:keri url leveraging the url dereferencing process
+    - Provenant
+        - Working on a trial with YouMail, high speed VOIP
+        - Pending demo with XBRL
+
+- Announcements
+    - Sam is doing a presentation in 1.5 hours on ACDC Provenance Chains.  In the Data Modeling ToIP group.
+        - https://zoom.us/j/99186768208?pwd=TUwxOUIvYW5xL0JHaEJTRlp5ZnNlUT09
+    - Lance received his OOR vLEI!
+    - VC-ACDC Proposal to VCWG, as a valid external proof format.
+        - Rough consensus was not reached on either proposal
+        - Confusion on how the compromise in Miami F2F is being interpreted.
+        - Could we leverage the work being done on OpenID Connect (OIDC).  
+    - IIW on its way.
+        - Bring your ideas for session to the April 4th KERI meeting so we can collaborate on sessions.
+        - Make sure to get your tickets, may be sold out.
+    
+
+- Discussion Items
+    - Cardano Backer
+        - Where to create a registry of Trust Anchors (witness pools or backers)
+            - How to create an appraisable trust basis for and AID based on the key state, signing algo, delegation, multisig and configuration of backers.  Reputation is added via credentials issued to the AID.  
+            - Appraisability is how we solve the difficult problems of trust.
+        - Current PR:
+            - backering for using something other than witnesses as backer, cardano code for Cardano specific backer.  Perhaps refactor to allow Cardano code to be moved externally.
+            - Phil and Sam to code review the PR and figure out how to externalize third party backers.
+            
+    - KERI Authorization for SSH (KASSH)
+        - proof of concept for uploading documents using sftp or ssh. Motivated using a KERI AID for SSH.
+        - Run a service on any VM (verification service from GLEIF reporting api)
+        - Create SSH Auth Credential.
+        - Authorization service looks for SSH Auth Credential
+        - creates ssh .pem file from public key for KERI AID
+        - KASSH has embeded watcher that automatically processes rotation to export ssh keys from new rotation
+        - https://github.com/pfeairheller/kassh
+
+### 2023-03-07
+- Recording
+    https://drive.google.com/file/d/18jf8AvPitYEaphcpo9cVjb31Y64oQDk8/view?usp=sharing
+- Reports
+    - CESR
+        - Created inception event in CESRide, will be moved to Signifide
+        - PR submitted for exposing a WASM module from CESRide, may also be moved to Signifide
+        - Work on Uniffi was submitted for CESRide, being compared with other FFI approaches
+            - Work may be moved into Parside
+    - KERIpy
+        - Propose merge branch as 1.0 main
+        - New utility for rolling back an accidential event not yet published totnesses
+        - Signing at edge working on
+        - ed448
+            - 57 bytes 156 pr keripy and cesride pull request
+    - Education
+        - Added 2 working sessions to get the site up and running
+        - Converting some Markdown files by hand
+        - Testing with ChatGPT for creating answers based on user levels.  (beginner, moderate, expert)
+        - Governanace related to attestations about terms / definitions in KERI ecosystem
+    - Signify
+        - GLEIF supporting signify clients in python and rust
+        - testing with keria agent and signify client
+        - working towared multisig
+        - signified (rust signify)
+        - JNI Rust spike from Signifide
+    - KERIA
+        - IN tandem with Signify (cloud agent)
+        - Signature and Signature-Input request signing added on both client requests and server responses
+    - KERIox HCF
+        - Implemented partial rotation
+    - Cardano
+        - RootsID partnership with Cardano Foundation - IoT, Supply Chain, GLEIF governance.
+    - GUT Keri-Lite
+        - Aries keri-lite demo
+        - Concerned about Maverick Rodolfo
+    - Provenant
+        - Attended Mobile World Congress conference (90k attendees).  
+        - Upcoming potential announcements about KERI in telecomm
+        
+- Announcements
+    - Attend the Trust Spanning Layer ToIP meetings - Next meeting 3/08 - 09:00am MT
+    - IIW in just over a month, should coordinate KERI track
+    - Next Thursday, KERI Edu Meeting at 07:00 PST
+    - Schema "stitching" utility.  KASL repo upcoming. 
+        -  Could be placed in ACDC schema repo in WoT.
+        -  https://github.com/WebOfTrust/schema
+    
+- Discussion Items
+    - Discussion on main 1.0 KERI
+        - PR to upgrade docker file for deploying witnesses
+        - Ongoing work on KERIa is forcing some potential breaking changes
+        - Propose merge of develement into Main cut new docker file, update keri on pypi
+            - versionsing 1.0
+            - keri protocol 10
+        - Unanimous vote approving the proposal to merge development into main.
+        - Bug fixes get a patch release version update
+        - New features get a minor release version update
+        - Document using development pip install locally (pip install -e .)
+        - Process around announcing and voting on both major and minor release updates.
+            - Daniel was triggered.  Can we version CESR code tables separately from KERIpy
+            - Version of KERI, KERIpy and CESR code table protocol versions do not need to be kept in lock step
+            
+    - KERI Lite
+        - Sam:  Service endpoint bound to DID, so we can't change the endpoint without changing the DID.
+
+
+### 2023-02-21
+- Recording
+    Did not record
+    
+- Reports
+    - CESR
+        - Saider, Sadder done or in PR
+        - Refactor to allow for accepting all arguments into a single method.
+        - Prefixer in the works but need to refactor tests
+        - PR waiting for review on Seqner
+    - KERIpy
+        - Utility class pushed for cleaning up unresolable OOBIs
+        - Outstanding PR on its way for SignifyHab
+    - Education
+        - Testing with ChatGPT for explanations of typical KERI/ACDC terminology.
+        - Looking for help reviewing the output of ChatGPT
+        - Looking to discuss how we could use KERI/ACDC to attest to definitions, Q&As and other educational resources.
+        - We've been testing with ChatGPT to offer various levels in educational or explanatory resources. All outcomes need te be reviewed. How could we use KERI identifiers to commit to either reviews or explanations given in meetings. We should grab every opportunity to consolidate a review (in an ACDC?) by experts in our team.
+    - Signify
+        - Signify-TS work currently on hold from GLEIF resources
+        - SignifyPy is a python client library for working against the new cloud agent in KERIA
+    - KERIA
+        - New cloud agent for being controlled by a Signify Client
+    - KERIox HCF
+    - Cardano
+        - Outstanding PR to review and decide what to do.
+    
+    
+- Announcements
+    - W3C VC Face-to-Face outcome
+        - Meeting scheduled to solve the "@context optional" discussion.
+        - Media types being used to differentiate between types of credentials and verifiable credentials.
+        - Decision to create a "base media type" that is `credential+ld+json.`  Other media types of credentials are allowed by must provide either unidirectional or bidirectional transformations.  So for example we would create credential+acdc+json and provide a unidirectional transformation to credential+ld+json.
+        - VC-ACDC to become a proof format peer to VC-JWT in the W3C specification.
+        - Unidirectional transformation means we don't have to make any security compromises with what we send over the wire.
+        - https://github.com/andrewwhitehead/anoncreds-w3c-mapping
+    - ToIP Trust Spanning Layer Task Force
+        - Proposals from Sam Smith, Daniel Hardman already made with others to follow
+        - Looking to come together on the different proposals to consolidate into one definition of Trust Spanning Layer
+        - Task force is mandated to produce Specifications.
+        - https://github.com/trustoverip/trust-spanning-protocol/discussions
+    - Sam to talk at the ToIP Data Modeling group meeting Tuesday 3/7/2023
+        - Discuss the experience setting up the RoOT of Official Trust at GLEIF in the vLEI
+        - What does it look like to provide and retain those chains.
+        - Remote Attestations (Ratts Group, IETF).  Establishing a hardware root of trust using authentic attestations to the state of hardware components.
+
+
+- Discussion Items
+    - Does anything in the Keri/ACDC world replace DNS? If not entirely, does it replace any aspect of DNS
+        - Neil: Jacques Latour (CIRA) is advocating that KERI/ACDC need to work w DNS and particularly DNSSEC (current tech work) vs. attempting to replace it.
+
+### 2023-02-07
+- Recording  
+    - https://drive.google.com/file/d/13h0tVm3Bj0REWW9hErnwJQO9rLAvRDk6/view?usp=sharing
+
+- Reports
+    - CESR
+        - Exploring some integration with Python
+            - https://github.com/WebOfTrust/cesride/pull/59
+        - Uniffi investigation underway for support of Python, Ruby, Swift, Kotlin
+            - https://github.com/mozilla/uniffi-rs
+        - 38% complete of a 1.0 milestone
+            - https://github.com/WebOfTrust/cesride/milestone/1
+        - Work continues on Indexer
+    - KERIpy
+        - Beginning implementation of superceding recovery rules for delegated identifiers
+            - Leveraging cooperative delegation to allow for a recovery rotation over a rotation (latest seal wins)
+            - Uses order of appearance of seal in delegator's KEL
+            - Requires walking up the delegation tree when one exists
+        - SignifyHab for integrating with Signify client
+    - Education
+        - Now ready to introduce the Levels of information and glossary.
+        - Using React to guide users based on Level 1, 2 or 3.
+        - More information on Thursday
+    - Cardano
+    - KERIox HCF
+        - Start implementing partial rotation rules
+    - Signify
+        - Added new repo for Signifypy for Python agent that will work with Signify client
+        - Request and response signing using Signature-Input and Signature structure field value HTTP headers
+    - Keep
+        - Janet G. Designer will export .fig figma file for all the open source UX designs for Keep
+        - Anyone can then export and create assets
+        - GLEIF roadmap continue development of Root GAR and Person Builds of Keep and push back upstream from GLEiF Fork
+    - did:keri
+        - Refactored and published in the did-keri-resolver for the KERI-lite version of did:keri
+        - 3 flavors of did:keri
+
+- Announcements
+    - Ruth - Provenant as Legal Entity issued first ever ECR to Timothy Ruff as Corporate Director
+    - Neil - Looking at authentic provenance chains and Trust Registries over at ToIP Data Modeling and Representation Group 12:00pm EST
+    - Feb 14,15,16 W3C VC working group holding F-2-F meeting in Miami to resolve an issue that has not been resolvable to date
+    - If "@context" and JSON-LD is a MUST in v2.0 of VC Data Model Spec "Big Tent vs Little Tent"
+    - Could allow for ACDCs to be complaint implementations of W3c VCs
+    - GLEIF now W3C member
+    - Sam presenting to ToIP in the Technical Stack Working Group 2/8 9am MT - KERI as a proposal for Trust Spanning Layer
+        - Trust Spanning Protocol Task Force within the Technical Stack Working Group
+        - Prior "reading" Sams presentation of the hour glass theorum 
+        - https://zoom.us/rec/share/rddaWi5PcDp_axmoLhK617WbmM3EWpFUBfX2GS4q_feuhhzn_Of9Yy0cSuS3IFFw.8DLf29JpSmCViVc0
+    - Daniel to present in a few weeks
+
+- Review Issues
+    - Define and create 1.0 version of KERIpy
+    - Roadmap Big Frogs for KERIpy
+        - Superceding rotation delegation rules - [Issue 26](https://github.com/WebOfTrust/keripy/issues/26)
+        - CESR updates for CESR native events - [Issue 212](https://github.com/WebOfTrust/keripy/issues/212)
+        - Split topics across KERI and CESR topic meetings
+    - Call to action for community members to review issues and bring of issues of interest next meeting
+
+- Question from Joseph regarding Signify
+    - I am slightly confused why a new agent is required for Signify. Why existing agent does not work?
+        - existing agent runs by locking/unlocking and stores salt in memory thus private keys not a good cloud deployment model (never deployed)
+        - many apis rely on an unlocked datastore
+        - helps with extracting the agent from KERIpy
+            - signifypy - https://github.com/WebOfTrust/signifypy
+
+- Discussion Items
+
+
+### 2023-01-24
+- Recording
+    - No Recording made
+
+- Reports
+    - CESR
+        - English semantic naming by Sam (see recording)
+        - Future of CESR - "roadmap" issues
+        - cesride/parside split
+        - sunset weboftrust/cesrox
+        - CESRide - the project formerly known as CESRox
+        - Matter PR
+        - cesr-dev 
+    - KERIpy
+        - refactor to support dual index signatures and multisig formation (robustness)
+    - Education
+        - next Thu (26th) same time Education meeting about the switch to Docusaurus as the documentation system of our future.
+    - Cardano
+        - PR in keripy
+    - KERIox HCF
+        - refactoring and new bindings for group events
+    - Keep
+    - Signify
+
+- Announcements
+    
+    - Rodolfo presents "didcomm-keri-light"
+        - "keri-light" not meaning to water down KERI
+        - potential to replace did:peer with did:keri (or the implementation of did:peer utilizes keri?)
+        - uses keri/core/eventing
+        - uses in memory kel (hack)
+        - python didcomm lib (?name)
+        - couldn't use non-transferable AID with data in inception event (so it validates)
+            - use transferable with no next keys, can't rotate but you get an icp (effectively ephemeral)
+        - https://github.com/rodolfomiranda/keripy/blob/didcomm-keri-light/didcomm/keri-lite.py
 
 ### 2023-01-10
 - Recording
+        - https://drive.google.com/file/d/1TsnU2jTa2RzfMft8asx5O8-7pcTrwyRw/view?usp=share_link
 
 - Reports
     - CESR
@@ -117,1414 +898,4 @@ Explanation of KERI development tools and techniques: [KERI development environm
         - With an EGF with public known witnesses, you have a Trust Anchor for the ecosystem and thus a discovery mechanism for that ecosystem
             - For example, the vLEI has their published witnesses so AIDs of vLEI holders can be discovered
         - did:keri can have a backing store and backing watchers to keep an eye on ecosystem trust anchors
-
-### 2022-12-13
-- Recording
-
-- Reports
-    - CESR
-    - CESRox
-        - create suggested extension point
-        - dual index support to controller signatures
-    - KERIpy
-        - lots of KLI fixes under the hood
-            - recursive percolation of service endpoints (OOBIs) and KELs
-            - mailbox inspection tool
-    - Education
-        - Working on Argolia search engine on white papers, specs, etc.
-        - Upcoming meeting this Thursday to review current progress: test the searchbar here: [WOT-terms site](https://dwarshuis.com/test/wot-terms2/4/resrc_draft-ssmith-keri.html)
-        - Next Thursday: Ask me anything too.
-    - Cardano
-        - Ready to Demo today!
-    - KERIox HCF
-        - Extracted CESR logic from KERIox into separate repo
-        - https://github.com/THCLab/cesrox
-    - Keep
-        - Pending upstream changes from GLEIF fork.
-        - Reach out to get generic branded screen set into WebOfTrust repo
-    - Signify
-        - Initial implementation of cryptographic primitives in TypeScript
-        - Key generation, event signing at the edge. Encrypted key storage, Event generation, Event Validation in the cloud.
-        - Will convert HackMD write up to Markdown file in the repo
-        - https://github.com/WebOfTrust/signify-ts
-
-- Announcements
-    - GLEIF vLEI in production! 
-        - Keri, Keripy, ACDC, CESR, vLEI, Witnesses
-        - currently in development branch
-
-- Topics
-    - Cardano Backer Demo Rodolfo
-        - Modification of indirecting.py and witness start command to support witness using Cardano
-        - Created an inception event with Cardano address in anchor, rotated every minute with witness receiving events
-        - Question: should we add configuration item in "c" field of inception event to indicate a Cardano ledger backer
-        - Do we need to include the Cardano address in every establishment event?  
-            - Probably just in inception event unless rotating to new address
-        - TODO:  Download the KEL from the blockchain and validate it off or the events from Cardano
-        - https://github.com/roots-id/keri-roots
-        - https://github.com/WebOfTrust/keripy/issues/90
-    - Witness misbehaving during our run to production.  How to catch it?
-        - Problems were with the mailbox service running on the same host as the witness
-            - need to break out
-        - Wintess itself test to resolve OOBI and then query witness
-    
-
-### 2022-11-29
-- Recording
-    - 
-
-- Reports
-    
-    - CESR
-        - updated version CESR spec
-        - added versioning CESR protocol genus and version 
-    - CESRox
-        - Updates IIW ported code from WoT repo unit tests neo 
-        - error
-    - KERIpy
-        - Additions and modification to KLI vLEI delegated
-    - Education
-        - Argolia search meeting
-        - CAncelled next education meeting
-    - Cardano
-        - KERI backer POC running
-        - https://github.com/roots-id/keri-roots
-    - KeriOX HCF
-        - extract all the logic for CESR from KERIOX with neo branch encodiing
-    - Keep
-        - forked the WoT clean implemention GLEIF
-        - GLEIF brand version on GLEIF's repo
-
-- Announcements
-    - GLEIF vLEI Root in production KERIpy AID 
-    - 
-
-- Items
-    - CESR Versioning
-        - What is the mime text/cesr  should not use + json unless completely json
-        - 
-    - HCF KERIOX Licensing Model
-        - thread on slack KeriOX
-        - HCF building components around KERI
-        - Summary items
-            - picked the UPL 1.2 not a strong copy left. Is a reciprocal license.
-            - with community for community
-    - LEI members
-        - UBISecure is one of largest LEI issuers
-   
-### 2022-11-01
-- Recording
-    - https://drive.google.com/file/d/1IaOwD3BvWYfecFYNwLpnPuWfgTkZrgAe/view?usp=share_link
-
-- Reports
-    - CESRox
-    - CESR
-    - KERIpy
-        - In current implementation, 2 rotations required to change control authority.  
-        - In new rotation rules, you can rotate to new keys that aren't in the prior next key digests.  You just need to reach the appropriate thresholds of prior next threshold and current signing threshold.  So you now only need one rotation to change control authority.
-        - This change was the forcing function to require dual index codes in CESR
-        - KLI usability enhancements.  Multisig Shell for creating multisig AIDs.
-        - Fixed agent endpoint for challenge response.
-    - KERIox
-    - vLEI
-        - Staging GLEIF Root AID, using staging GLEIF witness network.
-        - Working on staging GLEIF External AID and GLEIF External AID this week.
-    - Keep
-        - Fork of repository to GLEIF-IT that now has the GLEIF branding.
-        - Pending push to WoT repo to generic branding.
-
-- Items
-    - DID:KERI method implementation
-        - BCGov Discussion how to make KERI more interoperable with DID infrastructure.
-            - DID Resolver
-                - did:keri   OOBI service endpoint tunnel
-                - did:keri did doc with more features with local secured did resolver
-                    - Discover from a did everything from KERI withnesses and watchers in did:doc
-                    - 
-            - Exchange Protoocol (DIF Presetntation)
-            - How to understand ACDC
-        - did:keri:<aid>:<oobi url>?seq=4&dig=<SAID>
-          - essentially and end verifiable did:web URL
-          - adding a query string to the end of the did allows for specifying key state
-        - did:web:http://example.com/oobi/<aid>/controller
-          - did:web is essentially all blind OOBIs
-        - can easily rewrite any existing query message as a URL query string
-    - Witness Rotation 
-        - Forwarding responsibility of witnesses being rotated out.  They are required to publish up to the last event that rotated them out.
-        - For lost or misbehaving witnesses, you need another mechanism to publish your key state and new witness information, like the watcher network.
-        - If all your witnesses go down at the same time, you have a problem.  So your availability contraints drive your decision about how many witnesses/watchers you need.
-        - Backer registrar could have a forwarding event on the ledger to track a move to another ledger.
-
-    - Eclipse Attack Comparison KERI vs PoW
-        - Primarily attacks on permissionless networks, to succeed in a double spend hack
-        - Assume I have a full node on a PoW network.  When a full node gets a chain longer than the one they currently have (fork) the rule is to take the longer chain and throw away the shorter fork.
-        - Take over all the neighbor nodes of the target of the attack and share a longer, invalid chain with the "eclipsed" target node.  Then double spend the resource taken from the target node.  Then release the eclipse.
-        - The target is the gossip protocol.
-    - KERI resistence to Eclipse Attack
-        - KERI's first seen rule.  Once key state is seen, it can't be unseen.
-        - Reconciliation mechanisms to recover an AID if duplicity is seen.
-        - To eclipse KERI you would have to attack the watcher network.
-        - The verifier is always protected because of this rule.
-        - The worst case in KERI of an Eclipse Attack is a denial of service.
-    - Need for a published release and merge to main
-        - We will publish a list of upcoming changes to be merged into main on Slack and give folks time to respond
-
-
-### 2022-10-18
-- Recording
-    - https://drive.google.com/file/d/12SdEy0-wKX5Ky9KWAIee0iS_B9n3xkzF/view?usp=share_link
-
-- Reports
-    - CESRox
-        - Which repo to choose from for basis of code
-        - Provenant contributing a full time Rust dev
-    - KERIpy
-        - Sam: working on changes for reserve and custodial rotation logic
-        - Phil: Simplifyihg extending KLI scripts (KERI Command Line INterface)
-        - Kevin: Compact credentials stuff still TBD
-    - vLEI
-        - Schema changes all final in vLEI
-        - Privacy language final 
-        - XBRL digital signature WG try to influence the use of vLEI
-    - Keep
-        - Branding updates:  changes to new GLEIF green color scheme.  
-        - Plan: fork Keep to GLEIF repo then revert branding back to non-GLEIF colors for community repo
-    - KERIox
-        - Started updating to match the new encodings (NEO)
-    - CESR
-        - Spec changes relative to the new encoding format captured in the NEO branch updates to KERIpy
-        - Stable codes and stable values via pre-padding before the b64 conversion
-
-- Items
-    - IIW
-        - Solid KERI / ACDC track
-        - KERI Breakfast Table before Opening Circle 
-            - Each morning to plan sessions for the day
-    - Likeihood of US regulatory organizations standardizing on LEI
-        - Reporting:  XBRL, etc
-        - Financial Data Transparency Act
-    - Witnesses, Watchers and Blockchain
-        - Indirect Replay Mode with Ledger Oracle diagram from Identifier Theory Paper
-            - Validator looks up the backer (via ledger address) in the KEL of the AID which provides a cryptographic commitment to the ledger being the source of truth as a backer.
-            - A rotation event would contain new ledger backer configuration information to change backers
-            - A seal could be provided back as a receipt to the KEL event to include the hash address in the ledger.  This seal could be stored alongside the event to point to the place in the ledger.
-            - When you have a ledger backer you don't have witnesses.
-            - You can only have one ledger backer because you are relying on the total global ordering of the ledger.
-            - Anything that verifies is technically also a watcher.  So a witness is also performing watcher services.
-    - How to make any data authentic using KERI and friends -> Authentic Web
-        - Authentic Web as a verifiable data structure built from signed hash chained content addressable data
-        - Solves the hard problem of zero-trust architectures = signed-at-rest
-            - signed in motion is relatively easy because can use ephemeral identifiers with ephemeral key state for tokens
-            - key state at rest is hard because have to solve key rotation problem for persistent identifiers
-            - signed data at rest using key state at rest of persistent identifiers
-                - Use ephemeral identifiers as auxiliaries to persistent identifers
-                - Ambient verifiability:  everything can be verified offline, even copies.
-
-        - Mental model of Verifiable Data Structures all the way down
-            - Genealized hash chained signed data structures (provenanceable)
-                - hashed list. 
-                - hash of concatenated hashes in list
-                - hash of cat blineded hashes in list
-                - Hash Graph
-                    - Hash DAG
-                    - Custom Hash DAG
-                    - Merkle root hash (binary tree) Sparse Merkle Tree
-                    - Patricia Merkle (Trie) root hash 
-                - Signed Hash Graph
-                    - Signed Hash DAG
-                        - ACDC is a type of Custom signed Hash DAG iteself and distribute universal Hash DAG fragment
-                - Cryptographic Accumulators
-                    - Collective Signatures (BBS+)
-                    - CL Signatures (AnonCreds)
-            - Hash Log
-                - KEL is a hash log for key state
-                - TEL is a hash log for every other kind of state anchored to key state
-                    - TEL as versioned hash log
-            - Content Addressable (Hash indexed) Database
-                - De-duplication
-                - universaly unique identifers as indexes = secure distributable database 
-                - SAID as index = crypto agile interoperable universally unique identifiers as indexes
-                    - ACDC is a type of content addressable SAID database fragment, graph fragment
-                - B-Tree branch 
-        - Append to Extend
-            - permissionless data type registry
-            - permissionless rules registry
-            - ecosystem governance through permissionless but trusted (reputable) (web-of-trust)  registries
-        - Versioned Authentic data
-            - TEL transfer registry for versioned authentic data
-            - TEL transfer registry for NFTs
-            - TEL/ACDC for authentic messaging registry
-            - TEL/ACDC for authentic versioned document registry
-            - ACDCs are modeled as graph fragments.
-        - BADA/RUN when not use KEL Seals for distributed authentic database
-            - replay attack protection through monotonicity
-                - replay signed date-time stamped message 
-                - replay stale keys to newly date-time stamp and sign message
-                - ephemeral identifiers as auxilaries to persistent identifers
-                    - signed at rest of auxiliary ephemeral identifier
-
-Glossary items added:
-https://github.com/trustoverip/acdc/wiki/authentic-web
-https://github.com/trustoverip/acdc/wiki/RUN
-https://github.com/trustoverip/acdc/wiki/extensible-business-reporting-language
-WOT-term page added:
-https://github.com/WebOfTrust/WOT-terms/blob/gh-pages/resources/res_IdentifierTheory-ssmith-uidt.md markdown version of Universal Identifier Theory whitepaper
-https://github.com/WebOfTrust/WOT-terms/blob/gh-pages/Mental-model.md Mental model description of the Authentic Web
-
-
-### 2022-10-04
-- Recording
-    - [Recording](https://drive.google.com/file/d/11iLCtrewBhgwzaUzZA5vWdqgQdZFww54/view?usp=share_link)
-
-- Reports
-    - CESRox
-        - Define an approach to building library
-        - Create a beginning of a Roadmap
-        - Sam:  Count code table contains many exploratory codes that can be ignored, recent changes to indexed signature changes
-        
-    - KERIpy
-        - Sam:  added support for dual indexed signatures in CESR and keripy.  Final step for reserve participants and custodial participants in partial rotation.  Prior next key list and current signing list are no longer the same.  Allows for flexibility needed for new rotation logic.
-        - New codes which indicate what type (single, same, different, missing) of indices exist for a give signature.
-        - Support for privacy preserving credentials in kli and agent
-        - Compact credential support being added this week
-    - vLEI
-        - Sally reporting server - https://github.com/GLEIF-IT/sally
-        - example of verification service / ACDC watcher
-    - Keep
-        - Rebranding for vLEI
-    - KERIox
-    - CESR
-        - Dual indexed signature codes
-
-- Items
-    - Signify  (Signing at the Edge with keys at the edge)
-        - Backgroud
-            - Only a small set of activities that need to be protected in infrastructure for key management
-                - key pair creation
-                - key pair storage
-                - event generating 
-                - event signing
-                - event verification
-            - Trade off where these actions happen based on where you can secure / protect things.
-            - Secure code supply chain for key pair creation and event signing.  Then storage is secured by encrypting where the keys are store
-            - Signing is another level of security because you have to USE the private keys
-            - What are the liabilities do a cloud host have to worry about.
-                - Cloud host does not want to see keys (non-repudiation).  So we want to move event signing out of the cloud agent
-                - Key state (next digest and current signing key) come from the client.
-                - Cloud host ensures that the code supply chain is secure and never sees the private keys
-            - Think of credential signing as yet another event generation and signing
-            - We want to minimize what we program in the client.  Simplify the client to only the things we don't want in the cloud
-                - key pair creation
-                - event signing (the problem we want to avoid)
-            - Key storage is stored encrypted on the client and can be backed up encrypted on the cloud so the cloud never sees the keys
-            - Escrow - used it protocol design to handle out of order events.  Store the event and wait for the other stuff to show up and then continue processing of the event
-            - Firebase approach of using SSE events to ping the client that a dataset has changed and needs attention.  Same approach used here to notify client that something needs to be signed or key pairs need to be created.  Those would be datasets that a client can check at anytime (start up, after loss of connection, after SSE event shows up).
-            - Wallet - loaded term.  
-            - Signify has nothing to attack at rest.  Encrypted secrets stored in the cloud.  A stateless wallet.
-            - How does Signify trust that what she is signing is the correct thing.
-                - Have to trust that the cloud provider has secured the agent code is running correctly
-                - Cloud host could sign everything it sends to Signify
-
-
-        -Signify is a web client event signing and key pair creation app that minimizes the use of KERI on the client. The web host cloud agent never sees any of the client's private keys in the clear, these are only unlocked in memory on the client only using the client's passcode which can be used to derive an asymmetric encryption/decryption key pair. The client creates key pairs and then sends them encrypted to the cloud agent that stores them encrypted. Whenever the client needs something signed, the cloud agent does the event generation in response to the client's commands and then sends the generated event back to the client along with the necessary encrypted private signing keys.  The client can then decrypt the private keys to sign and send back the signatures on the event. The client can then delete those private keys from memory. So Signify is key creation and event signing in the edge with key storage, event generation, and event verification in the cloud.  
-Because event verification happens in the cloud it can use full KERI ACDCs etc and all signify clients can use full-featured web agents. The edge devices running the client only need to be able to create key pairs and sign events so they don't need to actually implement any KERI Core-specific functionality.  Although CESR would be nice to have. They don't do verification, they don't talk to witnesses or watchers, that is all done by the web-hosted cloud agent. This minimizes the liability of the cloud agent's web host provider because they never see private keys, and the client app is just a client app but with a back channel for decrypting and signing events generated on the agent and does key pair creation locally. It is not a wallet, The cloud agent is the cloud wallet but the private keys are only used in the edge.
-
-We think this might be a good trade space for facilitating web clients that do not need to store anything and all the heavy lifting is done in the cloud.
-
-Clearly, because event generation and verification are happening in the cloud an attacker who successfully attacks the cloud code supply chain can cause mischief by tricking the client into signing events that the client doesn't really want to sign. But that mischief never rises to the level of key compromise.
-
-- Implementation
-    - Leverage existing KERI Agent but add a Signify API
-    - Change Manager of KeyStore to have a remote signing mode. Whenit gets signing requenst from cloud agent sends the request on back channel to Signify client to sign.
-    - Make the controller signing look like witness signing
-    - Escrow eventings waiting for them to collect enought signatures or receipts to meeting a threshold of acceptance.
-    - Store and Forward cloud agent. Client does not have to keep state from session to session. All state is kept in the cloud. Use SSE (server sent events) to notify client that state has changed.
-    - Stateless Wallet
-
-
-
-### 2022-09-20
-
-- Recording
-    - [Recording](https://drive.google.com/file/d/1jwJ2eCgrO44uqjI8jS4S4y_adqZ0PdMY/view?usp=share_link)
-
-- Reports
-    - CESRox
-    - KERIpy
-        - NEO Branch merged into development.  New support for stable value CESR codes.  Useful for non-crypto primitives.
-        - Sam: working on changes to allow new rotation logic.  
-            - Reserve signers and custodial signers.  Support indices that are not the same for the current and former signer list
-            - Add support for dual indices to the idex code count table and Indexer class
-        - Kevin: Adding support for privacy preserving attributes (nonce field) as well as compact credentials
-        - Phil: Minor fixes and improvements for Agent interaction with the GLEIF Root of Trust roll out.
-        - Arshdeep's pull request for KLI Apis
-    - vLEI
-        - Kevin:  Updating the vLEI schema for compact credential support and consistency across all schema
-    - Keep
-        - Support for all the GLEIF uses of the KEEP Root External and Internal
-    - KERIox
-    - CESR
-        - Modified code table for index signatures
-        - Updated CESR spec, include changes for stable values in all codes
-    - Provenant
-        - Working on becoming a QVI, technical and people dimensions.
-        - Standing up witnesses
-        - Will need and become involve in CESRox
-
-- Items
-    - Question regarding adding new code support to CESR.  
-        - Collective signatures that have variable length
-        - https://github.com/WebOfTrustInfo/rwot11-the-hague/blob/master/advance-readings/CESR-adapter-for-sophisticated-multisig.md
-        - Will be able to use the new variable length codes to support these new signature types
-    - RootsID - Encountering KERI in the wild in conversations with clients, etc.
-    - Article:  https://www.ksoeteman.nl/2022/08/self-sovereign-identity-can-do-just-fine-blockchain-less/
-    - W3C TPAC Meeting.  Sam attended as an invited expert to give talk on ACDC.  Outcome unclear.  
-        - Discussion about adding JSON Schema support
-        - Discussion about registries.  Append-to-extend is ACDC solution to no registries.
-        - https://github.com/w3c/vc-data-model/issues/934  JSON Schema
-    - Time to start talking about IIW presentations and collaborations.
-        - GLEIF - announcing the completed vLEI root of trust.  
-        - KERI and DIDComm for DIDComm v3
-        - ToIP Technical Architecture v2
-    - Design principles being discussed at the KERI concepts meeting (edu) on Thursday
-    - Discussion topic:  Root of trust and key management.
-        - Sam paper:  Universal Identifier Theory.
-            - https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/IdentifierTheory_web.pdf
-            - 3 Types we care about.
-                - 1. Cryptonomous Identifier.  Self certifying.  Derived from pub/priv key pairs
-                    - [Transferable](https://github.com/trustoverip/acdc/wiki/transferable-identifier) vs [Non-transferable](https://github.com/trustoverip/acdc/wiki/non-transferable-identifier) identifiers ([persistent](https://github.com/trustoverip/acdc/wiki/persistent-identifier) vs ephemeral)
-                - 2. Public Identfiers that are not cryptonomous.  DNS domain, social security number, etc.  (Non-cryptographically generated ID)
-                - 3. Local Identifiers, Aliases.  Only have meaning to a local entity.  Not shared, avoids collisions.  
-                    - Pet Names: Take local identifiers and share them with "friends".  Trying to solve Zooko's Triangle.
-                        - https://en.wikipedia.org/wiki/Zooko%27s_triangle
-                        - Can be solved with an identifier graph.  
-                    - Problem with collisions.  
-            - To solve the problems with #2 you have a trust domain.  You place each identifier in a trust domain resolved by the cryptonomous identifiers associated in the trust domain.  This avoids the need for a centralized registry or locus of control.  Because we solved the collision problem of namespacing.
-            - Multi-factor association of loci of control.  For example, GLEIF will publish the root of trust to multiple public sources.  The set of these publication has loci of control which allows us to bootstrap the root of trust.
-    - Classification of identifiers.  "Important identifiers" that hold credentials vs ephemeral identifiers used for short term communications.
-        - If you can afford to discard the identifier, use non-transferable identifiers, for example witnesses.
-        - If your identifier is going to have reputation that can't be discarded use transferable identifiers.
-
-
-### 2022-09-06
-
-- Recording
-    - https://drive.google.com/file/d/1mfnOVjeZlVmWtUsf0hMlrMlI7sKUYdJc/view?usp=sharing
-- Reports
-    - CESRox
-        - Meeting on Thursday.  Decided on some first steps.
-        - Porting some code from KERIox to CESRox in the next few weeks
-    - KERIpy
-        - `neo` branch updates to CESR.  New serialization mechanism.  Stable codes
-            - Should merge into development this week
-            - Will break any scripts or configs that rely on stable AIDs generated from salts
-    - Keep
-        - Usability updates from lessons learned from Pilot
-        - GLEIF Root-of-Trust Build for production ready
-        - Bug Fixes
-        - Ubisecure
-            - trying to use keep multi-sig inception of root delegation
-        
-    - KERIox
-        - Continue work on delegation
-    - CESR
-        - Updated spec with new serialization conversions. Bin <-> Raw <-> Text.
-        - CESR native versions of KERI event messages specification on the way
-        - CESR native version of thresholds.
-        - Modifications to the group codes.
-        - Improvements aimed at helping CESR move beyond KERI and cryptographic primitives
-    - Provenant
-        - Working towards become a vLEI QVI.  
-        - Working on stable deployment of witness network(s).
-            - Relative to Stable Net / Builder Net in blockchain world like Sovrin
-            - Moving into a "production mode" in infrastructure.
-        - Recognition that this is will be a common problem for community
-- Items
-    -  Future of the Witness Network and Watcher Network
-        -  What will it look like in the future?  
-            -  Witnesses for "high stakes" identifiers will run on proprietary infrastructure
-            -  Witness as a Service (WiaS).  Witness hosting that can be provisioned on demand
-        -  What will the Watcher Network look like in the future?
-            -  Community collaboration.
-            -  Watcher as a Service (Waas?).
-        -  Are these networks interconnected?
-            -  There will be gossip protocol between Watchers.  Universally watches key state and detects duplicity and shares via gossip across the network.  Similar to the ceritficate transparency protocol used for SSL certs.  Will KERI it is either duplicity or not.  No guess work.
-        -  Is it safe to assume that the Watcher network exists?
-            -  Sam:  A verifier is a watcher.  Right now in the core, watchers are dumb.  If there is duplicity, it is simply discarded.  In the future, watchers will report on that duplicity and share both KERLs and duplicity across other Watchers.  
-        -  Global vs Contextual Watcher networks?
-            -  Varying layers of watcher networks...  Major companies, ecosystem and global watcher networks all sharing with each other.  
-            -  The only attack on KERI is an eclipse attack so the larger your watcher network reach is the better your protection from this type of attack.  The only limitation is a resource constraint.  
-            -  Where do the Judges run?  AT&T vs T-Mobile.  The only "fault" that is apparent is an attach on the KEL.  And that can only occur via key compromise.  So a successful multi-threshold attach causing duplicity is the only thing Watchers are looking for.  So even competitors will want to share across the entire ecosystem.  Similar to certificate transparency, all competitors in the internet hosting space share the information with each other because it is in their best interest to eliminate fraud / duplicity.
-            -  Up to the ecosystems to cooporate on Watcher networks, controlled by the validators.
-        -  Key compromise is very difficult, especially with multi-sig.  So there should be very few dupicitous occurances(sp?) across the KERI ecosystem.
-        -  Pub-Sub push interface for current witness code plus running a witness in promiscuous(sp?) mode to make a watcher.
-            -  Down the road, UDP gossip interface for witnesses and watchers sharing KELs
-    -  Relationship between DIDComm and KERI/ACDC (Daniel Hardman)
-        -  DIDComm and KERI have complimentary emphasis.
-        -  Significant Overlaps across DIDComm and KERI
-        -  Presentation from Daniel (proposal for how to "combine" the communities):
-            -  https://bit.ly/3BeC9Wf
-        -  Call for members of the KERI community to join DIDComm conversation and +1 calls for using CESR encoding in DIDComm
-        -  DIDComm v2 just ratified in DIF and the conversation for v3 is now open.
-            -  This is the time to start working towards unification.
-            
-    -  More CESR
-
-- Terms relevant in the (roll-out of) KERI watcher network:
-1. https://github.com/trustoverip/acdc/wiki/eclipse-attack
-2. https://github.com/trustoverip/acdc/wiki/promiscuous-mode
-3. https://github.com/trustoverip/acdc/wiki/protocol
-
-
-### 2022-08-23
-
-- Recording
-    - https://drive.google.com/file/d/1X6z6MtplLP-fEqyBHbShgpG2JNwzfx5l/view?usp=sharing
-    - 
-- Reports
-    - cesrox
-        - Questions
-                - Hackmd of what can be done: https://hackmd.io/W2Z39cuSSTmD2TovVLvAPg
-            - What should the scope of CESROX be?
-            - Where is the interface?
-            - Does it parse and process events or does it just parse?
-            - Should it be [SAX](https://dev.w3.org/XInclude-Test-Suite/libxml2-2.4.24/libxml2-2.4.24/doc/interface.html) like
-            - keriox slack channel
-    - keripy
-        - Change encoding to stable readable value element in primitives
-        - New count codes for better organization for collections and pipelining.
-        - Blind OOBI support added, all witnesses now expose a blind OOBI (https://weboftrust.github.io/ietf-oobi/draft-ssmith-oobi.html#section-6 )
-        - Agent updates to notifications and SSE messages
-    - keep
-        - separate ward from Keep UX
-        - packaging how to build and distribute for MacOX
-            - Cloud Agent Keripy without Keep but CLI or ReST API packaged build desktop
-        - rebranding GLEIF future
-    - KeriOx
-        - Delegation work
-        - Exn messages
-
-- Items
-    - Change to CESR encoding
-    - ToIP Tech stack
-        - Autonomous Identifier
-            - "system"
-
-
-### 2022-08-09
-
-- Recording
-    https://drive.google.com/file/d/1UFlIhg0Dg7YZWaCaoqIF1Q_XDEJAlp90/view?usp=sharing
-
-
-- Reports
-    - keripy
-        - Tholder now supports CESR signing/next thresholds
-            - CESR weighted threshold is variable length code (same as CESR proof path)
-        - Witness endpoint dissemination by controller
-            - Eliminates the need to configure witness pools with knowledge of each other
-    - caxe 
-    - keep
-        - Proposed split into two repositories
-            - Agent and UX/UI
-    - keriml (CESR in Swift)
-    - cesrox (https://github.com/WebOfTrust/cesrox)
-        - (would obviate the need for CESR in Swift)
-        - Provenant interested in contributing after Mid September
-        - CESR NOM library to parse
-        - serdes in Rust
-        - 
-    - keriox
-        
-
-- Agenda
-    - Announcements:
-        - Video Steven and Phil (IIW revisit session) : the kli interview and how it hopefully has become an integrated eduction resource : [here](https://hackmd.io/pv11Cne-TiG4zhXUS-T6IA). Straight to the subtitled vid on Youtube: [here](https://www.youtube.com/watch?v=GqjsRuu0V5A&list=PLXVbQu7JH_LHVhs0rZ9Bb8ocyKlPljkaG) 
-        - Keri Concepts and Terminology
-            - Every other Thursdays:  [Zoomlink](https://us02web.zoom.us/j/89893527631?pwd=S1VheVF4d2xpTTRTdERYbFFGUFdPUT09). Next Aug 9.
-
-    
-    - Upcoming (Heads Up) Proposed Changes to CESR
-        - Support for CESR Native KERI Key Event Message Body
-            - New codes
-        - Change to encoding of fixed size primitives for enhanced readability of value portion
-            - useful for numeric values like numeric thresholds, and sequence numbers
-            - useful for non-keri useof CESR
-                - proposed solution to CBOR vs JSON debate in IETF standards bodies
-                - 
-    - Quick questions:
-        - What is an 'inquisitor'
-        - Where can I find the (explanation of) dip, icp, di tags 
-            - Answer: in the `development` branch of keripy in file 'src/keri/app/habbing.py'
-        - What do we exactly mean with 'escrow state'
-        - 
-    -  OpenWallet Foundation
-        -  Hyperledger Linux Foundation (consortium of supporters Ping, MS etc)
-        -  in Opposition to proprietary Apple and Google Wallets, Open source standard wallet specification
-        -  Different types of wallets but the concept of OpenWallet is one type
-        -  EU also Digital Identity Wallet related
-        -  Concerned about undesirable feature selection
-            -  Jim St Clair is an organizer 
-    - RWoT Hague
-        - Henk Participating
-
-### 2022-07-26
-
-- Recording
-    - https://drive.google.com/file/d/1daSaLeQwU6gwgMsZLQXbWUQtwcDQJqS-/view?usp=sharing
-
-
-- Reports
-    - keripy
-        - No new developments. Cleanup from pilot
-    - caxe 
-    - keep
-        - PR arshdeep
-    - keriml
-    - cesrox
-    - keriox
-        - Progress for async multi-sig
-        - delegation
-
-- Agenda
-    - Announcements:
-        - IETF BoF 114
-            - SAT (Secure Asset Transfer)
-            - https://datatracker.ietf.org/meeting/agenda
-            - https://www.ietf.org/how/meetings/114/
-            - 
-    - plan for a bi-weekly meeting (KERI-ACDC for noobs) that does two things: work on documentation / terms / Q&A and at the same time education / AMA sessions.
-        - Suggest time slot in the KERI Slack  Suggestion: Thursday 10 AM ET  
-        - 
-    - XBRL signing questions:
-        - How generate facts file
-    - Cover the proposed new rotation mechanism
-        - 
-
-### 2022-07-12
-
-- Recording
-    - https://drive.google.com/file/d/1mXTfwyZsgUHQAjXoheOkeu5ZMwt383hx/view?usp=sharing
-- Reports
-    - keripy
-        - Finished up pilot
-        - Rename master to name and development (shorten to dev)
-            - main stable release
-            - dev unstable but unit tests
-            - Rest Scripts and CLI script updates (push to main)
-            - will publish new docker container
-        - pilot
-    - caxe 
-    - keep
-        - vLEI ecosystem fixes enhancements
-        - goal to extract vLEI stuff out
-    - keriml
-        - mijo is available work on CESR
-    - cesrox
-    - keriox
-        - HCF
-            - Exposed DART, 
-            - Time escrow expiration of events
-                - Async multi-sig
-        - 
-    
-
-
-- Agenda
-    - Announcements:
-        - [RWOT sept2022 Europe - The Hague](https://github.com/WebOfTrustInfo/rwot11-the-hague/blob/master/advance-readings/rwot-primer.md) 
-        - [proposal CESR adapter](https://hackmd.io/GbQO3p6QTge-8eQMGuMaeQ#CESR-adapter-for-sophisticated-multisigmd)
-        
-    - Partial queiries of KEL. Since sequence number query supported in KERIPY
-
-
-    - Cleanup Items and Questions
-        - Agenda items Henk:
-          1. What is "Merging Habery PR"? Hab comes from 'Habitat'. It's a place where multi-sigs and AIDs are linked. _Habery_ manages a collection of Habs. A Hab is a datastructure (a Python object)
-          The only hit (2022) in a Google search pointing to a github site 'habery _DOT_ github _DOT_ io' is NOT related.
-
-            2. KERI / ACDC glossary alignment with ToIP concepts-terminology-wg [Example ACDC glossary](https://github.com/trustoverip/acdc/wiki) and eSSIF : [concepts terminologie](https://essif-lab.github.io/framework/docs/essifLab-glossary)
-
-            3. Cleaning up KERI repos on WebOfTrust GitHub ?
-                - Phil add to keri.readme to table of active repos
-    
-    - Ledger Registrar Backer vs KERI Tunnel
-        - Discovery (KERI Tunnel)
-            - Resolution Infrastructure
-            - Service endpoints
-            - Witnesses
-        - Secondary Root-of-Trust
-            - Replacing witnesswith with Ledger Registrar and Ledger Oracle
-        - Hybrid secondary Root-of-Trust
-            Not anchoring every event periodic anchor
-            Snapshot Checkpoint KELs
-          - Augmented Watcher Network
-            - detect duplicity
-
-    - New Tweaks in Pre-Rotation IETF-KERI Draft
-        - 
-
-### 2022-06-28
-
-- Recording
-    - https://drive.google.com/file/d/1XHmuB9vJOwa1AgJWUK6-_E0cfTbTlEoe/view?usp=sharing
-    - 
-- Reports
-    - keripy
-    - caxe 
-        - 
-    - keep
-    - kiwi
-    - keriml
-    - keriox
-        - HCF keriox
-        - Dart client https://pub.dev/packages/keri
-    - cesr4j
-        - 
-    - cesrox
-        - 
-
-- Agenda
-    - Developments
-        - Cardano Proposal for Registrar Backers
-        - IETF BoF in July Week of 25th
-            - SAT meeting on 26th 3-5 EST
-            - SAT secure asset transfer working group
-                - keri
-            - https://www.ietf.org/mailman/listinfo/sat 
-            - https://web3.mit.edu
-            - https://datatracker.ietf.org/meeting/114/agenda
-        - XBRL Report Signing Pilot GLEIF annual report
-            - multiple signers
-            - partial facts signers
-            - multisig ACDCs authorizing signers
-            - cloud agent Keep demo'd
-        - 
-        
-    - Issues
-        - Is NTRU algo worth looking at in context of "KERI meets embedded systems"?
-            - https://csrc.nist.gov/CSRC/media/Events/Second-PQC-Standardization-Conference/documents/accepted-papers/grobschadl-lighteight-implmentation-NTRUE.pdf
-            - Looks like NTRUSign is broken. 
-            - NTRUEncrypt is usable. 
-            - pqNTRUSign uses large signature sizes so is not immediately suitable for IOT
-            - Too Much Crypto paper https://eprint.iacr.org/archive/2019/1492/1577734684.pdf
-        - pull request from Henk
-    https://github.com/WebOfTrust/keri/pull/19
-        - Cardano Backer Registrar
-            - metadata on cardano
-            - 
-        
-
-### 2022-06-14
-- Recording
-  https://drive.google.com/file/d/16Lz1Amvlio4yfbkqtSVmgZGiomAy5miX/view?usp=sharing
-  
-- Reports
-    - keripy
-        - Mad dash pilot vLEI ecosystem
-        - tests scripts for sample vLEI ecosystem
-        - escrows fix for delegation approval IXN
-        - fix for escrow of messages credential issuance
-    - Keep
-        - Major improvements
-        - multiple builds
-    - Keriml
-        - Miho PR
-        - CESR Swift should it be separate
-            - 
-    - CESROX
-        - Anyone else interested in helping on CesrOX
-        - Apache2
-    - KeriOx
-        - HCF  restructuring
-            - Windows DLL and Unix
-            - Dart
-
-    - CAXE
-        - XBRL with ACDC
-        - Two commands 
-            - extract XBRL facts from XBRL report
-                - ACDC data attestation to facts
-            - verification server
-                - ixbrl veiwer Workiva  
-                - Arelle Plugin (ARELLE = python xbrl framework  https://arelle.org/arelle/)
-    - CESR4j
-        - scaffold for Bazel replaces Maven Apache2
-    
-- Agenda
-  - Proposal to goto git flow like policy for KERIpy
-      - Two branches
-          - main
-              - stable code
-              - regular or upon decision by community merge dev into main
-              - releases PyPi off from main
-              - unit tests 
-              - github actions to do releases
-              - docker containers
-          - dev
-              - active development
-              - feature branches of dev
-  - Trunk based versus Git Flow use case for git flow is community
-      - 
-  - How to engage in the community
-    - Tests where API is stable
-    - open issues to ask questions
-    - learn by doing
-        - unit tests
-        - test an api and then contribute the test
-        - once you fully understand how to use an API because to tested it then suggest an improvement via a pull request. 
-    - take notes of your journey in an issue
-    - Keep tests Opportunities
-    - CLI framework Wrapper
-        - 
-    - ReST framework Wrapper
-        - PostMan
-        - Paw
-        - Already Swagger OpenAPI
-        - docker contrainer with ReST API port
-    - Docker Containers
-    
-    - Test is best documentation
-        - But documenting code with comments is always welcome
-        - 
-
-
-
-### 2022-05-31
-
-- Recording
-    - https://drive.google.com/file/d/15-ZiVKrpkjXHv6kLxkAV7K6x6BW-IseU/view?usp=sharing
-    
-- Reports
-  - Keripy 
-     - promiscuous percolated discovery through OOBIs using exn messages
-     - lock command for secure key store to be fixed in new push move to keep
-     - Ruth open issue
-  
-  - Keep
-      - new lock/unlock
-      - GLEIF vLEI ecosystem use case dominant
-          - eventually pull out more generic capability
-      - Support for one-way OOBI exchanges
-      - Packaging
-      - API additions for notifications
-      - 
-
-  - Keriml
-  
-  - KeriOX
-      - KERIOX repo: https://github.com/THCLab/keriox
-      - Nodejs and Dart clients: https://github.com/THCLab/keri-bindings/tree/master/bindings 
-      - Docker imgs: https://hub.docker.com/r/humancolossus/keriox-witness and https://hub.docker.com/r/humancolossus/keriox-watcher
-      - demo use case using all the infrastructure https://github.com/THCLab/dkms-demo
-
-  - CAXE
-      - https://github.com/WebOfTrust/caxe
-      - XBRL with ACDC
-
-- Agenda
-    - Update on DIF: IP issue resolved
-    - IETF-OOBI Draft  
-        - https://github.com/WebOfTrust/ietf-oobi
-    - We currently issue as a controller the `/end/role/add` OOBI and send it to  Watcher. AFAIK there's no any real usage of this OOBI (yet?) from the Watcher perspective. Shall it be understood as an introduction to Watcher AUTH mechanism? In essence this OOBI becomes an introduction OOBI from the contorller perspective to Watcher. Watchers don't accept any request, but only those that are AUTHenticated first. Thanks to that Watchers support only these controllers that "registered" themselves. (added by Michal)
-    - Escrow Maintenance Rules
-        - When adding key events to various types of escrow's, how to ensure given escrow will not be fulfilled with some random events? Currently any type of key event that has proper semantics and where `d` field equals to `digest(event)` may be escrowed and stay there forever (because for example the signature is missing or `sn` doesn't match ). Possible solutions:
-        - escrows have some kind of retention policy 
-        - events in escrow have exp time
-        - escrows have limited capacity
-
-
-### 2022-05-17
-
-- Recording
-    - https://drive.google.com/file/d/14WoVLlYILIaRw3BE4FnlpPONF8FR66AY/view?usp=sharing
-    - 
-- Reports
-  - Keripy 
-      - Python 3.10.4 support
-      - Packaging
-          
-  - Keriml
-  - Keep
-      - Make files to build for each Role type of users in vLEI ecosystem
-      - Github actions producing .dmgs .dep
-      - UX/UI development
-  - KeriOX
-      - EUPL licence next week
-      - NodeJS and Dart
-      - Async MultiSync
-  - Java
-
-- Agenda
-    - Kent Bull couldn't get the KeriPy demo running
-
-    - KeriPY build issues
-        - refresh virtual environment to be python3.10.4 and install dependencies
-        - pull latest master and keep
-    - RoadMap
-        - Hierachical Recovery Nested Delegations
-        - CESR versions of the KERI Messages
-        - Watchers
-    - Ledger Registrars
-        - https://github.com/WebOfTrust/keripy/issues/90
-        - Cardano Backer
-        - 
-
-
-### 2022-05-03
-
-- Recording
-https://drive.google.com/file/d/147yc11kAMB-yV58zdZFmdIQLs71PKf9r/view?usp=sharing
-- Reports
-  - Keripy 
-  - Keriml
-  - Keep
-  - KeriOX
-  - Java
-
-- Items
-    - Henk: IIW recordings available?
-    - IIW Report
-        - Phil Feariheller Side Conversations so valuable
-        - Ledgers vs. KERI If you have a reason to use a ledger besides identifiers then you could use your ledger as a backer.
-        - Witnesses and Watchers discussed
-        - DID:ORB ledger agnostic KERI alternative?; it's Sidetree based. A sort of KERI light? KERI is more compact. Sam suggest using KERI as a bases for ORB.
-        - The demo of Philip and Kevin was very well attended
-        - KERI for Muggles https://docs.google.com/presentation/d/1mO1EZa9BcjAjWEzw7DWi124uMfyNyDeM3HuajsGNoTo/edit#slide=id.ga411be7e84_0_0
-        - GLEIF presence was very good as a demonstration of the maturity of KERI.
-        - KERI DID Tunnel  How to Build a Tunnel to KERI Island
-
-        - VC Credential Formats 
-        - Kevin GRiffith  first one in person
-            - Demo of Keep Async Multisig.
-            - Building of Reputation System using ACDC
-            - Demo KERI Tunnel
-            - Phil Session on KERI On Thursday
-        - Janet Gonzalez
-            - Keep UX session
-            - Wow!  Use Cases for KERI
-            - Timothy Ruff on Adoption "First usable credential anyone will have is a organization role creditial"
-            - KYC is more than just SSI
-        - Kent Bull
-            - Fun to see the level of interest in KERI and SSI
-            - TRaining courses 
-            - Still early in the industry making a decision vs waiting for standard. Premature optimization.
-            - CESR session
-            - 
-        - Randy Warshaw   GLEIF making an early decision and going for it.  GLEIF sessions use sessions
-            - Stephan Wolff  no technical all use cases
-            - Huge movement of people connection into KERI
-            - UI Walkthorugh
-            - ACDC sessions
-            - Great to meet people been zooming with for so long
-        - Alan Davies
-            - Credential Master - Sales Force
-            - First meeting
-            - VCs for education ACDC introduction
-            - Timothy's presentation: https://youtu.be/kLSLA8_VDFw               - 
-
-        - DidComm KERI Tunnel
-
-        - Syllabus for KERI
-            - Clone KERI experts via training
-
-        - Separate Zoom Chat converstion NOT!
-        - 
-
-
-### 2022-04-19
-
-- Recording
-https://drive.google.com/file/d/13vqXoG7QvGeAe96tj35YZaT_V7PSgs83/view?usp=sharing
-- Reports 
-    - Keripy Command LIne for Multisit API for viewing escrow state API for keystate. Keying repo swift interaction with keychain with local authentication python wrapper ctypes
-
-    - Keriml Keep repackage Electron app to invoke python backend IIW demos on UX/UI
-
-    - KeriOX development is happening on private repo EUPL private HCF
-
-    - Java
-
-- Items
-
-    - OOBI initiated discovery for Witness.
-        OOBI for SSE service endpoint published in .well-known of witness controller Domain Name
-        Leveraging web search for discovery of OOBI
-    HTML5 SSE replacement long polling comet push to clients polling OOBI for SSE service endpoint published in .well-known of witness controller Domain Name Leveraging web search for discovery of OOBI KeyStateNotice SSE endpoint that pushed latest keystate notice reuse sequence number from keystate for SSE sequence number oobi/ksn/ WebOfTrust/keripy#110
-
-    - WebAuth uses of KERI SKWA
-
-    - Signature Threshold vs. Multi-Sig (software threhold)
-
-    - BLS signatures BBS+ signatures (collective signature)
-
-
-
-### 2022-04-05
-
-- Recording
-    https://drive.google.com/file/d/13T8QZQ0MCdRCscI0wGkbKoB3XSsXMplj/view?usp=sharing
-    - Recording Feb 22 also used for March 8, March 8 not available?
-    - 
-- Reports from Implementors
-    - Keriox
-        - OOBI problems
-        - Tests for Partial Rotation
-        - 
-    - Keripy
-        - Finshised Habery changes
-            - Command Changes synchronized with ReST API
-        - New APIs to support Keep (ReST)
-            - Metadata for contacts in addition to AID 
-                - Signed metadata BADA
-            - UI support APIs for workflows
-    - Keriml
-        - No updates
-    - Keep Kimi Kiwi
-        - Screens
-    - Documentation Efforts
-        - MOOC
-
-
-- Items
-    - ACDC Spec Draft
-        - https://github.com/trustoverip/tswg-acdc-specification
-        - 
-    - Educational resources (added by Henk)
-        - Vid snippets & Subtitle automation 
-        - Commit HackMD to Github every month
-        - Suggest Authentication for Moodle (KERI) MOOC-trials (added by Henk)
-           https://moodle.org/plugins/browse.php?list=category&id=21 
-           Are we able to eat our own dog food?
-
-    - Discuss gossip dissemination protocol:
-        Disseminatin information:
-            Actors need something to communicate
-                Controller resposible to disseminate to Witnesses.
-                    Witnesses gossip through gossip
-                Watchers (Judges, Jurors)
-            Percolation JIT NTK approach
-                
-      - types of discovery from Witness or Watcher (any host with KEL Database)
-          - Known Specific Event Query  
-          - Unknown but Latest Event Query
-          - Waiting for anticipated event (such as delegation anchor, any multisig)
-              - push subscribe to wait for anticipated event
-              - HTTP SSE
-              - UDP Gossip pub/sub
-    - WebAuth
-        - 
-```plantuml   
-@startuml
-autonumber
-actor "DID Controller" as DID
-entity "Service Provider" as Service
-database "Service DB" as DB
-control OOBI as OOBI
-
-DID -> Service : Open service  
-note left
-DID controller can verify the service provider
-following same flow of DID Auth (mutal authentication)
-end note
-Service -> DID : Ask for DID
-DID -> Service : Provide DID
-Service -> DB : Stores DID and generate nounce
-Service -> DID : Generate challange for given DID
-note right
-Challenge include a nounce generated 
-for that specific DID
-end note
-DID -> Service : Respond to the challange
-note left
-The challenge can be scane via QR, click the link
-or any other transport. 
-end note
-note right
-Respond to the challange includes:
-- OOBI
-- Signed challange with private key of the DID controller
-end note
-Service -> OOBI : Retrive KEL of given DID
-Service -> Service : verify challange
-Service -> DID : Issue session token
-@enduml
-
-```
-        
-### 2022-03-22
-
-- Recording
-   https://drive.google.com/file/d/13IjKZpM_0WKVmhgIn0AHW16RxnwXvE5U/view?usp=sharing
-   
-- Reports from Implementors
-    - keripy
-        Habery Hab architecture to support multiple AIDs per set of resources
-        Data OOBIs  Doobie.
-        mime  schema+json  for JSON Schem
-        vlei serves up json schema
-        
-    - keriml
-        pronunced "Caramel"
-        KIMI Keri Interactive Mobile Interface 
-        
-    - keriox
-        - KEL changes new partial rotation field name alignment
-        - Ready to do interoperablity tests.
-        - Keriox on Android device
-            - Flutter (Google cross platform) Dart
-
-- Items
-    - Interoperbility testing
-        - Remote HCF into IIW interop demo
-    - OOBI and Doobie
-        - IETF spec for OOBI discovery (todo)
-            - OOBI  Out of band Infrastructure: Internet is out-of-band infrastructure WRT KERI.
-            - Leverge internet web discovery mechanisms 
-            - KERI always verifies so security of internet is not a dependency.
-            - OOBI infrastructure provides OOBI Introductions
-        - How OOBIs work
-            - Discover service endpoints that provide data in support of verifying an AID
-            - ReST endpoints
-
-
-### 2022-03-08
-
-- Recording
-    https://drive.google.com/file/d/11lsFNbUh6MOfGkuaWShEcWttRdeudIRn/view?usp=sharing
-    
-- Reports from Implementors:
-    - keriox
-        apache2.0 DIF EUPL
-        OOBI implementation  - ACDC OCA OOBI
-        Dart - Flutter for mobile
-
-    - keripy
-        Delegation and Multisig on Cmd Line with New Habery construct (multi-hab per shared resource set)
-        Multi-sig delegation
-        Partial Rotation support
-
-    - keri-swift
-        mit license forked to apache2 under web-of-trust for ordered serialization of maps
-        inception event
-        milo provenant 
-        
-    - keep
-        Being built to be a generic tool from UX perspective
-        Also task based workflows with workflow specific terminology
-
-- Items
-    - Interopathon before IIW in April for KeriOX and KeriPY interoperability
-        - Keripy generates json versions of kel and vlei with schema to send to Keriox team
-    - did:auth keri:auth
-    - OOBI blog post
-        - https://medium.com/@hvancann/510467856035
-    - Partial rotation support
-    
-    
-
-    
-
-### 2022-02-22
-- Recording
-    https://drive.google.com/file/d/11lsFNbUh6MOfGkuaWShEcWttRdeudIRn/view?usp=sharing
-    
-- Reports from Implementors:
-    - keriox
-        - refactoring towards event driven architecture. Asynchronous event updates via escrows
-        - OOBI
-        
-    - keripy
-        - CLI now supports new Habery architecture.
-        - SWagger UI operational for ReST API
-        - Vacuuous bootstrap
-        - Current work to update delegation.
-        
-    - keri-swift
-        - Serder and Saidify for the Matter class and subclasses
-        - Default Swift JSON encoder does not preserve property creation order.
-        - Message Types #110 
-        
-    - IETF Standards
-        - New publication of KERI IETF did:keri specification
-        - New publication of KERI PTEL
-        - IPEX  Issuance and Presentation exchange protocol ToDo
-        - KERI ToDO
-        - Hidden Attribute Credentials (ACDC)
-            - XORA for one time use credentials
-            - https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/XORA.md
-
-
-- Items
-    - Documentation (Henk) -> sorry, not able to able to attend today, best regards, Henk
-
-    - Walkthrough of OpenAPI and Sphinx documentation support
-    - Fundamental security difference between PKI and non PKI trust bases
-        - EU Wallet initiative
-
-
-### 2022-02-08
-- Recording
-    https://drive.google.com/file/d/11TVWQAVIMqaWyY3NODJP-t7bXJ6D62Bx/view?usp=sharing
-- Reports from Implementors:
-    - keriox
-        - No new features since last time.
-        - Refactoring
-    - keripy
-        - Habery changes propogated through command line utils, and agent
-            - Changed archtecture, split shared resources from AID specific code
-            - Support for multiple AIDs per instance of KERIpy
-    - keri-swift
-        - pushed repo
-        - Cross platform for iOS first eventually androic
-        - LLVM compiler
-    - IETF Standards
-        - CESR Proof Sigantures posted
-        - [ACDC spec moving IETF pipeline ToIP](https://github.com/trustoverip/tswg-acdc-specification)
-        - PTEL spec published
-        - IETF did:keri spec to be published
-        - 
-
-- New Getting Started with keripy
-    - Encrypted keystore
-    - SwaggerUI
-    - OOBIs
-    - 2-Factor Auth with Challenge/Response
-
-- How do you see DEL's (duplicitous event logs)?
-  - How they're created/maintained?
-  - Basic building blocks/what kind of messages it contains?
-      - Duplicity notice message
-  - Basic logic for detecting duplicity
-      - monotonic logic for first seen accepted event. Once seen, always seen, never unseen. No revision possible. Detection logic upon receipt of two versions of an event at the same sn for a given AID = duplicity. Live vs Dead duplicity. Dead means one version already accepted to other is duplicitous version. Live when two version but neither has yet been accepted because not fully witnessed. Hold in escrow until one or neither is accepted. If neither then hold in escrow until a subsequent rotation designates which of the two is the valid one and so one.
-      - Monotonic logic protects against continuous revision eclipse attack vulnerability such as is the case for PoW ledgers.
-
-
-- Henk: **Education** - first draft of the [KERI MOOC](https://hackmd.io/nuUu5S8UQjOHXw_a53LvvA) now backupped on [github](https://github.com/henkvancann/keri-1/blob/main/docs/KERI-Mooc.md) and logged-in users can edit the hackmd file.\
-What do you think is a good way to develop KERI knowledge, provoke adoption and develop more programming capacity?
-
-
-
-- A **rubric-based eval of did:keri** - Daniel Hardman: go to https://w3c.github.io/did-rubric/ and answer all the questions about did:keri.\
-Decision made Feb 8: we wait until the IETF draft for DID:KERI is finalized. Henk could contribute in draft and then propose his edits to team first.     
-    
-  
-- **Terms and understanding**
-***'SAD' and 'SAID'***, for Europeans the difference in pronunciation of SAD and SAID is hard to grasp and reproduce.
-    The terms are closely related so we are not very alarmed that people confuse the terms.
-
-
-
-
-### 2022-01-25
-
-- Recording:
-     https://drive.google.com/file/d/1136sR2QXKF7tCIm3ieXLlfC1sDqyeOtT/view?usp=sharing
-
-
-- Reports from Implementers:
-    - KERIOX
-        - Digest field SAID
-        - escrow for witness receipts
-    - KERIPY
-        - Conversion to Habery (Habitat Factory) allows multiple Habs (Habitats) per shared resources
-        - OpenAPI (Swagger) for ReST endpoints refactor to be more ReSTful
-        - Sphinx based documentation for KERIpy on ReadTheDocs and CodeCoverage unit tests 
-        - Working on command line changes for Habery vaccuous mode
-        - Passcode encrypted key store support in command line
-        - KIWI-KEEP UX UI Workflows plugin Task support for custom workflows
-        - Zipped Eletron Distribution with Mithril and Material.org UX bare
-        - KEEP has style guide
-        - Could be adapted to Rust Backend
-
-- Witness dissemination protocol (how Witnesses promulgate receipts to Validator network) // added by Michal
-    - Validator requests key state from its Watchers 
-    - Watchers request key state from other trusted watchers
-    - Watchers then request key state from published witnesses (after OOBI bootstrap)
-    - Witnesses may support push interface such as SSE so that Watchers can subscribe to witness updates of keystate
-    - CRitical role of watcher is monotonic view of Key state. First Seen Policy. First seen always seen never unseen.
-        - Enables duplicity detection
-        - Enables redundancy high availability
-        - Reconcilable duplicity
-    - Juror and Judge Deciders
-    - Juror difference between watcher is that Juror reports duplicity whereas watcher just drops
-    - 
-
-
-- OOBI
-    - https://hackmd.io/MxTAIBQTRkWU4-w140tNuA
-    - 
-
-- Terms and understanding - Henk
-    2. 'Backer' and 'Witness', are these a 100% synonym? And if so: why not use 'backer' and keep repeating now and again that it's about a synomym. If not: what's the exact difference?
-- Roadmap:
-
-
-### 2022-01-11
-- Recording
-    - https://drive.google.com/file/d/10HzfvmpVlru1CecRerF8KULg0vVImJFB/view?usp=sharing
-    - 
-- Roadmap
-    - short term long term
-    - CESR version of KERI events
-        - UDP version of KERI (2nd Q)
-        - Gossip Protocol for KERI Receipt, KeyState, and OOBI dissemination (2nd Q)
-    - Recovery from delegated ID prerotated key compromise
-    - Presentation and Issuance exchange protocols add Ricardaian Contracts in the `r` section
-    - OOBI discovery and validation (Watchers)
-    - Registrar Backer support
-        - new config trait 
-        - new seal type
-    - Refreshing Doc strings 
-        - Sphinx Support for doc strings
-        - Swagger API
-        - Test Coverage
-    - Watcher Network
-    - KERI and DID-Comm and IETF
-    - KERI and peer did
-    - SWift KERI Library for iOS and Android (LLVM)
-    - 
-- Reports from Implementers:
-    - keripy
-        - SADification and SAIDification of attachments
-        - First implementation of CESR Proof Signatures, credential parsing moved to Parser
-        - Habery with explict multi-Habitat support (multiple prefix IDs per database) - [related issue](https://github.com/WebOfTrust/keripy/issues/46)
-        - Keep Repo Mithril and Material UX (https://github.com/WebOfTrust/keep)
-    - keriox
-        -  query mode done
-        -  WIP: `d` in messages (issue 110)
-            -  Goldilocks crypto agility, reduce complexity
-            -  BowTie model for reasonsing about crypto committments
-        -  WIP: working on escrows 
-- IETF Internet Draft CESR-Proof
-    - practical applications of CESR-Proofs
-    - https://github.com/WebOfTrust/ietf-cesr-proof
-- Discuss a URN namespace spec for KERI:
-    -  it's a good idea to invent a URN specific for KERI. 
-    -  Write a spec for it and register with IANA
-        -  urn:NID:NSS/path?query#fragment
-        -  Examples
-            -  urn:aid:alblseejlske/path?query#fragment
-            -  urn:keri:slgheilshe/path?query#fragment
-- Henk: first draft of the [KERI MOOC](https://hackmd.io/nuUu5S8UQjOHXw_a53LvvA)
-
-- OOBI
-- SKWA (Simple KERI for Web Auth)
-- Witness dissemination protocol (how Witnesses promulgate receipts to Validator network) // added by Michal
-
-
-
-### 2021-12-14
-- [recording](https://drive.google.com/file/d/1-jFXFGX0X_Bwgyq42xfT948dBxcZw_sJ/view?usp=sharing)
-- Business
-    - Meeting cancelled on Dec 28. Next meeting Jan 11th
-- Reports from Implementers
-    - keripy
-        - CESR codes for variable length material.   core.coring.Matter object class now supports variable length codes.
-        - encrypted content
-        - legacy suites
-        - pathing
-    - keriox
-        - Query messages development
-        - Reply messages
-        - KSN message
-        - TSG 
-- Discuss `did:keri` further usage (see Slack #general channel)
-    - registrant. Need to update registered version to reference WoT repo not DIF repo
-    - did:keri is a very loose wrapper around the KERI prefix, it's there for adoption
-    - Maybe it's a good idea to invent a URN specific for KERI
-
-- KERI incubation within IETF: work item under some WG / WG on its own...?
-    - KERI presented to Blockchain WG; in the future perhaps hosted within this WG
-    - We have to have a draft spec first. Then you form a (work item within a) working group to discuss the spec.
-- Michal question: A lightweight protocol for streaming authentic data in  environments with unstable internet connection. Would CESR make sense?
-    - Yes, we are able to create a UDP (asynchronous communication) version. It's easier to make UDP reliable than to make TCP scalable.
-- GLEIF MultiSig demo KLI (command line version)
-    - Two ways of reaching the threshold of a multisig by participant in a rotation event, is by sharing all public addresses among the group of possible signers. If you don't want to disclose pubic keys to other participants, then you could use digests of the public keys in a partial rotation event, where we only need the participating signers to reach the threshold; this subgroups needs to disclose their public keys.
-- IETF CESR  variable length codes
-    - Pathing for CESR Proofs Attachments SADs
-- Partial Rotation 
-
-
-
-### 2021-11-30
-- Recording 
-https://drive.google.com/drive/u/0/folders/1af1qa4cVw6vbuBGvqwa1sz9B2sk70ao-
-- Query Msg Discussion
-    - https://hackmd.io/Qsrfj7Y-TIGl5ESvrxWGxw
-- New issues 
-    - (https://github.com/WebOfTrust/keripy/issues/110#issuecomment-982631336)
-- IETF CESR Draft   https://datatracker.ietf.org/doc/draft-ssmith-cesr/
-- Distributed multi-sig protocol
-    - KERI 
-
-
-    - 
-
-### 2021-11-16
-[Recording](https://drive.google.com/drive/folders/1-4XrL8S9WHeSNzaZznSatYH8QkaOqsw4?usp=sharing)
-- rpy message
-    - d field for said
-- exp message
-    - d field for said
-- qry message
-    - d field for said
-- All keri key event messages icp  rot dip drt ixn to add d field for said of message. ( https://github.com/WebOfTrust/keripy/issues/110 )
-- p field will be said of prior message
-- Query Message keriox (michal pietrus)
-    - how handling query and reply
-- New partial rotation
-    https://github.com/WebOfTrust/keripy/issues/118
-- Where we chat in realtime
-- Issue update readme with status of features
-
-
-### 2021-11-02
-
-[Recording](https://drive.google.com/drive/folders/13dvg1X5djjezpYriDikxH25UNZ4meyvf?usp=sharing)
-- Call-to-order
-- Review Licensing Terms and Participation
-- progress updates from
-    - keripy team
-        - ksn query get the current state existing key for identifier query for KEL to update
-        - escrow query to get BADA (Best Available Data Logic)
-    - HCF team
-        - Leverage time stamping authority point in time that you trust
-        - DIF update nothing new still trying to figure out what to do working group
-        - Sam invite keriox and kerijs to attend this working group
-- Witness network
-    - clarification of receipts
-        - count code #B indexed witness signatures is more compact than #C which is couplets
-        - #B is useful if many witnesses
-        - Witnesses as highly disposable entities with NonTrans AIDs
-            - Listen on two ports TCP and HTTP
-                - If TCP then assumes direct mode
-                - IF HTTP then assumes indirect mode
-            - Witness Hosts also provide a MailBox service with HTTP SSE (server sent events)
-                - Controller of witnesses subscribes to SSE stream on Mailbox to read responses to its witness queries
-                - Kubernetes pod
-                - HTTP API is wrapper of keripy CESR message and unwraps to send to Parser: HTTP requests to Parsable CESR messages
-    - delegation issues with witnesses  https://github.com/WebOfTrust/keripy/issues/100
-    - 
-- New change to ledger registrars as backers
-    - https://github.com/WebOfTrust/keripy/issues/90
-    - registrar backer allows some to use a ledger registrar backer and ledger oracle instead of a witness pool as the secondary root of trust. Registrar may also provide an oracle or may have multiple oracles not specified.
-        - Witness KAACE algorithm provides a distributed consensus agreement.
-        - TimeStamp of watchers is authoritative for validator  Judge role
-
-
-### 2021-10-19
-
-- Call-to-order
-- Review Licensing Terms and Participation
-    - Apache2, Inbound=Outbound, Developer Certicate of Origin, IETF Submission
-- Discuss Progress on IETF draft submissions and IETF process
-- keripy update
-- Other agenda items
-- How to not fork KERI
-    - some would like to keep in DIF
-    - Options
-        - DIF not able to do KERI Spec without KERIpy group
-        - Split KERI in pieces and have pieces in DIF
-        - Political issues especially with respect to statements about IP.
 

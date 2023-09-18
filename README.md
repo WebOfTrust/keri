@@ -51,8 +51,8 @@ See the documents in this repo titled [LICENSE.md](https://github.com/WebOfTrust
 We meet every Thursday at 10 am EDT (or EST).
 The Zoom link is here:
 https://us06web.zoom.us/j/81679782107?pwd=cTFxbEtKQVVXSzNGTjNiUG9xVWdSdz09
-Meeting ID: 898 4290 0185
-Passcode: 300255
+Meeting ID: 816 7978 2107
+Passcode: 379242
 
 ### Community call
 We meet every other Tuesday at 10 am EDT (or EST). (First meeting was  2021 October, 19 )

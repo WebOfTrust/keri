@@ -48,19 +48,26 @@ See the documents in this repo titled [LICENSE.md](https://github.com/WebOfTrust
 ## Meetings
 
 ### Dev call
-We meet every Thursday at 10 am EDT (or EST).
+We meet every Thursday at 10 a.m. EDT (or EST).
 The Zoom link is here:
 https://us06web.zoom.us/j/81679782107?pwd=cTFxbEtKQVVXSzNGTjNiUG9xVWdSdz09
 Meeting ID: 816 7978 2107
 Passcode: 379242
 
-### Community call
-We meet every other Tuesday at 10 am EDT (or EST). (First meeting was  2021 October, 19 )
-The Zoom link is here:
-https://us02web.zoom.us/j/89842900185?pwd=OEpXSU5pa29FR1A3OXFkUithZFNwQT09
+### Specification call
+We meet every Tuesday at 10  a.m EDT (or EST) as part of the ACDC/KERI Task Force under the Technology Stack Working Group at the Trust over IP Foundation:
+
+Please download and import the following iCalendar (.ics) files to your calendar system.
+Weekly: https://us06web.zoom.us/meeting/tZUrcOCvpjkrGtMfRtTcLyp3nxnR2_7XMbgW/ics?icsToken=98tyKuGpqDwjHdyXsRmARpwcBI_CXe3xiHpcjbdwmi3xNyN_exOlOPpMAOBAR-D9
+
+Join Zoom Meeting
+https://us06web.zoom.us/j/81679782107?pwd=cTFxbEtKQVVXSzNGTjNiUG9xVWdSdz09
+
+Meeting ID: 816 7978 2107
 Passcode: 379242
 
-The agenda is organized via Discord and meeting notes are recorded [here](https://github.com/WebOfTrust/keri/discussions/categories/meetings)
+### Implementors call
+We meet every Thursday at 10 am EDT (or EST) under the Web Of Trust:
 
 ### Related Meetings
 A closely related specification that leverages KERI is ACDC. This is hosted at ToIP and meets on alternate weeks at the same time as the KERI meetings. These meetings complement the KERI meetings referenced above. For information look here [ToIP ACDC Task Force](https://wiki.trustoverip.org/display/HOME/ACDC+Meeting+Page) and here [ACDC IETF Draft](https://github.com/trustoverip/tswg-acdc-specification).
@@ -76,5 +83,5 @@ The reference implementation for KERI is the keripy implementation. This is host
 The keripy implementation is Apache2 licensed as are all repositories in the WebOfTrust project. 
 
 We also encourage the implementation of KERI in other languages. We are happy to host other implementations here
-in the WebOfTrust project as long as they are Apache2 licensed.
+in the WebOfTrust project as long as they are Apache-2.0 licensed.
 

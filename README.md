@@ -48,7 +48,7 @@ See the documents in this repo titled [LICENSE.md](https://github.com/WebOfTrust
 
 ## Meetings
 
-### Dev call
+### Implementors call
 We meet every Thursday at 10 a.m. EDT (or EST).
 The Zoom link is here:
 https://us06web.zoom.us/j/81679782107?pwd=cTFxbEtKQVVXSzNGTjNiUG9xVWdSdz09
@@ -67,24 +67,18 @@ https://us06web.zoom.us/j/81679782107?pwd=cTFxbEtKQVVXSzNGTjNiUG9xVWdSdz09
 Meeting ID: 816 7978 2107
 Passcode: 379242
 
-### Implementors call
-We meet every Thursday at 10 am EDT (or EST) under the Web Of Trust:
-
-### Related Meetings
-A closely related specification that leverages KERI is ACDC. This is hosted at ToIP and meets on alternate weeks at the same time as the KERI meetings. These meetings complement the KERI meetings referenced above. For information look here [ToIP ACDC Task Force](https://wiki.trustoverip.org/display/HOME/ACDC+Meeting+Page) and here [ACDC IETF Draft](https://github.com/trustoverip/tswg-acdc-specification).
-
 #### Education
 
 Community members have an education/documentation effort in progress here [edu](https://keriworld.slack.com/archives/C03RB6ASVUM)'. The repo for the Web of Trust terminology and glossaries is [here](https://github.com/WebOfTrust/WOT-terms). 
 
-Technical meeting on [KERISSE](kerisse.org) take place twice a week. Drop us a line if you're considering participation by creating an issue [here](https://github.com/WebOfTrust/WOT-terms/issues). 
-The KERI concepts (and its terminology) are being discussed in weekly *Zoom meeting* ([Agenda on KERI/ACDC meeting page](https://wiki.trustoverip.org/display/HOME/ACDC+Meeting+Page)) as well as in our [Discord channels](https://discord.gg/uhUzPsUz). The repo for the Web of Trust terminology and glossaries is [here](https://github.com/WebOfTrust/WOT-terms). 
+Technical meetings on [KERISSE](kerisse.org) take place twice a week. Drop us a line if you're considering participation by creating an issue [here](https://github.com/WebOfTrust/WOT-terms/issues). 
+The repo for the Web of Trust terminology and glossaries is [here](https://github.com/WebOfTrust/WOT-terms). 
 
 ## Existing Implementations
 The reference implementation for KERI is the keripy implementation. This is hosted here by the WebOfTrust project. The repository may be found here:  
 * [keripy](https://github.com/WebOfTrust/keripy) – under development  
 
-The keripy implementation is Apache2 licensed as are all repositories in the WebOfTrust project. 
+The keripy implementation is Apache-2.0 licensed as are all repositories in the WebOfTrust project. 
 
 We also encourage the implementation of KERI in other languages. We are happy to host other implementations here
 in the WebOfTrust project as long as they are Apache-2.0 licensed.

@@ -1,6 +1,4 @@
-# Keri Community
-
-## KERI Community Development Efforts
+# KERI Community
 
 ### Associated Specifications
 The table below lists all deliverables of the KERI Community:
@@ -42,7 +40,6 @@ We always believed that the end state for KERI standards would be at IETF but we
 The work at DIF has been archived and any perceived IPR issues resolved.
 https://github.com/decentralized-identity/keri
 
-
 ### Policy
 See the documents in this repo titled [LICENSE.md](https://github.com/WebOfTrust/Keri/blob/main/LICENSE.md) and [CONTRIBUTING.md](https://github.com/WebOfTrust/Keri/blob/main/CONTRIBUTING.md) for licensing and contributing policy. Besides the IETF licensing terms, these include the comprehensive Apache2 license for all associated intellectual property (IP) including patents. The advantage of one comprehensive license for all contributions is that there will always be alignment between all contributors and for any type of contribution. This alignment includes an **inbound=outbound** [policy](https://opensource.guide/legal/) for all related IP. We only want contributions to KERI made here in the WebOfTrust project that are licensed as free, and [nonreciprocal](https://opensource.org/node/875) open source be it software or specification.  
 
@@ -67,7 +64,7 @@ https://us06web.zoom.us/j/81679782107?pwd=cTFxbEtKQVVXSzNGTjNiUG9xVWdSdz09
 Meeting ID: 816 7978 2107
 Passcode: 379242
 
-#### Education
+### Education
 
 Community members have an education/documentation effort in progress here [edu](https://keriworld.slack.com/archives/C03RB6ASVUM)'. The repo for the Web of Trust terminology and glossaries is [here](https://github.com/WebOfTrust/WOT-terms). 
 

@@ -1,5 +1,10 @@
 # KERI Community
 
+## Discord
+
+We have a community Discord server and we'd love to see you there!
+https://discord.gg/edGDD632tP
+
 ### Associated Specifications
 The table below lists all deliverables of the KERI Community:
 | Acronym | Full Name of Deliverable | Link to Deliverable | Lead Authors | Status / Notes |

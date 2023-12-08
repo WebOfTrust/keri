@@ -3,7 +3,7 @@
 ## Discord
 
 We have a community Discord server and we'd love to see you there!
-https://discord.gg/edGDD632tP
+[https://discord.gg/edGDD632tP](https://discord.gg/njeh9tb4)
 
 ### Associated Specifications
 The table below lists all deliverables of the KERI Community:

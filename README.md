@@ -58,8 +58,21 @@ Technical meetings on [KERISSE](kerisse.org) take place twice a week. Drop us a 
 The repo for the Web of Trust terminology and glossaries is [here](https://github.com/WebOfTrust/WOT-terms). 
 
 ## Existing Implementations
-The reference implementation for KERI is the keripy implementation. This is hosted here by the WebOfTrust project. The repository may be found here:  
-* [keripy](https://github.com/WebOfTrust/keripy) – under development  
+The reference implementation for KERI is the keripy (Python) implementation. This is hosted here by the WebOfTrust project. See the below table for where the reference implementation, and others, are located.
+
+| Component               | Name                                                       | Language   | Creators                      | Status                        | Current Version                                                        | Spec Compliance |
+| ----------------------- | ---------------------------------------------------------- | ---------- | ----------------------------- | ----------------------------- | ---------------------------------------------------------------------- | --------------- |
+| KERI core & CESR        | [keripy](https://github.com/WebOfTrust/keripy)             | Python     | WebOfTrust community          | Release + Active development  | [1.1.17](https://pypi.org/project/keri/1.1.17/)                        | 100%            |
+| Agent Infrastructure    | [keria](https://github.com/WebOfTrust/keria)               | Python     | WebOfTrust community          | Release + Active development  | [0.1.3](https://pypi.org/project/keria/0.1.3/)                         | N/A             |
+| Edge Agent Library      | [signify-ts](https://github.com/WebOfTrust/signify-ts)     | Typescript | WebOfTrust community          | Release + Active development  | [0.1.0](https://pypi.org/project/signifypy/0.1.0/)                     | N/A             |
+| Edge Agent Library      | [signify-py](https://github.com/WebOfTrust/signifypy)      | Python     | WebOfTrust community          | Release + Active development  | [0.2.1](https://www.npmjs.com/package/signify-ts/v/0.2.1)              | N/A             |
+| CESR Library            | [cesride](https://github.com/WebOfTrust/cesride)           | Rust       | WebOfTrust community          | Release; inactive             | [0.6.4](https://crates.io/crates/cesride/0.6.4)                        | 90%             |
+| Trust Spanning Protocol | [tsp](https://github.com/openwallet-foundation-labs/tsp)   | Rust       | ToIP and OpenWallet community | Prototype                     | N/A                                                                    | ?               |
+| KERI core               | [keriox](https://github.com/THCLab/keriox)                 | Rust       | Human Colossus Foundation     | Release + Active development  | [0.11.0](https://crates.io/crates/keri-core/0.11.0)                    | 75%+            |
+| CESR Library            | [cesrox](https://github.com/THCLab/cesrox)                 | Rust       | Human Colossus Foundation     | Some development              | [0.1.4](https://crates.io/crates/cesrox/0.1.4)                         | 75%+            |
+| CESR                    | [simple-cesr](https://github.com/simple-ssi/simple-cesr)   | Typescript | Future Forge                  | Release + Active development  | [0.2.3](https://www.npmjs.com/package/@simple-ssi/simple-cesr/v/0.2.3) | ?               |
+| KERI core               | [kerigo](https://github.com/decentralized-identity/kerigo) | Go         | DIF community members         | Little  development           | No released versions                                                   | ?               |
+
 
 The keripy implementation is Apache-2.0 licensed as are all repositories in the WebOfTrust project. 
 

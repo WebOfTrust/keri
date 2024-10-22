@@ -46,10 +46,7 @@ Please download and import the following iCalendar (.ics) files to your calendar
 Weekly: https://us06web.zoom.us/meeting/tZUrcOCvpjkrGtMfRtTcLyp3nxnR2_7XMbgW/ics?icsToken=98tyKuGpqDwjHdyXsRmARpwcBI_CXe3xiHpcjbdwmi3xNyN_exOlOPpMAOBAR-D9
 
 Join Zoom Meeting
-https://us06web.zoom.us/j/81679782107?pwd=cTFxbEtKQVVXSzNGTjNiUG9xVWdSdz09
-
-Meeting ID: 816 7978 2107
-Passcode: 379242
+[https://us06web.zoom.us/j/81679782107?pwd=cTFxbEtKQVVXSzNGTjNiUG9xVWdSdz09](https://us06web.zoom.us/j/84721071832)
 
 ### Education
 

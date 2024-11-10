@@ -1,0 +1,24 @@
+name: Create issue and PR report
+
+on:
+  workflow_dispatch:
+    inputs:
+      days-ago:
+        type: number
+        default: 7
+        description: The number of days to go back from today
+
+env:
+  DAYS_AGO: ${{ github.event.inputs.days-ago }}
+  GH_TOKEN: ${{ github.token }}
+  REPO_OWNER: ${{ github.repository_owner }}
+  REPO_NAME: keri
+  CATEGORY_SLUG: meetings
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print report
+        run: ./scripts/create-report.sh

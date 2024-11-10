@@ -7,17 +7,13 @@ on:
         type: number
         default: 7
         description: The number of days to go back from today
-      dry-run:
-        type: boolean
-        default: false
-        description: Do not create the discussion item, just print the result
+
 env:
   DAYS_AGO: ${{ github.event.inputs.days-ago }}
   GH_TOKEN: ${{ github.token }}
   REPO_OWNER: ${{ github.repository_owner }}
   REPO_NAME: keri
   CATEGORY_SLUG: meetings
-  DRY_RUN: ${{ github.event.inputs.dry-run }}
 
 jobs:
   build:

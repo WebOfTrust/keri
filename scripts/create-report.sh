@@ -92,19 +92,15 @@ function create_discussion {
         }
     ')
 
-    if [ "${DRY_RUN}" = "true" ]; then
-        echo "$body"
-    else
-        gh api graphql -q '.data.createDiscussion.discussion.id' -F repoId="$repo_id" -F categoryId="$category_id" -F body="$body" -F title="$title" -f query='
-            mutation CreateDiscussion($repoId:ID!, $categoryId:ID!, $body:String!, $title:String!) {
-                createDiscussion(input: {repositoryId: $repoId, categoryId: $categoryId, body: $body, title: $title}) {
-                    discussion {
-                        id
-                    }
+    gh api graphql -q '.data.createDiscussion.discussion.id' -F repoId="$repo_id" -F categoryId="$category_id" -F body="$body" -F title="$title" -f query='
+        mutation CreateDiscussion($repoId:ID!, $categoryId:ID!, $body:String!, $title:String!) {
+            createDiscussion(input: {repositoryId: $repoId, categoryId: $categoryId, body: $body, title: $title}) {
+                discussion {
+                    id
                 }
             }
-        '
-    fi;
+        }
+    '
 }
 
 function create_discussion_comment {

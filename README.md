@@ -35,9 +35,8 @@ The specifications are governed by the Technical Stack Working Group charter at 
 ### Implementors call
 We meet alternating Tuesdays (off week for specification call) at 10 a.m. EDT (or EST).
 The Zoom link is here:
-https://us06web.zoom.us/j/81679782107?pwd=cTFxbEtKQVVXSzNGTjNiUG9xVWdSdz09
-Meeting ID: 816 7978 2107
-Passcode: 379242
+https://us06web.zoom.us/j/84721071832 
+Meeting ID: 847 2107 1832
 
 ### Specification call
 We meet alternating Tuesdays at 10  a.m EDT (or EST) as part of the ACDC/KERI Task Force under the Technology Stack Working Group at the Trust over IP Foundation:

@@ -14,8 +14,6 @@ repos=(
     "WebOfTrust/signify-ts"
     "WebOfTrust/signifypy"
     "WebOfTrust/cesride"
-    "WebOfTrust/kerific"
-    "WebOfTrust/kerisse"
     "WebOfTrust/keridoc"
     "WebOfTrust/signify-browser-extension"
     "WebOfTrust/polaris-web"

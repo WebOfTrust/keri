@@ -13,6 +13,7 @@ The table below lists all current deliverables of the KERI Community in the Trus
 | KERI | Key Event Receipt Infrastructure | https://github.com/trustoverip/tswg-keri-specification | Samuel Smith | ToIP Draft |
 | ACDC | Authentic Chained Data Containers | https://github.com/trustoverip/tswg-acdc-specification | Samuel Smith | ToIP Draft |
 | CESR | Composable Event Streaming Representation | https://github.com/trustoverip/tswg-cesr-specification | Samuel Smith | ToIP Draft |
+| did:webs | did:webs specification | https://trustoverip.github.io/tswg-did-method-webs-specification/ | See repo | ToIP Draft |
 
 #### Previous Work
 

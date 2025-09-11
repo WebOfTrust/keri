@@ -39,14 +39,13 @@ The Zoom link is here:
 https://us06web.zoom.us/j/84721071832 
 Meeting ID: 847 2107 1832
 
-### Specification call
-We meet alternating Tuesdays at 10  a.m EDT (or EST) as part of the ACDC/KERI Task Force under the Technology Stack Working Group at the Trust over IP Foundation:
+### Specification calls
 
-Please download and import the following iCalendar (.ics) files to your calendar system.
-Weekly: https://us06web.zoom.us/meeting/tZUrcOCvpjkrGtMfRtTcLyp3nxnR2_7XMbgW/ics?icsToken=98tyKuGpqDwjHdyXsRmARpwcBI_CXe3xiHpcjbdwmi3xNyN_exOlOPpMAOBAR-D9
+- KERI/ACDC/CESR meets every second Tuesday of the month under the KERI Suite Working Group at the Trust over IP Foundation
+- did:webs meets every third Tuesday the month under the KERI Suite Working Group at the Trust over IP Foundation
 
-Join Zoom Meeting
-[https://us06web.zoom.us/j/81679782107?pwd=cTFxbEtKQVVXSzNGTjNiUG9xVWdSdz09](https://us06web.zoom.us/j/84721071832)
+See the Linux Foundation Calendar for meeting links.
+https://zoom-lfx.platform.linuxfoundation.org/meeting/92088406384?password=04468be4-e866-4b5a-9069-b0ddcc6e4967
 
 ### Education
 

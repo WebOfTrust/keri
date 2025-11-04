@@ -10,9 +10,11 @@ category_slug=${CATEGORY_SLUG:?"CATEGORY_SLUG not set"}
 
 repos=(
     "WebOfTrust/keripy"
+    "ioflo/hio"
     "WebOfTrust/keria"
     "WebOfTrust/signify-ts"
     "WebOfTrust/signifypy"
+    "WebOfTrust/libkeri"
     "WebOfTrust/cesride"
     "WebOfTrust/keridoc"
     "WebOfTrust/signify-browser-extension"

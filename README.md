@@ -14,8 +14,8 @@ The table below lists all current deliverables of the KERI Community in the Trus
 | ACDC | Authentic Chained Data Containers | https://github.com/trustoverip/kswg-acdc-specification | Samuel Smith | ToIP Draft |
 | CESR | Composable Event Streaming Representation | https://github.com/trustoverip/kswg-cesr-specification | Samuel Smith | ToIP Draft |
 | did:webs | did:webs specification | https://trustoverip.github.io/tswg-did-method-webs-specification/ | See repo | ToIP Draft |
-| VD(?) | Verifiable Dossiers | https://trustoverip.github.io/kswg-dossier-specification/ | Daniel Hardman | ToIP Draft |
-| SU(?) | SAID URN | https://github.com/trustoverip/kswg-said-urn-charter?tab=readme-ov-file | Carly Huitema | URN Registration Submission |
+| VDOS | Verifiable Dossiers | https://trustoverip.github.io/kswg-dossier-specification/ | Daniel Hardman | ToIP Draft |
+| SAID URN | SAID URN | https://github.com/trustoverip/kswg-said-urn-charter?tab=readme-ov-file | Carly Huitema | URN Registration Submission |
 
 #### Previous Work
 

@@ -15,7 +15,7 @@ The table below lists all current deliverables of the KERI Community in the Trus
 | CESR | Composable Event Streaming Representation | https://github.com/trustoverip/kswg-cesr-specification | Samuel Smith | ToIP Draft |
 | did:webs | did:webs specification | https://trustoverip.github.io/tswg-did-method-webs-specification/ | See repo | ToIP Draft |
 | VD(?) | Verifiable Dossiers | https://trustoverip.github.io/kswg-dossier-specification/ | Daniel Hardman | ToIP Draft |
-| SU(?) | SAID URN | [https://trustoverip.github.io/tswg-did-method-webs-specification](https://github.com/trustoverip/kswg-said-urn-charter) | Carly Huitema | URN Registration Submission |
+| SU(?) | SAID URN | https://github.com/trustoverip/kswg-said-urn-charter?tab=readme-ov-file | Carly Huitema | URN Registration Submission |
 
 #### Previous Work
 

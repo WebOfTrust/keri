@@ -49,6 +49,18 @@ Meeting ID: 847 2107 1832
 See the Linux Foundation Calendar for meeting links.
 https://zoom-lfx.platform.linuxfoundation.org/meeting/92088406384?password=04468be4-e866-4b5a-9069-b0ddcc6e4967
 
+### KERI Foundation calls
+
+- KERI Foundation **Market and Community Advisory (KF-MCA)** group meets every two weeks under the KERI Foundation
+
+Sign up via the [Google Calendar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=bGhtZWIzZm9mb2lhNzducGMxbmZtbWZzaTFfMjAyNjAxMjBUMTYwMDAwWiBodmFuY2FubkBt&tmsrc=hvancann%40gmail.com&scp=ALL) and feel free to join whenever you like!
+
+Or join the meetings via this direct [Zoomlink](https://us02web.zoom.us/j/88433014611?pwd=JrizXZPlD0xapvvC4A17JfTKvVfgwn.1)
+
+- KERI Foundation **Setup and Conference (KF-Setup)** internal group (private repo) every *other* two weeks under the KERI Foundation; so alternating with the KF-MCA meetings!
+
+Join the private meetings by applying for a free KERI Foundation [membership](https://keri.foundation/membership/).
+
 ### Education
 
 Community members have an education/documentation effort in progress here [edu][KERISSE_URL]'. The repo for the Web of Trust terminology and glossaries is [here][WOT_TERMS_REPO]. 

@@ -14,7 +14,7 @@ repos=(
     "WebOfTrust/keria"
     "WebOfTrust/signify-ts"
     "WebOfTrust/signifypy"
-    "WebOfTrust/libkeri"
+    "healthKERI/libkeri"
     "WebOfTrust/cesride"
     "WebOfTrust/keridoc"
     "WebOfTrust/signify-browser-extension"
